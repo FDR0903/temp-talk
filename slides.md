@@ -1,7 +1,7 @@
 ---
 layout: cover
 class: text-center
-title: Design & Incentives in Blockchain Financial Systems
+title: Teaching - Future Research
 #theme: academic
 titleTemplate: '%s'
 favicon: ./images/defiicon.png
