@@ -22,7 +22,7 @@ date: '14/01/2026' # shows in infoLine, defaults to the current date
 mdc: true
 ---
 
-## These slides:  [faycaldrissi.com/jmp-talk/](https://www.faycaldrissi.com/jmp-talk/)
+## These slides:  [faycaldrissi.com/temp-talk/](https://www.faycaldrissi.com/temp-talk/)
 
 <br>
 
@@ -172,4 +172,4 @@ layout: end
 
 Thank you !
 
-These slides:  [faycaldrissi.com/jmp-talk/](https://www.faycaldrissi.com/jmp-talk/)
+These slides:  [faycaldrissi.com/temp-talk/](https://www.faycaldrissi.com/temp-talk/)
