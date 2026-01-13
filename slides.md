@@ -89,11 +89,11 @@ section: Future research
 - Drissi, Cartea, Egri. Agentic AI in Proof‑of‑Stake Blockchains
 - Drissi, Monga: Deep Decentralised Liquidity Provision
 - Drissi, Duran‑Martin, Palmari, Cartea. Adaptive Lookback for Bayesian Decision Making
-<br><br>
+<br><br> 
 
 ## Future reseach
 - Distributed/Federated learning on blockchains
-- Blockchain DAO data to analyse coordination on blockchains (graph theory)
+- Blockchain DAO data to analyse coordination on blockchains
 - Transfer learning from traditional to decentralised financial decision problems
 
 
