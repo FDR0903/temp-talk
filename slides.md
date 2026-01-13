@@ -26,12 +26,75 @@ mdc: true
 
 <br>
 
-# Teaching - Future Research
+# Teaching <br> Future Research
 
 ## Fayçal Drissi
 
 ### *University of Oxford*
 <br>
+
+
+---
+section: Future research
+---
+
+# Decentralized financial systems
+
+## Objectives
+- Implications of financial systems in blockchain infrastructures (smart contracts)
+<br><br>
+
+## Ongoing/Future research
+- *Cartea, Drissi, Feinstein, Georgiou*. Decentralised Swap Market Design (**Grant from Uniswap**)
+- *Drissi, Jaimungal, Wu (2025)*. Equilibrium Liquidity and Risk Offsetting in Decentralised Markets
+- *Baggiani, Drissi, Sanchez-Bettancourt*.  Noise Liquidity Provision in Blockchain Markets
+- *Drissi, Sanchez-Bettancourt, Steve*. Microstructure of Uniswap v4 
+<br><br>
+
+## Future research
+- Design and economics of smart contracts
+  - credit, yield protocols
+  - insurance protocols
+  - derivatives protocols, etc.
+
+---
+
+# Blockchain Infrastrcuture Design and Incentives
+
+## Objectives
+- Implications of the blockchain protocol and its infrastructure
+<br><br>
+
+## Ongoing/Future research
+- Cartea, Drissi, Egri. Decentralised Voting
+- Cartea, Drissi, García‑Arenas: Transaction Flow Fragmentation in Blockchains
+- Cartea, Drissi, Palmari: Design of Block Priority Competition
+<br><br>
+
+## Future research
+- Layer 1 - Layer 2 blockchain interaction
+- Incentives in blockchain proof-of-stake consensus: proposer-builder separation
+- Other blockchain protocols: proof-of-work, proof-of-activity, proof-of-authority, proof-of-burn, proof-of-capacity, proof-of-space 
+
+---
+
+# Machine learning for financial decision making and DeFi
+
+## Objectives
+- Machine learning for financial decision making in uncertain continuous‑time markets
+- AI / blockchain
+<br><br>
+
+## Ongoing/Future research
+- Drissi, Cartea, Egri. Agentic AI in Proof‑of‑Stake Blockchains
+- Drissi, Monga: Deep Decentralised Liquidity Provision
+- Drissi, Duran‑Martin, Palmari, Cartea. Adaptive Lookback for Bayesian Decision Making
+<br><br>
+
+## Future reseach
+- Distributed/Federated learning on blockchains
+- Blockchain DAO data to analyse coordination on blockchains (graph theory)
+- Transfer learning from traditional to decentralised financial decision problems
 
 
 ---
@@ -66,7 +129,7 @@ section: Teaching and Mentoring
 # Teaching experience
 
 
-## (2025) University of Oxford, Saïd Business School, MSc Financial Economics (MFE).
+## (2025 & 2026) University of Oxford, Saïd Business School, MSc Financial Economics (MFE).
 - Lecturer, 24 hours, 11 postgraduate students
 - Stochastic analysis, risk-neutral pricing, tree methods
 - Material and more details: 
@@ -81,11 +144,11 @@ layout: two-cols-header
 
 ::left::
 
-### SEEM and Financial Technology (FTEC) Bachelor programmes
+### SEEM and Financial Technology (FTEC) Bachelors
 - Differential Equations (ENGG2740)
 - Data Science (SEEM2460, CSCI2100, SEEM3650)
 - Programming, C++, Java, Python (ENGG1110, ESTR1100, CSCI1120, CSCI2040, SEEM3410, FTEC4005, SEEM4720)
-- Probability and Stochastic Analysis (ENGG2760, SEEM4760, )
+- Probability and Stochastic Analysis (ENGG2760, SEEM4760)
 - Economics (SEEM2440, ECON2011)
 - Statistics (ENGG2780, FTEC4003)
 - Mathematics (ENGG1125, ENGG1130, ENGG2440)
@@ -107,6 +170,18 @@ layout: two-cols-header
 - Economics (SEEM5370)
 - Financial Engineering (SEEM5670)
 
+<v-click>
+
+<br>
+
+### Other courses
+
+- Blockchain Solidity
+- Decentralised Finance
+- Neural Networks and applications for optimal control
+- Reinforcement Learning for Finance
+
+</v-click>
 </v-click>
 
 ---
@@ -142,29 +217,11 @@ Economics of blockchain order flow
 - 2 students
 - Topic: blockchain data analysis
 
-### (2021) Ecole Polytechnique -- ENSAE ParisTech
+<br>
+
+### (2021) Ecole Polytechnique, ENSAE ParisTech
 - 3 students
 - Topic: Optimal execution, Almgren‑Chriss model
-
----
-section: Future research
----
-
-# Blockchain economics
-
-Future research
-Decentralised systems:
-Continue economics of blockchains and financial services on blockchain (show some projects ongoing)
-credit, insurance, yield protocols, derivativ
-Agentic AI on blockchains (with Maté and Davide)
-Blockchain data / DAOs to analyse coordination (graph theory etc)
-Asset pricing - technology
-Machine learning
-Deep learning for control and learning of closed-loop dynamics 
-adaptive learning (gerardo & GL)
-Transfer learning in financial decision problems (Work with harr and all)
- 
-
 
 ---
 layout: end
