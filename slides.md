@@ -1,7 +1,7 @@
 ---
 layout: cover
 class: text-center
-title: AI and Blockchain Platforms
+title: Who Survives AI ?
 #theme: academic
 titleTemplate: '%s'
 favicon: ./images/defiicon.png
@@ -25,12 +25,14 @@ mdc: true
 
 <br>
 
-# AI and Blockchain Platforms
+# Who Survives AI ?
 
 ## Fayçal Drissi
 
 ### *University of Oxford*
 <br>
+
+### joint work with Fahad Saleh (University of Florida)
 
 <!--These slides: [https://www.faycaldrissi.com/siam2025](https://www.faycaldrissi.com/siam2025)
 [my scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
@@ -39,17 +41,6 @@ mdc: true
 
 ---
 section: AI economy
-layout: center
-class: text-center
----
-
-<h1 style="font-size: 4.6rem; line-height: 1.15;">Who survives AI ? </h1>
-
-<br>
-
-### joint work with Fahad Saleh (University of Florida)
-
-
 ---
 
 # "Wrapper" AI companies
