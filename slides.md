@@ -681,27 +681,31 @@ $$
 
 <div v-click="1" class="rounded bg-slate-100 p-4">
 
-#### Entry rule
+#### $\Lambda(S)^2$: investor's risk-adjusted surplus from entry
 
-$$
-\text{investor } i \text{ enters}
-\iff \nu^i \le \Lambda(S)^2
-$$
-
-<br>
-
-#### $\Lambda(S)^2$ is the investor's risk-adjusted surplus from entry:
-
-$$
+$$\small 
 \boxed{\Lambda(S)^2
 =2\rho_I[\operatorname{U}(S)-r]}
 $$
 
-</div>
+#### Entry rule:  $\qquad \footnotesize \text{investor } i \text{ enters} \iff \nu^i \le \Lambda(S)^2$
 
 </div>
 
+</div>
 
+<br>
+
+<div v-click="2" class="rounded bg-slate-100 p-4">
+
+#### Stage one clearing condition
+
+$$
+W_E^\star=\int_0^1 1_{\nu^i \le \Lambda(S^\star)^2} W_I^i\,di
+$$
+
+
+</div>
 
 ---
 section: Solution
@@ -802,6 +806,7 @@ $\footnotesize [x]_0^1:=\min\{1,\max\{0,x\}\}$
 </v-switch>
 
 <br>
+
 
 
 ---
@@ -1025,14 +1030,13 @@ section: Conclusion
 layout: end
 ---
 
-
 ### Core trade-off
 
-<center>
+
 
 L2s attract productive capital, but each L2 dollar contributes less to L1 security
 
-</center>
+
 
 <br><br>
 
