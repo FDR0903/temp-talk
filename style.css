@@ -23,3 +23,69 @@
 .float-left{
     float:left;
 }
+
+/* ============================================================= */
+/* ===== BEGIN NEW: Frankfurt made sober (NBER) · slate palette = */
+/* ===== safe to delete this whole block ======================= */
+/* ============================================================= */
+:root {
+  --econ-slate-700: #334155;  /* mid slate: title banner + item header */
+  --econ-fill:      #eef2f6;  /* very light slate: item body           */
+}
+
+/* Mute Frankfurt's indigo (#3333B3) full-width title banner to slate.
+   Keeps the banner shape and white text, just a sober colour. */
+#app .slidev-layout h1 {
+  background: var(--econ-slate-700) !important;
+  --un-shadow-color: var(--econ-slate-700) !important;
+}
+
+/* Mute Frankfurt's .item box (indigo header / lavender body) to slate. */
+#app .item header { background: var(--econ-slate-700) !important; }
+#app .item main   { background: var(--econ-fill) !important; }
+
+/* Mute Frankfurt's InfoLine footer (three indigo cells) to a slate gradient. */
+#app footer.bottom-0.flex > div:nth-child(1) { background: #1e293b !important; }
+#app footer.bottom-0.flex > div:nth-child(2) { background: #334155 !important; }
+#app footer.bottom-0.flex > div:nth-child(3) { background: #475569 !important; }
+
+/* Fact 4 overshoot table — booktabs / LaTeX look: serif, only top/mid/bottom rules + cmidrules, no per-row or vertical lines. */
+.overshoot-tbl { width: auto !important; margin: 0 auto; border-collapse: collapse; font-family: Georgia, "Times New Roman", serif; color: #1e293b; }
+.overshoot-tbl tr { border: none !important; }
+.overshoot-tbl th, .overshoot-tbl td { border: none; padding: 4px 22px; text-align: center; font-weight: 400; }
+.overshoot-tbl td:first-child, .overshoot-tbl th:first-child { text-align: left; }
+.overshoot-tbl b { font-weight: 700 !important; }
+.overshoot-tbl thead tr:first-child th { border-top: 1.6px solid #1e293b; padding-top: 5px; }
+.overshoot-tbl thead tr:last-child th  { border-bottom: 1px solid #1e293b; }
+.overshoot-tbl tbody tr:last-child td  { border-bottom: 1.6px solid #1e293b; padding-bottom: 6px; }
+.overshoot-tbl thead .cmid { border-bottom: 0.8px solid #64748b; }
+
+/* Figure / data captions on the fact slides: centred, small, wrap within the slide. */
+.fig-cap { max-width: 88%; margin: 6px auto 0; text-align: center; font-size: 0.88em; color: #475569; line-height: 1.4; }
+
+/* Fix: Slidev's "goto" navigator (opened with the g key) always renders its full
+   slide list in the DOM and merely parks the dialog off-screen at top:-80px when
+   closed. With a deck this size the list is taller than 80px, so it spills back
+   down and shows as a stray menu top-right. Hide the list unless the dialog is
+   actually open (two rules so a browser without :has still gets the first). */
+#slidev-goto-dialog.-top-20 .autocomplete-list { display: none !important; }
+#slidev-goto-dialog:has(#slidev-goto-input:disabled) .autocomplete-list { display: none !important; }
+/* ===== END NEW ===== */
+
+/* Proposition / result block — light-gray rectangle, left-aligned, hugs content. */
+.prop-box { display: block; width: fit-content; max-width: 720px; margin: 0 auto; background: #eef2f6; padding: 12px 26px; border-radius: 4px; text-align: left; }
+/* the box's own title heading (### / ####) is the label — replaces the generic "Proposition" */
+.prop-box h3, .prop-box h4 { font-size: 1em; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #94a3b8; margin: 0 0 5px; }
+.prop-box ul { margin: 0; }
+.prop-box li { margin: 3px 0; }
+
+/* Empirical-facts slides: center the body text; figures/captions already centered. Banner stays left. */
+.fact-c { text-align: center; }
+.fact-c h1 { text-align: left; }
+.fact-c ul, .fact-c ol { display: inline-block; text-align: left; }
+
+/* ===== NBER small-screen projection: enlarge all slide text =====
+   Frankfurt sets the base unit in `html { font-size: 10pt }` (frankfurt.css) and all
+   text + spacing cascades from it in rem. Bump the root to scale the whole deck
+   uniformly; :root outranks the theme's plain `html` selector regardless of load order. */
+:root { font-size: 10.5pt; }

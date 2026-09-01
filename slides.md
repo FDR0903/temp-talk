@@ -1,676 +1,1039 @@
 ---
+theme: frankfurt
+colorSchema: light
 layout: cover
 class: text-center
-title: Who Survives AI ?
-#theme: academic
+title: Price of Proof-of-Stake Security
 titleTemplate: '%s'
 favicon: ./images/defiicon.png
-author: Fayçal Drissi
+author: Cartea · Chen · Drissi · Zhong
+fonts:
+  local: Montserrat, Roboto Mono, Roboto Slab
 themeConfig:
   paginationX: disabled
   paginationY: disabled
   paginationPagesDisabled: [1]
-fonts:
-  local: Montserrat, Roboto Mono, Roboto Slab # local fonts are used for legal reasons for deployment to https://slidev-theme-academic.alexeble.de and only set up for the example project, remove this line for your project to automatically have fonts imported from Google
-
-theme: frankfurt
-infoLine: true # on by default, can be turned off
-#author: 'Your name here' # shows in infoLine
-#title: 'Title' # shows in infoLine
-date: '26/06/2026' # shows in infoLine, defaults to the current date
-
+infoLine: true
+date: '01/09/2026'
+drawings:
+  enabled: false   # hides Slidev's floating pen/annotation toolbar
 mdc: true
 ---
 
+# Price of Proof-of-Stake Security
 
 <br>
-
-# Who Survives AI ?
-
-## Fayçal Drissi
-
-### *University of Oxford*
 <br>
 
-### joint work with Fahad Saleh (University of Florida)
 
-<!--These slides: [https://www.faycaldrissi.com/siam2025](https://www.faycaldrissi.com/siam2025)
-[my scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
-[my website](https://www.faycaldrissi.com/), [my github](https://github.com/FDR0903)-->
+### Álvaro Cartea, Nan Chen, Fayçal Drissi, Mingyue Zhong
+#### University of Oxford, The Chinese University of Hong Kong
+
+<br><br>
+
+##  ICCF 2026
+
+<br><br>
 
 
 ---
-section: AI economy
+section: Blockchains
 ---
 
-# "Wrapper" AI companies
+# Blockchains
 
-### Startups that do not train their own models
+### Promise to coordinate economic activity, at scale, without intermediaries
 
-- they are on top of foundation models (GPT, Claude)
-- they add prompts, workflows, and integrations to offer a full specialized product
-- easiest way for many people to experience generative AI for the first time
+<v-click>
+
+- the role of blockchain markets is likely to grow
+    1. **tokenization** $\$$ 5.5T by 2030 (Citi)
+    2.  **stablecoins** $\$$ 310B today
+    3. **FX cross-border settlement**
 
 <br>
 
 <v-click>
 
-### Evidence
-
-- **coding**: Windsurf and Cursor replaced by integrated offerings (OpenAI Codex, Anthropic's Claude Code, Google's Jules)
-
-<v-click>
-
-- **design**: Anthropic launched products against their own customers (Figma)
-
-<v-click>
-
-- others: **science, security, law, financial analysis**
-
-<v-click>
-
-<br>
-
-$\implies$ a firm which relies exclusively on an AI model has a competitive edge that the model supplier can reproduce easily
+$\implies$ important to study
 
 </v-click>
 </v-click>
-</v-click>
-</v-click>
 
----
-
-# Models learn from usage
-
-### RLHF: the new standard approach for aligning LLMs with human preferences
-
-- InstructGPT (Ouyang et al., 2022)<br>
-user-submitted prompts from the OpenAI API + human rankings $\to$ reward model $\to$ fine-tuning
-- real user behavior and feedback are central to improving the model
-
-<br>
-
-<v-click>
-
-### Multi-turn RLHF (2024): alignment over entire conversations, not individual turns
-
-- models internalize the scope of discussions, workflows, and their next steps (GPT-5, recent iterations of Claude Code)
-
-<br>
-
-<v-click>
-
-### Training on usage is now the default
-
-- Anthropic (August 2025): consumer chats and coding sessions train the models
-- a continuous learning loop
-
-<v-click>
-
-- July 2026: Claude Cowork: record your screen while you do a task, talk through it as you go, and Claude turns it into a skill it can run again
-
-</v-click>
-</v-click>
-</v-click>
-
-
----
-
-# What firms give away
-
-<v-click>
-
-### Firms can protect themselves ...
-
-- contracts: enterprise no-training clauses, Zero Data Retention (ZDR), Data Processing Agreements (DPA)
-
-<br>
-
-<v-click>
-
-### ... but there are always leaks
-
-- routing proprietary data, operating procedures, and processes through black boxes
-<v-click>
-
-- incentives to improve models (OpenAI / Google)
-<v-click>
-
-- "Shadow AI": 
-  - employees using unapproved AI tools: creates major risks of sensitive data leaks
-  - April 2026: Samsung employees leak internal meeting notes and source code into ChatGPT $\implies$ many companies (JPMorgan, Verizon) block AI chatbots from corporate systems
-<v-click>
-
-- June 2026: pharmaceutical companies restrict or completely ban AI with their proprietary R&D and clinical data
-
-<v-click>
-
-<br>
-
-$\implies$ the model learns from what firms do with the model
-
-
-
-</v-click>
-</v-click>
-</v-click></v-click>
-</v-click>
-</v-click>
-
-
----
-
-# Providers become specialised
-
-### The economics of AI favor providers moving up the stack
-
-- selling API tokens: a low-margin, volume-driven business
-- domain-specific solutions: offer higher margins +  ownership of customer value
-
-<v-click>
-
-<br>
-
-### Evidence
-
-- OpenAI:
-  - **Jobs Platform** & AI-driven hiring and matchmaking
-- Anthropic: 
-  - **Claude for Financial Services** (Bloomberg, S&P integrations)
-
-<v-click>
-
-<br>
-
-$\implies$ the option to enter customers' markets is being exercised
-
-</v-click>
-</v-click>
 
 
 
 ---
+layout: two-cols-header
+---
 
-# Motivation
+# Blockchains
 
-### Summary
 
--  AI models are an input that a growing share of production needs
-- providers sell that input, and price it unilaterally
--  **AI models learn from their customers' usage** of the model
-- they hold an **option to enter their customers' markets**
+### A distributed, digital, permissionless ledger 
+- stores and executes transactions
+- without central authority, with *algorithmic consensus*
 
+::left::
+
+<v-click at="1">
+
+<br>
+<br>
+<br>
+
+#### **Blockchain round**
+- transactions are collected, not executed
+</v-click>
+<v-click at="2">
+
+- network communications, cryptographic work
+</v-click>
+<v-click at="3">
+
+- block created, transactions executed
+</v-click>
+<v-click at="4">
+
+$\implies$ consensus requires **time** ($\approx$ 12s)
+
+$\implies$ scaling is difficult
+
+</v-click>
+
+::right::
+
+<div style="display:flex; justify-content:center; margin-top: 8px;">
+<v-switch at="-1">
+<template #1>
+
+![blockchain](./images/block1.png){style="height: 250px;"}
+
+</template>
+<template #2>
+
+![block1](./images/block1.png){style="height: 250px;"}
+
+</template>
+<template #3>
+
+![block2](./images/block2.png){style="height: 250px;"}
+
+</template>
+<template #4>
+
+![block3](./images/block3.png){style="height: 250px;"}
+
+</template>
+<template #5>
+
+![block4](./images/block4.png){style="height: 250px;"}
+
+</template>
+<template #6>
+
+![block4](./images/block4.png){style="height: 250px;"}
+
+</template>
+</v-switch>
+</div>
+
+
+
+<br><br>
+
+
+---
+
+# Layer-2 blockchains
+
+- The base chain is called the <b>Layer 1 (L1)</b>: hard to scale to large economic activity
+<v-click>
+
+- Scaling solution: <b>Layer 2 (L2)</b> blockchains:
+  - Separate private blockchains that extend the L1
+  - Aim to enhance the L1 transaction capacity
+<v-click>
+
+- L2 has its own infrastructure: efficient and fast processing of transactions
+- Periodically posts transaction data to L1
+- L2 pays blob fees to stakers for data and settlement
+<v-click>
+
+<svg viewBox="0 0 1000 240" style="width:90%; height:230px; display:block; margin:4px auto 0;">
+  <defs>
+    <marker id="l2-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#475569" />
+    </marker>
+  </defs>
+
+  <text x="18" y="61" style="font-size:14px; font-weight:600; fill:#0f172a;">L2 execution</text>
+  <line x1="150" y1="56" x2="970" y2="56" stroke="#94a3b8" stroke-width="2" />
+
+  <g v-click="2">
+    <circle cx="190" cy="56" r="9" fill="#cbd5e1" /><text x="187" y="60" style="font-size:8px;">1</text>
+    <circle cx="225" cy="56" r="9" fill="#cbd5e1" /><text x="222" y="60" style="font-size:8px;">2</text>
+    <circle cx="260" cy="56" r="9" fill="#cbd5e1" /><text x="257" y="60" style="font-size:8px;">3</text>
+    <circle cx="295" cy="56" r="9" fill="#cbd5e1" /><text x="292" y="60" style="font-size:8px;">4</text>
+    <text x="175" y="25" style="font-size:10px; fill:#475569;">transactions execute continuously</text>
+  </g>
+
+  <g v-click="3">
+    <rect x="330" y="41" width="86" height="30" rx="6" fill="#334155" />
+    <text x="350" y="60" style="font-size:10px; fill:white;">batch 1</text>
+    <line x1="373" y1="75" x2="373" y2="167" stroke="#475569" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#l2-arrow)" />
+    <rect x="323" y="177" width="100" height="34" rx="6" fill="#e2e8f0" stroke="#475569" stroke-width="1.5" />
+    <text x="338" y="198" style="font-size:9px; fill:#0f172a;">settlement 1</text>
+  </g>
+  
+  <g v-click="4">
+    <circle cx="500" cy="56" r="9" fill="#cbd5e1" /><text x="497" y="60" style="font-size:8px;">5</text>
+    <circle cx="535" cy="56" r="9" fill="#cbd5e1" /><text x="532" y="60" style="font-size:8px;">6</text>
+    <circle cx="570" cy="56" r="9" fill="#cbd5e1" /><text x="567" y="60" style="font-size:8px;">7</text>
+    <circle cx="605" cy="56" r="9" fill="#cbd5e1" /><text x="602" y="60" style="font-size:8px;">8</text>
+  </g>
+
+  <g v-click="5">
+    <rect x="650" y="41" width="86" height="30" rx="6" fill="#334155" />
+    <text x="670" y="60" style="font-size:10px; fill:white;">batch 2</text>
+    <line x1="693" y1="75" x2="693" y2="167" stroke="#475569" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#l2-arrow)" />
+    <rect x="643" y="177" width="100" height="34" rx="6" fill="#e2e8f0" stroke="#475569" stroke-width="1.5" />
+    <text x="658" y="198" style="font-size:9px; fill:#0f172a;">settlement 2</text>
+  </g>
+
+  <text x="18" y="199" style="font-size:14px; font-weight:600; fill:#0f172a;">L1 settlement</text>
+  <line x1="150" y1="194" x2="970" y2="194" stroke="#94a3b8" stroke-width="2" />
+</svg>
+
+
+</v-click>
+</v-click>
+</v-click>
+
+
+
+---
+
+# Security in Proof-of-Stake blockchains
+
+### Stakers lock native tokens to participate in consensus
+
+![Proof-of-Stake](./images/POS.jpg){style="width:50%; margin-top:0px; margin-left:200px;"}
+
+<v-clicks>
+
+- **Discipline:** misconduct can be punished through slashing
+- **Incentives:** honest validators receive newly issued tokens
+  - This is an inflation tax on token holders
+- **Economic security:** a larger dollar value of stake $S$ makes attacks more expensive
+- L1 stake protects both L1 activity and the L2s that settle on it
+- L2 inherits security from L1
+
+</v-clicks>
+
+---
+
+# Productivity in Proof-of-Stake blockchains
+
+### Productivity
+- Blockchains offer decentralized financial (DeFi) services (trading, banking, lending, borrowing, insurance)
+- Investors lock tokens in these smart contracts
+- They earn revenue (fees) from users who use the DeFi services
+- Invested capital is taxed and pays security
 
 <v-click>
 
 <br>
 
-$\implies$ AI / firms relationship shapes **growth and incentives to create** $\implies$ important to study
-
-
-<v-click>
-<br>
-
-$\implies$ **this paper**: a model of the relationship
-
+### L1 versus L2
+- L2 blockchains are significantly faster $\implies$ more demand from users $\implies$ more revenue to investors
+- Only a fraction of productive capital on L2s is held in the native token  ($73\%$ on Linea and $0.5\%$ on Lighter)
+  - contribute less to the inflation tax $\implies$ pays less for security
 
 </v-click>
 
-</v-click>
+---
+
+# Research question
+
+<div class="text-center mt-14 text-3xl font-semibold">
+What is the effect of L2s on the security and productivity of a blockchain economy?
+</div>
+
+<v-clicks>
+
+<div class="mt-12 text-xl text-center">
+L2 efficiency attracts capital and enlarges the base that can finance security </div>
+
+<div class="mt-6 text-xl text-center">
+But each dollar of L2 capital generates less demand for tokens -> less issuance revenue
+</div>
+
+<div class="mt-6 text-xl text-center font-semibold">
+Blob fees must balance adoption gain against security
+</div>
+
+</v-clicks>
 
 ---
 section: Model
 ---
 
-# The model
+# Agents and timing
 
-### An AI-based economy: two strategic players, and demand for a product
+### Small open economy with an L1, an L2, and three agent types
 
+- **Investors:** allocate productive capital across L1 and L2
+- **Stakers:** choose how much capital to lock on L1 and participate in consensus
+- **Users:** demand DeFi services
+
+<div class="grid grid-cols-4 gap-3 mt-10 text-center">
+
+<div class="rounded bg-slate-100 p-4">
+<b>Before stage one (t=0)</b><br><br>
+L1 sets issuance rate <i>ι</i> and blob fee <i>b</i>
+</div>
+
+<div v-click="1" class="rounded bg-slate-100 p-4">
+<b>Stage one (t=1)</b><br><br>
+heterogeneous investors decide whether to enter the blockchain economy
+</div>
+
+<div v-click="2" class="rounded bg-slate-100 p-4">
+<b>Stage two (t=2)</b><br><br>
+Investors allocate capital; stakers choose stake
+</div>
+
+<div v-click="3" class="rounded bg-slate-100 p-4">
+<b>After stage two (t=3)</b><br><br>
+Randomness resolves: output, attacks, and transfers are realized
+</div>
+
+</div>
+
+<div v-click="4">
+
+$\implies$ solved by backward induction
+</div>
+
+---
+
+# Stage two: returns to DeFi (productivity)
+
+#### Revenue from users
+- Investors lock capital in L1/L2 in native tokens
+- L1 productivity: DeFi services generate $\mu_1$ dollars per dollar invested
+- L2 productivity: DeFi services generate $\mu_2>\mu_1$ dollars per dollar invested
 <v-click>
-
-**1. A firm** 
-- the firm sells a product to buyers
-- the firm has a **private competitive advantage** in the market
-- producing the product requires the provider's AI model **tokens** 
 
 <br>
 
+#### Platform risk in blockchains
+- Number of successful attacks on the L1: $J_1 \sim \operatorname{Poisson}(p_1(S))$
+- Number of successful attacks on the L2: $J_2 \sim \operatorname{Poisson}(p_2)$
 <v-click>
-
-**2. An AI model provider** 
-- provider sells tokens to the firm
-- it holds the option to enter, competitively, the firm's market
 
 <br>
 
+#### Issuance of tokens to stakers is a tax on investors
 <v-click>
 
-**3. Buyers** 
-- buyers purchase the product from the firm
-- if the provider enters the firm's market, buyers can also purchase from the provider
+<div class="grid grid-cols-2 gap-10 mt-2">
+
+<div>
+
+#### Before issuance
+- supply  $=2$ tokens, token price $=\$1$ (market cap=$\$2$)
+- stakers and investors each hold $1$ token
+- stakers and investors each hold $\$1$
+
+</div>
+
+<div v-click="4">
+
+#### After issuance (1 token)
+
+- supply $=3$ tokens, token price $=\$2/3$ (market cap=$\$2$)
+- stakers hold $2$ tokens, investors hold $1$ token
+- stakers own $\$4/3$; investors own $\$2/3$
+
+</div>
+
+</div>
 
 </v-click>
 </v-click>
 </v-click>
 
 ---
-
-# The firm
-
-- the firm sells a product that requires an AI model
-
-<v-click>
-
-- it holds a **private advantage** $x(t) \geq 0$ that the provider cannot (yet) reproduce (proprietary data, workflows, know-how)
-
-<v-click>
-
-- buyers value the advantage: they buy the product at
-  $$
-  D\big(Q(t)\big) + x(t)
-  $$
-
-  - $D(\cdot)$ is an inverse demand function
-  -  $Q(t)$ the available quantity of product at $t$
-<v-click>
-
-<br>
-
-- if $Q(t)$ includes the provider's product $\implies$ the firm sells less, at a lower price
-
-</v-click>
-</v-click>
-</v-click>
-
+layout: two-cols-header
 ---
 
-# The firm's advantage
-
-- the advantage evolves through two forces, creation and absorption:
-
-  $$
-  dx(t) = \Big( \underbrace{\iota(t)}_{\text{innovation effort}} \; - \underbrace{\lambda\, \tau_F(t)\, x(t)}_{\text{absorption}} \ \ \ \Big)\, dt \; + \underbrace{\sigma\, x(t) \sqrt{\tau_F(t)}\; dW(t)}_{\text{risk}}
-  $$
-
-  - $\lambda > 0$ is the absorption speed per token 
-  - $\tau_F(t) \geq 0$ is the firm's token usage
-<br>
-
-
+# Stage two: returns to DeFi (productivity)
+### Issuance tax
+- Issuance is a tax rate $\iota$ on each invested dollar
+- L1 capital is $100\%$ in native tokens $\implies$ tax rate is $\iota$
 <v-click>
+
+- A share $\chi$ of L2 capital is in native tokens $\implies$ tax rate is $\iota\,\chi$. $\qquad$ In practice: $\chi$ is $73\%$ on Linea and $0.5\%$ on Lighter
+
 <br>
+<v-click>
 
-- without innovation ($\iota = 0$):
-
-$$
-x(t) = x(0)\, \exp\!\Big(\! -\big(\lambda + \tfrac{\sigma^2}{2}\big) \int_0^t \tau_F(s)\, ds \; + \; \sigma \int_0^t \sqrt{\tau_F(s)}\; dW(s) \Big)
-$$
-
-$\implies$ the advantage decays with **cumulative usage**
+### Blob fees 
+- L2 pays blob fees to stakers $\implies$ L2 makes users pay the blob fee $\implies$ users reduce demand proportionally
 
 </v-click>
-
-
----
-
-# The firm's production
-
-- the firm owns an infrastructure stock $S_F$
-
-$$
-dS_F(t) = \Big( \underbrace{I_F(t)}_{\text{investment}} - \underbrace{\delta\, S_F(t)}_{\text{depreciation}} \Big)\, dt
-$$
-
-<v-click>
-
-- **production technology:** the firm produces with tokens $\tau_F$ and with the stock $S_F$ (**constant elasticity of substitution**):
-
-  $$
-  q_F = G(\tau_F, S_F) = \Big[ \omega\, \tau_F^{\theta} + (1-\omega)\, S_F^{\theta} \Big]^{1/\theta}
-  $$
-
-  <v-click>
-
-  - the elasticity of substitution between tokens and stock is $\varsigma = 1/(1-\theta)$: increasing in $\theta$
-    - if $\theta > 0$: each input can produce without the other ($\theta = 1$: perfect substitutes)
-    - if $\theta \leq 0$: both inputs are essential ($\theta \to -\infty$: fixed proportions)
-
-  </v-click>
 </v-click>
 
----
-
-# The firm's problem
-
-<v-click>
-
-- producing has costs
-  - tokens cost the price $p$ per unit
-  - investment cost $h_F(I_F(t))$: increasing, convex
-  - innovation cost $\kappa(\iota(t))$: strictly convex
-
-<v-click>
-
 <br>
 
-- the firm has instantaneous profit:
+::left::
 
+<v-click at="3">
+
+### Dollar return to L1 investment
+
+$$ \small
+\boxed{R_1(S)=\mu_1-\kappa_1\,J_1(S)-\iota}
 $$
-\pi_F = \underbrace{\big[ D(Q) + x \big]\, q_F}_{\text{revenue at the premium}} \; - \underbrace{p\, \tau_F}_{\text{token bill}} \; - \underbrace{h_F(I_F)}_{\text{investment}} \; - \underbrace{\kappa(\iota)}_{\text{innovation}}
-$$
 
-<br>
-
-<v-click>
-
-- the firm maximizes
-
-$$
-\max_{\tau_F,\; I_F,\; \iota} \;\; \mathbb{E}\left[ \int_0^\infty e^{-r_F\, t}\, \pi_F(t)\, dt \right]
+L1 platform risk
+$$ \small
+\boxed{p_1(S)=\underline p_1+
+\frac{\bar p_1-\underline p_1}{1+\eta S}} \quad p_1'(S)<0,\quad p_1''(S)>0
 $$
 
 </v-click>
 
-</v-click>
+::right::
+
+<v-click at="4">
+
+#### Dollar return to L2 investment
+$$\small
+\boxed{R_2(S)=\mu_2-\kappa_1J_1(S)-\kappa_2J_2-\chi\,\iota-b}
+$$
+
+security contribution gap: $\small
+\boxed{\Delta^\iota=\iota - (\iota\chi + b) = \iota(1-\chi)-b}
+$
+
+productivity gap: $\small
+\boxed{\Delta^\mu=\mu_2-\mu_1-\kappa_2\,p_2}
+$
 
 </v-click>
 
 ---
 
-# The AI model provider
+# Stage two: investor portfolio choice
 
-- the provider sells tokens to the firm
-  - it posts the token price $p(t)$ continuously
-  - it bears a token serving cost $\Gamma(\cdot)$: increasing, convex
+- Contiunuum of investors with aggregate wealth $W_E$
+- Each infinitesimal investor takes aggregate stake $S$ as given
 
+<v-switch at="0" unmount>
+<template #1>
 
+<div class="rounded bg-slate-100 p-5 mt-5">
 
-<v-click>
-<br>
+#### Portfolio problem of investor $i$: mean variance preferences over wealth at $t=3$
+$$
+\max_{\substack{\omega_{I,1}^i,\omega_{I,2}^i\geq0\\
+\omega_{I,1}^i+\omega_{I,2}^i=1}}
+\left\{
+\mathbb E\left[\widetilde W_I^i/W_I^i\right]-
+\frac{\rho_I}{2}\operatorname{Var}\left[\widetilde W_I^i/W_I^i\right]
+\right\},
+\qquad \rho_I>0
+$$
 
-- **the provider can enter (irreversibly) the firm's market**
-  - it pays a fixed entry cost $E > 0$ 
-  - it then produces with the same CES technology $G$
-    - it uses its own tokens $\tau_P$ (for free)
-    - it builds its own infrastructure $S_P$ with investment $I_P$ (if needed)
+</div>
+
+</template>
+<template #2>
+
+<div class="rounded bg-slate-100 p-5 mt-5">
+
+#### Expected portfolio return
+
+$$
+\begin{aligned}
+\mathbb E[\widetilde W_I^i/W_I^i]={}&\omega_{I,1}^i
+[\mu_1-\kappa_1p_1(S)-\iota]\\
+&+\omega_{I,2}^i
+[\mu_2-\kappa_1p_1(S)-\kappa_2p_2-\chi\iota-b]
+\end{aligned}
+$$
+
+</div>
+
+</template>
+<template #3>
+
+<div class="rounded bg-slate-100 p-5 mt-5">
+
+#### Variance of the portfolio return
+
+$$
+\operatorname{Var}(R_p^i(S))
+=\kappa_1^2p_1(S)+(\omega_{I,2}^i)^2\kappa_2^2p_2
+$$
+
+The attack counts are independent: $J_1(S)\perp J_2$.
+
+</div>
+
+</template>
+</v-switch>
+
+---
+
+# Stage two: returns to staking
+
+- Continuum of stakers who invest in staking or risk-free rate
+- Stakers supply L1 security and receive revenue from productive activity
+- Each infinitesimal stakers takes aggregate $S$ and the revenues from
+
+<div class="grid grid-cols-3 gap-4 mt-7 text-center">
+
+<div class="rounded bg-slate-100 p-4">
+
+#### L1 issuance 
+
+Each dollar of L1 capital pays $\iota$
+
+$$
+\iota W_{E,1}
+$$
+
+</div>
+
+<div v-click="1" class="rounded bg-slate-100 p-4">
+
+#### L2 issuance
+
+The native-token share $\chi$ pays issuance
+
+$$
+\iota\chi W_{E,2}
+$$
+
+</div>
+
+<div v-click="2" class="rounded bg-slate-100 p-4">
+
+#### Blob fees
+
+Each dollar of L2 capital pays $b$
+
+$$
+bW_{E,2}
+$$
+
+</div>
+
+</div>
+
+<v-click at="3">
+
+$\implies$ staking reward per dollar can be estimated as: 
+$$\tau = \frac{1}{S}\left(\iota\,w_{E,1}+\iota\,\chi\,W_{E,2}+b\,W_{E,2}\right)$$
 
 </v-click>
 
 ---
 
-# The provider's problem
+# Stage two: staker portfolio choice
 
-- the provider has instantaneous profit:
+
+<div class="rounded bg-slate-100 p-5 mt-5">
+
+#### Dollar return to staking
 
 $$
-\small
-\pi_P = \underbrace{p\, \tau_F - \Gamma(\tau_F)}_{\text{revenue from tokens}} \; + \; \underbrace{\mathbf{1}\{t \geq e\}}_\text{if provider enters market} \Big[ \underbrace{D(Q)\, q_P - h_P(I_P)}_{\text{revenue from product}} \; - \underbrace{\big( \Gamma(\tau_F + \tau_P) - \Gamma(\tau_F) \big)}_{\text{token serving cost adjustment}} \Big]
+\boxed{R_S(S)=\tau-\kappa_1J_1(S)}
+$$
+
+<div class="grid grid-cols-2 gap-5 mt-3 text-center">
+
+<div>
+
+$$
+\mathbb E[R_S(S)]=\tau-\kappa_1p_1(S)
+$$
+
+</div>
+
+<div>
+
+$$
+\operatorname{Var}(R_S(S))=\kappa_1^2p_1(S)
+$$
+
+</div>
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="grid grid-cols-2 gap-4 mt-4">
+
+<div class="rounded bg-slate-100 p-4">
+
+#### Portfolio problem of staker $j$
+
+- Stake a fraction $\omega_S^j\geq0$ of wealth $W_S^j$
+- Invest the remainder at the risk-free rate $r$
+
+</div>
+
+<div class="rounded bg-slate-100 p-4">
+
+#### Mean–variance preferences over wealth at $t=3$
+
+$\rho_S>0$ is staker risk aversion.
+
+$$
+\max_{\omega_S^j\geq0}
+\left\{
+\mathbb E\!\left[\frac{\widetilde W_S^j}{W_S^j}\right]
+-\frac{\rho_S}{2}
+\operatorname{Var}\!\left[\frac{\widetilde W_S^j}{W_S^j}\right]
+\right\}
+$$
+
+</div>
+
+</div>
+
+</v-click>
+
+---
+
+# Stage two: clearing conditions
+
+### Aggregate productive capital $W_E$ is fixed by stage-one entry
+
+<div class="grid grid-cols-2 gap-4 mt-5 text-center">
+
+<div class="rounded bg-slate-100 p-4">
+
+#### DeFi markets
+
+$$
+W_{E,1}^\star=\omega_{I,1}^\star W_E
+\qquad
+W_{E,2}^\star=\omega_{I,2}^\star W_E
+$$
+
+</div>
+
+<div v-click="1" class="rounded bg-slate-100 p-4">
+
+#### Staking market
+
+$$
+S^\star=\omega_S^\star W_S
+$$
+
+</div>
+
+</div>
+
+<v-click at="2">
+
+<div class="rounded bg-slate-100 p-4 mt-4 text-center">
+
+#### Security budget
+
+$$
+\boxed{\tau^\star S^\star
+=\iota W_{E,1}^\star+(\iota\chi+b)W_{E,2}^\star}
+$$
+
+
+</div>
+
+</v-click>
+
+---
+
+# Stage one: investor entry
+
+### Investors differ in the minimum surplus they require to enter
+
+<div class="grid grid-cols-2 gap-4 mt-4">
+
+<div class="rounded bg-slate-100 p-4">
+
+#### Private reservation value
+
+$$
+\nu^i\sim U[0,\bar\nu]
+$$
+
+- Reservation values are independent of wealth and return shocks
+
+</div>
+
+<div v-click="1" class="rounded bg-slate-100 p-4">
+
+#### Entry rule
+
+$$
+\text{investor } i \text{ enters}
+\iff \nu^i \le \Lambda(S)^2
 $$
 
 <br>
 
-<v-click>
-
-- the provider maximizes
+#### $\Lambda(S)^2$ is the investor's risk-adjusted surplus from entry:
 
 $$
-\max_{p,\; e,\; \tau_P,\; I_P} \;\; \mathbb{E}\left[ \int_0^\infty e^{-r_P\, t}\, \pi_P(t)\, dt \; - \; e^{-r_P\, e}\, E \right]
+\boxed{\Lambda(S)^2
+=2\rho_I[\operatorname{U}(S)-r]}
 $$
 
-<v-click>
+</div>
+
+</div>
+
+
+
+---
+section: Solution
+---
+
+# Solution
+
+### Solve by backward induction and impose equilibrium consistency
+
+<div class="grid grid-cols-3 gap-5 mt-10 text-center">
+
+<div class="rounded bg-slate-100 p-5">
+<b>1. Stage two</b><br><br>
+Investor and staker portfolio choices for given productive capital
+</div>
+
+<div v-click="1" class="rounded bg-slate-100 p-5">
+<b>2. Stage one</b><br><br>
+Investor entry and productive capital
+</div>
+
+<div v-click="2" class="rounded bg-slate-100 p-5">
+<b>3. Market clearing</b><br><br>
+Entry, rewards, and output agree
+</div>
+
+</div>
+
+---
+
+# Solution: investor portfolio
+
+<v-switch at="0" unmount>
+<template #1>
+
+### The L2 advantage has two components
+
+<div class="grid grid-cols-2 gap-4 mt-5 text-center">
+
+<div class="rounded bg-slate-100 p-5">
+
+#### Productivity advantage
+
+$$
+\Delta^\mu:=\mu_2-\mu_1-\kappa_2p_2
+$$
+
+</div>
+
+<div class="rounded bg-slate-100 p-5">
+
+#### Contribution gap
+
+$$
+\Delta^\iota:=\iota(1-\chi)-b
+$$
+
+</div>
+
+</div>
+
+<div class="rounded bg-slate-100 p-3 mt-4 text-center">
+
+$$
+\boxed{\Delta=\Delta^\mu+\Delta^\iota}
+$$
+
+</div>
+
+</template>
+<template #2>
+
+### Optimal investor portfolio weights
+
+<div class="rounded bg-slate-100 p-5 mt-5 text-center">
+
+$$
+\boxed{
+\omega_{I,2}^\star=
+\left[\frac{\Delta}{\rho_I\kappa_2^2p_2}\right]_0^1,
+\qquad
+\omega_{I,1}^\star=1-\omega_{I,2}^\star
+}
+$$
+
+$\footnotesize [x]_0^1:=\min\{1,\max\{0,x\}\}$
+
+
+
+</div>
+
+- Higher L2 productivity advantage $\Delta^\mu$ shifts capital to the L2
+- Higher L2 tax rebate $\Delta^\iota$ shifts capital to the L2 
+  - Low token share $\chi$
+  - Low blob fee $b$
+
+</template>
+</v-switch>
 
 <br>
 
-- the objective has two components
-  - the **token business**: the firm is a customer worth keeping
-  - the **product business**: the firm is a rival worth displacing
+
+---
+
+# Solution: staker portfolio
+
+### Equilibrium staking share
+
+<div class="grid grid-cols-2 gap-4 mt-5">
+
+<div class="rounded bg-slate-100 p-4 text-center">
+
+$$
+\boxed{
+\omega_S^\star(S^\star)=
+\left[
+\frac{\tau^\star-r-\kappa_1p_1(S^\star)}
+{\rho_S\kappa_1^2p_1(S^\star)}
+\right]_+}
+$$
+
+$$\footnotesize
+[x]_+:=\max\{0,x\}
+$$
+
+</div>
+
+<div v-click="1" class="rounded bg-slate-100 p-4">
+
+- Larger reward $\tau$ from investors $\implies$ more staking
+- Larger risk-free opportunity cost $\implies$ less staking
+- Larger L1 attack risk $\implies$ less staking
+
+</div>
+
+</div>
+
+---
+
+# Solution: productive capital
+
+<v-switch at="0" unmount>
+<template #1>
+
+### Anticipated value of blockchain investment
+
+<div class="rounded bg-slate-100 p-5 mt-5">
+
+$$
+m_1(S):=\mu_1-\kappa_1p_1(S)-\iota-r
+$$
+
+$$
+\Lambda(S)^2
+=2\rho_I[m_1(S)+\Delta\omega_{I,2}^\star]
+-\rho_I^2\left[
+\kappa_1^2p_1(S)+(\omega_{I,2}^\star)^2\kappa_2^2p_2
+\right]
+$$
+
+</div>
+
+</template>
+<template #2>
+
+### Entry determines productive capital
+
+<div class="rounded bg-slate-100 p-5 mt-5 text-center">
+
+
+$$
+\boxed{W_E^\star=\frac{\Lambda(S^\star)^2}{\bar\nu}W_I}
+$$
+
+$$
+W_{E,1}^\star=\omega_{I,1}^\star W_E^\star,
+\qquad
+W_{E,2}^\star=\omega_{I,2}^\star W_E^\star.
+$$
+
+</div>
+
+</template>
+</v-switch>
+
+---
+
+# Solution: equilibrium security $S^\star$
+
+### Security budget clearing
+- Payments from productive capital $=$ compensation required by stakers
+
+<div class="grid grid-cols-2 gap-4 mt-4">
+
+<div class="rounded bg-slate-100 p-4">
+
+#### Payments from productive capital
+
+$$
+\Psi(S)=\underbrace{\frac{W_I}{\bar\nu}\Lambda(S)^2}_\text{aggregate entry}\underbrace{\left(\iota\omega_{I,1}^\star
++(\iota\chi+b)\omega_{I,2}^\star\right)}_\text{payment per dollar}
+$$
+
+</div>
+
+<div class="rounded bg-slate-100 p-4">
+
+#### Required staker compensation
+
+$$
+\Phi(S)=S\left[
+r+\kappa_1p_1(S)
++\frac{\rho_S}{W_S}\kappa_1^2p_1(S)S
+\right]
+$$
+
+- opportunity cost, L1 attack loss, compensation for attack risk
+
+</div>
+
+</div>
+
+<v-click>
+
+<div class="rounded bg-slate-100 px-4 py-2 mt-4 text-center text-xl">
+
+$$
+\boxed{\Phi(S^\star)=\Psi(S^\star)}
+$$
+
+</div>
 
 </v-click>
-</v-click>
+
+---
+
+# Solution: explicit characterization of $S^\star$
+
+
+
+### Equilibrium stake is the unique positive root of
+
+<div class="rounded bg-slate-100 px-5 py-3 mt-4">
+
+
+$$
+\boxed{c_3(S^\star)^3+c_2(S^\star)^2+c_1S^\star-c_0=0}
+$$
+
+$$\small
+c_0=\Psi_0,\qquad
+c_1=r+\kappa_1\bar p_1-\eta\Psi_\infty,\qquad
+c_2=\eta(r+\kappa_1\underline p_1)
++\frac{\rho_S}{W_S}\kappa_1^2\bar p_1,\qquad
+c_3=\eta\frac{\rho_S}{W_S}\kappa_1^2\underline p_1.
+$$
+
+$$\footnotesize
+\begin{aligned}
+\Psi_0=\Psi(0)
+={}&\frac{W_I}{\bar\nu}
+\Big[\iota\,\omega_{I,1}^{\star}
++(\iota\chi+b)\omega_{I,2}^{\star}\Big] \times
+\Bigg\{
+2\rho_I\Big[
+\mu_1-\kappa_1\bar p_1-\iota-r
++\Delta\omega_{I,2}^{\star}
+\Big]
+-\rho_I^2\Big[
+\kappa_1^2\bar p_1
++(\omega_{I,2}^{\star})^2\kappa_2^2p_2
+\Big]
+\Bigg\},
+\\[0.8em]
+\Psi_\infty=\lim_{S\to\infty}\Psi(S)
+={}&\frac{W_I}{\bar\nu}
+\Big[\iota\,\omega_{I,1}^{\star}
++(\iota\chi+b)\omega_{I,2}^{\star}\Big] \times
+\Bigg\{
+2\rho_I\Big[
+\mu_1-\kappa_1\underline p_1-\iota-r
++\Delta\omega_{I,2}^{\star}
+\Big]
+-\rho_I^2\Big[
+\kappa_1^2\underline p_1
++(\omega_{I,2}^{\star})^2\kappa_2^2p_2
+\Big]
+\Bigg\},
+\end{aligned}
+$$
+
+</div>
+
+
+<div class="rounded bg-slate-100 p-3 mt-3 text-center">
+If payment per dollar = 0, productive capital generates no security revenue and <i>S</i><sup>⋆</sup> = 0.
+</div>
 
 ---
 section: Results
 ---
 
-# Model solution
+# Issuance
 
-### Very hard in the general case
-
-
-<v-click>
-
-<br>
-
-### The linear case
-
-- linear inverse demand 
-$$D(Q) = a - b\, Q$$
-- linear investment costs 
-
-$$h_F(I) = \chi_F\, I \qquad \text{and} \qquad h_P(I) = \chi_P\, I$$
-
-- quadratic innovation cost 
-$$\kappa(\iota) = \kappa_0\, \iota + \dfrac{\kappa_1}{2}\, \iota^2$$ 
-
-- linear token serving cost 
-$$\Gamma(\tau) = \gamma_s\, \tau$$
-
-</v-click>
-
+![capitalissuance](./result_plots/capital_vs_issuance.png){style="transform: translate(25%, 0%); width: 600px"}
 
 ---
 
-# The equilibrium system in the linear case
+# Blob fees and productivity
 
-- effective token price, and the CES unit cost:
-
-$$\footnotesize
-\tilde{p} = \underbrace{p}_{\text{token price}} + \underbrace{\lambda\, x\, \partial_x V_F - \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_F}_{\text{shadow cost of absorption}},
-\qquad\qquad 
-c_F(\tilde{p}) = \Big[ \omega^{\varsigma}\, \tilde{p}^{\,1-\varsigma} + (1-\omega)^{\varsigma}\, \zeta_F^{\,1-\varsigma} \Big]^{\frac{1}{1-\varsigma}}
-$$
-
-<v-click>
-
-- before entry, on $(\bar{x}, \infty)$:
-
-$$\footnotesize
-r_F V_F^0 = \frac{\big( a + x - c_F(\tilde{p}) \big)^2}{4b} + \frac{\big( \max\{0,\; \partial_x V_F^0 - \kappa_0\} \big)^2}{2 \kappa_1}
-$$
-
-$$\footnotesize
-r_P V_P^0 = \iota\, \partial_x V_P^0 + \max_{p \, \geq\, 0}\; \tau_F(x, p) \Big( p - \gamma_s - \lambda\, x\, \partial_x V_P^0 + \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_P^0 \Big)
-$$
-
-
-
-- after entry, similar ODE system in $V_F^1$ and $V_P^1$
-
-<v-click>
-
-- entry is a **threshold rule**: enter the first time $x(t) < \bar{x}$
-
-<v-click>
-
-- at the boundary $\bar{x}$: value matching, and smooth pasting for the provider, which chooses the boundary
-
-$$\footnotesize
-V_F^0 = V_F^1, \qquad V_P^0 = V_P^1 - E, \qquad \partial_x V_P^0 = \partial_x V_P^1
-$$
-
-$\implies$ equilibrium $\equiv$ system of second-order ODEs with a free boundary
-
-<small>$\tau_F(x, p)$: the firm's token demand at the posted price; $\iota$: the innovation rule; $V^0 / V^1$: values before / after entry; $\varsigma = 1/(1-\theta)$: elasticity of substitution.</small>
-
-</v-click>
-</v-click>
-</v-click>
+![capitalblob](./result_plots/capital_vs_blob_fee.png){style="transform: translate(25%, 0%); width: 600px"}
 
 ---
 
-# Result 1: firms restrict their use of the model
+# Blob fees and security
 
-### Every token produces output today + transfers part of the advantage
-
-<v-click>
-
-- the firm's marginal revenue from tokens stays **strictly above** the token price:
-
-$$\small
-\underbrace{\frac{\partial}{\partial \tau_F} \Big[ \big( D(Q) + x \big)\, q_F \Big]}_{\text{marginal revenue from each token}} - \;\, \underbrace{p}_\text{token price}
-\;\; = \; \underbrace{\lambda\, x\, \partial_x V_F}_{\text{destroyed exclusivity}} \; - \underbrace{\tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_F}_{\text{price of the uncertainty}} \;\; > \;\, 0
-$$
-
- $q_F = G(\tau_F, S_F)$ is output 
-
-<v-click>
-
-- marginal revenue from tokens falls with usage $\implies$ a firm using tokens optimally today would buy them until marginal revenue $=$ token price
-
-- a **positive** difference $\implies$ the firm gives up tokens today because it adjusts token prices to account for destroyed exclusivity 
-<v-click>
-
-$\implies$ restraint is **equilibrium self-defense**
-
-$\implies$ adoption of AI can be low where AI is productive 
-
-</v-click>
-</v-click>
-</v-click>
+![securityblob](./result_plots/stake_vs_blob_fee.png){style="transform: translate(25%, 0%); width: 600px"}
 
 ---
-
-# Result 2: the price of tokens
-
-### <u>Before entry</u>, the posted price balances two motives for the provider
-
-$$\small
-\underbrace{\frac{\partial}{\partial p} \Big[ \big( p - \gamma_s \big)\, \tau_F(x, p) \Big]}_{\text{marginal instantaneous profit from tokens}}
-\;\; = \;\;
-\underbrace{\big(\partial_p \tau_F\big) \Big( \lambda\, x\, \partial_x V_P^0 - \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_P^0 \Big)}_{\text{learning motive}}
-$$
-
-<v-click>
-
-- a provider extracting everything from token sales today would set the price where marginal current profit $= 0$
-
-- the provider prices **off** that optimum on purpose: it trades instantaneous token profit against what usage teaches the model
-
-<v-click>
-
-- the sign of the learning motive is the provider's **posture** toward its customer
-
-<v-click>
-
-- when the **option to enter** dominates:
-  - the provider prices **below** the price that maximizes its instantaneous token profit, possibly **below cost**, to accelerate absorption
-
-<v-click>
-
-- when the **token business** dominates:
-  - the provider prices **above** the price that maximizes its current token profit, to slow learning
-
-</v-click>
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# Result 2: the price of tokens
-
-### <u> After entry </u>, the price serves a second purpose:
-
-$$\small
-\underbrace{\frac{\partial}{\partial p} \Big[ \big( p - \gamma_s \big)\, \tau_F(x, p) \Big]}_{\text{marginal instantaneous profit from tokens}}\;\; = \;\;
-\underbrace{\big(\partial_p \tau_F\big) \Big( \lambda\, x\, \partial_x V_P^1 - \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_P^1 \Big)}_{\text{learning motive}} \ -\ \underbrace{\tfrac{2}{3}\, q_P\, \partial_{\tilde{p}} c_F}_{\text{raising the rival's cost}}
-
-$$ 
-
-term $\tfrac{2}{3}\, q_P\, \partial_{\tilde{p}} c_F$ is nonnegative
-$\implies$ the provider gives up token revenue with higher token prices $\implies$ higher price raises firm's production cost $\implies$ firm competes less 
-
-<v-click>
-
-<br>
-
-### Token price
-
-- **high** if the token business dominates
-- **low** if the provider wants to accumulate its customer's advantage
-- **higher** after entry to raise the rival's cost
-
-<v-click>
-
-<br>
-
-
-$\implies$ pricing of model access is strategic
-
-</v-click>
-</v-click>
-
-
----
-
-# Result 3: coexistence regimes
-
-### Any equilibrium is one of three regimes
-
-<v-click>
-
-**1. No entry, no defense**: the firm's market is not worth taking
-
-
-
-<v-click>
-
-**2. Deterrence by perpetual innovation**: the firm keeps the advantage above the threshold $\bar{x}$ at all dates
-
-- Deterrence is a permanent running cost
-
-<v-click>
-
-**3. Entry**: the advantage falls below $\bar{x}$, and the provider enters at that moment
-
-
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# Result 4: who survives AI?
-
-Depends on the production technology !
-
-<v-click>
-
-- Case 1: stock and AI are **substitutes** ($\theta > 0$)
-  - the firm can shift production onto its non-AI capacity
-  - the provider produces from tokens alone after (if) entry
-
-<v-click>
-<br>
-
-- Case 2: stock and AI are **complements** ($\theta \leq 0$)
-  - the firm cannot produce without tokens
-  - it transfers its advantage $\implies$ defense is expensive for firms that use the model most
-
-<v-click>
-
-<br>
-
-$\implies$ which regime a firm faces is a property of its **production technology**
-
-$\implies$ most exposed: the firms that **must** use the model to operate
-
-</v-click>
-</v-click>
-</v-click>
-
----
+section: Conclusion
 layout: end
 ---
 
-Thank you !
+
+### Core trade-off
+
+<center>
+
+L2s attract productive capital, but each L2 dollar contributes less to L1 security
+
+</center>
+
+<br><br>
+
+Thank you!
