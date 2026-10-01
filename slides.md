@@ -1,10 +1,10 @@
 ---
 layout: cover
 class: text-center
-title: Who survives AI?
+title: Who Survives AI?
 #theme: academic
 titleTemplate: '%s'
-author: Fayçal Drissi
+author: Fayçal Drissi and Fahad Saleh
 themeConfig:
   paginationX: disabled
   paginationY: disabled
@@ -24,14 +24,24 @@ mdc: true
 
 <br>
 
-# Who survives AI?
+# Who Survives AI?
+
+<div class="grid grid-cols-2 gap-16 mt-8">
+<div>
 
 ## Fayçal Drissi
 
 ### *University of Oxford*
-<br>
 
-### joint work with Fahad Saleh (University of Florida)
+</div>
+<div>
+
+## Fahad Saleh
+
+### *University of Florida*
+
+</div>
+</div>
 
 ---
 section: AI economy

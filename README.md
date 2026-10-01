@@ -1,6 +1,6 @@
-# Who survives AI?
+# Who Survives AI?
 
-Slides by Fayçal Drissi (University of Oxford), based on joint work with Fahad Saleh (University of Florida).
+Slides by Fayçal Drissi (University of Oxford) and Fahad Saleh (University of Florida).
 
 The deck covers AI providers, firms’ use of models, and the incentives for providers to enter their customers’ markets.
 
@@ -19,7 +19,7 @@ Open <http://localhost:3030>.
 npm run build
 ```
 
-The site is generated in `dist/`. The GitHub Actions workflow deploys pushes to GitHub Pages at <https://fdr0903.github.io/temp-talk/>. `vercel.json` also configures deployment and slide routing on Vercel.
+The site is generated in `dist/`. The GitHub Actions workflow deploys pushes to `main` at <https://www.faycaldrissi.com/temp-talk/>. In the repository's **Settings → Pages**, set **Source** to **GitHub Actions** so Pages publishes the built slides. `vercel.json` also configures deployment and slide routing on Vercel.
 
 ## Export to PDF
 
