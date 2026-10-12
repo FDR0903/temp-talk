@@ -1,10 +1,10 @@
 ---
 layout: cover
 class: text-center
-title: Who Survives AI?
+title: AI Platforms
 #theme: academic
 titleTemplate: '%s'
-author: Fayçal Drissi and Fahad Saleh
+author: Fayçal Drissi
 themeConfig:
   paginationX: disabled
   paginationY: disabled
@@ -16,7 +16,7 @@ theme: frankfurt
 infoLine: true # on by default, can be turned off
 #author: 'Your name here' # shows in infoLine
 #title: 'Title' # shows in infoLine
-date: '26/06/2026' # shows in infoLine, defaults to the current date
+date: '12/10/2026' # shows in infoLine, defaults to the current date
 
 mdc: true
 ---
@@ -24,30 +24,65 @@ mdc: true
 
 <br>
 
-# Who Survives AI?
-
-<div class="grid grid-cols-2 gap-16 mt-8">
-<div>
+# Part I: Who survives AI ?
 
 ## Fayçal Drissi
 
 ### *University of Oxford*
+<br>
 
-</div>
-<div>
+### joint work with Fahad Saleh (University of Florida)
 
-## Fahad Saleh
+<!--These slides: [https://www.faycaldrissi.com/siam2025](https://www.faycaldrissi.com/siam2025)
+[my scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
+[my website](https://www.faycaldrissi.com/), [my github](https://github.com/FDR0903)-->
 
-### *University of Florida*
-
-</div>
-</div>
 
 ---
-section: AI economy
+section: AI and firms
 ---
 
-# "Wrapper" AI companies
+# I. Motivation
+
+
+![blockchain1](./images/tweet4.png){style="transform: translate(60%, 0%); width: 400px"}
+
+---
+
+# I. Motivation
+
+
+![blockchain1](./images/tweet5.png){style="transform: translate(60%, 0%); width: 400px"}
+
+---
+
+# I. Motivation
+
+
+![blockchain1](./images/tweet6.png){style="transform: translate(60%, 0%); width: 400px"}
+
+---
+
+# I. Motivation
+
+
+![blockchain1](./images/tweet2.png){style="transform: translate(60%, 0%); width: 400px"}
+
+
+---
+
+# I. Motivation
+## US DoJ
+
+The US government has sided with OpenAI against the New York Times. The DoJ says training an LLM on copyrighted works does not violate copyright law, and that treating it as infringement would hurt US science, prosperity, and national security.
+
+![blockchain1](./images/tweet3.png){style="transform: translate(30%, 20%); width: 500px"}
+
+
+---
+
+# I. Motivation
+## The case of "Wrapper" AI companies
 
 ### Startups that do not train their own models
 
@@ -75,7 +110,8 @@ section: AI economy
 
 <br>
 
-$\implies$ a firm which relies exclusively on an AI model has a competitive edge that the model supplier can reproduce easily
+$\implies$ wrapper firms depend on foundation-model providers for a key input
+
 
 </v-click>
 </v-click>
@@ -84,7 +120,8 @@ $\implies$ a firm which relies exclusively on an AI model has a competitive edge
 
 ---
 
-# Models learn from usage
+# I. Motivation
+##  Models learn from usage
 
 ### RLHF: the new standard approach for aligning LLMs with human preferences
 
@@ -120,89 +157,27 @@ user-submitted prompts from the OpenAI API + human rankings $\to$ reward model $
 
 ---
 
-# What firms give away
-
-<v-click>
-
-### Firms can protect themselves ...
-
-- contracts: enterprise no-training clauses, Zero Data Retention (ZDR), Data Processing Agreements (DPA)
-
-<br>
-
-<v-click>
-
-### ... but there are always leaks
-
-- routing proprietary data, operating procedures, and processes through black boxes
-<v-click>
-
-- incentives to improve models (OpenAI / Google)
-<v-click>
-
-- "Shadow AI":
-  - employees using unapproved AI tools: creates major risks of sensitive data leaks
-  - April 2026: Samsung employees leak internal meeting notes and source code into ChatGPT $\implies$ many companies (JPMorgan, Verizon) block AI chatbots from corporate systems
-<v-click>
-
-- June 2026: pharmaceutical companies restrict or completely ban AI with their proprietary R&D and clinical data
-
-<v-click>
-
-<br>
-
-$\implies$ the model learns from what firms do with the model
+# I. Motivation
+##  Shadow AI
 
 
 
-</v-click>
-</v-click>
-</v-click></v-click>
-</v-click>
-</v-click>
+- employees using unapproved AI tools: creates major risks of sensitive data leaks
+- April 2026: Samsung employees leak internal meeting notes and source code into ChatGPT $\implies$ many companies (JPMorgan, Verizon) block AI chatbots from corporate systems
+- New Microsoft research reveals that 71% of UK employees have used unapproved consumer AI tools at work, and 51% continue to do so every week
 
-
----
-
-# Providers become specialised
-
-### The economics of AI favor providers moving up the stack
-
-- selling API tokens: a low-margin, volume-driven business
-- domain-specific solutions: offer higher margins +  ownership of customer value
-
-<v-click>
-
-<br>
-
-### Evidence
-
-- OpenAI:
-  - **Jobs Platform** & AI-driven hiring and matchmaking
-- Anthropic:
-  - **Claude for Financial Services** (Bloomberg, S&P integrations)
-
-<v-click>
-
-<br>
-
-$\implies$ the option to enter customers' markets is being exercised
-
-</v-click>
-</v-click>
 
 
 
 ---
 
-# Motivation
+# I. Motivation
 
 ### Summary
 
 -  AI models are an input that a growing share of production needs
 - providers sell that input, and price it unilaterally
 -  **AI models learn from their customers' usage** of the model
-- they hold an **option to enter their customers' markets**
 
 
 <v-click>
@@ -215,7 +190,7 @@ $\implies$ AI / firms relationship shapes **growth and incentives to create** $\
 <v-click>
 <br>
 
-$\implies$ **this paper**: a model of the relationship
+$\implies$ **this paper**: a model of supplier pricing and learning from customer usage
 
 
 </v-click>
@@ -223,35 +198,33 @@ $\implies$ **this paper**: a model of the relationship
 </v-click>
 
 ---
-section: Model
----
 
-# The model
+# II. The model
 
 ### An AI-based economy: two strategic players, and demand for a product
 
 <v-click>
 
-**1. A firm**
+**1. A firm** 
 - the firm sells a product to buyers
 - the firm has a **private competitive advantage** in the market
-- producing the product requires the provider's AI model **tokens**
+- production uses the provider's AI model **tokens** alongside infrastructure
 
 <br>
 
 <v-click>
 
-**2. An AI model provider**
+**2. An AI model provider** 
 - provider sells tokens to the firm
-- it holds the option to enter, competitively, the firm's market
+- it sets the token price and learns from the firm's usage
 
 <br>
 
 <v-click>
 
-**3. Buyers**
+**3. Buyers** 
 - buyers purchase the product from the firm
-- if the provider enters the firm's market, buyers can also purchase from the provider
+- total product output is $Q=q_F$
 
 </v-click>
 </v-click>
@@ -259,28 +232,30 @@ section: Model
 
 ---
 
-# The firm
+# II. The model
 
-- the firm sells a product that requires an AI model
+### The firm
+
+- the firm sells a product using AI tokens and its own infrastructure
 
 <v-click>
 
-- it holds a **private advantage** $x(t) \geq 0$ that the provider cannot (yet) reproduce (proprietary data, workflows, know-how)
+- it holds a **private advantage** $x(t) \geq 0$ over the shared AI model (proprietary data, workflows, know-how)
 
 <v-click>
 
 - buyers value the advantage: they buy the product at
   $$
-  D\big(Q(t)\big) + x(t)
+  D\big(q_F(t)\big) + x(t)
   $$
 
   - $D(\cdot)$ is an inverse demand function
-  -  $Q(t)$ the available quantity of product at $t$
+  - $Q(t)=q_F(t)$ is the firm's output
 <v-click>
 
 <br>
 
-- if $Q(t)$ includes the provider's product $\implies$ the firm sells less, at a lower price
+- buyers can also perform the task themselves using the shared model $\implies$ the firm's premium depends on what its product adds
 
 </v-click>
 </v-click>
@@ -288,63 +263,73 @@ section: Model
 
 ---
 
-# The firm's advantage
+# II. The model
+
+### The firm's advantage
 
 - the advantage evolves through two forces, creation and absorption:
 
   $$
-  dx(t) = \Big( \underbrace{\iota(t)}_{\text{innovation effort}} \; - \underbrace{\lambda\, \tau_F(t)\, x(t)}_{\text{absorption}} \ \ \ \Big)\, dt \; + \underbrace{\sigma\, x(t) \sqrt{\tau_F(t)}\; dW(t)}_{\text{risk}}
+  \dot{x}(t) = \underbrace{\iota(t)}_{\text{innovation effort}} \; - \underbrace{\lambda\, \tau_F(t)\, x(t)}_{\text{absorption}}
   $$
 
-  - $\lambda > 0$ is the absorption speed per token
+  - $\lambda > 0$ is the absorption speed per token 
   - $\tau_F(t) \geq 0$ is the firm's token usage
-<br>
-
 
 <v-click>
-<br>
 
-- without innovation ($\iota = 0$):
+- **general solution:**
 
 $$
-x(t) = x(0)\, \exp\!\Big(\! -\big(\lambda + \tfrac{\sigma^2}{2}\big) \int_0^t \tau_F(s)\, ds \; + \; \sigma \int_0^t \sqrt{\tau_F(s)}\; dW(s) \Big)
+\begin{aligned}
+x(t) = \underbrace{x(0)\, e^{-\lambda \int_0^t \tau_F(u)\,du}}_{\text{remaining initial advantage}}+ \underbrace{\int_0^t \iota(s)\, e^{-\lambda \int_s^t \tau_F(u)\,du}\,ds}_{\text{surviving innovations}}
+\end{aligned}
 $$
 
-$\implies$ the advantage decays with **cumulative usage**
+$\implies$ without innovation ($\iota=0$), only the first term remains: the advantage decays with **cumulative usage**
 
 </v-click>
 
 
 ---
 
-# The firm's production
+# II. The model
 
-- the firm owns an infrastructure stock $S_F$
+### The firm's production
 
-$$
-dS_F(t) = \Big( \underbrace{I_F(t)}_{\text{investment}} - \underbrace{\delta\, S_F(t)}_{\text{depreciation}} \Big)\, dt
-$$
+- infrastructure $S_F$ evolves through investment and depreciation: $\small \qquad \dot S_F=I_F-\delta S_F$
 
 <v-click>
 
-- **production technology:** the firm produces with tokens $\tau_F$ and with the stock $S_F$ (**constant elasticity of substitution**):
+- production technology: constant elasticity of substitution $\qquad \qquad \small q_F=G(\tau_F,S_F)=\Big[\omega\,\tau_F^{\theta}+(1-\omega)\,S_F^{\theta}\Big]^{1/\theta}$
 
-  $$
-  q_F = G(\tau_F, S_F) = \Big[ \omega\, \tau_F^{\theta} + (1-\omega)\, S_F^{\theta} \Big]^{1/\theta}
-  $$
+<v-click>
 
-  <v-click>
+<img src="./images/ces-substitution.svg" alt="Equal-output CES curves as theta increases: fixed proportions require at least one unit of each input; the theta-zero limit needs two units of infrastructure with half a unit of tokens; perfect substitutes need only one and a half units of infrastructure with half a unit of tokens." style="display: block; width: 850px; max-height: 240px; margin: 0 auto; object-fit: contain;" />
 
-  - the elasticity of substitution between tokens and stock is $\varsigma = 1/(1-\theta)$: increasing in $\theta$
-    - if $\theta > 0$: each input can produce without the other ($\theta = 1$: perfect substitutes)
-    - if $\theta \leq 0$: both inputs are essential ($\theta \to -\infty$: fixed proportions)
+$\theta\uparrow\ \implies\ \varsigma=\dfrac{1}{1-\theta}\uparrow$: **easier to replace one input with the other at the same output**.
 
-  </v-click>
 </v-click>
+</v-click>
+
+<!--
+Figure reproduced by scripts/create-ces-substitution-figure.py.
+Every panel fixes output q_F=1 and the CES weight omega=1/2, with identical axis scales.
+In the theta -> -infinity limit, G=min(tau_F,S_F); the L-shaped contour requires
+both inputs to be at least 1. Extra infrastructure cannot replace missing tokens.
+In the theta -> 0 limit, G=sqrt(tau_F*S_F), so halving tokens requires S_F=2.
+At theta=1, G=(tau_F+S_F)/2, so halving tokens requires S_F=1.5.
+The elasticity formula tends to infinity as theta -> 1 from below; it is not finite
+at theta=1. The displayed theta-zero production function is understood by continuity.
+Curvature shows the trade-off between input quantities, rather than a literal plot
+of elasticity against theta. Higher theta increases the elasticity of substitution.
+-->
 
 ---
 
-# The firm's problem
+# II. The model
+
+### The firm's problem
 
 <v-click>
 
@@ -370,7 +355,7 @@ $$
 - the firm maximizes
 
 $$
-\max_{\tau_F,\; I_F,\; \iota} \;\; \mathbb{E}\left[ \int_0^\infty e^{-r_F\, t}\, \pi_F(t)\, dt \right]
+\max_{\tau_F,\; I_F,\; \iota} \;\; \int_0^\infty e^{-r_F\, t}\, \pi_F(t)\, dt
 $$
 
 </v-click>
@@ -381,64 +366,41 @@ $$
 
 ---
 
-# The AI model provider
+# II. The model
 
-- the provider sells tokens to the firm
+### The AI model provider
+
+- the AI provider sells tokens to the firm
   - it posts the token price $p(t)$ continuously
   - it bears a token serving cost $\Gamma(\cdot)$: increasing, convex
 
-
-
 <v-click>
 <br>
 
-- **the provider can enter (irreversibly) the firm's market**
-  - it pays a fixed entry cost $E > 0$
-  - it then produces with the same CES technology $G$
-    - it uses its own tokens $\tau_P$ (for free)
-    - it builds its own infrastructure $S_P$ with investment $I_P$ (if needed)
-
-</v-click>
-
----
-
-# The provider's problem
-
-- the provider has instantaneous profit:
+- the AI provider has instantaneous profit:
 
 $$
 \small
-\pi_P = \underbrace{p\, \tau_F - \Gamma(\tau_F)}_{\text{revenue from tokens}} \; + \; \underbrace{\mathbf{1}\{t \geq e\}}_\text{if provider enters market} \Big[ \underbrace{D(Q)\, q_P - h_P(I_P)}_{\text{revenue from product}} \; - \underbrace{\big( \Gamma(\tau_F + \tau_P) - \Gamma(\tau_F) \big)}_{\text{token serving cost adjustment}} \Big]
-$$
-
-<br>
-
-<v-click>
-
-- the provider maximizes
-
-$$
-\max_{p,\; e,\; \tau_P,\; I_P} \;\; \mathbb{E}\left[ \int_0^\infty e^{-r_P\, t}\, \pi_P(t)\, dt \; - \; e^{-r_P\, e}\, E \right]
+\pi_P = \underbrace{p\, \tau_F}_{\text{token revenue}} \; - \; \underbrace{\Gamma(\tau_F)}_{\text{token serving cost}}
 $$
 
 <v-click>
-
 <br>
 
-- the objective has two components
-  - the **token business**: the firm is a customer worth keeping
-  - the **product business**: the firm is a rival worth displacing
+- the AI provider maximizes
+
+$$
+\max_{p} \;\; \int_0^\infty e^{-r_P\, t}\, \pi_P(t)\, dt
+$$
 
 </v-click>
 </v-click>
 
 ---
-section: Results
----
 
-# Model solution
+# III. Results
 
-### Very hard in the general case
+## Model solution: very hard in the general case
 
 
 <v-click>
@@ -447,75 +409,62 @@ section: Results
 
 ### The linear case
 
-- linear inverse demand
+- linear inverse demand 
 $$D(Q) = a - b\, Q$$
-- linear investment costs
+- linear investment cost
 
-$$h_F(I) = \chi_F\, I \qquad \text{and} \qquad h_P(I) = \chi_P\, I$$
+$$h_F(I) = \chi_F\, I$$
 
-- quadratic innovation cost
-$$\kappa(\iota) = \kappa_0\, \iota + \dfrac{\kappa_1}{2}\, \iota^2$$
+- quadratic innovation cost 
+$$\kappa(\iota) = \kappa_0\, \iota + \dfrac{\kappa_1}{2}\, \iota^2$$ 
 
-- linear token serving cost
+- linear token serving cost 
 $$\Gamma(\tau) = \gamma_s\, \tau$$
 
 </v-click>
 
 
 ---
-zoom: 0.92
----
 
-# The equilibrium system in the linear case
+# III. Results
 
-- effective token price, and the CES unit cost:
+##  The equilibrium system in the linear case
 
-$$\footnotesize
-\tilde{p} = \underbrace{p}_{\text{token price}} + \underbrace{\lambda\, x\, \partial_x V_F - \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_F}_{\text{shadow cost of absorption}},
-\qquad\qquad
-c_F(\tilde{p}) = \Big[ \omega^{\varsigma}\, \tilde{p}^{\,1-\varsigma} + (1-\omega)^{\varsigma}\, \zeta_F^{\,1-\varsigma} \Big]^{\frac{1}{1-\varsigma}}
-$$
 
-<v-click>
 
-- before entry, on $(\bar{x}, \infty)$:
+- equilibrium $\equiv$ system of coupled ODEs with free boundaries
 
 $$\footnotesize
-r_F V_F^0 = \frac{\big( a + x - c_F(\tilde{p}) \big)^2}{4b} + \frac{\big( \max\{0,\; \partial_x V_F^0 - \kappa_0\} \big)^2}{2 \kappa_1}
+r_F V_F = \frac{\big( a + x - c_F(\tilde{p}) \big)^2}{4b} + \frac{\big( \max\{0,\; \partial_x V_F - \kappa_0\} \big)^2}{2 \kappa_1}
+\qquad\text{and}\qquad
+r_P V_P = \iota\, \partial_x V_P + \max_{p \, \geq\, 0}\; \tau_F(x, p) \Big( p - \gamma_s - \lambda\, x\, \partial_x V_P \Big)
 $$
 
-$$\footnotesize
-r_P V_P^0 = \iota\, \partial_x V_P^0 + \max_{p \, \geq\, 0}\; \tau_F(x, p) \Big( p - \gamma_s - \lambda\, x\, \partial_x V_P^0 + \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_P^0 \Big)
-$$
+
+
+<br>
+
+<small>
+<small>
+
+- $\tau_F$: firm's token demand
+- $\iota$: innovation
+- $\tilde c=c_F(\tilde p)$: firm's effective unit production cost, with $\tilde p=p+\lambda x\,\partial_xV_F$ (token price plus the shadow cost of absorption)
+- $c_P$: provider's unit cost (tokens at $\gamma_s$, stock at $\zeta_P$)
+- $\varsigma = 1/(1-\theta)$: elasticity of substitution.
+
+</small>
+</small>
 
 
 
-- after entry, similar ODE system in $V_F^1$ and $V_P^1$
 
-<v-click>
-
-- entry is a **threshold rule**: enter the first time $x(t) < \bar{x}$
-
-<v-click>
-
-- at the boundary $\bar{x}$: value matching, and smooth pasting for the provider, which chooses the boundary
-
-$$\scriptsize
-V_F^0 = V_F^1, \qquad V_P^0 = V_P^1 - E, \qquad \partial_x V_P^0 = \partial_x V_P^1
-$$
-$\implies$ equilibrium $\equiv$ system of second-order ODEs with a free boundary
-
-<small>$\tau_F(x, p)$: the firm's token demand at the posted price; $\iota$: the innovation rule; $V^0 / V^1$: values before / after entry; $\varsigma = 1/(1-\theta)$: elasticity of substitution.</small>
-
-</v-click>
-</v-click>
-</v-click>
 
 ---
 
-# Result 1: firms restrict their use of the model
+# III. Results
 
-### Every token produces output today + transfers part of the advantage
+##  Result 1: firms restrict their use of the model
 
 <v-click>
 
@@ -523,94 +472,55 @@ $\implies$ equilibrium $\equiv$ system of second-order ODEs with a free boundary
 
 $$\small
 \underbrace{\frac{\partial}{\partial \tau_F} \Big[ \big( D(Q) + x \big)\, q_F \Big]}_{\text{marginal revenue from each token}} - \;\, \underbrace{p}_\text{token price}
-\;\; = \; \underbrace{\lambda\, x\, \partial_x V_F}_{\text{destroyed exclusivity}} \; - \underbrace{\tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_F}_{\text{price of the uncertainty}} \;\; > \;\, 0
+\;\; = \; \underbrace{\lambda\, x\, \partial_x V_F}_{\text{destroyed exclusivity}} \;\; > \;\, 0
 $$
 
- $q_F = G(\tau_F, S_F)$ is output
+ $q_F = G(\tau_F, S_F)$ is output 
 
-<v-click>
 
-- marginal revenue from tokens falls with usage $\implies$ a firm using tokens optimally today would buy them until marginal revenue $=$ token price
 
-- a **positive** difference $\implies$ the firm gives up tokens today because it adjusts token prices to account for destroyed exclusivity
+- marginal revenue from tokens falls with use $\implies$ firm using tokens optimally would buy them until marginal revenue $=$ token price
+
+- **positive** difference $\implies$ the firm gives up tokens today because it adjusts token prices to account for destroyed exclusivity  
 <v-click>
 
 $\implies$ restraint is **equilibrium self-defense**
 
-$\implies$ adoption of AI can be low where AI is productive
+$\implies$ adoption of AI can be low where AI is productive 
 
-</v-click>
+$\implies$ should we regulate how AI learns ?
+
+
+
+
 </v-click>
 </v-click>
 
 ---
 
-# Result 2: the price of tokens
+# III. Results
 
-### <u>Before entry</u>, the posted price balances two motives for the provider
+## Result 2: the price of tokens
+
+#### Token price balances two motives for the AI model provider
 
 $$\small
 \underbrace{\frac{\partial}{\partial p} \Big[ \big( p - \gamma_s \big)\, \tau_F(x, p) \Big]}_{\text{marginal instantaneous profit from tokens}}
 \;\; = \;\;
-\underbrace{\big(\partial_p \tau_F\big) \Big( \lambda\, x\, \partial_x V_P^0 - \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_P^0 \Big)}_{\text{learning motive}}
+\underbrace{\lambda\, x\, \big(\partial_p \tau_F\big)\, \partial_x V_P^0}_{\text{learning motive}}
 $$
 
 <v-click>
 
-- a provider extracting everything from token sales today would set the price where marginal current profit $= 0$
+- a provider extracting everything from token revenue sets token price where marginal profit $= 0$
 
-- the provider prices **off** that optimum on purpose: it trades instantaneous token profit against what usage teaches the model
+- the provider prices **off** that optimum on purpose: token profit against model learning
 
 <v-click>
 
 - the sign of the learning motive is the provider's **posture** toward its customer
-
-<v-click>
-
-- when the **option to enter** dominates:
-  - the provider prices **below** the price that maximizes its instantaneous token profit, possibly **below cost**, to accelerate absorption
-
-<v-click>
-
-- when the **token business** dominates:
-  - the provider prices **above** the price that maximizes its current token profit, to slow learning
-
-</v-click>
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# Result 2: the price of tokens
-
-### <u> After entry </u>, the price serves a second purpose:
-
-$$\small
-\underbrace{\frac{\partial}{\partial p} \Big[ \big( p - \gamma_s \big)\, \tau_F(x, p) \Big]}_{\text{marginal instantaneous profit from tokens}}\;\; = \;\;
-\underbrace{\big(\partial_p \tau_F\big) \Big( \lambda\, x\, \partial_x V_P^1 - \tfrac{1}{2}\, \sigma^2 x^2\, \partial_{xx} V_P^1 \Big)}_{\text{learning motive}} \ -\ \underbrace{\tfrac{2}{3}\, q_P\, \partial_{\tilde{p}} c_F}_{\text{raising the rival's cost}}
-
-$$
-
-term $\tfrac{2}{3}\, q_P\, \partial_{\tilde{p}} c_F$ is nonnegative
-$\implies$ the provider gives up token revenue with higher token prices $\implies$ higher price raises firm's production cost $\implies$ firm competes less
-
-<v-click>
-
-<br>
-
-### Token price
-
-- **high** if the token business dominates
-- **low** if the provider wants to accumulate its customer's advantage
-- **higher** after entry to raise the rival's cost
-
-<v-click>
-
-<br>
-
-
-$\implies$ pricing of model access is strategic
+  - if positive: the provider prices **below** the price, possibly **below cost**, to accelerate absorption
+  - if negative: the provider prices **above** the price to maximize revenue
 
 </v-click>
 </v-click>
@@ -618,34 +528,9 @@ $\implies$ pricing of model access is strategic
 
 ---
 
-# Result 3: coexistence regimes
+# III. Results
 
-### Any equilibrium is one of three regimes
-
-<v-click>
-
-**1. No entry, no defense**: the firm's market is not worth taking
-
-
-
-<v-click>
-
-**2. Deterrence by perpetual innovation**: the firm keeps the advantage above the threshold $\bar{x}$ at all dates
-
-- Deterrence is a permanent running cost
-
-<v-click>
-
-**3. Entry**: the advantage falls below $\bar{x}$, and the provider enters at that moment
-
-
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# Result 4: who survives AI?
+##  Result 3: who survives AI?
 
 Depends on the production technology !
 
@@ -653,14 +538,15 @@ Depends on the production technology !
 
 - Case 1: stock and AI are **substitutes** ($\theta > 0$)
   - the firm can shift production onto its non-AI capacity
-  - the provider produces from tokens alone after (if) entry
+  - **equilibrium = perpetual innovation**
 
 <v-click>
 <br>
 
 - Case 2: stock and AI are **complements** ($\theta \leq 0$)
   - the firm cannot produce without tokens
-  - it transfers its advantage $\implies$ defense is expensive for firms that use the model most
+  - equilibrium depends on AI retraining rate: 
+    - **equilibrium = decreased innovation** if competitve edge disappears too fast
 
 <v-click>
 
@@ -675,7 +561,481 @@ $\implies$ most exposed: the firms that **must** use the model to operate
 </v-click>
 
 ---
+section: AI and learning
+layout: center
+class: text-center
+---
+
+<h1 style="font-size: 3.7rem; line-height: 1.2;">Financial markets and AI</h1>
+
+<br>
+
+### joint work with Andrea Barbon
+
+<!--
+Transition from the first paper: firms' use of AI changes the value of their knowledge.
+The second question concerns the people producing and interpreting that knowledge.
+Motivation follows the Collective intelligence paragraph of application_outline.tex,
+with the empirical claims checked against the original sources.
+-->
+
+---
+
+# I. Motivation
+
+## AI changes the work involved in cognitive tasks
+
+- people delegate parts parts of the cognitive work
+- this usually improves performance in interpreting information, exercising judgment, developing ideas
+
+<v-click>
+
+<br>
+
+### Cognitive tasks with AI decreases practice
+
+- reasoning through a problem helps develop the ability to solve the next one
+- congitive tasks build expertise
+
+</v-click>
+
+<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70">
+Bengio et al. (2026), International AI Safety Report 2026, §2.3.2.
+</div>
+
+<!--
+The report synthesizes emerging evidence about cognitive offloading and human autonomy.
+It also describes benefits and emphasizes that long-term evidence remains limited.
+The practice mechanism motivates the model; this slide does not claim that all AI use erodes skills.
+-->
+
+---
+
+# I. Motivation
+
+## Evidence: AI-assisted writing
+
+### Kosmyna et al. (2025), *Your Brain on ChatGPT*
+
+- **54 participants** wrote essays with ChatGPT, search engines, or no tools
+- EEG measurements and interviews to track engagement, recall, and ownership
+
+<v-click>
+
+<br>
+
+### What the study reports
+
+- the ChatGPT group showed **weaker EEG connectivity during writing**
+- participants had more difficulty quoting their own essays
+
+</v-click>
+
+<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70">
+Kosmyna et al. (2025), Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task.<br>
+Small, task-specific study; long-run effects on skills remain an open question.
+</div>
+
+<!--
+54 participants completed sessions 1–3; 18 returned for a crossover session.
+Connectivity measures task-time functional activity, not structural brain damage.
+Avoid claiming a percentage fall in total brain activity or permanent loss of intelligence.
+The authors emphasize the study's task-specific scope and the limits of its interpretation.
+-->
+
+---
+
+# I. Motivation
+
+## Evidence: solving mathematics with AI
+
+### Bastani et al. (2025): a randomized field experiment
+
+Nearly 1,000 high-school students; AI-assisted practice followed by an **unaided exam**.
+
+| Access during practice | Practice scores | Subsequent unaided exam |
+| --- | --- | --- |
+| Standard GPT-4 chat | **+48%** | **−17%** |
+| Tutor with teacher-designed hints | **+127%** | No significant difference |
+
+<v-click>
+
+<br>
+
+$\implies$ better performance can coexist with less learning
+
+$\implies$ how the tool is designed and used matters
+
+</v-click>
+
+<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70">
+Bastani et al. (2025), Generative AI without guardrails can harm learning: Evidence from high school mathematics.<br>
+Changes relative to the group without AI; percentages, not percentage points.
+</div>
+
+<!--
+Supplementary primary evidence, added because it directly speaks to a maths audience.
+Study took place in a Turkish high school over four sessions, using GPT-4.
+The tutor's unaided exam result is statistically indistinguishable from the control group;
+it is not evidence of improved exam learning. These are short-term outcomes in this setting.
+The published correction concerns an author's affiliation.
+-->
+
+
+---
+
+# II. The model
+
+## The financial market
+
+### Two trading rounds, and a continuum of risk-averse traders
+
+- traders $i\in[0,1]$ buy and sell a risky asset at each date $t=1,2$
+- asset pays a payoff $v_t$ at each date $t=1,2$
+
+$$
+v_t\sim N(0,\tau_v^{-1})
+$$
+
+- traders observe private information about the payoff, and the market price $p_t$
+
+<br>
+<br>
+
+
+
+
+<!--
+Zero net supply, a riskless asset with zero return, and common CARA risk aversion gamma.
+Round-1 asset pays at t=2; round-2 asset pays at t=3. Independent payoffs isolate skill dynamics
+from persistent information about the same asset. Gaussian noise here concerns information,
+not Brownian uncertainty in the first paper's advantage dynamics.
+-->
+
+---
+
+# II. The model
+
+### Each trader sets the precision of a private signal
+
+$$
+s_{i,t}=v_t+\varepsilon_{i,t},\qquad
+\varepsilon_{i,t}\sim N(0,x_{i,t}^{-1}),\qquad
+x_{i,t}=\underbrace{a_{i,t}}_{\text{AI}}+\underbrace{h_{i,t}}_{\text{cognitive effort}}
+$$
+
+- a higher precision $x_{i,t}$ means a less noisy signal
+
+
+<v-click>
+
+<br>
+
+- Cognitive effort and AI use are costly
+
+$$
+C_A(a_{i,t})=c\,a_{i,t},\qquad C_H(h_{i,t},k_{i,t})=\frac{h_{i,t}^2}{2k_{i,t}}
+$$
+
+- $c>0$: the price of AI-produced precision
+- $k_{i,t}>0$: cognitive capital of trader $i$:  more expertise makes cognitive effort cheaper
+
+</v-click>
+
+<!--
+Human processing h is measured in units of signal precision, not literal hours worked.
+All signal errors are independent across traders and dates in the baseline.
+Notation follows ANDREA: c is the AI price, p is the asset price, a is AI precision,
+and u is noise-trader demand. This avoids the grant's alternative notation.
+-->
+
+---
+
+# II. The model
+
+### Cognitive capital dynamics
+
+$$
+k_{i,2}=\underbrace{(1-\delta)\ k_{i,1}}_{\text{depreciation}}
++\underbrace{\lambda\ h_{i,1}}_{\text{learning by doing}},
+\qquad \delta\in(0,1),\quad \lambda>0
+$$
+
+- cognitive effort: interpret information today + build expertise for tomorrow
+
+<v-click>
+
+<br>
+
+<br>
+
+$\implies$ AI affects cognitive capital through the **choice to delegate** and reduced practice
+
+$\implies$ traders anticipate the effect of their choices on future expertise
+
+
+</v-click>
+
+<!--
+AI does not enter the capital law directly. Substitution changes optimal h, which changes k.
+This is the paper's central modelling step: skill erosion is an equilibrium consequence
+of the information-production choice, rather than a direct damage term imposed on AI use.
+-->
+
+---
+
+# II. The model
+
+### The trader's objective
+
+
+$$
+\begin{gathered}
+\max_{\{a_{i,t},h_{i,t},q_{i,t}\}_{t=1}^{2}}\; \mathbb{E}\!\left[-e^{-\gamma W_{i,3}}\right]
+\qquad\text{where}\qquad
+W_{i,3}=W_0+\sum_{t=1}^{2}\Bigg[
+\underbrace{q_{i,t}(v_t-p_t)}_{\text{trading profit}}
+-\underbrace{ca_{i,t}}_{\text{AI cost}}
+-\underbrace{\frac{h_{i,t}^2}{2k_{i,t}}}_{\text{cognitive effort cost}}
+\Bigg]
+\end{gathered}
+$$
+
+- $q_{i,t}$: the position in the risky asset; $\gamma>0$: risk aversion
+- traders pay for information before seeing the signal and price
+
+<br><br>
+
+<img src="./images/market-timing.svg" alt="Market timing: at t=1 choose AI and cognitive effort, observe a signal and trade; at t=2 receive the first payoff, update cognitive capital, choose inputs and trade again; at t=3 receive the second payoff and consume final wealth." style="display: block; width: 100%; max-height: 105px; margin: 10px 0 0; object-fit: contain;" />
+
+
+<!--
+Expected utility is part of the Gaussian financial-information model, as in ANDREA.
+This is distinct from the Brownian term removed from the first paper's dynamics.
+CARA preferences remove wealth effects; the two rounds are linked through capital alone.
+
+### The trade-off
+- Acquire information, trade, and maximize utility from final wealth
+- better information improves the trading decision
+- human analysis is costly, and preserves future expertise
+- AI can make today's information cheaper
+
+-->
+
+---
+
+# II. The model
+
+## Prices aggregate traders' information
+
+- $u_t\sim N(0,\tau_u^{-1})$: random noise-trader demand
+
+$$\text{clearing} \quad \implies \quad
+\underbrace{\bar x_t=\int_0^1x_{i,t}\,di}_\text{average precision},\qquad
+\widehat p_t=v_t+\frac{\gamma}{\bar x_t}u_t
+$$
+
+$\implies$ the price is a public, noisy estimate of the payoff (due to noise trading)
+
+$\implies$ more precise private signals $\overline x_t$ make the market price more informative
+
+
+<!--
+ANDREA Lemma 1: p_t = (xbar_t + tau_p,t)/(tau_v + tau_p,t + xbar_t) times p-hat_t.
+The scaling is positive, so the rescaled statistic and actual price carry the same information.
+Independent private errors average out; noise-trader demand keeps prices partially revealing.
+-->
+<br>
+
+<img src="./images/market-timing.svg" alt="Market timing: at t=1 choose AI and cognitive effort, observe a signal and trade; at t=2 receive the first payoff, update cognitive capital, choose inputs and trade again; at t=3 receive the second payoff and consume final wealth." style="display: block; width: 100%; max-height: 105px; margin: 10px 0 0; object-fit: contain;" />
+
+---
+
+# II. The model
+
+## Solved by backward induction
+
+- Date $2$
+
+
+$$\small
+V_2(k)=\max_{a,h\geq0}\left\{B_2(a+h)-ca-\frac{h^2}{2k}\right\}, \qquad B_t(x)=\frac{1}{2\gamma}\ln(\tau_v+\tau_{p,t}+x)
+$$
+
+<v-click>
+
+- Date $1$
+
+$$\small
+\max_{a_1,h_1\geq0}\left\{B_1(a_1+h_1)-ca_1-\frac{h_1^2}{2k_1}
++V_2\!\left((1-\delta)k_1+\lambda h_1\right)\right\}, \qquad B_t(x)=\frac{1}{2\gamma}\ln(\tau_v+\tau_{p,t}+x)
+$$
+
+</v-click>
+
+<!--
+B is the choice-relevant certainty-equivalent benefit, not expected trading profit.
+Gaussian updating and CARA utility give the log expression exactly.
+The objectives are concave. First-order conditions and market clearing then give closed forms.
+-->
+
+<br>
+
+<img src="./images/market-timing.svg" alt="Market timing: at t=1 choose AI and cognitive effort, observe a signal and trade; at t=2 receive the first payoff, update cognitive capital, choose inputs and trade again; at t=3 receive the second payoff and consume final wealth." style="display: block; width: 100%; max-height: 105px; margin: 10px 0 0; object-fit: contain;" />
+
+
+
+---
+
+# III. Results
+
+## Result 1: traders value expertise
+
+### Optimal cognitive effort includes return to future expertise
+
+$$
+h_2=ck_2,\qquad
+h_1=\underbrace{ck_1}_{\text{current information}}
++\underbrace{\frac{\lambda c^2 k_1}{2}}_{\text{practice premium}}
+$$
+
+- in the last round, marginal cost of cognitive effort equals the cost $c$
+- in the first round, traders do extra analysis because it builds cognitive capital / expertise
+
+
+
+<!--
+These policies and the envelope formula hold where AI is used.
+V2' is evaluated holding the second-round price coefficients fixed, as an atomistic trader does.
+The practice premium shows that erosion does not require myopic traders.
+-->
+
+---
+
+# III. Results
+
+## Result 2: cheap AI can erode cognitive capital
+
+### Optimal dynamics of expertise (cognitive capital)
+
+$$
+k_2=\rho(c)k_1,\qquad
+\rho(c)=1-\delta+\lambda c\left(1+\frac{\lambda c}{2}\right)
+$$
+
+<v-click>
+
+<br>
+
+- Threshold in token price
+  $$
+  c<\widehat c:=\frac{\sqrt{1+2\delta}-1}{\lambda}\quad\Longleftrightarrow\quad k_2<k_1
+  $$
+
+  - below the threshold, practice does not replace depreciating skills
+  - traders understand the future consequence, yet find the cheaper information worthwhile
+
+<br>
+
+$\implies$ cognitive decline can be **privately optimal**
+
+</v-click>
+
+<!--
+ANDREA Proposition on the erosion threshold, within the positive-AI-use region.
+This establishes decline from round 1 to round 2, not geometric extinction over an infinite horizon.
+Private optimality does not establish social optimality or a welfare loss.
+-->
+
+---
+
+# III. Results
+
+## Result 3: cognitive decline is concealed
+
+### The amount of information in the market stays constant, but the human contribution decreases
+
+$$\small
+\begin{gathered}
+\overline x_{1}=\overline x_{2},\\[-0.2em]
+c<\widehat{c}\;\implies\; k_2<k_1
+\end{gathered}
+$$
+
+<img src="./images/cognitive-capital-baseline.svg" alt="Baseline illustration: the AI share of private precision rises from 46% to 69%, while cognitive capital falls from an index of 100 to 60.5. Price informativeness is unchanged." style="display: block; width: 760px; max-height: 275px; margin: 8px auto 0; object-fit: contain;" />
+
+<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70 [&>p]:m-0 [&>p]:leading-tight">
+
+Model illustration: $c=0.1$, $\delta=0.5$, $k_1=8$; $\gamma=\tau_v=\tau_u=\lambda=1$. Positive AI use in both rounds.
+
+</div>
+
+<!--
+Figure reproduced by scripts/create-cognitive-capital-figure.py, not estimated from data.
+Private precision xbar = (sqrt(17)-1)/2 = 1.561553; price precision = 2.438447 in both rounds.
+Human precision is 0.84 then 0.484; capital is 8 then 4.84.
+Human information shares are 53.79% and 30.99%; AI fills the residual.
+This illustrates the two-round result without importing the correlated-error extension.
+-->
+
+---
+
+# III. Results
+
+## Result 4: AI risk
+
+### Remove AI unexpectedly before the second trading round
+
+| | Economy $A$ | Economy $B$ | Economy $C$ |
+| --- | --- | --- | --- |
+| Round 1 | Uses cheap AI | Uses cheap AI | Never has AI |
+| Round 2 | AI shock | Continues | Continues |
+
+<v-click>
+
+<br>
+
+$$
+k_2^A = k_2^B <k_2^C,\qquad \overline x_2^A<\overline x_2^C<\overline x_2^B
+$$
+
+- AI adoption leaves less cognitive capital available in the case of AI Shock
+
+<br>
+
+$\implies$ efficient prices hide AI dependence
+
+</v-click>
+
+<!--
+ANDREA fragility proposition: same primitives except AI access in round 1;
+c below the erosion threshold and in the AI-use region. Outage is unanticipated.
+This is a theoretical counterfactual, not an observed market outage.
+Human-only equilibrium precision increases with inherited cognitive capital.
+-->
+
+---
+
+# III. Results
+
+## A preliminary empirical test
+
+- compare high-AI-use assets (**top 10% or 25%**) with others, **before and after** market events
+- new geopolitical events: proxies for AI shocks
+<br><br>
+
+| Event | Top 10% AI use | Top 25% AI use |
+| --- | ---: | ---: |
+| Israel–Hamas war | $-0.0096\;(-1.28)$ | $-0.0113\;(-1.56)$ |
+| US outbound-investment restrictions | $-0.0265\;(-2.43)$ | $-0.0244\;(-2.32)$ |
+
+<br>
+
+$\implies$ negative estimates: **high-AI assets' price efficiency falls relative to the control group**
+
+---
 layout: end
 ---
 
 Thank you !
+
