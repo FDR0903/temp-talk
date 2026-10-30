@@ -577,7 +577,7 @@ $\implies$ Idle tokenized holdings earn zero yield but bear risk. $\implies$ **$
 Return to investment
 
 $$\begin{aligned}
-r(L)&=\lambda\,\pi\,\text{yield}(L,V^\star(L))
+r(L)&=\underbrace{\lambda\,\pi}_\text{trader arrival}\times\text{Yield}(L)
 -\delta-\phi
 \end{aligned}$$
 
@@ -622,11 +622,12 @@ $\implies$ regulatory burden
 - Issuer decides whether, and how much, to tokenize
 - **Revenue**: management fees $\phi\,L^\star(\pi)$ on equilibrium AUM
 - Compliance policy: **two ways to comply** 
-  - **costless adjustments**: admit fewer traders $\pi\downarrow$
-  - **costly measures**: screen more precisely $\rho\uparrow$
-- **Cost**: screening $\mathcal C(\rho)$, increasing and convex
+  - **costless measures**: admit fewer traders $\pi\downarrow$
+  - **costly measures**: screen more precisely $\rho\uparrow$ $\implies$ cost $\mathcal C(\rho)$
 
 </v-clicks>
+
+<!--, increasing and convex-->
 
 <!--
 Paper: Model, Issuer. Equations feasibility, regulatory, issuer_problem and Ustar.
@@ -651,14 +652,14 @@ class: discussion paper-talk markdown-slide issuer-problem-slide projection-larg
 <div class="issuer-problem-grid">
 <div>
 
-### Optimization problem
+
 
 <div class="prop-box">
 
 $$\begin{aligned}
 U^\star(\psi)&=\max_{\substack{0<\pi\leq1\\\rho\geq1}}
-\quad\left[\underbrace{\phi L^\star(\pi)}_{\text{fee revenue}}-\underbrace{\mathcal C(\rho)}_{\text{screening cost}}\right]\\[0.45em]
-\text{s.t.}\quad&\underbrace{\frac{(1-\mu)\lambda\pi}{\mu\rho+(1-\mu)}}_{\text{illicit flow}(\pi, \rho)}\leq\underbrace{\psi}_{\text{regulatory cap}}
+\quad\left[\underbrace{\phi L^\star(\pi)}_{\text{revenue}}-\underbrace{\mathcal C(\rho)}_{\text{compliance cost}}\right]\\~\\
+\text{s.t.}\quad&\text{illicit trading}(\pi, \rho)\leq\underbrace{\psi}_{\text{regulatory cap}}
 \end{aligned}$$
 
 </div>
@@ -757,6 +758,9 @@ class: discussion paper-talk projection-large projection-extended projection-res
 
 # Result · Regulation reduces liquidity
 
+<br>
+<br>
+
 <div class="prop-box">
 
 **Proposition.**<br>
@@ -764,10 +768,10 @@ Sufficiently strict regulation makes tokenization non-viable.
 
 </div>
 
-<br>
-<br>
 
 
+
+<!--
 <div v-click="0" class="mechanism-row">
 <div>Revenue<br>bounded</div>
 <span>→</span>
@@ -781,6 +785,8 @@ acceptance <b>π<sup>⋆</sup> → 0</b>
 <div>Liquidity<br>L<sup>⋆</sup> → 0</div>
 
 </div>
+
+-->
 
 <br>
 
@@ -867,7 +873,7 @@ This is commercial viability, not proof that unrestricted tokenization maximizes
 class: discussion paper-talk projection-large projection-extended projection-frictions-table
 ---
 
-# Result 3 · Viability of tokenization is asset-specific / platform-specific
+# Result · Viability of tokenization is asset-specific / platform-specific
 
 <table class="overshoot-tbl frictions-table">
 <thead><tr><th>Asset or platform characteristic</th><th>Economic effect</th></tr></thead>
