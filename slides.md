@@ -716,7 +716,7 @@ class: discussion paper-talk projection-large projection-extended projection-add
 class: discussion paper-talk projection-large projection-extended projection-result
 ---
 
-# Result 1 · Regulation reduces liquidity
+# Result · Regulation reduces liquidity
 
 <div class="prop-box">
 
@@ -751,6 +751,47 @@ Issuer policies need not be unique. Monotonicity is in the strong set order.
 These comparisons describe the conditional market. When the issuer exits, actual tokenized liquidity is zero.
 Net investor yield remains ξ wherever the market exists.
 -->
+
+---
+class: discussion paper-talk projection-large projection-extended projection-result
+---
+
+# Result · Regulation reduces liquidity
+
+<div class="prop-box">
+
+**Proposition.**<br>
+Sufficiently strict regulation makes tokenization non-viable.
+
+</div>
+
+<br>
+<br>
+
+
+<div v-click="0" class="mechanism-row">
+<div>Revenue<br>bounded</div>
+<span>→</span>
+<div>Screening precision<br>bounded</div>
+<span>→</span>
+<div>
+As ψ → 0 <br>
+acceptance <b>π<sup>⋆</sup> → 0</b>
+</div>
+<span>→</span>
+<div>Liquidity<br>L<sup>⋆</sup> → 0</div>
+
+</div>
+
+<br>
+
+<div v-click="0">
+
+Profit falls below the positive opportunity cost: $U^\star(\psi)<\underline U$
+
+
+</div>
+
 
 ---
 class: discussion paper-talk evidence-slide projection-large projection-extended projection-turnover-evidence
@@ -795,46 +836,6 @@ Thin activity in existing tokens is not a direct observation of our issuer refus
 positive AUM with thin trading does not itself establish commercial non-viability.
 -->
 
----
-class: discussion paper-talk projection-large projection-extended projection-result
----
-
-# Result 2 · viability of tokenization ?
-
-<div class="prop-box">
-
-**Proposition.**<br>
-Sufficiently strict regulation makes tokenization non-viable.
-
-</div>
-
-<br>
-<br>
-
-<div v-click="1">
-As ψ → 0
-</div>
-
-
-<div v-click="1" class="mechanism-row">
-<div><b>ρ<sup>⋆</sup> &lt; ρ̄ &lt; ∞</b><br>Revenue &  screening precision<br> bounded</div>
-<span>→</span>
-<div>acceptance <b>π<sup>⋆</sup> → 0</b> 
-<br> Liquidity  L<sup>⋆</sup> → 0
-</div>
-<span>→</span>
-<div><b>φL<sup>⋆</sup> → 0</b><br>Issuer revenue<br>vanish</div>
-
-</div>
-
-<br>
-
-<div v-click="1">
-
-Profit falls below the positive opportunity cost: $U^\star(\psi)<\underline U$
-
-
-</div>
 
 
 
