@@ -787,8 +787,7 @@ acceptance <b>π<sup>⋆</sup> → 0</b>
 
 <div v-click="0">
 
-Profit falls below the positive opportunity cost: $U^\star(\psi)<\underline U$
-
+Profit falls below the  opportunity cost: $\quad U^\star(\psi)<\underline U$
 
 </div>
 
@@ -810,7 +809,7 @@ class: discussion paper-talk evidence-slide projection-large projection-extended
 </table>
 
 
-<br><br>
+<br><br><br><br>
 
 <div class="source">
 
@@ -874,21 +873,17 @@ class: discussion paper-talk projection-large projection-extended projection-fri
 <table class="overshoot-tbl frictions-table">
 <thead><tr><th>Asset or platform characteristic</th><th>Economic effect</th></tr></thead>
 <tbody>
-<tr><td>Higher turnover (overall demand)</td><td>More yield for investors</td></tr>
+<tr><td>Higher turnover (overall demand)</td><td>More yield</td></tr>
 <tr><td>Greater onchain risk</td><td>Less yield</td></tr>
 <tr><td>Greater asset risk (volatility)</td><td>Less yield</td></tr>
-<tr><td>Larger illicit share / costlier screening technology</td><td>Compliance is more expensive</td></tr>
+<tr><td>Larger illicit share / costlier screening technology</td><td>Compliance more expensive</td></tr>
 <tr><td>Greater investor / issuer risks</td><td>Higher ξ and <u>U</u>; less viable tokenization</td></tr>
 </tbody>
 </table>
 
 <br>
 
-<div v-click="1" class="prop-box">
 
-An asset that is **cheaper to hold, trade and screen** withstands tighter regulation.
-
-</div>
 
 <!--
 Time: 1:05.
@@ -940,30 +935,29 @@ section: Optimal regulation
 class: discussion paper-talk markdown-slide projection-large projection-roomy projection-regulation-motivation
 ---
 
+
 # Optimal regulation: why ?
 
-## Regulators interested in blockchain technology for socially beneficial innovation
+## Interest in blockchain technology: socially beneficial innovation
+<br>
 
-- central bank digital currencies, stablecoins <span class="policy-reference">(Fung and Halaburda, 2016; Auer et al., 2022)</span>
+- central bank digital currencies, stablecoins <br><span class="policy-reference">(Fung and Halaburda, 2016; Auer et al., 2022)</span>
 - instantaneous and cross-border settlement (BIS Project Mariana)<br><span class="policy-reference">(Harvey, 2021; BIS Innovation Hub, 2023; Cardozo et al., 2024)</span>
-- (DAOs) raise capital and organize governance <span class="policy-reference">(Cong et al., 2025; Han, Lee and Li, 2026)</span>
+- (DAOs) raise capital and organize governance <br><span class="policy-reference">(Cong et al., 2025; Han, Lee and Li, 2026)</span>
 - competition for traditional venues
 - programmable finance, disintermediation
 
-<v-click>
 
-<br>
-
-$\implies$ model inspired by Campello, Cong and Dietrich (2024)
-
-</v-click>
 
 ---
 class: discussion paper-talk markdown-slide optimal-regulation-slide innovation-timing-slide projection-large projection-extended projection-innovation
 ---
 
-# Blockchain activity accelerates innovation
+# Model
 
+## Blockchain activity accelerates innovation
+
+##### inspired by Campello, Cong and Dietrich (2024)
 
 <div class="presentation-columns">
 <div>
@@ -1011,7 +1005,9 @@ an assumption, not an empirical causal estimate. The next slide values the earli
 class: discussion paper-talk markdown-slide optimal-regulation-slide social-value-slide projection-large projection-extended projection-social-value
 ---
 
-# Social value of tokenization
+# Model
+
+##  Social value of tokenization
 
 <div class="presentation-columns">
 <div>
@@ -1069,7 +1065,9 @@ by existing crypto and stablecoin trading. The next slide adds the harm from ill
 class: discussion paper-talk markdown-slide optimal-regulation-slide social-harm-slide projection-large projection-extended projection-social-harm
 ---
 
-# Illicit trading creates social harm
+# Model
+
+##  Illicit trading creates social harm
 
 
 <div class="presentation-columns">
@@ -1099,7 +1097,7 @@ $$\text{Total expected harm}=\frac{hJ^\star(\psi)}{d}$$
 
 </div>
 
-<div v-click="3" class="regulation-takeaway">
+<div v-click="2" class="regulation-takeaway">
 
 
 - Regulation $\psi$ limits **illicit trading**
@@ -1296,6 +1294,7 @@ section: Conclusion
 
 Is tokenization viable?
 
+complex equation
 
 <!--
 Time: 0:20.
