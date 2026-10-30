@@ -919,6 +919,8 @@ class: discussion paper-talk evidence-slide projection-large projection-extended
 </figure>
 </div>
 
+- Stocks not the best fit for tokenization (issuer risk + asset risk)
+
 <!--
 Time: 1:00. Ethereum/Robinhood comparison.
 Compare the two platform distributions.

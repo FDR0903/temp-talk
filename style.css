@@ -469,7 +469,7 @@
 .projection-market-evidence .distribution-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.6rem; margin: 0.4rem 0 0; }
 .projection-market-evidence .distribution-pair figure { min-width: 0; margin: 0; }
 .projection-market-evidence .distribution-pair figcaption { font-size: 1.65rem; font-weight: 600; color: #334155; text-align: center; }
-.projection-market-evidence .distribution-pair img { display: block; width: 100%; height: 350px; object-fit: contain; }
+.projection-market-evidence .distribution-pair img { display: block; width: 100%; height: 310px; object-fit: contain; }
 
 /* Regulation motivation: match the larger projection text without changing the list. */
 .paper-talk.projection-regulation-motivation > h2 { font-size: 1.7rem; line-height: 1.25; margin: 0.8rem 0 0.9rem; }
