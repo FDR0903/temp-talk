@@ -878,6 +878,7 @@ class: discussion paper-talk projection-large projection-extended projection-fri
 <tr><td>Greater onchain risk</td><td>Less yield</td></tr>
 <tr><td>Greater asset risk (volatility)</td><td>Less yield</td></tr>
 <tr><td>Larger illicit share / costlier screening technology</td><td>Compliance is more expensive</td></tr>
+<tr><td>Greater investor / issuer risks</td><td>Higher ξ and <u>U</u>; less viable tokenization</td></tr>
 </tbody>
 </table>
 
