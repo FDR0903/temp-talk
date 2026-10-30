@@ -23,3 +23,465 @@
 .float-left{
     float:left;
 }
+
+/* ============================================================= */
+/* ===== BEGIN NEW: Frankfurt made sober (NBER) · slate palette = */
+/* ===== safe to delete this whole block ======================= */
+/* ============================================================= */
+:root {
+  --econ-slate-700: #334155;  /* mid slate: title banner + item header */
+  --econ-fill:      #eef2f6;  /* very light slate: item body           */
+}
+
+/* Mute Frankfurt's indigo (#3333B3) full-width title banner to slate.
+   Keeps the banner shape and white text, just a sober colour. */
+#app .slidev-layout h1 {
+  background: var(--econ-slate-700) !important;
+  --un-shadow-color: var(--econ-slate-700) !important;
+}
+
+/* Mute Frankfurt's .item box (indigo header / lavender body) to slate. */
+#app .item header { background: var(--econ-slate-700) !important; }
+#app .item main   { background: var(--econ-fill) !important; }
+
+/* Mute Frankfurt's InfoLine footer (three indigo cells) to a slate gradient. */
+#app footer.bottom-0.flex > div:nth-child(1) { background: #1e293b !important; }
+#app footer.bottom-0.flex > div:nth-child(2) { background: #334155 !important; }
+#app footer.bottom-0.flex > div:nth-child(3) { background: #475569 !important; }
+
+/* Fact 4 overshoot table — booktabs / LaTeX look: serif, only top/mid/bottom rules + cmidrules, no per-row or vertical lines. */
+.overshoot-tbl { width: auto !important; margin: 0 auto; border-collapse: collapse; font-family: Georgia, "Times New Roman", serif; color: #1e293b; }
+.overshoot-tbl tr { border: none !important; }
+.overshoot-tbl th, .overshoot-tbl td { border: none; padding: 4px 22px; text-align: center; font-weight: 400; }
+.overshoot-tbl td:first-child, .overshoot-tbl th:first-child { text-align: left; }
+.overshoot-tbl b { font-weight: 700 !important; }
+.overshoot-tbl thead tr:first-child th { border-top: 1.6px solid #1e293b; padding-top: 5px; }
+.overshoot-tbl thead tr:last-child th  { border-bottom: 1px solid #1e293b; }
+.overshoot-tbl tbody tr:last-child td  { border-bottom: 1.6px solid #1e293b; padding-bottom: 6px; }
+.overshoot-tbl thead .cmid { border-bottom: 0.8px solid #64748b; }
+
+/* Figure / data captions on the fact slides: centred, small, wrap within the slide. */
+.fig-cap { max-width: 88%; margin: 6px auto 0; text-align: center; font-size: 0.88em; color: #475569; line-height: 1.4; }
+
+/* Fix: Slidev's "goto" navigator (opened with the g key) always renders its full
+   slide list in the DOM and merely parks the dialog off-screen at top:-80px when
+   closed. With a deck this size the list is taller than 80px, so it spills back
+   down and shows as a stray menu top-right. Hide the list unless the dialog is
+   actually open (two rules so a browser without :has still gets the first). */
+#slidev-goto-dialog.-top-20 .autocomplete-list { display: none !important; }
+#slidev-goto-dialog:has(#slidev-goto-input:disabled) .autocomplete-list { display: none !important; }
+/* ===== END NEW ===== */
+
+/* Proposition / result block — light-gray rectangle, left-aligned, hugs content. */
+.prop-box { display: block; width: fit-content; max-width: 720px; margin: 0 auto; background: #eef2f6; padding: 12px 26px; border-radius: 4px; text-align: left; }
+/* the box's own title heading (### / ####) is the label — replaces the generic "Proposition" */
+.prop-box h3, .prop-box h4 { font-size: 1em; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #94a3b8; margin: 0 0 5px; }
+.prop-box ul { margin: 0; }
+.prop-box li { margin: 3px 0; }
+
+/* Empirical-facts slides: center the body text; figures/captions already centered. Banner stays left. */
+.fact-c { text-align: center; }
+.fact-c h1 { text-align: left; }
+.fact-c ul, .fact-c ol { display: inline-block; text-align: left; }
+
+/* ===== NBER small-screen projection: enlarge all slide text =====
+   Frankfurt sets the base unit in `html { font-size: 10pt }` (frankfurt.css) and all
+   text + spacing cascades from it in rem. Bump the root to scale the whole deck
+   uniformly; :root outranks the theme's plain `html` selector regardless of load order. */
+:root { font-size: 10.5pt; }
+
+/* Discussion deck: retain the Frankfurt/slate style and keep projection text spacious. */
+.discussion { line-height: 1.42; }
+.discussion h1 { font-size: 2.05rem; line-height: 1.2; }
+.discussion h3 { font-size: 1.2rem; line-height: 1.35; }
+.discussion li { margin: 0.45rem 0; }
+.discussion li > ul, .discussion li > ol { padding-inline-start: 1.5em; }
+.discussion .source { margin-top: 1rem; font-size: 0.79em; line-height: 1.35; color: #64748b; }
+.discussion .source a { text-decoration: underline; text-underline-offset: 2px; }
+.discussion .source p { margin: 0; }
+.slidev-layout.discussion-columns { grid-template-rows: auto 1fr auto !important; column-gap: 2.5rem; }
+.discussion .prop-box { max-width: 100%; margin-top: 0.65rem; }
+.discussion .prop-box p { margin: 0.45rem 0; }
+.discussion .prop-box h3 { font-size: 0.86em; }
+.mechanism-row { display: flex; align-items: stretch; gap: 0.65rem; margin: 1.4rem 0; }
+.mechanism-row > div { flex: 1; padding: 0.85rem 0.7rem; border: 1px solid #94a3b8; border-radius: 5px; background: #eef2f6; text-align: center; font-size: 0.9em; }
+.mechanism-row > span { align-self: center; color: #64748b; font-size: 1.4em; }
+.mechanism-row b { color: #1e293b; }
+.compact-row { margin: 0.7rem 0; }
+.compact-row > div { padding: 0.6rem 0.5rem; font-size: 0.86em; }
+.two-options { max-width: 720px; margin-left: auto; margin-right: auto; }
+.discussion .overshoot-tbl { width: 100% !important; font-size: 0.98em; }
+.discussion .overshoot-tbl th, .discussion .overshoot-tbl td { padding: 0.65rem 0.85rem; }
+.discussion .overshoot-tbl td, .discussion .overshoot-tbl th { text-align: left; }
+.discussion .comment-list { margin: 1.2rem 0 1.6rem; }
+.discussion .comment-list li { margin: 0.9rem 0; }
+.discussion blockquote { border-left: 3px solid #64748b; padding: 0.45rem 1rem; margin: 0.65rem 0; background: #f8fafc; color: #334155; font-size: 1em; }
+.comment-dense { font-size: 1.03rem; }
+.comment-dense .katex-display { margin: 0.75rem 0; }
+.comment-dense .source { margin-top: 0.65rem; }
+.comment-dense .source p { line-height: inherit; }
+.comment-dense h3 { margin-top: 0.7rem; margin-bottom: 0.4rem; }
+.security-comment p { margin: 0.55rem 0; }
+.security-comment .katex-display { margin: 0.6rem 0; }
+.rebate-comment .source { margin-top: 0.5rem; }
+.composition-comment > p { margin: 0.5rem 0; }
+.composition-comment > ul { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.composition-comment li { margin: 0.3rem 0; }
+.composition-comment .katex-display { margin: 0.5rem 0; }
+.composition-comment .prop-box { padding: 0.5rem 1rem; }
+
+/* Tokenization evidence: compact captions and full, uncropped source figures. */
+.tokenization-slide h1 { margin-bottom: 1.05rem; }
+.tokenization-slide .source { margin-top: 0.55rem; font-size: 0.73rem; }
+.tokenization-slide .prop-box { padding: 0.55rem 1rem; font-size: 1rem; }
+.comment-two-slide h1 { margin-bottom: 0.35rem; }
+.comment-two-slide h1 + h3 { margin: 0 0 0.4rem; line-height: 1.2; }
+.comment-two-slide .source p { line-height: inherit; }
+.chain-evidence { display: grid; grid-template-columns: 23% 1fr; gap: 1.3rem; align-items: center; }
+.chain-evidence > img { display: block; width: 100%; height: 260px; object-fit: contain; }
+.discussion .chain-value-table { font-size: 0.9rem; }
+.discussion .chain-value-table th, .discussion .chain-value-table td { padding: 0.24rem 0.35rem; }
+.discussion .chain-value-table th:last-child, .discussion .chain-value-table td:last-child { text-align: right; }
+.chain-takeaway { width: 100%; }
+.turnover-chart { display: block; height: 206px; max-width: 100%; width: auto; margin: 0 auto; }
+.comment-two-slide .turnover-chart { height: 196px; }
+.turnover-slide .katex-display { margin: 0.6rem 0; font-size: 0.94em; }
+.ethereum-history { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 270px; }
+.comment-two-slide .ethereum-history { min-height: 262px; }
+.ethereum-history-plot { display: block; width: 72%; height: auto; }
+.ethereum-history-legend { display: block; width: 26%; height: auto; max-height: 270px; object-fit: contain; }
+.asset-pies { position: relative; height: 384px; }
+.asset-pie { position: absolute; width: 27.5%; margin: 0; }
+.asset-pie figcaption { font-size: 1.15rem; font-weight: 600; color: #334155; text-align: center; margin-bottom: 0.15rem; }
+.asset-pie img { display: block; width: 100%; height: auto; }
+.pie-ethereum { left: 0; top: 0; }
+.pie-solana { left: 36.25%; top: 7px; }
+.pie-arbitrum { right: 0; top: 0; }
+.pie-base { left: 19%; top: 195px; }
+.pie-robinhood { right: 19%; top: 200px; }
+
+/* Merits and the chronology of tokenization. */
+.merits-tradeoffs { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin: 1.1rem 0 0.8rem; }
+.merits-tradeoffs h3 { margin: 0 0 0.55rem; }
+.merits-tradeoffs li { margin: 0.7rem 0; }
+.merits-slide .prop-box { width: 100%; margin-top: 1.2rem; }
+.tokenization-timeline-slide h1 { margin-bottom: 1.2rem; }
+.tokenization-timeline { display: grid; gap: 0.35rem; }
+.timeline-event { display: grid; grid-template-columns: 8rem 1fr; gap: 1.3rem; padding: 0.25rem 0; border-bottom: 1px solid #cbd5e1; }
+.timeline-date { color: #475569; font-weight: 600; padding-top: 0.2rem; }
+.timeline-event h3 { margin: 0 0 0.35rem; font-size: 1.15rem; }
+.timeline-event p { margin: 0.15rem 0; }
+.timeline-event ul { margin: 0; }
+.timeline-event li { margin: 0.32rem 0; }
+.tokenization-timeline-slide .prop-box { padding: 0.55rem 1rem; font-size: 1rem; }
+.tokenization-timeline-slide .source { font-size: 0.74rem; margin-top: 0.65rem; }
+
+/* Paper talk: preserve the Frankfurt/slate theme, with one argument per slide. */
+.paper-talk h1 { font-size: 1.9rem; }
+/* Compact Markdown typography; opt in with class: discussion paper-talk markdown-slide. */
+.paper-talk.markdown-slide > h2,
+.paper-talk.markdown-slide > h3,
+.paper-talk.markdown-slide > h4 { font-weight: 600; line-height: 1.25; margin: 0.65rem 0 0.25rem; }
+.paper-talk.markdown-slide > h2 { font-size: 1.4rem; }
+.paper-talk.markdown-slide > h3 { font-size: 1.2rem; }
+.paper-talk.markdown-slide > h4 { font-size: 1.05rem; }
+.paper-talk.markdown-slide > p { margin: 0.35rem 0; line-height: 1.35; }
+.paper-talk.markdown-slide ul,
+.paper-talk.markdown-slide ol { margin: 0.25rem 0 0.65rem; }
+.paper-talk.markdown-slide li { margin: 0.15rem 0; line-height: 1.35; }
+.paper-talk.markdown-slide li > p { margin: 0.15rem 0; line-height: inherit; }
+.paper-talk .prop-box { max-width: 100%; padding: 0.65rem 1.25rem; }
+.paper-talk .prop-box p { margin: 0.45rem 0; }
+.paper-talk .policy-variable-box ul { margin: 0; }
+.paper-talk .policy-variable-box li { margin: 0; line-height: 1.2; }
+.paper-talk .policy-reference { font-size: 0.85em; color: #475569; }
+.paper-talk .source { font-size: 0.76rem; line-height: 1.35; margin-top: 0.9rem; }
+.paper-talk .source p { margin: 0; }
+.paper-talk .katex-display { margin: 0.75rem 0; }
+.paper-talk .merits-tradeoffs { margin: 1.2rem 0 1.4rem; }
+.paper-talk .cook-quote { margin: 1rem 0 0.8rem; padding: 0.9rem 1.25rem; border-left: 4px solid #475569; background: #eef2f6; }
+.paper-talk .cook-quote blockquote { margin: 0; padding: 0; border: 0; background: transparent; color: #1e293b; font-size: 1.2rem; line-height: 1.4; }
+.paper-talk .cook-quote figcaption { margin-top: 0.65rem; color: #475569; font-size: 0.86rem; }
+.paper-talk .cook-quote a { text-decoration: underline; text-underline-offset: 2px; }
+.permissionless-stages { position: relative; height: 330px; margin-top: 0.4rem; }
+.permissionless-stage { position: absolute; inset: 0; }
+.paper-talk .atkins-quote { margin: 1.2rem 0; padding: 1rem 1.25rem; background: #eef2f6; border-left: 4px solid #475569; font-size: 1.15rem; line-height: 1.5; color: #1e293b; }
+.paper-talk .atkins-conclusion { margin-top: 1.6rem; }
+.paper-talk .buidl-overview { width: 100%; padding: 0.65rem 1.1rem; }
+.paper-talk .buidl-overview li { margin: 0.35rem 0; }
+.buidl-code-window { height: 165px; overflow: hidden; margin: 1rem 0 0.6rem; }
+.buidl-code-window img { display: block; width: 100%; height: auto; }
+.transfer-check-flow { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 42px 20px 46px 20px 46px 36px 54px; gap: 0.3rem 1.6rem; align-items: center; margin: 0.65rem 0 0; }
+.transfer-flow-node { justify-self: center; width: 430px; max-width: 100%; border: 1px solid #94a3b8; border-radius: 5px; padding: 0.65rem 0.8rem; background: #eef2f6; text-align: center; line-height: 1.25; }
+.transfer-flow-node code { font-size: 0.98rem; }
+.transfer-request { grid-area: 1 / 1 / 2 / 3; }
+.transfer-flow-arrow { grid-column: 1 / 3; text-align: center; font-size: 1.5rem; color: #64748b; }
+.service-arrow { grid-row: 2; }
+.compliance-service { grid-area: 3 / 1 / 4 / 3; border-color: #b7791f; }
+.validation-arrow { grid-row: 4; }
+.transfer-validation { grid-area: 5 / 1 / 6 / 3; border-color: #b7791f; }
+.transfer-flow-branches { grid-area: 6 / 1 / 7 / 3; width: 100%; height: 36px; overflow: visible; }
+.transfer-flow-branches text { font-size: 14px; }
+.transfer-executes { grid-area: 7 / 1; width: 320px; border-color: #0f766e; }
+.transfer-reverts { grid-area: 7 / 2; width: 320px; border-color: #be123c; }
+.permissioning-turnover-cards { display: grid; grid-template-columns: 1fr 1fr; width: 560px; max-width: 100%; gap: 1.5rem; margin: 1rem auto 0; }
+.permissioning-turnover-card { border: 1.5px solid #475569; border-radius: 6px; background: #eef2f6; padding: 0.65rem 0.8rem; text-align: center; font-size: 1.1rem; }
+.permissioning-turnover-card.tokenized-turnover { border-color: #b7791f; }
+.paper-talk .permissioning-turnover-card p { margin: 0.25rem 0; line-height: 1.4; }
+.permissioning-turnover-caption { margin-top: 0.45rem; text-align: center; font-size: 1.15rem; }
+.permissioning-turnover-caption p { margin: 0; }
+.scale-number { font-size: 2.5rem; font-weight: 600; line-height: 1.1; color: #334155; }
+.growth-content { display: grid; grid-template-columns: minmax(0, 2.25fr) minmax(0, 1fr); align-items: center; gap: 1.8rem; margin: 0.8rem 0 1.2rem; }
+.growth-market-comparison { display: grid; gap: 1.4rem; }
+.growth-market-comparison > div { border-top: 1px solid #94a3b8; padding-top: 0.7rem; }
+.paper-talk .growth-market-comparison h3 { margin: 0 0 0.5rem; font-size: 1.1rem; line-height: 1.35; }
+.growth-figure { margin: 0; }
+.growth-figure img { display: block; width: 100%; height: auto; }
+.growth-figure figcaption { margin-top: 0.45rem; color: #64748b; text-align: center; font-size: 0.76rem; }
+.growth-slide .growth-figure img { width: calc(100% * var(--figure-scale, 1)); height: calc(275px * var(--figure-scale, 1)); max-width: none; position: relative; left: 50%; transform: translateX(-50%); object-fit: contain; }
+#app .slidev-layout.viability-end { background: #fff; color: #1e293b; letter-spacing: normal; grid-template-columns: minmax(0, 1fr); padding: 4rem 3.5rem; }
+#app .slidev-layout.viability-end h1 { width: auto; margin: 0 0 2.5rem; padding: 1rem 1.5rem; border-radius: 0.5rem; font-size: 2.4rem; line-height: 1.2; }
+.viability-end .end-market-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.viability-end h3 { margin: 0 0 0.75rem; font-size: 1.15rem; line-height: 1.35; }
+.viability-end .scale-number { font-size: 3rem; }
+.policy-events { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; margin: 1.3rem 0; }
+.policy-events > div { border-top: 1px solid #94a3b8; padding-top: 0.8rem; }
+.policy-events h3 { font-size: 1.15rem; margin: 0 0 0.8rem; }
+.permissioned-policy-slide > ul { margin-top: 1.2rem; margin-bottom: 1rem; }
+.permissioned-policy-slide > ul > li { margin: 0.9rem 0; }
+.policy-impact { margin-top: 1rem; text-align: center; font-size: 1.25rem; color: #334155; }
+.compliance-code { display: block; width: 100%; height: 190px; object-fit: contain; margin: 0.8rem auto; }
+.economy-diagram { position: relative; height: 360px; margin: 0.4rem 0 0.7rem; }
+.economy-arrows { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.economy-arrows path[marker-end] { fill: none; stroke-width: 2.4; }
+.economy-node { position: absolute; display: grid; place-items: center; width: 24%; height: 44px; transform: translateX(-50%); border: 1.5px solid #94a3b8; background: #eef2f6; border-radius: 5px; padding: 0.5rem 0.65rem; text-align: center; font-size: 1.1rem; line-height: 1.3; }
+.paper-talk .economy-node p { margin: 0; }
+.economy-node.issuer { left: 50%; top: 104px; border-color: #475569; }
+.economy-node.traders { left: 18.5%; top: 242px; }
+.economy-node.investors { left: 81.5%; top: 242px; }
+.economy-node.blockchain { left: 50%; top: 316px; border-color: #b7791f; }
+.economy-label { position: absolute; padding: 1px 3px; background: white; color: #475569; font-size: 0.96rem; line-height: 1.2; white-space: nowrap; }
+.kyc-label { left: 33.7%; top: 181px; color: #b7791f; transform: translate(-50%, -50%) rotate(-23deg); }
+.compliance-cost-label { left: 37.5%; top: 209px; color: #b7791f; transform: translate(-50%, -50%) rotate(-23deg); }
+.aum-fee-label { left: 62.5%; top: 209px; transform: translate(-50%, -50%) rotate(23deg); }
+.investor-yield-label { left: 50%; top: 273px; transform: translateX(-50%); }
+.issued-tokens-label { left: calc(82.5% + 22px); top: 148px; color: #b7791f; transform: translateY(-50%); }
+.deposit-tokens-label { left: 74%; top: 302px; color: #b7791f; transform: translate(-50%, -50%); }
+.trade-tokens-label { left: 26%; top: 302px; color: #b7791f; transform: translate(-50%, -50%); }
+.economy-token text { fill: #b7791f; font-size: 15px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+.economy-policy { position: absolute; inset: 0; }
+.economy-node.regulator { left: 50%; top: 6px; border-color: #b7791f; }
+.regulatory-policy-label { left: calc(50% + 12px); top: 77px; color: #b7791f; transform: translateY(-50%); }
+.threshold-regions { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; text-align: center; }
+.threshold-regions > div { border-top: 2px solid #64748b; background: #eef2f6; padding: 0.65rem 1rem; }
+.paper-talk .frictions-table, .paper-talk .activity-table { font-size: 1rem; }
+.paper-talk .frictions-table th, .paper-talk .frictions-table td { padding: 0.85rem 0.6rem; }
+.paper-talk .activity-table th, .paper-talk .activity-table td { padding: 0.9rem 1rem; }
+.paper-talk.evidence-slide h1 { margin-bottom: 1.1rem; }
+.evidence-slide .source { margin-top: 0.65rem; }
+.turnover-comparison { display: grid; gap: 1.4rem; margin: 1.3rem 0 1.7rem; }
+.turnover-comparison > div { display: grid; grid-template-columns: 1fr auto; gap: 0.4rem 1rem; }
+.turnover-comparison b { font-size: 1.9rem; line-height: 1.1; color: #334155; }
+.turnover-bar { grid-column: 1 / 3; height: 24px; background: #475569; }
+.open-bar { width: 100%; }
+.whitelist-bar { width: 19.642857%; background: #94a3b8; }
+.paper-turnover-chart { display: block; width: 100%; height: 276px; object-fit: contain; margin: 0 auto 0.7rem; }
+.paper-history-chart { display: block; width: 100%; height: 267px; object-fit: contain; margin: 0 auto 0.7rem; }
+.paper-pies { display: grid; gap: 1.25rem; margin: 0 0 0.6rem; }
+.two-pies { grid-template-columns: 1fr 1fr; }
+.three-pies { grid-template-columns: 1fr 1fr 1fr; }
+.paper-pies figure { margin: 0; }
+.paper-pies figcaption { text-align: center; font-weight: 600; color: #334155; margin-bottom: 0.2rem; }
+.paper-pies img { display: block; width: 100%; height: 255px; object-fit: contain; }
+.paper-talk .ethereum-history { min-height: 300px; }
+.paper-talk .ethereum-history-legend { max-height: 300px; }
+
+/* Issuer's problem: equations on the left, the newspaper image on the right. */
+.issuer-problem-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: 1.8rem; margin-top: 0.9rem; }
+.paper-talk .issuer-problem-grid .prop-box { width: 100%; margin: 0; }
+.paper-talk .issuer-decision p { margin: 0 0 0.65rem; line-height: 1.35; }
+.issuer-problem-image { display: block; width: 100%; height: 255px; object-fit: contain; }
+
+/* Optimal regulation: use the existing slate blocks and projection typography. */
+.optimal-regulation-slide h1 { margin-bottom: 0.9rem; }
+.optimal-regulation-slide > p { margin: 0.4rem 0; }
+.optimal-regulation-slide .katex-display { margin: 0.6rem 0; }
+.regulation-value-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1.8rem; margin: 0.5rem 0 0.8rem; }
+.regulation-value-grid h3 { margin: 0 0 0.4rem; color: #334155; }
+.regulation-value-grid ul { padding-left: 1.2em; }
+.regulation-value-grid li { margin: 0.35rem 0; }
+.regulation-value-grid p { margin: 0.4rem 0; }
+.regulation-value-grid .katex-display { font-size: 0.92em; }
+.regulation-value-estimate > p { margin: 0.5rem 0; }
+.social-value-slide .prop-box { width: 100%; padding: 0.4rem 1rem; }
+.social-harm-slide .prop-box { margin-top: 1rem; }
+.regulation-takeaway { margin-top: 1rem; font-weight: 600; color: #334155; }
+.regulator-objective-slide .prop-box { width: 100%; padding: 0.3rem 1rem; }
+.regulator-objective-slide > ul { margin: 0.6rem 0; }
+.regulation-regimes { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 0.75rem; margin-top: 0.9rem; }
+.regulation-regimes > div { padding: 0.6rem 0.7rem; background: #eef2f6; border-top: 2px solid #64748b; text-align: center; }
+.regulation-regimes h3 { margin: 0 0 0.4rem; font-size: 1.05rem; color: #334155; }
+.regulation-regimes p { margin: 0.35rem 0; }
+.paper-talk .regulation-bounds-note { margin-top: 0.5rem; font-size: 0.78rem; }
+.regulation-figure-key { color: #475569; font-size: 0.9rem; margin: 0 0 0.35rem; }
+.regulation-figure-key p { margin: 0; }
+.regulation-main-chart { display: block; width: 100%; height: 270px; object-fit: contain; margin: 0 auto; }
+.regulation-figure-points { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 0.6rem; }
+.regulation-figure-points p { margin: 0; }
+.regulation-friction-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 0.9rem; }
+.regulation-friction-charts figure { margin: 0; }
+.regulation-friction-charts figcaption { margin: 0 0 0.2rem; color: #334155; font-weight: 600; font-size: 0.95rem; text-align: center; line-height: 1.25; }
+.regulation-friction-charts figcaption p { margin: 0; }
+.regulation-friction-charts img { display: block; width: 100%; height: 130px; object-fit: contain; }
+.paper-talk .regulation-friction-takeaway { width: 100%; margin-top: 0.5rem; padding: 0.4rem 0.9rem; font-size: 0.98rem; }
+.regulation-friction-takeaway p { margin: 0.25rem 0; }
+
+/* Small-screen talk: larger text on the selected slides, without changing the theme. */
+.slidev-layout.projection-large { --projection-font: 1.45rem; font-size: var(--projection-font); line-height: 1.3; }
+.projection-large p, .projection-large li { font-size: inherit; line-height: 1.3; }
+.paper-talk.projection-large h1 { font-size: 2.1rem; }
+.paper-talk.projection-large h2 { font-size: 1.95rem; line-height: 1.2; }
+.paper-talk.projection-large h3 { font-size: 1.5rem; line-height: 1.25; }
+.paper-talk.projection-large li { margin: 0.3rem 0; }
+.paper-talk.projection-large li > p { margin: 0.15rem 0; }
+.paper-talk.projection-large .source { font-size: 1rem; }
+.paper-talk.projection-large .source p { font-size: inherit; }
+.paper-talk.projection-large .atkins-quote { font-size: var(--projection-font); line-height: 1.35; }
+.paper-talk.projection-large .prop-box { padding: 0.6rem 1rem; }
+.paper-talk.projection-large .katex-display { margin: 0.5rem 0; font-size: 1em; }
+.projection-large .presentation-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 1.8rem; margin-top: 0.5rem; }
+.projection-large .presentation-columns > div { min-width: 0; }
+.paper-talk.projection-large .presentation-columns .prop-box { width: 100%; margin: 0.6rem 0 0; }
+.paper-talk.projection-large .presentation-columns .prop-box p { margin: 0.3rem 0; line-height: 1.25; }
+.paper-talk.projection-large .presentation-columns h3 { margin: 0 0 0.5rem; }
+.paper-talk.projection-overview > h2 { font-size: 1.5rem; margin: 0.2rem 0 0.65rem; }
+.projection-overview .overview-traders { margin-top: 0.9rem; }
+.paper-talk.projection-overview .overview-solution { margin-top: 0.8rem; }
+.paper-talk.projection-buidl .buidl-overview li { margin: 0.25rem 0; }
+.projection-buidl .buidl-code-window { height: 185px; margin: 0.6rem 0 0; }
+.projection-transfer .transfer-check-flow { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: 46px 20px 48px 20px 48px 36px 56px; }
+.projection-transfer .transfer-flow-node { width: 520px; font-size: 1.4rem; padding: 0.6rem 0.8rem; }
+.projection-transfer .transfer-flow-node code { font-size: 1.25rem; }
+.projection-transfer .transfer-flow-branches text { font-size: 18px; }
+.projection-turnover .permissioning-turnover-cards { width: 740px; margin: 1.3rem auto; }
+.projection-turnover .permissioning-turnover-card, .projection-turnover .permissioning-turnover-caption { font-size: 1.6rem; }
+.slidev-layout.projection-policy { --projection-font: 2rem; }
+.projection-policy .policy-events { gap: 1.8rem; margin: 1.2rem 0 0.8rem; }
+.paper-talk.projection-policy .policy-events h3 { font-size: 1.8rem; margin-bottom: 0.7rem; }
+.paper-talk.projection-policy .policy-variable-box li { margin: 0; line-height: 1.18; }
+.paper-talk.projection-investors .prop-box { padding: 0.45rem 0.85rem; }
+.paper-talk.projection-investors .katex-display { margin: 0.3rem 0; font-size: 0.95em; }
+
+/* Complete small-screen pass: keep text and reveals, use the available space. */
+.slidev-layout.projection-extended { --projection-font: 1.55rem; }
+.slidev-layout.projection-roomy { --projection-font: 1.7rem; }
+.projection-roomy.projection-turnover .permissioning-turnover-card,
+.projection-roomy.projection-turnover .permissioning-turnover-caption { font-size: 1.85rem; }
+.projection-growth .growth-content { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); margin: 0.4rem 0 0.6rem; }
+.projection-growth .growth-figure img { height: calc(240px * var(--figure-scale, 1)); }
+.projection-growth .growth-figure figcaption { font-size: 1rem; }
+.projection-growth .growth-market-comparison h3 { font-size: 1.4rem; }
+.projection-growth .scale-number { font-size: 2.9rem; }
+.projection-growth .growth-takeaways { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem; }
+.paper-talk.projection-growth .growth-takeaways .prop-box { width: 100%; margin: 0; }
+.projection-economy .economy-diagram { transform: scale(1.04); transform-origin: top center; }
+.projection-economy .economy-node { font-size: 1.5rem; }
+.projection-economy .economy-label { font-size: 1.15rem; }
+.projection-economy .economy-token text { font-size: 18px; }
+.projection-issuer .issuer-problem-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1.3rem; margin-top: 0; }
+.paper-talk.projection-issuer .issuer-problem-grid h3 { margin-top: 0; }
+.paper-talk.projection-issuer .issuer-participation h3 { font-size: 1.35rem; line-height: 1.3; margin-bottom: 0.4rem; }
+.projection-issuer .issuer-participation .katex-display { font-size: 1.55rem; margin: 0.4rem 0 0.6rem; }
+.projection-issuer .issuer-problem-image { height: 270px; }
+.paper-talk.projection-issuer .prop-box { width: 100%; padding: 0.7rem 0.8rem; }
+.projection-result .mechanism-row { gap: 0.6rem; margin: 0.85rem 0; }
+.projection-result .mechanism-row > div { font-size: 1.25rem; line-height: 1.25; padding: 0.7rem 0.55rem; }
+.projection-result .mechanism-row > div > b { font-size: 1.55rem; }
+.projection-turnover-evidence .projection-turnover-table { width: 100% !important; table-layout: fixed; font-size: 1.5rem; }
+.paper-talk.projection-turnover-evidence .projection-turnover-table th,
+.paper-talk.projection-turnover-evidence .projection-turnover-table td { padding: 0.4rem 0.55rem; font-size: inherit; line-height: 1.2; white-space: normal; }
+.projection-turnover-evidence .projection-turnover-table th:first-child { width: 34%; }
+.paper-talk.projection-turnover-evidence .prop-box { width: 100%; margin-top: 0.8rem; }
+.paper-talk.projection-turnover-evidence .source { margin-top: 0.6rem; }
+.paper-talk.projection-frictions-table .frictions-table { width: 100% !important; table-layout: fixed; font-size: 1.45rem; }
+.paper-talk.projection-frictions-table .frictions-table th,
+.paper-talk.projection-frictions-table .frictions-table td { padding: 0.65rem 0.7rem; font-size: inherit; line-height: 1.25; }
+.projection-turnover-figure .paper-turnover-chart { height: 370px; margin: 0; }
+.projection-platform-pie .paper-pies { display: block; margin: 0; }
+.projection-platform-pie .paper-pies figcaption { font-size: 1.65rem; line-height: 1.2; margin-bottom: 0.5rem; }
+.projection-platform-pie .paper-pies img { height: 350px; }
+.projection-innovation .presentation-columns { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+.projection-social-value .presentation-columns { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.projection-social-value .presentation-columns > .prop-box { align-self: center; }
+.paper-talk.projection-social-value .katex-display,
+.paper-talk.projection-social-harm .katex-display { font-size: 0.95em; }
+.projection-social-harm .regulation-takeaway { margin-top: 0.8rem; }
+.projection-regulator-objective .prop-box { margin: 1.1rem 0; }
+.projection-regulator-objective > ul { margin-top: 1rem; }
+.projection-regimes .regulation-regimes { gap: 0.9rem; margin: 1rem 0; }
+.projection-regimes .regulation-regimes > div { padding: 1.2rem 0.8rem; }
+.paper-talk.projection-regimes .regulation-regimes h3 { font-size: 1.4rem; }
+.projection-regimes .regulation-regimes p { margin: 0.65rem 0; }
+.paper-talk.projection-regimes .regulation-bounds-note { font-size: 1.15rem; line-height: 1.3; }
+.projection-extended .regulation-figure-key { font-size: 1.1rem; line-height: 1.25; margin-bottom: 0.4rem; }
+.projection-regulation-beliefs .regulation-main-chart { height: 300px; }
+.projection-regulation-beliefs .regulation-figure-points { font-size: 1.3rem; gap: 1.4rem; margin-top: 0.5rem; }
+.projection-regulation-beliefs .regulation-figure-points p { line-height: 1.25; }
+.projection-regulation-panel figure { margin: 0; min-width: 0; }
+.projection-regulation-panel figcaption { font-size: 1.5rem; font-weight: 600; color: #334155; text-align: center; margin-bottom: 0.35rem; }
+.projection-regulation-panel figcaption p { margin: 0; }
+.projection-regulation-panel img { display: block; width: 100%; height: 315px; object-fit: contain; }
+.projection-regulation-panel .regulation-panel-with-takeaway { display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr); gap: 1.2rem; align-items: center; }
+.projection-regulation-panel .regulation-panel-with-takeaway img { height: 310px; }
+.paper-talk.projection-regulation-panel .regulation-friction-takeaway { font-size: inherit; width: 100%; margin: 0; padding: 0.6rem 0.8rem; }
+.projection-demand .demand-layout { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr); gap: 1.2rem; align-items: center; }
+.projection-demand .regulation-main-chart { height: 320px; }
+.paper-talk.projection-demand .prop-box { width: 100%; margin: 0; padding: 0.6rem 0.8rem; }
+#app .slidev-layout.viability-end.projection-conclusion { display: flex; flex-direction: column; justify-content: center; padding: 4rem 3.5rem; }
+#app .viability-end.projection-conclusion h1 { margin: 0; font-size: 3.5rem; line-height: 1.2; padding: 1.5rem 1.7rem; }
+.slidev-layout.projection-additional { --projection-font: 1.7rem; }
+.slidev-layout.projection-result { --projection-font: 1.7rem; }
+.slidev-layout.projection-regimes { --projection-font: 1.8rem; }
+.projection-regimes .regulation-regimes > div { padding: 2.5rem 0.8rem; }
+.paper-talk.projection-regimes .regulation-regimes h3 { font-size: 1.6rem; }
+.paper-talk.projection-regimes .regulation-bounds-note { font-size: 1.25rem; }
+.projection-regimes .katex { white-space: nowrap; }
+.paper-talk.projection-turnover-evidence .projection-turnover-table th:not(:first-child),
+.paper-talk.projection-turnover-evidence .projection-turnover-table td:not(:first-child) { text-align: center; }
+
+/* OKX example following Result 2: large text beside the supplied evidence. */
+.slidev-layout.projection-okx { --projection-font: 1.85rem; }
+.projection-okx .okx-case-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center; gap: 1.8rem; margin-top: 0.5rem; }
+.projection-okx .okx-case-text { min-width: 0; }
+.paper-talk.projection-okx .okx-case-text ul { margin: 0; padding-left: 1.3em; }
+.paper-talk.projection-okx .okx-case-text li { margin: 0.7rem 0; line-height: 1.3; }
+.projection-okx .okx-case-evidence { min-width: 0; margin: 0; }
+.projection-okx .okx-case-evidence img { display: block; width: 100%; height: 355px; object-fit: contain; }
+.paper-talk.projection-okx .okx-case-evidence .source { margin-top: 0.4rem; text-align: center; }
+
+/* Issuer participation example: venue description, objection news and advertisement. */
+.slidev-layout.projection-okx-two-images { --projection-font: 1.5rem; }
+.projection-okx-two-images .okx-case-layout { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) minmax(0, 0.95fr); gap: 1.3rem; }
+.paper-talk.projection-okx-two-images .okx-case-text li { line-height: 1.25; }
+.projection-okx-two-images .okx-case-evidence img { height: 345px; }
+
+/* Platform distributions fill the slide side by side. */
+.projection-market-evidence .distribution-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.6rem; margin: 0.4rem 0 0; }
+.projection-market-evidence .distribution-pair figure { min-width: 0; margin: 0; }
+.projection-market-evidence .distribution-pair figcaption { font-size: 1.65rem; font-weight: 600; color: #334155; text-align: center; }
+.projection-market-evidence .distribution-pair img { display: block; width: 100%; height: 350px; object-fit: contain; }
+
+/* Regulation motivation: match the larger projection text without changing the list. */
+.paper-talk.projection-regulation-motivation > h2 { font-size: 1.7rem; line-height: 1.25; margin: 0.8rem 0 0.9rem; }
+.paper-talk.projection-regulation-motivation > ul { margin: 0.8rem 0 0; }
+.paper-talk.projection-regulation-motivation li { margin: 0.5rem 0; line-height: 1.25; }
+
+/* Figure 2: show all four original panels on one slide. */
+.paper-talk.projection-regulation-grid h1 { margin-bottom: 0.4rem; }
+.projection-regulation-grid .regulation-figure-key { font-size: 1rem; line-height: 1.25; margin-bottom: 0.3rem; }
+.projection-regulation-grid .regulation-friction-charts { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.3rem 1rem; }
+.projection-regulation-grid .regulation-friction-charts figure { min-width: 0; }
+.projection-regulation-grid .regulation-friction-charts figcaption { font-size: 1.25rem; line-height: 1.2; margin-bottom: 0.15rem; }
+.projection-regulation-grid .regulation-friction-charts img { height: 130px; }
+.paper-talk.projection-regulation-grid .regulation-friction-takeaway { margin-top: 0.35rem; padding: 0.3rem 0.8rem; font-size: 1.15rem; line-height: 1.25; }
+.projection-regulation-grid .regulation-friction-takeaway p { margin: 0.2rem 0; line-height: 1.25; }

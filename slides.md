@@ -1,1041 +1,1306 @@
 ---
+theme: frankfurt
+colorSchema: light
 layout: cover
-class: text-center
-title: AI Platforms
-#theme: academic
+class: text-center paper-talk
+title: Regulating tokenized securities
 titleTemplate: '%s'
 author: Fayçal Drissi
+fonts:
+  local: Montserrat, Roboto Mono, Roboto Slab
 themeConfig:
   paginationX: disabled
   paginationY: disabled
   paginationPagesDisabled: [1]
-fonts:
-  local: Montserrat, Roboto Mono, Roboto Slab # local fonts are used for legal reasons for deployment to https://slidev-theme-academic.alexeble.de and only set up for the example project, remove this line for your project to automatically have fonts imported from Google
-
-theme: frankfurt
-infoLine: true # on by default, can be turned off
-#author: 'Your name here' # shows in infoLine
-#title: 'Title' # shows in infoLine
-date: '12/10/2026' # shows in infoLine, defaults to the current date
-
+infoLine: true
+date: '2026'
+drawings:
+  enabled: false
 mdc: true
+defaults:
+  class: discussion paper-talk
 ---
 
+# <small>The Economics of Regulating<br>Tokenized Securities</small>
 
 <br>
 
-# Part I: Who survives AI ?
+### Álvaro Cartea · Fayçal Drissi · Fahad Saleh
 
-## Fayçal Drissi
-
-### *University of Oxford*
-<br>
-
-### joint work with Fahad Saleh (University of Florida)
-
-<!--These slides: [https://www.faycaldrissi.com/siam2025](https://www.faycaldrissi.com/siam2025)
-[my scholar](https://scholar.google.com/citations?user=njvyriQAAAAJ&hl=fr), 
-[my website](https://www.faycaldrissi.com/), [my github](https://github.com/FDR0903)-->
-
-
----
-section: AI and firms
----
-
-# I. Motivation
-
-
-![blockchain1](./images/tweet4.png){style="transform: translate(60%, 0%); width: 400px"}
-
----
-
-# I. Motivation
-
-
-![blockchain1](./images/tweet5.png){style="transform: translate(60%, 0%); width: 400px"}
-
----
-
-# I. Motivation
-
-
-![blockchain1](./images/tweet6.png){style="transform: translate(60%, 0%); width: 400px"}
-
----
-
-# I. Motivation
-
-
-![blockchain1](./images/tweet2.png){style="transform: translate(60%, 0%); width: 400px"}
-
-
----
-
-# I. Motivation
-## US DoJ
-
-The US government has sided with OpenAI against the New York Times. The DoJ says training an LLM on copyrighted works does not violate copyright law, and that treating it as infringement would hurt US science, prosperity, and national security.
-
-![blockchain1](./images/tweet3.png){style="transform: translate(30%, 20%); width: 500px"}
-
-
----
-
-# I. Motivation
-## The case of "Wrapper" AI companies
-
-### Startups that do not train their own models
-
-- they are on top of foundation models (GPT, Claude)
-- they add prompts, workflows, and integrations to offer a full specialized product
-- easiest way for many people to experience generative AI for the first time
+University of Oxford · University of Florida
 
 <br>
 
-<v-click>
-
-### Evidence
-
-- **coding**: Windsurf and Cursor replaced by integrated offerings (OpenAI Codex, Anthropic's Claude Code, Google's Jules)
-
-<v-click>
-
-- **design**: Anthropic launched products against their own customers (Figma)
-
-<v-click>
-
-- others: **science, security, law, financial analysis**
-
-<v-click>
-
-<br>
-
-$\implies$ wrapper firms depend on foundation-model providers for a key input
-
-
-</v-click>
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# I. Motivation
-##  Models learn from usage
-
-### RLHF: the new standard approach for aligning LLMs with human preferences
-
-- InstructGPT (Ouyang et al., 2022)<br>
-user-submitted prompts from the OpenAI API + human rankings $\to$ reward model $\to$ fine-tuning
-- real user behavior and feedback are central to improving the model
-
-<br>
-
-<v-click>
-
-### Multi-turn RLHF (2024): alignment over entire conversations, not individual turns
-
-- models internalize the scope of discussions, workflows, and their next steps (GPT-5, recent iterations of Claude Code)
-
-<br>
-
-<v-click>
-
-### Training on usage is now the default
-
-- Anthropic (August 2025): consumer chats and coding sessions train the models
-- a continuous learning loop
-
-<v-click>
-
-- July 2026: Claude Cowork: record your screen while you do a task, talk through it as you go, and Claude turns it into a skill it can run again
-
-</v-click>
-</v-click>
-</v-click>
-
-
----
-
-# I. Motivation
-##  Shadow AI
-
-
-
-- employees using unapproved AI tools: creates major risks of sensitive data leaks
-- April 2026: Samsung employees leak internal meeting notes and source code into ChatGPT $\implies$ many companies (JPMorgan, Verizon) block AI chatbots from corporate systems
-- New Microsoft research reveals that 71% of UK employees have used unapproved consumer AI tools at work, and 51% continue to do so every week
-
-
-
-
----
-
-# I. Motivation
-
-### Summary
-
--  AI models are an input that a growing share of production needs
-- providers sell that input, and price it unilaterally
--  **AI models learn from their customers' usage** of the model
-
-
-<v-click>
-
-<br>
-
-$\implies$ AI / firms relationship shapes **growth and incentives to create** $\implies$ important to study
-
-
-<v-click>
-<br>
-
-$\implies$ **this paper**: a model of supplier pricing and learning from customer usage
-
-
-</v-click>
-
-</v-click>
-
----
-
-# II. The model
-
-### An AI-based economy: two strategic players, and demand for a product
-
-<v-click>
-
-**1. A firm** 
-- the firm sells a product to buyers
-- the firm has a **private competitive advantage** in the market
-- production uses the provider's AI model **tokens** alongside infrastructure
-
-<br>
-
-<v-click>
-
-**2. An AI model provider** 
-- provider sells tokens to the firm
-- it sets the token price and learns from the firm's usage
-
-<br>
-
-<v-click>
-
-**3. Buyers** 
-- buyers purchase the product from the firm
-- total product output is $Q=q_F$
-
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# II. The model
-
-### The firm
-
-- the firm sells a product using AI tokens and its own infrastructure
-
-<v-click>
-
-- it holds a **private advantage** $x(t) \geq 0$ over the shared AI model (proprietary data, workflows, know-how)
-
-<v-click>
-
-- buyers value the advantage: they buy the product at
-  $$
-  D\big(q_F(t)\big) + x(t)
-  $$
-
-  - $D(\cdot)$ is an inverse demand function
-  - $Q(t)=q_F(t)$ is the firm's output
-<v-click>
-
-<br>
-
-- buyers can also perform the task themselves using the shared model $\implies$ the firm's premium depends on what its product adds
-
-</v-click>
-</v-click>
-</v-click>
-
----
-
-# II. The model
-
-### The firm's advantage
-
-- the advantage evolves through two forces, creation and absorption:
-
-  $$
-  \dot{x}(t) = \underbrace{\iota(t)}_{\text{innovation effort}} \; - \underbrace{\lambda\, \tau_F(t)\, x(t)}_{\text{absorption}}
-  $$
-
-  - $\lambda > 0$ is the absorption speed per token 
-  - $\tau_F(t) \geq 0$ is the firm's token usage
-
-<v-click>
-
-- **general solution:**
-
-$$
-\begin{aligned}
-x(t) = \underbrace{x(0)\, e^{-\lambda \int_0^t \tau_F(u)\,du}}_{\text{remaining initial advantage}}+ \underbrace{\int_0^t \iota(s)\, e^{-\lambda \int_s^t \tau_F(u)\,du}\,ds}_{\text{surviving innovations}}
-\end{aligned}
-$$
-
-$\implies$ without innovation ($\iota=0$), only the first term remains: the advantage decays with **cumulative usage**
-
-</v-click>
-
-
----
-
-# II. The model
-
-### The firm's production
-
-- infrastructure $S_F$ evolves through investment and depreciation: $\small \qquad \dot S_F=I_F-\delta S_F$
-
-<v-click>
-
-- production technology: constant elasticity of substitution $\qquad \qquad \small q_F=G(\tau_F,S_F)=\Big[\omega\,\tau_F^{\theta}+(1-\omega)\,S_F^{\theta}\Big]^{1/\theta}$
-
-<v-click>
-
-<img src="./images/ces-substitution.svg" alt="Equal-output CES curves as theta increases: fixed proportions require at least one unit of each input; the theta-zero limit needs two units of infrastructure with half a unit of tokens; perfect substitutes need only one and a half units of infrastructure with half a unit of tokens." style="display: block; width: 850px; max-height: 240px; margin: 0 auto; object-fit: contain;" />
-
-$\theta\uparrow\ \implies\ \varsigma=\dfrac{1}{1-\theta}\uparrow$: **easier to replace one input with the other at the same output**.
-
-</v-click>
-</v-click>
 
 <!--
-Figure reproduced by scripts/create-ces-substitution-figure.py.
-Every panel fixes output q_F=1 and the CES weight omega=1/2, with identical axis scales.
-In the theta -> -infinity limit, G=min(tau_F,S_F); the L-shaped contour requires
-both inputs to be at least 1. Extra infrastructure cannot replace missing tokens.
-In the theta -> 0 limit, G=sqrt(tau_F*S_F), so halving tokens requires S_F=2.
-At theta=1, G=(tau_F+S_F)/2, so halving tokens requires S_F=1.5.
-The elasticity formula tends to infinity as theta -> 1 from below; it is not finite
-at theta=1. The displayed theta-zero production function is understood by continuity.
-Curvature shows the trade-off between input quantities, rather than a literal plot
-of elasticity against theta. Higher theta increases the elasticity of substitution.
+Time: 0:20. Cumulative: 0:20.
+The economic value of tokenization depends on the regulatory environment.
+Three parts: the debate and the value proposition → an equilibrium model →
+then descriptive evidence on permissioning and differences across assets and platforms.
+The talk ends with "Is tokenization viable?".
 -->
 
 ---
-
-# II. The model
-
-### The firm's problem
-
-<v-click>
-
-- producing has costs
-  - tokens cost the price $p$ per unit
-  - investment cost $h_F(I_F(t))$: increasing, convex
-  - innovation cost $\kappa(\iota(t))$: strictly convex
-
-<v-click>
-
-<br>
-
-- the firm has instantaneous profit:
-
-$$
-\pi_F = \underbrace{\big[ D(Q) + x \big]\, q_F}_{\text{revenue at the premium}} \; - \underbrace{p\, \tau_F}_{\text{token bill}} \; - \underbrace{h_F(I_F)}_{\text{investment}} \; - \underbrace{\kappa(\iota)}_{\text{innovation}}
-$$
-
-<br>
-
-<v-click>
-
-- the firm maximizes
-
-$$
-\max_{\tau_F,\; I_F,\; \iota} \;\; \int_0^\infty e^{-r_F\, t}\, \pi_F(t)\, dt
-$$
-
-</v-click>
-
-</v-click>
-
-</v-click>
-
+section: Motivation
+class: discussion paper-talk growth-slide projection-large projection-extended projection-growth
 ---
 
-# II. The model
+# Tokenization is growing
 
-### The AI model provider
+<div class="growth-content">
 
-- the AI provider sells tokens to the firm
-  - it posts the token price $p(t)$ continuously
-  - it bears a token serving cost $\Gamma(\cdot)$: increasing, convex
+<!-- Figure size: change --figure-scale below (1 = 100%, 0.8 = 80%, 1.2 = 120%). -->
+<figure class="growth-figure" style="--figure-scale: 1;">
+<img src="./images/tokenizationsize.png" alt="RWA.xyz stacked area chart showing growth in tokenized asset value across Treasury debt, commodities, strategies, stocks, credit and other categories, labeled dates run from January 2024 to September 2026" />
+<figcaption>Tokenized assets across asset classes · RWA.xyz</figcaption>
+</figure>
 
-<v-click>
-<br>
 
-- the AI provider has instantaneous profit:
+<div v-click="1" class="end-market-comparison growth-market-comparison">
+<div>
 
-$$
-\small
-\pi_P = \underbrace{p\, \tau_F}_{\text{token revenue}} \; - \; \underbrace{\Gamma(\tau_F)}_{\text{token serving cost}}
-$$
+### Tokenized equities and stocks
 
-<v-click>
-<br>
+<div class="scale-number">$3.7B</div>
 
-- the AI provider maximizes
+</div>
+<div>
 
-$$
-\max_{p} \;\; \int_0^\infty e^{-r_P\, t}\, \pi_P(t)\, dt
-$$
+### US equity market capitalization
 
-</v-click>
-</v-click>
+<div class="scale-number">$76.9T</div>
 
----
+</div>
+</div>
+</div>
 
-# III. Results
+<div class="growth-takeaways">
 
-## Model solution: very hard in the general case
+<div v-click="2" class="prop-box">
 
+**What makes tokenization economically worthwhile?**
 
-<v-click>
+</div>
 
-<br>
+<div v-click="3" class="prop-box">
 
-### The linear case
+**It depends on the regulatory environment**
 
-- linear inverse demand 
-$$D(Q) = a - b\, Q$$
-- linear investment cost
+</div>
 
-$$h_F(I) = \chi_F\, I$$
-
-- quadratic innovation cost 
-$$\kappa(\iota) = \kappa_0\, \iota + \dfrac{\kappa_1}{2}\, \iota^2$$ 
-
-- linear token serving cost 
-$$\Gamma(\tau) = \gamma_s\, \tau$$
-
-</v-click>
-
-
----
-
-# III. Results
-
-##  The equilibrium system in the linear case
-
-
-
-- equilibrium $\equiv$ system of coupled ODEs with free boundaries
-
-$$\footnotesize
-r_F V_F = \frac{\big( a + x - c_F(\tilde{p}) \big)^2}{4b} + \frac{\big( \max\{0,\; \partial_x V_F - \kappa_0\} \big)^2}{2 \kappa_1}
-\qquad\text{and}\qquad
-r_P V_P = \iota\, \partial_x V_P + \max_{p \, \geq\, 0}\; \tau_F(x, p) \Big( p - \gamma_s - \lambda\, x\, \partial_x V_P \Big)
-$$
-
-
-
-<br>
-
-<small>
-<small>
-
-- $\tau_F$: firm's token demand
-- $\iota$: innovation
-- $\tilde c=c_F(\tilde p)$: firm's effective unit production cost, with $\tilde p=p+\lambda x\,\partial_xV_F$ (token price plus the shadow cost of absorption)
-- $c_P$: provider's unit cost (tokens at $\gamma_s$, stock at $\zeta_P$)
-- $\varsigma = 1/(1-\theta)$: elasticity of substitution.
-
-</small>
-</small>
-
-
-
-
-
----
-
-# III. Results
-
-##  Result 1: firms restrict their use of the model
-
-<v-click>
-
-- the firm's marginal revenue from tokens stays **strictly above** the token price:
-
-$$\small
-\underbrace{\frac{\partial}{\partial \tau_F} \Big[ \big( D(Q) + x \big)\, q_F \Big]}_{\text{marginal revenue from each token}} - \;\, \underbrace{p}_\text{token price}
-\;\; = \; \underbrace{\lambda\, x\, \partial_x V_F}_{\text{destroyed exclusivity}} \;\; > \;\, 0
-$$
-
- $q_F = G(\tau_F, S_F)$ is output 
-
-
-
-- marginal revenue from tokens falls with use $\implies$ firm using tokens optimally would buy them until marginal revenue $=$ token price
-
-- **positive** difference $\implies$ the firm gives up tokens today because it adjusts token prices to account for destroyed exclusivity  
-<v-click>
-
-$\implies$ restraint is **equilibrium self-defense**
-
-$\implies$ adoption of AI can be low where AI is productive 
-
-$\implies$ should we regulate how AI learns ?
-
-
-
-
-</v-click>
-</v-click>
-
----
-
-# III. Results
-
-## Result 2: the price of tokens
-
-#### Token price balances two motives for the AI model provider
-
-$$\small
-\underbrace{\frac{\partial}{\partial p} \Big[ \big( p - \gamma_s \big)\, \tau_F(x, p) \Big]}_{\text{marginal instantaneous profit from tokens}}
-\;\; = \;\;
-\underbrace{\lambda\, x\, \big(\partial_p \tau_F\big)\, \partial_x V_P^0}_{\text{learning motive}}
-$$
-
-<v-click>
-
-- a provider extracting everything from token revenue sets token price where marginal profit $= 0$
-
-- the provider prices **off** that optimum on purpose: token profit against model learning
-
-<v-click>
-
-- the sign of the learning motive is the provider's **posture** toward its customer
-  - if positive: the provider prices **below** the price, possibly **below cost**, to accelerate absorption
-  - if negative: the provider prices **above** the price to maximize revenue
-
-</v-click>
-</v-click>
-
-
----
-
-# III. Results
-
-##  Result 3: who survives AI?
-
-Depends on the production technology !
-
-<v-click>
-
-- Case 1: stock and AI are **substitutes** ($\theta > 0$)
-  - the firm can shift production onto its non-AI capacity
-  - **equilibrium = perpetual innovation**
-
-<v-click>
-<br>
-
-- Case 2: stock and AI are **complements** ($\theta \leq 0$)
-  - the firm cannot produce without tokens
-  - equilibrium depends on AI retraining rate: 
-    - **equilibrium = decreased innovation** if competitve edge disappears too fast
-
-<v-click>
-
-<br>
-
-$\implies$ which regime a firm faces is a property of its **production technology**
-
-$\implies$ most exposed: the firms that **must** use the model to operate
-
-</v-click>
-</v-click>
-</v-click>
-
----
-section: AI and learning
-layout: center
-class: text-center
----
-
-<h1 style="font-size: 3.7rem; line-height: 1.2;">Financial markets and AI</h1>
-
-<br>
-
-### joint work with Andrea Barbon
-
-<!--
-Transition from the first paper: firms' use of AI changes the value of their knowledge.
-The second question concerns the people producing and interpreting that knowledge.
-Motivation follows the Collective intelligence paragraph of application_outline.tex,
-with the empirical claims checked against the original sources.
--->
-
----
-
-# I. Motivation
-
-## AI changes the work involved in cognitive tasks
-
-- people delegate parts parts of the cognitive work
-- this usually improves performance in interpreting information, exercising judgment, developing ideas
-
-<v-click>
-
-<br>
-
-### Cognitive tasks with AI decreases practice
-
-- reasoning through a problem helps develop the ability to solve the next one
-- congitive tasks build expertise
-
-</v-click>
-
-<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70">
-Bengio et al. (2026), International AI Safety Report 2026, §2.3.2.
 </div>
 
 <!--
-The report synthesizes emerging evidence about cognitive offloading and human autonomy.
-It also describes benefits and emphasizes that long-term evidence remains limited.
-The practice mechanism motivates the model; this slide does not claim that all AI use erodes skills.
+Time: 0:50. Cumulative: 1:10.
+Initially show only the plot. Click 1 reveals the market-size comparison to its right.
+Click 2 reveals the economic-value question below.
+Tokenization has begun and the data are encouraging. The closing slide returns to its scale
+relative to conventional equity markets.
+The supplied RWA.xyz chart shows growth across a broad tokenized-asset universe,
+with Treasury debt its largest displayed component. Labeled dates run January 2024–September 2026.
+The chart extends beyond those ticks, and its exact endpoints and snapshot date are not shown.
+Let the aggregate growth carry the figure rather than reading every legend category.
+Much recent work documents size, activity and adoption. We ask about the economic mechanism
+and the regulatory conditions under which tokenization is worthwhile.
 -->
 
 ---
+class: discussion paper-talk projection-large projection-roomy
+title: Value of tokenization
+---
 
-# I. Motivation
+# Value of tokenization
 
-## Evidence: AI-assisted writing
 
-### Kosmyna et al. (2025), *Your Brain on ChatGPT*
+- Permissionless
+- Transparent
+- Helps underbanked / emerging markets
+- 24/7 Trading
 
-- **54 participants** wrote essays with ChatGPT, search engines, or no tools
-- EEG measurements and interviews to track engagement, recall, and ownership
+<!--
+Time: 0:20.
+Acknowledge the appeal of permissionless public trading and broader access.
+These bullets describe the promise, rather than unconditional predictions from our model.
+The next slide introduces the economic value of tokenization through programmable finance.
+-->
 
-<v-click>
+
+---
+class: discussion paper-talk projection-large projection-roomy
+---
+
+# (Real) value of tokenization
+
+## DeFi: tokenized assets can earn a passive yield
+- **Smart contracts:** automate financial services <br>(AMMs, Lending/Borrowing, Insurance)   
+- **Liquidity provision:** <br>investors can earn  revenue  from  trading that liquidity generates
+- DeFi services can reduce costs (see Park, Malinova 2025)
+<v-click at="1">
 
 <br>
 
-### What the study reports
-
-- the ChatGPT group showed **weaker EEG connectivity during writing**
-- participants had more difficulty quoting their own essays
+$\implies$ **DeFi can create economic value and help tokenization scale.**
 
 </v-click>
 
-<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70">
-Kosmyna et al. (2025), Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task.<br>
-Small, task-specific study; long-run effects on skills remain an open question.
+
+<br>
+
+<div v-click="2" class="prop-box">
+
+Is it enough for the viability of tokenization ?
+
+</div>
+
+
+<!--
+Time: 0:40. Cumulative: 5:10.
+Click 1 reveals the liquidity point. Click 2 reveals the question box. Click 3 reveals the permissioning point.
+The useful functionality is programmability. Instead of only holding a tokenized asset,
+an investor may supply it to a smart-contract market and receive fees and price-impact revenue.
+This incremental return matters relative to holding the underlying asset offchain.
+Yield is paid by traders. LPs bear risks and costs. No blockchain is guaranteed to be cheaper.
+The paper allows costs to depend on trade size and depth and studies the resulting market's viability.
+BIS and the French, Singaporean and Swiss central banks tested AMMs for FX trading and
+settlement of hypothetical wholesale CBDCs between simulated financial institutions.
+Mariana demonstrates technical feasibility, not measured liquidity gains or live adoption.
+Cook discusses automated collateral operations, linked FX transactions and intraday capital use.
+The preceding slides establish the constraints. Now introduce our economic value proposition,
+then explain that regulators can adjust the compliance environment.
+-->
+
+
+---
+class: discussion paper-talk projection-large
+---
+
+# Tokenized Securities Are Securities
+
+SEC Chair Paul Atkins (November 2025):
+
+<blockquote class="atkins-quote">
+
+*“**A stock is still a stock** whether it is a paper certificate, an entry in a DTCC account, or represented by a token on a public blockchain. A bond does not stop being a bond because its payment streams are tracked using smart contracts.”*
+
+</blockquote>
+
+<blockquote class="atkins-quote atkins-conclusion">
+
+***“Tokenized securities are and will continue to be securities.”***
+
+</blockquote>
+
+
+<!--
+Time: 0:35.
+The Atkins attribution and both quotations are visible immediately.
+Legal classification follows the instrument's rights and substance, not its recordkeeping technology.
+Restrictions depend on the instrument and offering regime. They do not all require accredited investors.
+The speech states the Chair's principles. It is not itself a new Commission rule.
+Next show how these obligations enter the token contract in practice.
+-->
+
+
+---
+class: discussion paper-talk projection-large projection-buidl
+---
+
+# Permissioning in practice: BUIDL
+
+<div class="prop-box buidl-overview">
+
+**BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
+
+- Tokenized money market fund with underlying assets at BNY Mellon
+- Ownership registered onchain by a SEC-registered transfer agent
+- Every transfer gated by a compliance check at the token contract level
+
+</div>
+
+
+<div class="buidl-code-window">
+<img src="./images/tokenized_transfers.png" alt="BUIDL transfer restriction code: the canTransfer modifier calls getComplianceService().validateTransfer before a transfer executes" />
 </div>
 
 <!--
-54 participants completed sessions 1–3; 18 returned for a crossover session.
-Connectivity measures task-time functional activity, not structural brain damage.
-Avoid claiming a percentage fall in total brain activity or permanent loss of intelligence.
-The authors emphasize the study's task-specific scope and the limits of its interpretation.
+Time: 0:40. Cumulative: 3:40.
+Initially show the fund description and all three bullets. Click 1 reveals the contract excerpt.
+The image focuses on the canTransfer modifier.
+Read the highlighted compliance-service call. The next slide unpacks it in stages.
+-->
+
+
+<!--
+Time: 0:30. Cumulative: 4:10.
+Initially: transfer requested. Click 1: compliance service and its incoming arrow.
+Click 2: validateTransfer and its incoming arrow. Click 3: both outcomes and the pass/fail branches.
+Transfers cannot bypass these token-level checks by changing venues.
+ATS examples from the earlier deck: Securitize Markets, tZERO and INX.
+The SEC order also permits pool-level credentialing. Token-level checks are not a universal
+requirement for every security or venue. This example illustrates the implementation in BUIDL.
 -->
 
 ---
+class: discussion paper-talk projection-large projection-turnover projection-roomy
+---
 
-# I. Motivation
+# Permissioning undermines liquidity
 
-## Evidence: solving mathematics with AI
+<div class="permissioning-turnover-caption">
 
-### Bastani et al. (2025): a randomized field experiment
+**Daily Turnover**
 
-Nearly 1,000 high-school students; AI-assisted practice followed by an **unaided exam**.
-
-| Access during practice | Practice scores | Subsequent unaided exam |
-| --- | --- | --- |
-| Standard GPT-4 chat | **+48%** | **−17%** |
-| Tutor with teacher-designed hints | **+127%** | No significant difference |
-
-<v-click>
-
-<br>
-
-$\implies$ better performance can coexist with less learning
-
-$\implies$ how the tool is designed and used matters
-
-</v-click>
-
-<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70">
-Bastani et al. (2025), Generative AI without guardrails can harm learning: Evidence from high school mathematics.<br>
-Changes relative to the group without AI; percentages, not percentage points.
 </div>
 
-<!--
-Supplementary primary evidence, added because it directly speaks to a maths audience.
-Study took place in a Turkish high school over four sessions, using GPT-4.
-The tutor's unaided exam result is statistically indistinguishable from the control group;
-it is not evidence of improved exam learning. These are short-term outcomes in this setting.
-The published correction concerns an author's affiliation.
--->
+
+<div class="permissioning-turnover-cards">
+<div class="permissioning-turnover-card native-turnover">
+
+**Native Assets**
+
+ETH: 6%<br>
+SOL: 8%
+
+</div>
+<div class="permissioning-turnover-card tokenized-turnover">
+
+**Tokenized Securities**
+
+Whitelist-only: 1.3%<br>
+Accredited-only: 0.02%
+
+</div>
+</div>
 
 
 ---
+class: discussion paper-talk markdown-slide projection-large projection-policy
+---
 
-# II. The model
+# Compliance is a policy variable
 
-## The financial market
+<div class="policy-events">
+<div>
 
-### Two trading rounds, and a continuum of risk-averse traders
+### June 2025 · Atkins
 
-- traders $i\in[0,1]$ buy and sell a risky asset at each date $t=1,2$
-- asset pays a payoff $v_t$ at each date $t=1,2$
+Consider an **innovation exemption** for onchain products and services
 
-$$
-v_t\sim N(0,\tau_v^{-1})
-$$
+</div>
+<div v-click="1">
 
-- traders observe private information about the payoff, and the market price $p_t$
+### September 2026 · SEC order
 
-<br>
-<br>
+- Conditional relief from the Exchange Act 
+  - for **DEX venues** as **exchanges**
+  - for **liquidity providers** as **dealers**
+</div>
+</div>
 
 
 
 
 <!--
-Zero net supply, a riskless asset with zero return, and common CARA risk aversion gamma.
-Round-1 asset pays at t=2; round-2 asset pays at t=3. Independent payoffs isolate skill dynamics
-from persistent information about the same asset. Gaussian noise here concerns information,
-not Brownian uncertainty in the first paper's advantage dynamics.
+Time: 0:40. Cumulative: 5:50.
+Initially show June 2025. Click 1 reveals September 2026 and the sources. Click 2 reveals the box.
+June 2025: Atkins directed staff to consider conditional exemptive relief. It was a proposal then.
+September 17, 2026: SEC issued an order for permissioned AMMs trading tokenized NMS stocks.
+Conditional relief concerns the Exchange Act exchange definition and the dealer definition
+for certain proprietary-capital LPs. It expires five years after publication.
+It does not remove securities law or open every tokenized product to everyone.
+Conditions include shareholder rights, auditable public contracts, credentialing, disclosures,
+symbol/volume limits and coordination with trading halts. Pool allow-lists or token transfer
+restrictions may enforce credentialing (order pp. 9–10).
+Order: https://www.sec.gov/files/rules/exorders/2026/34-106402.pdf
+The additional examples and author–year references come from the paper's introduction:
+CBDCs (fung2016central, auer2022central), cross-border settlement
+(harvey2021defi, hub2023project, cardozo2024cross), and capital raising/governance
+(cong2025centralized, han2026decentralized).
+This does not literally set our model's illicit-flow cap ψ. It illustrates a changeable legal
+environment. Our cap is an abstraction of stringency. The liquidity interpretation is our paper's.
 -->
 
+
+
+---
+class: discussion paper-talk projection-large projection-roomy
 ---
 
-# II. The model
-
-### Each trader sets the precision of a private signal
-
-$$
-s_{i,t}=v_t+\varepsilon_{i,t},\qquad
-\varepsilon_{i,t}\sim N(0,x_{i,t}^{-1}),\qquad
-x_{i,t}=\underbrace{a_{i,t}}_{\text{AI}}+\underbrace{h_{i,t}}_{\text{cognitive effort}}
-$$
-
-- a higher precision $x_{i,t}$ means a less noisy signal
+# Contribution
+<br>
 
 
-<v-click>
+**An equilibrium model of a tokenized securities market with relevant economic forces**
 
 <br>
 
-- Cognitive effort and AI use are costly
+**Two research questions**: 
 
-$$
-C_A(a_{i,t})=c\,a_{i,t},\qquad C_H(h_{i,t},k_{i,t})=\frac{h_{i,t}^2}{2k_{i,t}}
-$$
+- How does regulatory stringency affect the viability of tokenization?
 
-- $c>0$: the price of AI-produced precision
-- $k_{i,t}>0$: cognitive capital of trader $i$:  more expertise makes cognitive effort cheaper
+- How should regulation be conducted ?
 
-</v-click>
 
 <!--
-Human processing h is measured in units of signal precision, not literal hours worked.
-All signal errors are independent across traders and dates in the baseline.
-Notation follows ANDREA: c is the AI price, p is the asset price, a is AI precision,
-and u is noise-trader demand. This avoids the grant's alternative notation.
+Time: 0:20. Cumulative: 6:40.
+Measuring adoption alone cannot answer these questions.
+Our model retains trading-generated returns, endogenous investor capital, and a compliance constraint.
+First characterize the effects of stringency on liquidity and commercial viability.
+Then let the regulator choose the cap, balancing innovation benefits against illicit-trading harm.
 -->
 
 ---
+class: discussion paper-talk projection-large projection-extended projection-economy
+section: Tokenized markets
+---
 
-# II. The model
+# The economy
 
-### Cognitive capital dynamics
+<div class="economy-diagram">
+<svg class="economy-arrows" viewBox="0 0 864 360" preserveAspectRatio="none" role="img" aria-label="The issuer gives tokens to investors, who deposit them on the blockchain. Traders trade these tokens on the blockchain, generating investor yield. Investors pay an AUM fee to the issuer, the issuer screens traders and bears compliance costs.">
+<defs>
+<marker id="economy-compliance-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#b7791f" /></marker>
+<marker id="economy-revenue-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#475569" /></marker>
+</defs>
+<g v-click="3">
+<path class="kyc-arrow" d="M411,148 L181,242" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
+<path class="compliance-cost-arrow" d="M201,242 L424,148" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
+</g>
+<path class="aum-fee-arrow" d="M663,242 L440,148" stroke="#475569" marker-end="url(#economy-revenue-head)" />
+<path v-click="2" class="investor-yield-arrow" d="M264,264 L600,264" stroke="#475569" marker-end="url(#economy-revenue-head)" />
+<path class="issued-tokens-arrow" d="M536,126 C676,111 770,144 754,242" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
+<g class="economy-token" aria-label="Issued token">
+<circle cx="713" cy="148" r="14" fill="#fff4d5" stroke="#b7791f" stroke-width="1.8" />
+<circle cx="713" cy="148" r="10" fill="none" stroke="#b7791f" stroke-width="0.8" />
+<text x="713" y="148">T</text>
+</g>
+<path v-click="1" class="deposit-tokens-arrow" d="M704,286 C704,322 595,338 536,338" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
+<path v-click="2" class="trade-tokens-arrow" d="M160,286 C160,322 269,338 328,338" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
+</svg>
 
-$$
-k_{i,2}=\underbrace{(1-\delta)\ k_{i,1}}_{\text{depreciation}}
-+\underbrace{\lambda\ h_{i,1}}_{\text{learning by doing}},
-\qquad \delta\in(0,1),\quad \lambda>0
-$$
+<div class="economy-node issuer">
 
-- cognitive effort: interpret information today + build expertise for tomorrow
+**Issuer**
 
-<v-click>
+</div>
+<div v-click="2" class="economy-node traders">
 
-<br>
+**Traders**
 
-<br>
+</div>
+<div class="economy-node investors">
 
-$\implies$ AI affects cognitive capital through the **choice to delegate** and reduced practice
+**Investors**
 
-$\implies$ traders anticipate the effect of their choices on future expertise
+</div>
+<div v-click="1" class="economy-node blockchain">
+
+**Blockchain**
+
+</div>
+
+<div v-click="3" class="economy-label kyc-label">KYC/AML</div>
+<div v-click="3" class="economy-label compliance-cost-label">Compliance Costs</div>
+<div class="economy-label aum-fee-label">AUM Fee</div>
+<div v-click="2" class="economy-label investor-yield-label">Investor Yield</div>
+<div class="economy-label issued-tokens-label">Tokens</div>
+<div v-click="1" class="economy-label deposit-tokens-label">Deposit tokens</div>
+<div v-click="2" class="economy-label trade-tokens-label">Use financial services</div>
+
+<div v-click="3" class="economy-policy">
+<svg class="economy-arrows" viewBox="0 0 864 360" preserveAspectRatio="none" role="img" aria-label="Regulatory policy constrains the issuer.">
+<defs>
+<marker id="economy-policy-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#b7791f" /></marker>
+</defs>
+<path class="regulatory-policy-arrow" d="M432,50 L432,104" stroke="#b7791f" marker-end="url(#economy-policy-head)" />
+</svg>
+<div class="economy-node regulator">
+
+**Regulator**
+
+</div>
+<div class="economy-label regulatory-policy-label">Regulatory Policy</div>
+</div>
+</div>
 
 
-</v-click>
 
 <!--
-AI does not enter the capital law directly. Substitution changes optimal h, which changes k.
-This is the paper's central modelling step: skill erosion is an equilibrium consequence
-of the information-production choice, rather than a direct damage term imposed on AI use.
+Time: 0:55. Cumulative: 7:35.
+Initially show only the issuer and investors, with the AUM Fee arrow and the gold issuance
+arrow, coin and Tokens label between them.
+Click 1 reveals the blockchain, the Deposit tokens arrow and its label together.
+Click 2 reveals traders, their Use financial services arrow and label, and the Investor Yield
+arrow and label. The yield consists of fees and price impact.
+Click 3 reveals KYC/AML toward traders and Compliance Costs back toward the issuer,
+including both arrows and their labels, together with the regulator and its
+downward Regulatory Policy arrow.
+The issuer earns fee φ on AUM and bears screening costs.
+Traders arrive at rate λ and choose trade size. Investors can instead hold the asset offchain.
+Liquidity supply earns incremental revenue. Idle onchain holding does not, while both bear tokenization risk.
+All tokenized holdings therefore become liquidity in equilibrium.
+The issuer tokenizes only if optimized profit exceeds positive opportunity cost U̲.
+First take the cap as given. Later, the regulator anticipates these market responses
+and chooses the cap before the issuer's decision.
 -->
 
 ---
+class: discussion paper-talk markdown-slide projection-large projection-overview
+---
 
-# II. The model
+# The model
 
-### The trader's objective
+## Three stage model
 
-
-$$
-\begin{gathered}
-\max_{\{a_{i,t},h_{i,t},q_{i,t}\}_{t=1}^{2}}\; \mathbb{E}\!\left[-e^{-\gamma W_{i,3}}\right]
-\qquad\text{where}\qquad
-W_{i,3}=W_0+\sum_{t=1}^{2}\Bigg[
-\underbrace{q_{i,t}(v_t-p_t)}_{\text{trading profit}}
--\underbrace{ca_{i,t}}_{\text{AI cost}}
--\underbrace{\frac{h_{i,t}^2}{2k_{i,t}}}_{\text{cognitive effort cost}}
-\Bigg]
-\end{gathered}
-$$
-
-- $q_{i,t}$: the position in the risky asset; $\gamma>0$: risk aversion
-- traders pay for information before seeing the signal and price
+<div class="presentation-columns">
+<div>
 
 <br><br>
 
-<img src="./images/market-timing.svg" alt="Market timing: at t=1 choose AI and cognitive effort, observe a signal and trade; at t=2 receive the first payoff, update cognitive capital, choose inputs and trade again; at t=3 receive the second payoff and consume final wealth." style="display: block; width: 100%; max-height: 105px; margin: 10px 0 0; object-fit: contain;" />
+### Stage 1: issuer
 
+- Issuer decides whether, and how much to issue
+- must screen traders
+- **revenue**: management fees
 
-<!--
-Expected utility is part of the Gaussian financial-information model, as in ANDREA.
-This is distinct from the Brownian term removed from the first paper's dynamics.
-CARA preferences remove wealth effects; the two rounds are linked through capital alone.
-
-### The trade-off
-- Acquire information, trade, and maximize utility from final wealth
-- better information improves the trading decision
-- human analysis is costly, and preserves future expertise
-- AI can make today's information cheaper
-
--->
-
----
-
-# II. The model
-
-## Prices aggregate traders' information
-
-- $u_t\sim N(0,\tau_u^{-1})$: random noise-trader demand
-
-$$\text{clearing} \quad \implies \quad
-\underbrace{\bar x_t=\int_0^1x_{i,t}\,di}_\text{average precision},\qquad
-\widehat p_t=v_t+\frac{\gamma}{\bar x_t}u_t
-$$
-
-$\implies$ the price is a public, noisy estimate of the payoff (due to noise trading)
-
-$\implies$ more precise private signals $\overline x_t$ make the market price more informative
-
-
-<!--
-ANDREA Lemma 1: p_t = (xbar_t + tau_p,t)/(tau_v + tau_p,t + xbar_t) times p-hat_t.
-The scaling is positive, so the rescaled statistic and actual price carry the same information.
-Independent private errors average out; noise-trader demand keeps prices partially revealing.
--->
-<br>
-
-<img src="./images/market-timing.svg" alt="Market timing: at t=1 choose AI and cognitive effort, observe a signal and trade; at t=2 receive the first payoff, update cognitive capital, choose inputs and trade again; at t=3 receive the second payoff and consume final wealth." style="display: block; width: 100%; max-height: 105px; margin: 10px 0 0; object-fit: contain;" />
-
----
-
-# II. The model
-
-## Solved by backward induction
-
-- Date $2$
-
-
-$$\small
-V_2(k)=\max_{a,h\geq0}\left\{B_2(a+h)-ca-\frac{h^2}{2k}\right\}, \qquad B_t(x)=\frac{1}{2\gamma}\ln(\tau_v+\tau_{p,t}+x)
-$$
-
-<v-click>
-
-- Date $1$
-
-$$\small
-\max_{a_1,h_1\geq0}\left\{B_1(a_1+h_1)-ca_1-\frac{h_1^2}{2k_1}
-+V_2\!\left((1-\delta)k_1+\lambda h_1\right)\right\}, \qquad B_t(x)=\frac{1}{2\gamma}\ln(\tau_v+\tau_{p,t}+x)
-$$
-
-</v-click>
-
-<!--
-B is the choice-relevant certainty-equivalent benefit, not expected trading profit.
-Gaussian updating and CARA utility give the log expression exactly.
-The objectives are concave. First-order conditions and market clearing then give closed forms.
--->
+</div>
+<div>
+<div v-click="1">
 
 <br>
 
-<img src="./images/market-timing.svg" alt="Market timing: at t=1 choose AI and cognitive effort, observe a signal and trade; at t=2 receive the first payoff, update cognitive capital, choose inputs and trade again; at t=3 receive the second payoff and consume final wealth." style="display: block; width: 100%; max-height: 105px; margin: 10px 0 0; object-fit: contain;" />
+### Stage 2: Investors
+
+- Decide how much to invest in DeFi $\implies$ yield
+
+</div>
+<div v-click="2" class="overview-traders">
+<br><br><br><br>
+
+### Stage 3: traders
+
+- Consume blockchain financial services
+
+</div>
+<div v-click="3" class="prop-box overview-solution">
+
+$\implies$ solved by backward induction
+
+</div>
+</div>
+</div>
 
 
 
----
-
-# III. Results
-
-## Result 1: traders value expertise
-
-### Optimal cognitive effort includes return to future expertise
-
-$$
-h_2=ck_2,\qquad
-h_1=\underbrace{ck_1}_{\text{current information}}
-+\underbrace{\frac{\lambda c^2 k_1}{2}}_{\text{practice premium}}
-$$
-
-- in the last round, marginal cost of cognitive effort equals the cost $c$
-- in the first round, traders do extra analysis because it builds cognitive capital / expertise
-
-
-
-<!--
-These policies and the envelope formula hold where AI is used.
-V2' is evaluated holding the second-round price coefficients fixed, as an atomistic trader does.
-The practice premium shows that erosion does not require myopic traders.
--->
 
 ---
+class: discussion paper-talk markdown-slide model-proposal projection-large projection-model-split projection-traders
+---
 
-# III. Results
+# Stage 3: traders
 
-## Result 2: cheap AI can erode cognitive capital
+<div class="presentation-columns">
+<div>
 
-### Optimal dynamics of expertise (cognitive capital)
+- Traders arrive at Poisson rate $\lambda$
+- Fraction $\pi$ admitted by issuer
+- Observe onchain liquidity $L$
 
-$$
-k_2=\rho(c)k_1,\qquad
-\rho(c)=1-\delta+\lambda c\left(1+\frac{\lambda c}{2}\right)
-$$
+<div v-click="1">
 
-<v-click>
+- Traders derive (concave) utility $\Pi(V)$ from trading $V$
+
+
+</div>
+</div>
+<div>
+<div v-click="2">
+
+- **Cost** to consume onchain liquidity: $\kappa(V/L)$ paid to investors
+
+</div>
+<div v-click="3">
 
 <br>
 
-- Threshold in token price
-  $$
-  c<\widehat c:=\frac{\sqrt{1+2\delta}-1}{\lambda}\quad\Longleftrightarrow\quad k_2<k_1
-  $$
+- Traders solve
 
-  - below the threshold, practice does not replace depreciating skills
-  - traders understand the future consequence, yet find the cheaper information worthwhile
+<div class="prop-box">
+
+$$\begin{aligned}
+V^\star(L)&=\arg\max_{V\geq0}\\[0.3em]
+&\quad\Bigg[\underbrace{\Pi(V)}_{\text{trading utility}}-\underbrace{\kappa\!\left(\frac{V}{L}\right)V}_{\text{costs}}\Bigg]
+\end{aligned}$$
+
+</div>
+</div>
+</div>
+</div>
+
+<!--
+Comparison proposal: replaces the preceding stage 3 slide if selected.
+Paper: Model, Traders. Equation trader_problem.
+Capital Π denotes utility, whereas π is the acceptance rate.
+Concavity is in trading volume V, not in market liquidity L.
+κ(V/L) is the cost per unit traded. Total payment to LPs is κ(V/L)V.
+This payment includes both trading fees and price impact. γV is value extracted by
+profit-seekers, for example through sandwich attacks, and is not LP revenue.
+Initially show trader arrivals and their choice given liquidity. Click 1 reveals utility
+and its properties. Click 2 reveals trading costs and convexity. Click 3 reveals the
+trader's optimization problem. Both legitimate and illicit traders
+have the same trading preferences. The admitted arrival rate is λπ.
+-->
+
+
+---
+class: discussion paper-talk markdown-slide model-proposal projection-large projection-model-split projection-investors
+---
+
+# Stage 2: investors
+
+- Tokenized holdings introduce novel risks (smart-contract, operational, custody) <br> $\implies$ investors require a **risk premium** $\xi$
+
+<div class="presentation-columns">
+<div>
+<v-clicks at="1">
+
+- Liquidity provision earns a passive **yield**
+<!-- Investors can hold the same security off-chain
+$\implies$ Idle tokenized holdings earn zero yield but bear risk. $\implies$ **$L^\star=L^\star$**.-->
+- **Costs**:
+  - adverse selection $\delta$ (asset-specific risk)
+  - issuer's management fee $\phi$
+
+</v-clicks>
+</div>
+<div v-click="3" class="prop-box">
+
+Return to investment
+
+$$\begin{aligned}
+r(L)&=\lambda\,\pi\,\text{yield}(L,V^\star(L))
+-\delta-\phi
+\end{aligned}$$
 
 <br>
 
-$\implies$ cognitive decline can be **privately optimal**
+<div v-click="4">
 
-</v-click>
+Free entry: investment adjusts until
+
+$$\underbrace{r\!\left(L^\star(\pi)\right)}_{\text{net yield}}=\underbrace{\xi}_{\text{required premium}}$$
+
+</div>
+</div>
+</div>
 
 <!--
-ANDREA Proposition on the erosion threshold, within the positive-AI-use region.
-This establishes decline from round 1 to round 2, not geometric extinction over an infinite horizon.
-Private optimality does not establish social optimality or a welfare loss.
+Comparison proposal: replaces the preceding stage 2 slide if selected.
+Paper: Model, Investors. Equations lp_return and investor_equilibrium.
+The gross incremental yield is trading revenue divided by supplied liquidity L.
+Subtract δ and φ to get net incremental return r(L), relative to holding the same
+underlying security offchain. Settlement and smart-contract risks motivate ξ.
+γ is a trader-side extraction cost and is not another term to subtract from r(L).
+Initially show the risks and required premium. Click 1 reveals passive yield,
+click 2 the off-chain alternative, and click 3 investor costs. Click 4 reveals
+the net-return equation. Click 5 reveals the free-entry condition r(L*) = ξ.
+There is no separate investor argmax specified in the paper: capital adjusts until
+net return equals the required premium. Click 6 explains why idle onchain holdings
+are dominated by supplying liquidity, so AUM and liquidity coincide.
+-->
+
+
+---
+class: discussion paper-talk markdown-slide model-proposal projection-large projection-roomy
+---
+
+# Stage 1: issuer
+
+<v-clicks at="+0">
+
+- **Regulator** imposes a cap $\psi$ on  **illicit trading** <br>
+$\implies$ regulatory burden
+- Issuer decides whether, and how much, to tokenize
+- **Revenue**: management fees $\phi\,L^\star(\pi)$ on equilibrium AUM
+- Compliance policy: **two ways to comply** 
+  - **costless adjustments**: admit fewer traders $\pi\downarrow$
+  - **costly measures**: screen more precisely $\rho\uparrow$
+- **Cost**: screening $\mathcal C(\rho)$, increasing and convex
+
+</v-clicks>
+
+<!--
+Paper: Model, Issuer. Equations feasibility, regulatory, issuer_problem and Ustar.
+The issuer chooses acceptance π and precision ρ, not an independent AUM quantity.
+Stage 2 gives equilibrium AUM L*(π): investor entry responds to trading revenue.
+Stage 3 gives optimal trade size V*(L). This completes backward induction.
+φ is fixed. C(1)=0, C'>0, C''>0. At fixed acceptance, precision changes the composition
+of admitted traders without changing their total arrival rate λπ or revenue directly.
+ρ=qL/qI → qI=π/(μρ+1−μ), qL=ρπ/(μρ+1−μ). Hence admitted illicit flow is
+(1−μ)λπ/(μρ+1−μ). The probability restriction qL≤1 gives π≤μ+(1−μ)/ρ.
+Initially show the regulator's cap. Click 1 reveals the issuer's choices and the two
+ways to comply. Click 2 reveals fee revenue, and click 3 screening costs.
+The next slide states the optimization problem and the issuance decision.
 -->
 
 ---
+class: discussion paper-talk markdown-slide issuer-problem-slide projection-large projection-extended projection-issuer
+---
 
-# III. Results
+# Stage 1: issuer's problem
 
-## Result 3: cognitive decline is concealed
+<div class="issuer-problem-grid">
+<div>
 
-### The amount of information in the market stays constant, but the human contribution decreases
+### Optimization problem
 
-$$\small
-\begin{gathered}
-\overline x_{1}=\overline x_{2},\\[-0.2em]
-c<\widehat{c}\;\implies\; k_2<k_1
-\end{gathered}
-$$
+<div class="prop-box">
 
-<img src="./images/cognitive-capital-baseline.svg" alt="Baseline illustration: the AI share of private precision rises from 46% to 69%, while cognitive capital falls from an index of 100 to 60.5. Price informativeness is unchanged." style="display: block; width: 760px; max-height: 275px; margin: 8px auto 0; object-fit: contain;" />
+$$\begin{aligned}
+U^\star(\psi)&=\max_{\substack{0<\pi\leq1\\\rho\geq1}}
+\quad\left[\underbrace{\phi L^\star(\pi)}_{\text{fee revenue}}-\underbrace{\mathcal C(\rho)}_{\text{screening cost}}\right]\\[0.45em]
+\text{s.t.}\quad&\underbrace{\frac{(1-\mu)\lambda\pi}{\mu\rho+(1-\mu)}}_{\text{illicit flow}(\pi, \rho)}\leq\underbrace{\psi}_{\text{regulatory cap}}
+\end{aligned}$$
 
-<div class="absolute bottom-8 left-14 right-14 text-sm leading-tight opacity-70 [&>p]:m-0 [&>p]:leading-tight">
+</div>
 
-Model illustration: $c=0.1$, $\delta=0.5$, $k_1=8$; $\gamma=\tau_v=\tau_u=\lambda=1$. Positive AI use in both rounds.
+<br><br>
+
+</div>
+
+
+<div class="issuer-participation">
+
+### Tokenize only if **profit exceeds an opportunity cost** $\underline U>0$:
+
+$$U^\star(\psi)>\underline U.$$
+
+</div>
+</div>
+
+<!--
+Paper: Model, Issuer. Equations issuer_problem and Ustar.
+The paper defines U* with a supremum. The model solution establishes attainment.
+The opportunity cost is positive, underline U>0, and is an outside option rather than
+an additional screening cost. Click 1 reveals the issuance decision U*>underline U.
+A lower ψ means tighter regulation. We study ψ<(1−μ)λ and assume tokenization is
+worthwhile without regulation: underline U<φL*(1). The following result asks how
+optimal acceptance and equilibrium liquidity respond as the regulator tightens ψ.
+-->
+
+---
+class: discussion paper-talk projection-large projection-extended projection-additional projection-okx projection-okx-two-images
+---
+
+# The case of OKX
+
+<div class="okx-case-layout">
+<div class="okx-case-text">
+
+- OKXICE TSV provides permissioned AMMs (Uniswap v4, X Layer)
+- TSV Participants buy/sell Tokenized NMS Stock against stablecoins
+- “OKXICE TSV Hook” enforces permissioning (only wallets holding a soulbound token “SBT” issued by OKXICE TSV).
+
+</div>
+<figure class="okx-case-evidence">
+<img src="./images/OKX.png" alt="Coin Bureau post reporting that 26 companies objected to tokenized versions of their shares trading on OKXICE." />
+<figcaption class="source">Source: Coin Bureau.</figcaption>
+</figure>
+<figure class="okx-case-evidence okx-issuer-advertisement">
+<img src="./images/HVf0NrKWMAAwV8K.jpg" alt="Newspaper advertisement warning public company CEOs about the risks of tokenized shares" />
+<figcaption class="source">FT.</figcaption>
+</figure>
+</div>
+
+---
+class: discussion paper-talk projection-large projection-extended projection-result
+---
+
+# Result 1 · Regulation reduces liquidity
+
+<div class="prop-box">
+
+**Proposition.**<br>
+Tighter regulation reduces liquidity and trading volumes.
+
+</div>
+
+<br><br>
+
+
+
+<div class="mechanism-row">
+<div><b>ψ ↓ ⇒ π<sup>⋆</sup> ↓</b><br>Lower admitted flow<br>λπ<sup>⋆</sup></div>
+<span>→</span>
+<div><b>T<sup>⋆</sup> ↓</b><br>Smaller aggregate transfer<br>to liquidity providers</div>
+<span>→</span>
+<div><b>L<sup>⋆</sup> ↓</b><br>Liquidity is proportional<br>to the transfer</div>
+</div>
+
+<!--
+Time: 1:05.
+Paper: prop:reg_liquidity, supported by prop:flow, prop:transfer and prop:proportionality.
+The three channel boxes follow those supporting propositions in order:
+lower acceptance and admitted flow, smaller aggregate transfer, then proportional liquidity.
+T* denotes the aggregate transfer from traders to liquidity providers, not yield per unit of capital.
+This is the issuer's optimal response, not only a mechanical constraint effect.
+For ψ<ψ0=(1−μ)λ the cap binds. The issuer uses minimum compliant precision at each π.
+The reduced objective has strictly increasing differences in π,ψ on an interval with increasing endpoints.
+Optimal acceptance strictly increases with ψ. T*=(ξ+δ+φ)L*.
+Issuer policies need not be unique. Monotonicity is in the strong set order.
+These comparisons describe the conditional market. When the issuer exits, actual tokenized liquidity is zero.
+Net investor yield remains ξ wherever the market exists.
+-->
+
+---
+class: discussion paper-talk evidence-slide projection-large projection-extended projection-turnover-evidence
+---
+
+# Turnover
+
+<table class="overshoot-tbl projection-turnover-table">
+<thead><tr><th></th><th>Whitelist-<br>only</th><th>Accredited-<br>only</th><th>Native<br>(ETH/SOL)</th></tr></thead>
+<tbody>
+<tr><td>Tokens</td><td>153</td><td>23</td><td>2</td></tr>
+<tr><td>Market capitalization</td><td>&#36;7.8B</td><td>&#36;471M</td><td>—</td></tr>
+<tr><td>Transfers per token per day</td><td><b>≈41</b></td><td><b>≈0.6</b></td><td>—</td></tr>
+<tr><td>Daily turnover</td><td>≈1.1%</td><td>≈0.016%</td><td><b>≈6% / 8%</b></td></tr>
+</tbody>
+</table>
+
+
+<br><br>
+
+<div class="source">
+
+Counts and market cap (Allium): July 2025–March 2026.<br>
+RWA turnover: 90 days ending 8 June 2026.
 
 </div>
 
 <!--
-Figure reproduced by scripts/create-cognitive-capital-figure.py, not estimated from data.
-Private precision xbar = (sqrt(17)-1)/2 = 1.561553; price precision = 2.438447 in both rounds.
-Human precision is 0.84 then 0.484; capital is 8 then 4.84.
-Human information shares are 53.79% and 30.99%; AI fills the residual.
-This illustrates the two-round result without importing the correlated-error extension.
+Time: 0:45.
+153 whitelist-only tokens/$7.8B/≈41 transfers per token per day.
+23 accredited-only tokens/$471M/≈0.6.
+Native assets: ETH and SOL. Their existing daily-turnover benchmarks are about
+6% and 8%, respectively (data-context.md and the earlier turnover slide).
+Native market capitalization and daily transfer counts are not available in the
+supplied data. Dashes denote missing figures, not zero activity.
+The turnover row uses a different window from the counts and market cap above:
+whitelist 1.1% and accredited 0.016%, 90 days ending 8 June 2026 (data-context.md).
+Turnover is transfer volume divided by market capitalization, not transfer count.
+The ETH/SOL benchmark window is not specified in the supplied materials.
+Token sizes and asset mix matter when comparing counts.
+Thin activity in existing tokens is not a direct observation of our issuer refusing to tokenize:
+positive AUM with thin trading does not itself establish commercial non-viability.
 -->
 
 ---
+class: discussion paper-talk projection-large projection-extended projection-result
+---
 
-# III. Results
+# Result 2 · viability of tokenization ?
 
-## Result 4: AI risk
+<div class="prop-box">
 
-### Remove AI unexpectedly before the second trading round
+**Proposition.**<br>
+Sufficiently strict regulation makes tokenization non-viable.
 
-| | Economy $A$ | Economy $B$ | Economy $C$ |
-| --- | --- | --- | --- |
-| Round 1 | Uses cheap AI | Uses cheap AI | Never has AI |
-| Round 2 | AI shock | Continues | Continues |
+</div>
+
+<br>
+<br>
+
+<div v-click="1">
+As ψ → 0
+</div>
+
+
+<div v-click="1" class="mechanism-row">
+<div><b>ρ<sup>⋆</sup> &lt; ρ̄ &lt; ∞</b><br>Revenue &  screening precision<br> bounded</div>
+<span>→</span>
+<div>acceptance <b>π<sup>⋆</sup> → 0</b> 
+<br> Liquidity  L<sup>⋆</sup> → 0
+</div>
+<span>→</span>
+<div><b>φL<sup>⋆</sup> → 0</b><br>Issuer revenue<br>vanish</div>
+
+</div>
+
+<br>
+
+<div v-click="1">
+
+Profit falls below the positive opportunity cost: $U^\star(\psi)<\underline U$
+
+
+</div>
+
+
+
+
+
+<!--
+Time: 1:05.
+Paper: prop:viability, supported by prop:bounded_screening and prop:forced_rationing.
+Initially announce the result. Click 1 reveals the screening-cost sentence and the full channel.
+Bounded screening: increasing screening costs and bounded commission revenue imply a finite,
+uniform precision bound rho-bar. With that bound, the largest feasible acceptance rate vanishes
+as psi approaches zero. Optimal acceptance must remain feasible and therefore also vanishes.
+Vanishing profits: liquidity, commission revenue and optimized profit vanish with acceptance.
+These are the two supporting propositions, following the paper's concluding channel summary.
+Click 2 reveals the profit cutoff and the decision not to tokenize.
+Trading revenue is the aggregate payment to investors, not net yield per unit of capital:
+free entry keeps net investor yield at ξ whenever the tokenized market exists.
+The maximum AUM fee is φL*(1), since π≤1. Precision costing more than this cannot be optimal:
+costless uninformative screening with low admission yields a positive profit instead.
+Thus ρ*<C⁻¹(φL*(1)) uniformly. Bounded precision implies π*≤constant×ψ.
+As ψ→0, admission, liquidity, fee revenue and optimized profit vanish.
+Positive opportunity cost U̲ gives a positive viability threshold.
+We assume tokenization worthwhile without regulation, hence ψ*∈(0,ψ0).
+Do not assert issuance at the exact threshold: the issuer's rule is U*>U̲.
+This is commercial viability, not proof that unrestricted tokenization maximizes social welfare.
+-->
+
+
+
+---
+class: discussion paper-talk projection-large projection-extended projection-frictions-table
+---
+
+# Result 3 · Viability of tokenization is asset-specific / platform-specific
+
+<table class="overshoot-tbl frictions-table">
+<thead><tr><th>Asset or platform characteristic</th><th>Economic effect</th></tr></thead>
+<tbody>
+<tr><td>Higher turnover (overall demand)</td><td>More yield for investors</td></tr>
+<tr><td>Greater onchain risk</td><td>Less yield</td></tr>
+<tr><td>Greater asset risk (volatility)</td><td>Less yield</td></tr>
+<tr><td>Larger illicit share / costlier screening technology</td><td>Compliance is more expensive</td></tr>
+</tbody>
+</table>
+
+<br>
+
+<div v-click="1" class="prop-box">
+
+An asset that is **cheaper to hold, trade and screen** withstands tighter regulation.
+
+</div>
+
+<!--
+Time: 1:05.
+The third result concerns asset-specific viability under a common regulatory policy.
+Turnover is an empirical indicator of trading demand. Trading generates fees and price-impact revenue for liquidity providers.
+Higher ξ,δ,γ or pointwise higher C weakly raises ψ*. Higher legitimate share μ weakly lowers ψ*.
+The first family lowers revenue. The second lowers optimized profit through costs or feasibility.
+Lower profit requires a looser cap for viability.
+Platform features can enter these primitives, but platform choice is not endogenous.
+Do not sign the threshold with λ: the formal propositions do not establish that comparative static.
+A common cap can keep one asset viable and make another non-viable.
+-->
+
+---
+class: discussion paper-talk evidence-slide projection-large projection-extended projection-market-evidence
+---
+
+# Different outcomes
+
+<div class="distribution-pair">
+<figure>
+<figcaption>Ethereum</figcaption>
+<img src="./images/ethereum_distribution.png" alt="Ethereum: stablecoins $160B, Treasuries $6.2B, commodities $4.7B, active strategies $1.8B" />
+</figure>
+<figure>
+<figcaption>Robinhood</figcaption>
+<img src="./images/robinhood_distribution.png" alt="Robinhood: stablecoins $997M, stocks $152.9M, asset-backed credit $34.5M, Treasuries $4.5M" />
+</figure>
+</div>
+
+<!--
+Time: 1:00. Ethereum/Robinhood comparison.
+Compare the two platform distributions.
+Stablecoins dominate. Compare the nonstablecoin mix.
+Ethereum: Treasuries $6.2B, commodities $4.7B, strategies $1.8B, stablecoins $160B.
+Robinhood: stocks $152.9M, asset-backed credit $34.5M, Treasuries $4.5M,
+stablecoins $997M. Unlabeled small slices prevent exact totals.
+These are allocations, not identified platform liquidity effects.
+The model allows platform risk/execution frictions but does not solve cross-chain sorting.
+Composition does not prove the chain caused sorting or rank platform liquidity after controlling for assets.
+Connect to ξ,δ (reward needed for capital), γ (trade size), and μ,C (compliance).
+These can differ by asset and infrastructure, motivating care with a common policy or exemption.
+-->
+
+---
+section: Optimal regulation
+class: discussion paper-talk markdown-slide projection-large projection-roomy projection-regulation-motivation
+---
+
+# Optimal regulation: why ?
+
+## Regulators interested in blockchain technology for socially beneficial innovation
+
+- central bank digital currencies, stablecoins <span class="policy-reference">(Fung and Halaburda, 2016; Auer et al., 2022)</span>
+- instantaneous and cross-border settlement (BIS Project Mariana)<br><span class="policy-reference">(Harvey, 2021; BIS Innovation Hub, 2023; Cardozo et al., 2024)</span>
+- (DAOs) raise capital and organize governance <span class="policy-reference">(Cong et al., 2025; Han, Lee and Li, 2026)</span>
+- competition for traditional venues
+- programmable finance, disintermediation
 
 <v-click>
 
 <br>
 
+$\implies$ model inspired by Campello, Cong and Dietrich (2024)
+
+</v-click>
+
+---
+class: discussion paper-talk markdown-slide optimal-regulation-slide innovation-timing-slide projection-large projection-extended projection-innovation
+---
+
+# Blockchain activity accelerates innovation
+
+
+<div class="presentation-columns">
+<div>
+
+- $Q_0$: existing blockchain activity
+- $Q^\star(\psi)$: added activity (tokenized market)
+- Total activity: $Q_0+Q^\star(\psi)$
+
+
+</div>
+<div>
+<div v-click="1">
+
+- More activity (legitimate and illicit) accelerates socially useful innovation:
+
+<div class="prop-box">
+
+$$\Pr(\tau\leq t)=1-e^{-a[Q_0+Q^\star(\psi)]t}.$$
+
+</div>
+</div>
+
+<div v-click="1" class="regulation-takeaway">
+
+
+
+</div>
+
+</div>
+</div>
+
+<!--
+Time: 0:45. Section cumulative: 0:45. Optimal-regulation section budget: 5:00.
+Attribution: Regulatory uncertainty and fintech innovation, cited in the paper as cong2024regulatory.
+Bridge from passive yield and programmable finance to the social benefits of innovation.
+Q*(psi) is the dollar trading flow lambda*pi*(psi)*V*(L*(pi*(psi))) in the market above.
+Initially introduce existing activity, added tokenized trading, and their units.
+Click 1 introduces an exponential innovation time with rate a[Q0+Q*(psi)].
+Click 2 emphasizes that more activity shortens the expected waiting time to innovation.
+Both legitimate and illicit trading contribute to activity. The innovation channel is
+an assumption, not an empirical causal estimate. The next slide values the earlier innovation.
+-->
+
+---
+class: discussion paper-talk markdown-slide optimal-regulation-slide social-value-slide projection-large projection-extended projection-social-value
+---
+
+# Social value of tokenization
+
+<div class="presentation-columns">
+<div>
+
+- $\Theta\geq0$: future social benefit
+- $m=\mathbb E[\Theta\mid S]$ : regulator's estimate
+
+<div v-click="1">
+
+- Expected discounted benefit without tokenization:
+
+$$m \ p\left(Q_0\right)=m\, \frac{a\,Q_0}{d+a\,Q_0}.$$
+
+- $d>0$: discount rate.
+
+</div>
+
+</div>
+
+<div v-click="2" class="prop-box">
+
+Tokenization adds incremental social value
+
 $$
-k_2^A = k_2^B <k_2^C,\qquad \overline x_2^A<\overline x_2^C<\overline x_2^B
+mA(\psi)
+$$
+$$
+=m\big[p(Q_0+Q^\star(\psi))-p(Q_0)\big]
 $$
 
-- AI adoption leaves less cognitive capital available in the case of AI Shock
+</div>
 
-<br>
+<div v-click="2">
 
-$\implies$ efficient prices hide AI dependence
+- Regulation $\psi$ limits **innovation**
+
+</div>
+</div>
+
+
+<!--
+Time: 0:45. Section cumulative: 1:30.
+Continue from the exponential innovation time and activity levels on the preceding slide.
+Theta is the future social benefit, potentially including continuing public benefits.
+S is information available before the issuer decides to tokenize; m is the conditional mean.
+Click 1 introduces discounting. Theta and innovation timing are independent conditional on S.
+The expected discounted innovation benefit is m*p(Q0+Q*); without tokenization it is m*p(Q0).
+Click 2 displays their difference. A is the incremental discounted value per dollar of m.
+Activity changes timing, not the conditional estimate m or the eventual payoff Theta.
+This is the added social benefit of tokenization beyond the innovation already supported
+by existing crypto and stablecoin trading. The next slide adds the harm from illicit trading.
+-->
+
+---
+class: discussion paper-talk markdown-slide optimal-regulation-slide social-harm-slide projection-large projection-extended projection-social-harm
+---
+
+# Illicit trading creates social harm
+
+
+<div class="presentation-columns">
+<div>
+<div v-click="1">
+
+- Equilibrium illicit trading volume:
+
+$$J^\star(\psi)=\underbrace{\psi}_{\substack{\text{illicit trades}\\\text{per unit of time}}}\times\underbrace{V^\star}_{\substack{\text{equilibrium}\\\text{trade size}}}$$
+
+
+</div>
+
+
+</div>
+<div>
+
+<div v-click="2">
+
+- $h>0$ is the **social harm per dollar of illicit trading**.
+
+</div>
+
+<div v-click="2" class="prop-box">
+
+$$\text{Total expected harm}=\frac{hJ^\star(\psi)}{d}$$
+
+</div>
+
+<div v-click="3" class="regulation-takeaway">
+
+
+- Regulation $\psi$ limits **illicit trading**
+
+- Regulation $\psi$ also limits innovation
+
+</div>
+</div>
+</div>
+
+<!--
+Time: 0:45. Section cumulative: 2:15.
+Distinguish the cap on illicit trade arrivals from illicit dollar volume.
+V* is the trade size from stage three, evaluated at the chosen cap's equilibrium liquidity.
+Click 1 converts arrivals into volume and defines harm per dollar. Click 2 discounts
+constant harm hJ* at rate d over the infinite horizon, including after innovation occurs.
+Click 3 connects the two externalities, neither of which private agents internalize.
+When the issuer does not tokenize, Q*=J*=0. Both kinds of trading support innovation,
+while illicit activity also creates the additional social harm.
+-->
+
+---
+class: discussion paper-talk markdown-slide optimal-regulation-slide regulator-objective-slide projection-large projection-extended projection-regulator-objective
+---
+
+# Optimal regulation
+
+- Regulator anticipates effect of regulatory burden
+
+- Regulator maximizes 
+
+<div class="prop-box">
+
+$$W(\psi)=\underbrace{mA(\psi)}_{\text{innovation benefit}}-\underbrace{\frac{hJ^\star(\psi)}d}_{\text{illicit harm}}-\underbrace{v}_{\text{required benefit}}$$
+
+</div>
+
+- If $W(\psi) \le 0$  for all $\psi$, then ban
+
+
+<!--
+The original time allowance covers this objective slide and the following regime slide.
+Time: 1:10. Section cumulative: 3:25.
+Reuse U* and opportunity cost underline U from stage one. Choose among privately viable
+markets; no tokenization has incremental value zero, and ties lead to a ban.
+v is a minimum required net social gain, not the issuer's opportunity cost.
+Click 1 reveals the three regimes. The two finite bounds guarantee the extreme policies;
+they need not be the exact switches, so not every estimate between them implies an interior cap.
+A sufficient lower bound is v/A(psi0). The sufficient upper bound in the paper is the max of
+[hJ*(psi0)/d+v]/A(psi0) and h[d+aQ0+aQ*(psi0)]^2/(a*d^2).
+When tokenization is optimal at both compared parameter values, higher m favors looser
+regulation and higher h favors tighter regulation. The next slide illustrates all three regimes.
+Full admission means no additional burden in this model, not the absence of securities law.
+-->
+
+---
+class: discussion paper-talk markdown-slide optimal-regulation-slide regulator-objective-slide projection-large projection-extended projection-regimes
+---
+
+# Three regulatory regimes
+
+<img class="regulation-main-chart" src="./images/optimal-regulation.png" alt="Figure 1. Left: higher estimates m move policy from a ban to intermediate regulation and then full admission. Right: greater existing activity Q0 tightens regulation and eventually leads to a ban." />
+
+<div class="regulation-figure-points">
+<div>
+
+**Higher $m$:** more value from innovation favors looser regulation.
+
+</div>
+<div>
+
+**Higher $Q_0$:** tokenization adds less innovation value; eventually a ban.
+
+</div>
+</div>
+
+<v-click>
+
+- SEC  2026 exemption: regulator believes in innovation potential
 
 </v-click>
 
 <!--
-ANDREA fragility proposition: same primitives except AI access in round 1;
-c below the erosion threshold and in the AI-use region. Outage is unanticipated.
-This is a theoretical counterfactual, not an observed market outage.
-Human-only equilibrium precision increases with inherited cognitive capital.
+Time: 0:35. Section cumulative: 4:00.
+Paper Figure 1, original curves and parameters. Left: Q0=32/9; right: m=10.
+Left: higher estimates move policy from ban to intermediate regulation to full admission.
+Right: existing activity speeds innovation without tokenization, reducing the incremental
+benefit of adding this tokenized market. Regulation tightens and eventually tokenization is banned.
+The black dot is the ban at the tie; the open dot is the limiting operating policy.
+Functional forms: Pi(V)=sqrt(V), kappa(z)=z^2, C(rho)=(rho-1)^2, z=V/L.
+Parameters: lambda=8, mu=xi=phi=1/2, delta=gamma=0, a=9/32, d=1,
+h=9/16, underline U=v=1/8. Upwards means looser regulation, not more burden.
+Ban at zero is a display convention, not an operating tokenized market at psi=0.
 -->
 
 ---
+class: discussion paper-talk optimal-regulation-slide regulation-figure-slide regulation-frictions-slide projection-large projection-extended projection-regulation-grid
+---
 
-# III. Results
+# Frictions
 
-## A preliminary empirical test
 
-- compare high-AI-use assets (**top 10% or 25%**) with others, **before and after** market events
-- new geopolitical events: proxies for AI shocks
-<br><br>
 
-| Event | Top 10% AI use | Top 25% AI use |
-| --- | ---: | ---: |
-| Israel–Hamas war | $-0.0096\;(-1.28)$ | $-0.0113\;(-1.56)$ |
-| US outbound-investment restrictions | $-0.0265\;(-2.43)$ | $-0.0244\;(-2.32)$ |
+<div class="regulation-friction-charts">
+<figure>
+<figcaption>
 
-<br>
+Issuer's opportunity cost $\underline U$
 
-$\implies$ negative estimates: **high-AI assets' price efficiency falls relative to the control group**
+</figcaption>
+<img src="./images/optimal-regulation-opportunity-cost.png" alt="Issuer opportunity cost, underline U: optimal regulation stays flat, then loosens, and eventually switches to a ban." />
+</figure>
+<figure>
+<figcaption>
+
+Onchain risk premium $\xi$
+
+</figcaption>
+<img src="./images/optimal-regulation-risk-premium.png" alt="Investor onchain risk premium, xi: regulation initially loosens and eventually switches to a ban." />
+</figure>
+<figure>
+<figcaption>
+
+Adverse selection cost $\delta$
+
+</figcaption>
+<img src="./images/optimal-regulation-adverse-selection.png" alt="Adverse selection cost, delta: regulation initially loosens and eventually switches to a ban." />
+</figure>
+<figure>
+<figcaption>
+
+Value extracted from traders $\gamma$
+
+</figcaption>
+<img src="./images/optimal-regulation-value-extraction.png" alt="Value extracted from traders, gamma: regulation initially loosens and eventually switches to a ban." />
+</figure>
+</div>
+
+
+- regulator first **loosens regulation** to sustain activity, then **bans tokenization** when social benefits are too small.
+
+
+
+<!--
+Time: 0:30. Section cumulative: 4:30.
+Return to issuer opportunity costs and investor risks/costs from the preceding model.
+The fourth panel defines gamma: value extracted from traders by profit-seekers, such as
+sandwich attacks. It increases trading costs and lowers trade size; it is not LP revenue.
+Read the common pattern: higher frictions reduce activity, so the regulator initially
+loosens regulation to sustain innovation, then bans tokenization when net benefits are too low.
+These are the four original panels of Figure 2, not a general comparative-statics theorem.
+Parameters: lambda=8, mu=phi=xi=1/2, delta=gamma=0, a=9/32, d=h=1,
+m=10, Q0=32/9, v=1/8, underline U=1/4, unless varied on an axis.
+Functional forms as in Figure 1. For this illustration only, the issuer tokenizes at
+profit equal to its opportunity cost, as stated in the paper's caption.
+-->
+
+---
+class: discussion paper-talk optimal-regulation-slide regulation-figure-slide projection-large projection-extended projection-demand
+---
+
+# Stronger demand: stricter regulation
+
+
+
+<div class="demand-layout">
+
+<img class="regulation-main-chart" src="./images/optimal-regulation-trader-demand.png" alt="Optimal regulation and trader demand. As the utility multiplier b rises from 1 to 3, the optimal regulatory cap falls from approximately 2.76 to 1.11. A lower cap means stricter regulation." />
+
+- Stronger demand sustains **innovation benefits** with fewer admitted traders
+
+</div>
+
+<!--
+Time: 0:30. Section cumulative: 5:00.
+Paper Figure 3 varies b in Pi_b(V)=b*sqrt(V), keeping every Figure 2 parameter fixed.
+At b=1 the optimal cap is about 2.76; at b=2 it is 1.56; at b=3 it is 1.11.
+A lower cap means stricter regulation. Larger trades support liquidity and issuer revenue
+even as admission falls; equilibrium screening precision rises along the plotted curve.
+All plotted optima strictly satisfy issuer participation, so no equality convention is needed.
+The demand multiplier changes the trade sizes of both legitimate and illicit traders.
+It does not change arrival intensity lambda or the legitimate share mu.
+Call b trader demand, not turnover: at fixed admission, both V and L scale by b^2,
+leaving Q/L unchanged. Along the chosen policies admission and turnover actually fall.
+Incremental innovation benefits rise along this numerical curve; investor net yield stays at xi.
+This supports the stated intuition for the illustration, not a general comparative-statics theorem.
+-->
 
 ---
 layout: end
+section: Conclusion
 ---
 
-Thank you !
 
+Is tokenization viable?
+
+
+<!--
+Time: 0:20.
+Return to the opening question. Click 1 reveals the market-size benchmarks.
+The answer depends on the regulatory environment and the asset's economic characteristics.
+Allium reports $2.3B of equities/stocks within $29.5B of tokenized RWAs on 15 July 2026.
+SIFMA reports $76.9T in US-listed equities at the end of Q2 2026.
+These are scale benchmarks, not a like-for-like share: the token numerator includes global
+products and private/pre-IPO exposures. The denominator covers US-listed companies.
+Do not describe their ratio as the fraction of US equities tokenized.
+Pause for questions.
+-->
