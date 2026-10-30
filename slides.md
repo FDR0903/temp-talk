@@ -115,58 +115,12 @@ title: Value of tokenization
 - Permissionless
 - Transparent
 - Helps underbanked / emerging markets
-- 24/7 Trading
 
 <!--
 Time: 0:20.
 Acknowledge the appeal of permissionless public trading and broader access.
 These bullets describe the promise, rather than unconditional predictions from our model.
 The next slide introduces the economic value of tokenization through programmable finance.
--->
-
-
----
-class: discussion paper-talk projection-large projection-roomy
----
-
-# (Real) value of tokenization
-
-## DeFi: tokenized assets can earn a passive yield
-- **Smart contracts:** automate financial services <br>(AMMs, Lending/Borrowing, Insurance)   
-- **Liquidity provision:** <br>investors can earn  revenue  from  trading that liquidity generates
-- DeFi services can reduce costs (see Park, Malinova 2025)
-<v-click at="1">
-
-<br>
-
-$\implies$ **DeFi can create economic value and help tokenization scale.**
-
-</v-click>
-
-
-<br>
-
-<div v-click="2" class="prop-box">
-
-Is it enough for the viability of tokenization ?
-
-</div>
-
-
-<!--
-Time: 0:40. Cumulative: 5:10.
-Click 1 reveals the liquidity point. Click 2 reveals the question box. Click 3 reveals the permissioning point.
-The useful functionality is programmability. Instead of only holding a tokenized asset,
-an investor may supply it to a smart-contract market and receive fees and price-impact revenue.
-This incremental return matters relative to holding the underlying asset offchain.
-Yield is paid by traders. LPs bear risks and costs. No blockchain is guaranteed to be cheaper.
-The paper allows costs to depend on trade size and depth and studies the resulting market's viability.
-BIS and the French, Singaporean and Swiss central banks tested AMMs for FX trading and
-settlement of hypothetical wholesale CBDCs between simulated financial institutions.
-Mariana demonstrates technical feasibility, not measured liquidity gains or live adoption.
-Cook discusses automated collateral operations, linked FX transactions and intraday capital use.
-The preceding slides establish the constraints. Now introduce our economic value proposition,
-then explain that regulators can adjust the compliance environment.
 -->
 
 
@@ -274,6 +228,51 @@ Accredited-only: 0.02%
 
 
 ---
+class: discussion paper-talk projection-large projection-roomy
+---
+
+# Value of tokenization
+
+## DeFi: tokenized assets can earn a passive yield
+- **Smart contracts:** automate financial services <br>(AMMs, Lending/Borrowing, Insurance)   
+- **Liquidity provision:** <br>investors can earn  revenue  from  trading that liquidity generates
+- DeFi services can reduce costs (see Park, Malinova 2025)
+<v-click at="1">
+
+<br>
+
+$\implies$ **DeFi can create economic value and help tokenization scale.**
+
+</v-click>
+
+
+<br>
+
+<div v-click="2" class="prop-box">
+
+Is it enough for the viability of tokenization ? $\implies$ depends on regulation
+
+</div>
+
+
+<!--
+Time: 0:40. Cumulative: 5:10.
+Click 1 reveals the liquidity point. Click 2 reveals the question box. Click 3 reveals the permissioning point.
+The useful functionality is programmability. Instead of only holding a tokenized asset,
+an investor may supply it to a smart-contract market and receive fees and price-impact revenue.
+This incremental return matters relative to holding the underlying asset offchain.
+Yield is paid by traders. LPs bear risks and costs. No blockchain is guaranteed to be cheaper.
+The paper allows costs to depend on trade size and depth and studies the resulting market's viability.
+BIS and the French, Singaporean and Swiss central banks tested AMMs for FX trading and
+settlement of hypothetical wholesale CBDCs between simulated financial institutions.
+Mariana demonstrates technical feasibility, not measured liquidity gains or live adoption.
+Cook discusses automated collateral operations, linked FX transactions and intraday capital use.
+The preceding slides establish the constraints. Now introduce our economic value proposition,
+then explain that regulators can adjust the compliance environment.
+-->
+
+
+---
 class: discussion paper-talk markdown-slide projection-large projection-policy
 ---
 
@@ -291,7 +290,7 @@ Consider an **innovation exemption** for onchain products and services
 
 ### September 2026 · SEC order
 
-- Conditional relief from the Exchange Act 
+- Conditional relief from Exchange Act 
   - for **DEX venues** as **exchanges**
   - for **liquidity providers** as **dealers**
 </div>
@@ -1290,7 +1289,6 @@ This supports the stated intuition for the illustration, not a general comparati
 layout: end
 section: Conclusion
 ---
-
 
 Is tokenization viable?
 
