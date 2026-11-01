@@ -230,6 +230,12 @@
 .paper-talk .permissioning-turnover-card p { margin: 0.25rem 0; line-height: 1.4; }
 .permissioning-turnover-caption { margin-top: 0.45rem; text-align: center; font-size: 1.15rem; }
 .permissioning-turnover-caption p { margin: 0; }
+.paper-talk.projection-permissioning .atkins-quote { margin: 0.6rem 0; padding: 0.5rem 1rem; line-height: 1.25; }
+.projection-permissioning .permissioning-summary > p { margin: 0.65rem 0 0.35rem; }
+.projection-permissioning .permissioning-turnover-caption { margin-top: 0.2rem; font-size: 1.05rem; }
+.projection-permissioning .permissioning-turnover-cards { width: 560px; gap: 1.2rem; margin: 0.45rem auto 0; }
+.projection-permissioning .permissioning-turnover-card { padding: 0.35rem 0.65rem; font-size: 1.15rem; }
+.paper-talk.projection-permissioning .permissioning-turnover-card p { margin: 0.15rem 0; line-height: 1.25; }
 .scale-number { font-size: 2.5rem; font-weight: 600; line-height: 1.1; color: #334155; }
 .growth-content { display: grid; grid-template-columns: minmax(0, 2.25fr) minmax(0, 1fr); align-items: center; gap: 1.8rem; margin: 0.8rem 0 1.2rem; }
 .growth-market-comparison { display: grid; gap: 1.4rem; }
@@ -375,6 +381,8 @@
 /* Complete small-screen pass: keep text and reveals, use the available space. */
 .slidev-layout.projection-extended { --projection-font: 1.55rem; }
 .slidev-layout.projection-roomy { --projection-font: 1.7rem; }
+.paper-talk.projection-value .policy-summary { margin-top: 1rem; font-size: 1.35rem; }
+.paper-talk.projection-value .policy-summary p { margin: 0; }
 .projection-roomy.projection-turnover .permissioning-turnover-card,
 .projection-roomy.projection-turnover .permissioning-turnover-caption { font-size: 1.85rem; }
 .projection-growth .growth-content { grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); margin: 0.4rem 0 0.6rem; }
@@ -442,6 +450,12 @@
 .slidev-layout.projection-additional { --projection-font: 1.7rem; }
 .slidev-layout.projection-result { --projection-font: 1.7rem; }
 .slidev-layout.projection-regimes { --projection-font: 1.8rem; }
+.projection-regimes .regulation-regimes-figure { width: calc(230px * 1540 / 627); max-width: 100%; margin: 0 auto; }
+.projection-regimes .regulation-main-chart { height: auto; }
+/* Align captions with the plotting areas inside the 1540 × 627 source image. */
+.projection-regimes .regulation-figure-points { grid-template-columns: 10.5fr 39.5fr 9.1fr 39.5fr 1.4fr; gap: 0; font-size: 1.3rem; text-align: center; }
+.projection-regimes .regulation-figure-points > div:first-child { grid-column: 2; }
+.projection-regimes .regulation-figure-points > div:last-child { grid-column: 4; }
 .projection-regimes .regulation-regimes > div { padding: 2.5rem 0.8rem; }
 .paper-talk.projection-regimes .regulation-regimes h3 { font-size: 1.6rem; }
 .paper-talk.projection-regimes .regulation-bounds-note { font-size: 1.25rem; }

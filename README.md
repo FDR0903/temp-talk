@@ -1,6 +1,6 @@
 # The Economics of Regulating Tokenized Securities
 
-Slidev presentation for a 25-minute talk plus questions, using the Frankfurt theme and slate palette.
+Slidev presentation for a 15-minute talk plus questions, using the Frankfurt theme and slate palette.
 
 View the slides at <https://fdr0903.github.io/temp-talk/>.
 
