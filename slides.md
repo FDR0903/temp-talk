@@ -1,1313 +1,1438 @@
 ---
-theme: frankfurt
+theme: default
 colorSchema: light
-layout: cover
-class: text-center paper-talk
-title: Regulating tokenized securities
+layout: seminar
+aspectRatio: 16/9
+canvasWidth: 980
+title: The Economics of Regulating Tokenized Securities
 titleTemplate: '%s'
-author: Fayçal Drissi
+author: Álvaro Cartea, Fayçal Drissi, Fahad Saleh
 fonts:
-  local: Montserrat, Roboto Mono, Roboto Slab
-themeConfig:
-  paginationX: disabled
-  paginationY: disabled
-  paginationPagesDisabled: [1]
-infoLine: true
-date: '2026'
+  sans: Seminar Sans
+  local: Seminar Sans
+transition: none
 drawings:
   enabled: false
 mdc: true
 defaults:
-  class: discussion paper-talk
+  layout: seminar
 ---
 
-# <small>The Economics of Regulating<br>Tokenized Securities</small>
-
-<br>
-
-### Álvaro Cartea · Fayçal Drissi · Fahad Saleh
-
-University of Oxford · University of Florida
-
-<br>
+<div class="sem-box sem-blue" style="left:189.87px;top:136.25px;width:600.26px;height:151px;background:#fff;">
 
 
-<!--
-Time: 0:20. Cumulative: 0:20.
-The economic value of tokenization depends on the regulatory environment.
-Three parts: the debate and the value proposition → an equilibrium model →
-then descriptive evidence on permissioning and differences across assets and platforms.
-The talk ends with "Is tokenization viable?".
--->
+
+</div>
+
+<div class="seminar-block " style="top:169.76px;left:0px;right:auto;width:980px;font-size:37.2px;text-align:center;line-height:1.389;">
+
+**The Economics of Regulating**<br>**Tokenized Securities**
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:354.22px;left:0px;right:auto;width:980px;text-align:center;">
+
+**Álvaro Cartea<sup>1</sup>, Fayçal Drissi<sup>1</sup>, Fahad Saleh<sup>2</sup>**
+
+</div>
+
+<div class="seminar-block sem-muted sem-small" style="top:418.52px;left:0px;right:auto;width:980px;text-align:center;">
+
+<sup>1</sup>University of Oxford &nbsp;&nbsp; <sup>2</sup>University of Florida
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 1/25. Text and mathematics remain editable. -->
 
 ---
-section: Motivation
-class: discussion paper-talk growth-slide projection-large projection-extended projection-growth
+layout: seminar
+title: "Equity Tokenization Remains Trivial in Scale"
 ---
 
-# Tokenization is growing
+# Equity Tokenization Remains Trivial in Scale
 
-<div class="growth-content">
-
-<!-- Figure size: change --figure-scale below (1 = 100%, 0.8 = 80%, 1.2 = 120%). -->
-<figure class="growth-figure" style="--figure-scale: 1;">
-<img src="./images/tokenizationsize.png" alt="RWA.xyz stacked area chart showing growth in tokenized asset value across Treasury debt, commodities, strategies, stocks, credit and other categories, labeled dates run from January 2024 to September 2026" />
-<figcaption>Tokenized assets across asset classes · RWA.xyz</figcaption>
+<figure style="position:absolute;top:65px;left:50px;width:880px;margin:0;">
+<img src="./images/tokenizationsize.png" alt="RWA.xyz stacked area chart showing growth in tokenized asset value across asset classes, with labeled dates from January 2024 to September 2026" style="display:block;width:100%;height:auto;" />
+<figcaption style="margin-top:6px;font-size:14px;line-height:1.2;text-align:center;">Tokenized assets across asset classes · RWA.xyz</figcaption>
 </figure>
 
+<div class="sem-box sem-orange" style="left:101.06px;top:432px;width:349.13px;height:100px;">
 
-<div v-click="1" class="end-market-comparison growth-market-comparison">
-<div>
 
-### Tokenized equities and stocks
-
-<div class="scale-number">$3.7B</div>
-
-</div>
-<div>
-
-### US equity market capitalization
-
-<div class="scale-number">$76.9T</div>
-
-</div>
-</div>
-</div>
-
-<div class="growth-takeaways">
-
-<div v-click="2" class="prop-box">
-
-**What makes tokenization economically worthwhile?**
 
 </div>
 
-<div v-click="3" class="prop-box">
+<div class="sem-box sem-blue" style="left:529.81px;top:432px;width:349.13px;height:100px;">
 
-**It depends on the regulatory environment**
 
-</div>
 
 </div>
 
-<!--
-Time: 0:50. Cumulative: 1:10.
-Initially show only the plot. Click 1 reveals the market-size comparison to its right.
-Click 2 reveals the economic-value question below.
-Tokenization has begun and the data are encouraging. The closing slide returns to its scale
-relative to conventional equity markets.
-The supplied RWA.xyz chart shows growth across a broad tokenized-asset universe,
-with Treasury debt its largest displayed component. Labeled dates run January 2024–September 2026.
-The chart extends beyond those ticks, and its exact endpoints and snapshot date are not shown.
-Let the aggregate growth carry the figure rather than reading every legend category.
-Much recent work documents size, activity and adoption. We ask about the economic mechanism
-and the regulatory conditions under which tokenization is worthwhile.
--->
+<div class="seminar-block " style="top:450px;left:101.06px;right:auto;width:349.13px;text-align:center;">
+
+**Tokenized Stocks**
+
+</div>
+
+<div class="seminar-block " style="top:487px;left:101.06px;right:auto;width:349.13px;font-size:31px;text-align:center;">
+
+&#36;3.7 billion
+
+</div>
+
+<div class="seminar-block " style="top:450px;left:529.81px;right:auto;width:349.13px;text-align:center;">
+
+**U.S. Equity Market**
+
+</div>
+
+<div class="seminar-block " style="top:487px;left:529.81px;right:auto;width:349.13px;font-size:31px;text-align:center;">
+
+&#36;78.7 trillion
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 2/25. Text and mathematics remain editable. -->
+<!-- Growth chart added from slides_old.md, "Tokenization is growing". -->
 
 ---
-class: discussion paper-talk projection-large projection-roomy
-title: Value of tokenization
+layout: seminar
+title: "Why Hold Securities Onchain?"
 ---
 
-# Value of tokenization
+# Why Hold Securities Onchain?
+
+<div class="seminar-block " style="top:114.02px;">
+
+Investors can hold the same securities offchain.
+
+</div>
+
+<div class="seminar-block " style="top:167.8px;">
+
+Holding onchain introduces novel risks and costs.
+
+</div>
+
+<div class="seminar-block " style="top:221.58px;">
+
+An incremental onchain incentive is necessary for tokenization to be viable.
+
+</div>
+
+<div class="sem-box sem-orange" style="left:39.81px;top:304.15px;width:900.38px;height:147px;">
 
 
-- Permissionless
-- Transparent
-- Helps underbanked / emerging markets
 
-<!--
-Time: 0:20.
-Acknowledge the appeal of permissionless public trading and broader access.
-These bullets describe the promise, rather than unconditional predictions from our model.
-The next slide introduces the economic value of tokenization through programmable finance.
--->
+</div>
 
+<div class="seminar-block " style="top:337.46px;left:39.81px;right:auto;width:900.38px;text-align:center;">
 
----
-class: discussion paper-talk projection-large
----
+Equilibrium Condition:
 
-# Tokenized Securities Are Securities
+</div>
 
-SEC Chair Paul Atkins (November 2025):
+<div class="seminar-block " style="top:397.37px;left:39.81px;right:auto;width:900.38px;text-align:center;white-space:nowrap;">
 
-<blockquote class="atkins-quote">
+**Incremental Onchain Incentive = Incremental Onchain Costs and Priced Risks**
 
-*“**A stock is still a stock** whether it is a paper certificate, an entry in a DTCC account, or represented by a token on a public blockchain. A bond does not stop being a bond because its payment streams are tracked using smart contracts.”*
+</div>
 
-</blockquote>
-
-<blockquote class="atkins-quote atkins-conclusion">
-
-***“Tokenized securities are and will continue to be securities.”***
-
-</blockquote>
-
-
-<!--
-Time: 0:35.
-The Atkins attribution and both quotations are visible immediately.
-Legal classification follows the instrument's rights and substance, not its recordkeeping technology.
-Restrictions depend on the instrument and offering regime. They do not all require accredited investors.
-The speech states the Chair's principles. It is not itself a new Commission rule.
-Next show how these obligations enter the token contract in practice.
--->
-
+<!-- Source: files/seminar.pdf; numbered slide 3/25. Text and mathematics remain editable. -->
 
 ---
-class: discussion paper-talk projection-large projection-buidl
+layout: seminar
+title: "Incremental Onchain Incentive"
 ---
 
-# Permissioning in practice: BUIDL
+# Incremental Onchain Incentive
 
-<div class="prop-box buidl-overview">
+<div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
+
+Yield farming can provide the incremental onchain incentive.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
+
+Yield farming: supplying tokens as liquidity to earn fees from traders.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:247.08px;left:108.39px;right:auto;width:831.61px;">
+
+Yield farming returns arise via an endogenous externality between trading and liquidity provision.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:355.31px;left:108.39px;right:auto;width:831.61px;">
+
+Regulatory environment endogenously affects yields.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 4/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "The Role of Regulation"
+---
+
+# The Role of Regulation
+
+<div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
+
+Tighter regulation reduces trading activity, lowering trading revenues.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
+
+Lower revenues reduce incentives for liquidity provision, raising trading costs.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;">
+
+Low trading and low liquidity sustain each other in a low-adoption equilibrium.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;">
+
+A low-adoption equilibrium implies low incentives to tokenize.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 5/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "SEC Innovation Exemption"
+---
+
+# SEC Innovation Exemption
+
+<div class="seminar-block " style="top:114.02px;">
+
+SEC, Release No. 34-106402 (September 17, 2026):
+
+</div>
+
+<div class="sem-box sem-blue" style="left:61.68px;top:208.18px;width:857.51px;height:117.61px;border-radius:10.8px;">
+
+
+
+</div>
+
+<div class="seminar-block " style="top:236.75px;left:92.31px;right:auto;width:800px;">
+
+*“Tier 1 Tokenized NMS Stock traded on a TSV . . . cannot exceed . . .*
+
+</div>
+
+<div class="seminar-block " style="top:272.16px;left:104.09px;right:auto;width:800px;">
+
+*0.25 percent of the average daily share volume during the prior month . . . ”*
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 6/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Main Result"
+---
+
+# Main Result
+
+<div class="sem-box sem-blue" style="left:98px;top:125.13px;width:784.01px;height:91.87px;font-size:25.83px;">
+
+Sufficiently stringent regulation renders tokenization non-viable.
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:275.27px;left:409.36px;right:auto;width:400px;">
+
+Tighter regulation
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:308.57000000000005px;left:342.87px;right:auto;width:50px;">
+
+$\implies$
+
+</div>
+<div class="seminar-block sem-small sem-muted" style="top:308.85px;left:409.36px;right:auto;width:450px;">
+
+Less trading
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:342.15000000000003px;left:342.87px;right:auto;width:50px;">
+
+$\implies$
+
+</div>
+<div class="seminar-block sem-small sem-muted" style="top:342.43px;left:409.36px;right:auto;width:450px;">
+
+Lower fee income
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:375.74px;left:342.87px;right:auto;width:50px;">
+
+$\implies$
+
+</div>
+<div class="seminar-block sem-small sem-muted" style="top:376.02px;left:409.36px;right:auto;width:450px;">
+
+Lower onchain investment
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:409.32000000000005px;left:342.87px;right:auto;width:50px;">
+
+$\implies$
+
+</div>
+<div class="seminar-block sem-small sem-muted" style="top:409.6px;left:409.36px;right:auto;width:450px;">
+
+Unprofitable issuance
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 7/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "BlackRock USD Institutional Digital Liquidity Fund (BUIDL)"
+clicks: 1
+---
+
+<div class="sem-box " style="left:138.32px;top:73.85px;width:703.36px;height:165.82px;border-color:#888;border-radius:10.8px;">
+
+
+
+</div>
+
+<div class="seminar-block sem-accent sem-small" style="top:97.67px;left:162.82px;right:auto;width:660px;">
 
 **BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
 
-- Tokenized money market fund with underlying assets at BNY Mellon
-- Ownership registered onchain by a SEC-registered transfer agent
-- Every transfer gated by a compliance check at the token contract level
+</div>
+
+<div class="seminar-block sem-small" style="top:132.7px;left:162.82px;right:auto;width:670px;">
+
+• Tokenized money market fund with underlying assets at BNY Mellon
 
 </div>
 
+<div class="seminar-block sem-small" style="top:163.43px;left:162.82px;right:auto;width:670px;">
 
-<div class="buidl-code-window">
-<img src="./images/tokenized_transfers.png" alt="BUIDL transfer restriction code: the canTransfer modifier calls getComplianceService().validateTransfer before a transfer executes" />
-</div>
-
-<!--
-Time: 0:40. Cumulative: 3:40.
-Initially show the fund description and all three bullets. Click 1 reveals the contract excerpt.
-The image focuses on the canTransfer modifier.
-Read the highlighted compliance-service call. The next slide unpacks it in stages.
--->
-
-
-<!--
-Time: 0:30. Cumulative: 4:10.
-Initially: transfer requested. Click 1: compliance service and its incoming arrow.
-Click 2: validateTransfer and its incoming arrow. Click 3: both outcomes and the pass/fail branches.
-Transfers cannot bypass these token-level checks by changing venues.
-ATS examples from the earlier deck: Securitize Markets, tZERO and INX.
-The SEC order also permits pool-level credentialing. Token-level checks are not a universal
-requirement for every security or venue. This example illustrates the implementation in BUIDL.
--->
-
----
-class: discussion paper-talk projection-large projection-turnover projection-roomy
----
-
-# Permissioning undermines liquidity
-
-<div class="permissioning-turnover-caption">
-
-**Daily Turnover**
+• Ownership registered onchain by a SEC-registered transfer agent
 
 </div>
 
+<div class="seminar-block sem-small" style="top:194.16px;left:162.82px;right:auto;width:670px;">
 
-<div class="permissioning-turnover-cards">
-<div class="permissioning-turnover-card native-turnover">
-
-**Native Assets**
-
-ETH: 6%<br>
-SOL: 8%
-
-</div>
-<div class="permissioning-turnover-card tokenized-turnover">
-
-**Tokenized Securities**
-
-Whitelist-only: 1.3%<br>
-Accredited-only: 0.02%
-
-</div>
-</div>
-
-
----
-class: discussion paper-talk projection-large projection-roomy
----
-
-# Value of tokenization
-
-## DeFi: tokenized assets can earn a passive yield
-- **Smart contracts:** automate financial services <br>(AMMs, Lending/Borrowing, Insurance)   
-- **Liquidity provision:** <br>investors can earn  revenue  from  trading that liquidity generates
-- DeFi services can reduce costs (see Park, Malinova 2025)
-<v-click at="1">
-
-<br>
-
-$\implies$ **DeFi can create economic value and help tokenization scale.**
-
-</v-click>
-
-
-<br>
-
-<div v-click="2" class="prop-box">
-
-Is it enough for the viability of tokenization ? $\implies$ depends on regulation
+• Every transfer gated by a compliance check at the token contract level
 
 </div>
 
+<div class="seminar-block " style="top:280px;left:18.37px;right:auto;width:943.3px;height:193px;overflow:hidden;" v-click="1">
 
-<!--
-Time: 0:40. Cumulative: 5:10.
-Click 1 reveals the liquidity point. Click 2 reveals the question box. Click 3 reveals the permissioning point.
-The useful functionality is programmability. Instead of only holding a tokenized asset,
-an investor may supply it to a smart-contract market and receive fees and price-impact revenue.
-This incremental return matters relative to holding the underlying asset offchain.
-Yield is paid by traders. LPs bear risks and costs. No blockchain is guaranteed to be cheaper.
-The paper allows costs to depend on trade size and depth and studies the resulting market's viability.
-BIS and the French, Singaporean and Swiss central banks tested AMMs for FX trading and
-settlement of hypothetical wholesale CBDCs between simulated financial institutions.
-Mariana demonstrates technical feasibility, not measured liquidity gains or live adoption.
-Cook discusses automated collateral operations, linked FX transactions and intraday capital use.
-The preceding slides establish the constraints. Now introduce our economic value proposition,
-then explain that regulators can adjust the compliance environment.
--->
-
-
----
-class: discussion paper-talk markdown-slide projection-large projection-policy
----
-
-# Compliance is a policy variable
-
-<div class="policy-events">
-<div>
-
-### June 2025 · Atkins
-
-Consider an **innovation exemption** for onchain products and services
+<img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;" />
 
 </div>
-<div v-click="1">
 
-### September 2026 · SEC order
+<!-- Source: files/seminar.pdf; numbered slide 8/25. Text and mathematics remain editable. -->
 
-- Conditional relief from Exchange Act 
-  - for **DEX venues** as **exchanges**
-  - for **liquidity providers** as **dealers**
+---
+layout: seminar
+title: "Transfer compliance"
+clicks: 3
+---
+
+<div class="seminar-block " style="top:40.91px;">
+
+The <span class="sem-code" style="font-size:21.53px;">canTransfer</span> modifier enforces:
+
 </div>
-</div>
 
-
-
-
-<!--
-Time: 0:40. Cumulative: 5:50.
-Initially show June 2025. Click 1 reveals September 2026 and the sources. Click 2 reveals the box.
-June 2025: Atkins directed staff to consider conditional exemptive relief. It was a proposal then.
-September 17, 2026: SEC issued an order for permissioned AMMs trading tokenized NMS stocks.
-Conditional relief concerns the Exchange Act exchange definition and the dealer definition
-for certain proprietary-capital LPs. It expires five years after publication.
-It does not remove securities law or open every tokenized product to everyone.
-Conditions include shareholder rights, auditable public contracts, credentialing, disclosures,
-symbol/volume limits and coordination with trading halts. Pool allow-lists or token transfer
-restrictions may enforce credentialing (order pp. 9–10).
-Order: https://www.sec.gov/files/rules/exorders/2026/34-106402.pdf
-The additional examples and author–year references come from the paper's introduction:
-CBDCs (fung2016central, auer2022central), cross-border settlement
-(harvey2021defi, hub2023project, cardozo2024cross), and capital raising/governance
-(cong2025centralized, han2026decentralized).
-This does not literally set our model's illicit-flow cap ψ. It illustrates a changeable legal
-environment. Our cap is an abstraction of stringency. The liquidity interpretation is our paper's.
--->
-
-
-
----
-class: discussion paper-talk projection-large projection-roomy
----
-
-# Contribution
-<br>
-
-
-**An equilibrium model of a tokenized securities market with relevant economic forces**
-
-<br>
-
-**Two research questions**: 
-
-- How does regulatory stringency affect the viability of tokenization?
-
-- How should regulation be conducted ?
-
-
-<!--
-Time: 0:20. Cumulative: 6:40.
-Measuring adoption alone cannot answer these questions.
-Our model retains trading-generated returns, endogenous investor capital, and a compliance constraint.
-First characterize the effects of stringency on liquidity and commercial viability.
-Then let the regulator choose the cap, balancing innovation benefits against illicit-trading harm.
--->
-
----
-class: discussion paper-talk projection-large projection-extended projection-economy
-section: Tokenized markets
----
-
-# The economy
-
-<div class="economy-diagram">
-<svg class="economy-arrows" viewBox="0 0 864 360" preserveAspectRatio="none" role="img" aria-label="The issuer gives tokens to investors, who deposit them on the blockchain. Traders trade these tokens on the blockchain, generating investor yield. Investors pay an AUM fee to the issuer, the issuer screens traders and bears compliance costs.">
+<svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
 <defs>
-<marker id="economy-compliance-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#b7791f" /></marker>
-<marker id="economy-revenue-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#475569" /></marker>
+<marker id="transfer-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker>
+<marker id="transfer-pass" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d" /></marker>
+<marker id="transfer-fail" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#b91c1c" /></marker>
 </defs>
-<g v-click="3">
-<path class="kyc-arrow" d="M411,148 L181,242" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
-<path class="compliance-cost-arrow" d="M201,242 L424,148" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
-</g>
-<path class="aum-fee-arrow" d="M663,242 L440,148" stroke="#475569" marker-end="url(#economy-revenue-head)" />
-<path v-click="2" class="investor-yield-arrow" d="M264,264 L600,264" stroke="#475569" marker-end="url(#economy-revenue-head)" />
-<path class="issued-tokens-arrow" d="M536,126 C676,111 770,144 754,242" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
-<g class="economy-token" aria-label="Issued token">
-<circle cx="713" cy="148" r="14" fill="#fff4d5" stroke="#b7791f" stroke-width="1.8" />
-<circle cx="713" cy="148" r="10" fill="none" stroke="#b7791f" stroke-width="0.8" />
-<text x="713" y="148">T</text>
-</g>
-<path v-click="1" class="deposit-tokens-arrow" d="M704,286 C704,322 595,338 536,338" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
-<path v-click="2" class="trade-tokens-arrow" d="M160,286 C160,322 269,338 328,338" stroke="#b7791f" marker-end="url(#economy-compliance-head)" />
+<path v-click="1" d="M490 154.79 V209.91" stroke="#64748b" stroke-width=".86" marker-end="url(#transfer-arrow)" />
+<path v-click="2" d="M490 265.04 V320.17" stroke="#64748b" stroke-width=".86" marker-end="url(#transfer-arrow)" />
+<g v-click="3"><path d="M427.79 375.72 L315.27 426.34" stroke="#15803d" stroke-width=".86" marker-end="url(#transfer-pass)" /><path d="M552.21 375.72 L664.73 426.34" stroke="#b91c1c" stroke-width=".86" marker-end="url(#transfer-fail)" /></g>
 </svg>
 
-<div class="economy-node issuer">
+<div class="sem-box sem-node" style="left:336.87px;top:99.66px;width:306.26px;height:55.13px;border-color:#64748b;">
+
+Transfer requested
+
+</div>
+
+<div class="sem-box sem-node" style="left:336.87px;top:209.91px;width:306.26px;height:55.13px;border-color:#f39c12;" v-click="1">
+
+<span class="sem-code">getComplianceService()</span>
+
+</div>
+
+<div class="sem-box sem-node" style="left:250.46px;top:320.17px;width:479.08px;height:55.12px;border-color:#f39c12;" v-click="2">
+
+<span class="sem-code">validateTransfer(sender, receiver, value)</span>
+
+</div>
+
+<div class="sem-box sem-node" style="left:91.87px;top:430.42px;width:306.25px;height:55.12px;border-color:#15803d;" v-click="3">
+
+Transfer executes
+
+</div>
+
+<div class="sem-box sem-node" style="left:581.88px;top:430.42px;width:306.25px;height:55.12px;border-color:#b91c1c;" v-click="3">
+
+Transfer reverts
+
+</div>
+
+<div class="seminar-block sem-label" style="top:391.54px;left:326.5px;right:auto;width:80px;color:#000;" v-click="3">
+
+pass
+
+</div>
+
+<div class="seminar-block sem-label" style="top:395.37px;left:621.24px;right:auto;width:80px;color:#000;" v-click="3">
+
+fail
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 9/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Model Overview"
+clicks: 3
+---
+
+# Model Overview
+
+<svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
+<defs><marker id="model-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker><marker id="model-blue" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#3498db" /></marker><marker id="model-orange" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f39c12" /></marker></defs>
+<g v-click="1"><path d="M434.46 312.34 L248.09 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" /><path d="M546.4 312.34 L732.78 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" /></g>
+<path v-click="2" d="M306.68 437.48 H674.18" stroke="#3498db" stroke-width=".86" marker-end="url(#model-blue)" />
+<path v-click="3" d="M490.43 189.41 V256.79" stroke="#f39c12" stroke-width=".86" marker-end="url(#model-orange)" />
+</svg>
+
+<div class="sem-box sem-node" style="left:367.93px;top:256.79px;width:245px;height:55.12px;border-color:#3498db;">
 
 **Issuer**
 
 </div>
-<div v-click="2" class="economy-node traders">
+
+<div class="sem-box sem-node" style="left:61.68px;top:409.91px;width:245px;height:55.13px;border-color:#64748b;">
 
 **Traders**
 
 </div>
-<div class="economy-node investors">
+
+<div class="sem-box sem-node" style="left:674.18px;top:409.91px;width:245px;height:55.13px;border-color:#64748b;">
 
 **Investors**
 
 </div>
-<div v-click="1" class="economy-node blockchain">
 
-**Blockchain**
+<div class="seminar-block sem-label sem-muted" style="top:353.43px;left:215.87px;right:auto;width:160px;" v-click="1">
+
+screens traders
 
 </div>
 
-<div v-click="3" class="economy-label kyc-label">KYC/AML</div>
-<div v-click="3" class="economy-label compliance-cost-label">Compliance Costs</div>
-<div class="economy-label aum-fee-label">AUM Fee</div>
-<div v-click="2" class="economy-label investor-yield-label">Investor Yield</div>
-<div class="economy-label issued-tokens-label">Tokens</div>
-<div v-click="1" class="economy-label deposit-tokens-label">Deposit tokens</div>
-<div v-click="2" class="economy-label trade-tokens-label">Use financial services</div>
+<div class="seminar-block sem-label sem-muted" style="top:341.53px;left:652.27px;right:auto;width:220px;line-height:1.187;" v-click="1">
 
-<div v-click="3" class="economy-policy">
-<svg class="economy-arrows" viewBox="0 0 864 360" preserveAspectRatio="none" role="img" aria-label="Regulatory policy constrains the issuer.">
-<defs>
-<marker id="economy-policy-head" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 Z" fill="#b7791f" /></marker>
-</defs>
-<path class="regulatory-policy-arrow" d="M432,50 L432,104" stroke="#b7791f" marker-end="url(#economy-policy-head)" />
-</svg>
-<div class="economy-node regulator">
+receives fees<br>proportional to AUM
+
+</div>
+
+<div class="seminar-block sem-label sem-accent" style="top:444.69px;left:385.8px;right:auto;width:300px;" v-click="2">
+
+trading fees + price impact
+
+</div>
+
+<div class="sem-box sem-orange sem-node" style="left:367.93px;top:134.28px;width:245px;height:55.13px;" v-click="3">
 
 **Regulator**
 
 </div>
-<div class="economy-label regulatory-policy-label">Regulatory Policy</div>
+
+<div class="seminar-block sem-label" style="top:213.94px;left:499.15px;right:auto;width:260px;color:#000;" v-click="3">
+
+imposes cap on illicit trading
+
 </div>
-</div>
 
-
-
-<!--
-Time: 0:55. Cumulative: 7:35.
-Initially show only the issuer and investors, with the AUM Fee arrow and the gold issuance
-arrow, coin and Tokens label between them.
-Click 1 reveals the blockchain, the Deposit tokens arrow and its label together.
-Click 2 reveals traders, their Use financial services arrow and label, and the Investor Yield
-arrow and label. The yield consists of fees and price impact.
-Click 3 reveals KYC/AML toward traders and Compliance Costs back toward the issuer,
-including both arrows and their labels, together with the regulator and its
-downward Regulatory Policy arrow.
-The issuer earns fee φ on AUM and bears screening costs.
-Traders arrive at rate λ and choose trade size. Investors can instead hold the asset offchain.
-Liquidity supply earns incremental revenue. Idle onchain holding does not, while both bear tokenization risk.
-All tokenized holdings therefore become liquidity in equilibrium.
-The issuer tokenizes only if optimized profit exceeds positive opportunity cost U̲.
-First take the cap as given. Later, the regulator anticipates these market responses
-and chooses the cap before the issuer's decision.
--->
+<!-- Source: files/seminar.pdf; numbered slide 10/25. Text and mathematics remain editable. -->
 
 ---
-class: discussion paper-talk markdown-slide projection-large projection-overview
+layout: seminar
+title: "Issuer: Screening"
+clicks: 1
 ---
 
-# The model
+# Issuer: Screening
 
-## Three stage model
+<div class="seminar-block " style="top:112.63px;">
 
-<div class="presentation-columns">
-<div>
-
-<br><br>
-
-### Stage 1: issuer
-
-- Issuer decides whether, and how much to issue
-- must screen traders
-- **revenue**: management fees
+Traders arrive at Poisson rate $\lambda>0$.
 
 </div>
-<div>
-<div v-click="1">
 
-<br>
+<div class="seminar-block " style="top:159.98px;">
 
-### Stage 2: Investors
-
-- Decide how much to invest in DeFi $\implies$ yield
-
-</div>
-<div v-click="2" class="overview-traders">
-<br><br><br><br>
-
-### Stage 3: traders
-
-- Consume blockchain financial services
-
-</div>
-<div v-click="3" class="prop-box overview-solution">
-
-$\implies$ solved by backward induction
-
-</div>
-</div>
-</div>
-
-
-
-
----
-class: discussion paper-talk markdown-slide model-proposal projection-large projection-model-split projection-traders
----
-
-# Stage 3: traders
-
-<div class="presentation-columns">
-<div>
-
-- Traders arrive at Poisson rate $\lambda$
-- Fraction $\pi$ admitted by issuer
-- Observe onchain liquidity $L$
-
-<div v-click="1">
-
-- Traders derive (concave) utility $\Pi(V)$ from trading $V$
-
-
-</div>
-</div>
-<div>
-<div v-click="2">
-
-- **Cost** to consume onchain liquidity: $\kappa(V/L)$ paid to investors
-
-</div>
-<div v-click="3">
-
-<br>
-
-- Traders solve
-
-<div class="prop-box">
-
-$$\begin{aligned}
-V^\star(L)&=\arg\max_{V\geq0}\\[0.3em]
-&\quad\Bigg[\underbrace{\Pi(V)}_{\text{trading utility}}-\underbrace{\kappa\!\left(\frac{V}{L}\right)V}_{\text{costs}}\Bigg]
-\end{aligned}$$
-
-</div>
-</div>
-</div>
-</div>
-
-<!--
-Comparison proposal: replaces the preceding stage 3 slide if selected.
-Paper: Model, Traders. Equation trader_problem.
-Capital Π denotes utility, whereas π is the acceptance rate.
-Concavity is in trading volume V, not in market liquidity L.
-κ(V/L) is the cost per unit traded. Total payment to LPs is κ(V/L)V.
-This payment includes both trading fees and price impact. γV is value extracted by
-profit-seekers, for example through sandwich attacks, and is not LP revenue.
-Initially show trader arrivals and their choice given liquidity. Click 1 reveals utility
-and its properties. Click 2 reveals trading costs and convexity. Click 3 reveals the
-trader's optimization problem. Both legitimate and illicit traders
-have the same trading preferences. The admitted arrival rate is λπ.
--->
-
-
----
-class: discussion paper-talk markdown-slide model-proposal projection-large projection-model-split projection-investors
----
-
-# Stage 2: investors
-
-- Tokenized holdings introduce novel risks (smart-contract, operational, custody) <br> $\implies$ investors require a **risk premium** $\xi$
-
-<div class="presentation-columns">
-<div>
-<v-clicks at="1">
-
-- Liquidity provision earns a passive **yield**
-<!-- Investors can hold the same security off-chain
-$\implies$ Idle tokenized holdings earn zero yield but bear risk. $\implies$ **$L^\star=L^\star$**.-->
-- **Costs**:
-  - adverse selection $\delta$ (asset-specific risk)
-  - issuer's management fee $\phi$
-
-</v-clicks>
-</div>
-<div v-click="3" class="prop-box">
-
-Return to investment
-
-$$\begin{aligned}
-r(L)&=\underbrace{\lambda\,\pi}_\text{trader arrival}\times\text{Yield}(L)
--\delta-\phi
-\end{aligned}$$
-
-<br>
-
-<div v-click="4">
-
-Free entry: investment adjusts until
-
-$$\underbrace{r\!\left(L^\star(\pi)\right)}_{\text{net yield}}=\underbrace{\xi}_{\text{required premium}}$$
-
-</div>
-</div>
-</div>
-
-<!--
-Comparison proposal: replaces the preceding stage 2 slide if selected.
-Paper: Model, Investors. Equations lp_return and investor_equilibrium.
-The gross incremental yield is trading revenue divided by supplied liquidity L.
-Subtract δ and φ to get net incremental return r(L), relative to holding the same
-underlying security offchain. Settlement and smart-contract risks motivate ξ.
-γ is a trader-side extraction cost and is not another term to subtract from r(L).
-Initially show the risks and required premium. Click 1 reveals passive yield,
-click 2 the off-chain alternative, and click 3 investor costs. Click 4 reveals
-the net-return equation. Click 5 reveals the free-entry condition r(L*) = ξ.
-There is no separate investor argmax specified in the paper: capital adjusts until
-net return equals the required premium. Click 6 explains why idle onchain holdings
-are dominated by supplying liquidity, so AUM and liquidity coincide.
--->
-
-
----
-class: discussion paper-talk markdown-slide model-proposal projection-large projection-roomy
----
-
-# Stage 1: issuer
-
-<v-clicks at="+0">
-
-- **Regulator** imposes a cap $\psi$ on  **illicit trading** <br>
-$\implies$ regulatory burden
-- Issuer decides whether, and how much, to tokenize
-- **Revenue**: management fees $\phi\,L^\star(\pi)$ on equilibrium AUM
-- Compliance policy: **two ways to comply** 
-  - **costless measures**: admit fewer traders $\pi\downarrow$
-  - **costly measures**: screen more precisely $\rho\uparrow$ $\implies$ cost $\mathcal C(\rho)$
-
-</v-clicks>
-
-<!--, increasing and convex-->
-
-<!--
-Paper: Model, Issuer. Equations feasibility, regulatory, issuer_problem and Ustar.
-The issuer chooses acceptance π and precision ρ, not an independent AUM quantity.
-Stage 2 gives equilibrium AUM L*(π): investor entry responds to trading revenue.
-Stage 3 gives optimal trade size V*(L). This completes backward induction.
-φ is fixed. C(1)=0, C'>0, C''>0. At fixed acceptance, precision changes the composition
-of admitted traders without changing their total arrival rate λπ or revenue directly.
-ρ=qL/qI → qI=π/(μρ+1−μ), qL=ρπ/(μρ+1−μ). Hence admitted illicit flow is
-(1−μ)λπ/(μρ+1−μ). The probability restriction qL≤1 gives π≤μ+(1−μ)/ρ.
-Initially show the regulator's cap. Click 1 reveals the issuer's choices and the two
-ways to comply. Click 2 reveals fee revenue, and click 3 screening costs.
-The next slide states the optimization problem and the issuance decision.
--->
-
----
-class: discussion paper-talk markdown-slide issuer-problem-slide projection-large projection-extended projection-issuer
----
-
-# Stage 1: issuer's problem
-
-<div class="issuer-problem-grid">
-<div>
-
-
-
-<div class="prop-box">
-
-$$\begin{aligned}
-U^\star(\psi)&=\max_{\substack{0<\pi\leq1\\\rho\geq1}}
-\quad\left[\underbrace{\phi L^\star(\pi)}_{\text{revenue}}-\underbrace{\mathcal C(\rho)}_{\text{compliance cost}}\right]\\~\\
-\text{s.t.}\quad&\text{illicit trading}(\pi, \rho)\leq\underbrace{\psi}_{\text{regulatory cap}}
-\end{aligned}$$
+A fraction $\mu\in(0,1)$ are **legitimate**; the rest are **illicit**.
 
 </div>
 
-<br><br>
+<div class="seminar-block " style="top:207.63px;">
+
+The issuer chooses acceptance rate $\pi\in(0,1]$ and precision $\rho\geq1$, thereby implying:
 
 </div>
 
+<div class="seminar-block sem-muted" style="top:290.62px;left:123.28px;right:auto;width:392.23px;text-align:right;font-style:italic;white-space:nowrap;">
 
-<div class="issuer-participation">
-
-### Tokenize only if **profit exceeds an opportunity cost** $\underline U>0$:
-
-$$U^\star(\psi)>\underline U.$$
-
-</div>
-</div>
-
-<!--
-Paper: Model, Issuer. Equations issuer_problem and Ustar.
-The paper defines U* with a supremum. The model solution establishes attainment.
-The opportunity cost is positive, underline U>0, and is an outside option rather than
-an additional screening cost. Click 1 reveals the issuance decision U*>underline U.
-A lower ψ means tighter regulation. We study ψ<(1−μ)λ and assume tokenization is
-worthwhile without regulation: underline U<φL*(1). The following result asks how
-optimal acceptance and equilibrium liquidity respond as the regulator tightens ψ.
--->
-
----
-class: discussion paper-talk projection-large projection-extended projection-additional projection-okx projection-okx-two-images
----
-
-# The case of OKX
-
-<div class="okx-case-layout">
-<div class="okx-case-text">
-
-- OKXICE TSV provides permissioned AMMs (Uniswap v4, X Layer)
-- TSV Participants buy/sell Tokenized NMS Stock against stablecoins
-- “OKXICE TSV Hook” enforces permissioning (only wallets holding a soulbound token “SBT” issued by OKXICE TSV).
-
-</div>
-<figure class="okx-case-evidence">
-<img src="./images/OKX.png" alt="Coin Bureau post reporting that 26 companies objected to tokenized versions of their shares trading on OKXICE." />
-<figcaption class="source">Source: Coin Bureau.</figcaption>
-</figure>
-<figure class="okx-case-evidence okx-issuer-advertisement">
-<img src="./images/HVf0NrKWMAAwV8K.jpg" alt="Newspaper advertisement warning public company CEOs about the risks of tokenized shares" />
-<figcaption class="source">FT.</figcaption>
-</figure>
-</div>
-
----
-class: discussion paper-talk projection-large projection-extended projection-result
----
-
-# Result · Regulation reduces liquidity
-
-<div class="prop-box">
-
-**Proposition.**<br>
-Tighter regulation reduces liquidity and trading volumes.
+Legitimate Trader Accept Probability:
 
 </div>
 
-<br><br>
-
-
-
-<div class="mechanism-row">
-<div><b>ψ ↓ ⇒ π<sup>⋆</sup> ↓</b><br>Lower admitted flow<br>λπ<sup>⋆</sup></div>
-<span>→</span>
-<div><b>T<sup>⋆</sup> ↓</b><br>Smaller aggregate transfer<br>to liquidity providers</div>
-<span>→</span>
-<div><b>L<sup>⋆</sup> ↓</b><br>Liquidity is proportional<br>to the transfer</div>
-</div>
-
-<!--
-Time: 1:05.
-Paper: prop:reg_liquidity, supported by prop:flow, prop:transfer and prop:proportionality.
-The three channel boxes follow those supporting propositions in order:
-lower acceptance and admitted flow, smaller aggregate transfer, then proportional liquidity.
-T* denotes the aggregate transfer from traders to liquidity providers, not yield per unit of capital.
-This is the issuer's optimal response, not only a mechanical constraint effect.
-For ψ<ψ0=(1−μ)λ the cap binds. The issuer uses minimum compliant precision at each π.
-The reduced objective has strictly increasing differences in π,ψ on an interval with increasing endpoints.
-Optimal acceptance strictly increases with ψ. T*=(ξ+δ+φ)L*.
-Issuer policies need not be unique. Monotonicity is in the strong set order.
-These comparisons describe the conditional market. When the issuer exits, actual tokenized liquidity is zero.
-Net investor yield remains ξ wherever the market exists.
--->
-
----
-class: discussion paper-talk projection-large projection-extended projection-result
----
-
-# Result · Regulation reduces liquidity
-
-<br>
-<br>
-
-<div class="prop-box">
-
-**Proposition.**<br>
-Sufficiently strict regulation makes tokenization non-viable.
-
-</div>
-
-
-
-
-<!--
-<div v-click="0" class="mechanism-row">
-<div>Revenue<br>bounded</div>
-<span>→</span>
-<div>Screening precision<br>bounded</div>
-<span>→</span>
-<div>
-As ψ → 0 <br>
-acceptance <b>π<sup>⋆</sup> → 0</b>
-</div>
-<span>→</span>
-<div>Liquidity<br>L<sup>⋆</sup> → 0</div>
-
-</div>
-
--->
-
-<br>
-
-<div v-click="0">
-
-Profit falls below the  opportunity cost: $\quad U^\star(\psi)<\underline U$
-
-</div>
-
-
----
-class: discussion paper-talk evidence-slide projection-large projection-extended projection-turnover-evidence
----
-
-# Turnover
-
-<table class="overshoot-tbl projection-turnover-table">
-<thead><tr><th></th><th>Whitelist-<br>only</th><th>Accredited-<br>only</th><th>Native<br>(ETH/SOL)</th></tr></thead>
-<tbody>
-<tr><td>Tokens</td><td>153</td><td>23</td><td>2</td></tr>
-<tr><td>Market capitalization</td><td>&#36;7.8B</td><td>&#36;471M</td><td>—</td></tr>
-<tr><td>Transfers per token per day</td><td><b>≈41</b></td><td><b>≈0.6</b></td><td>—</td></tr>
-<tr><td>Daily turnover</td><td>≈1.1%</td><td>≈0.016%</td><td><b>≈6% / 8%</b></td></tr>
-</tbody>
-</table>
-
-
-<br><br><br><br>
-
-<div class="source">
-
-Counts and market cap (Allium): July 2025–March 2026.<br>
-RWA turnover: 90 days ending 8 June 2026.
-
-</div>
-
-<!--
-Time: 0:45.
-153 whitelist-only tokens/$7.8B/≈41 transfers per token per day.
-23 accredited-only tokens/$471M/≈0.6.
-Native assets: ETH and SOL. Their existing daily-turnover benchmarks are about
-6% and 8%, respectively (data-context.md and the earlier turnover slide).
-Native market capitalization and daily transfer counts are not available in the
-supplied data. Dashes denote missing figures, not zero activity.
-The turnover row uses a different window from the counts and market cap above:
-whitelist 1.1% and accredited 0.016%, 90 days ending 8 June 2026 (data-context.md).
-Turnover is transfer volume divided by market capitalization, not transfer count.
-The ETH/SOL benchmark window is not specified in the supplied materials.
-Token sizes and asset mix matter when comparing counts.
-Thin activity in existing tokens is not a direct observation of our issuer refusing to tokenize:
-positive AUM with thin trading does not itself establish commercial non-viability.
--->
-
-
-
-
-
-
-<!--
-Time: 1:05.
-Paper: prop:viability, supported by prop:bounded_screening and prop:forced_rationing.
-Initially announce the result. Click 1 reveals the screening-cost sentence and the full channel.
-Bounded screening: increasing screening costs and bounded commission revenue imply a finite,
-uniform precision bound rho-bar. With that bound, the largest feasible acceptance rate vanishes
-as psi approaches zero. Optimal acceptance must remain feasible and therefore also vanishes.
-Vanishing profits: liquidity, commission revenue and optimized profit vanish with acceptance.
-These are the two supporting propositions, following the paper's concluding channel summary.
-Click 2 reveals the profit cutoff and the decision not to tokenize.
-Trading revenue is the aggregate payment to investors, not net yield per unit of capital:
-free entry keeps net investor yield at ξ whenever the tokenized market exists.
-The maximum AUM fee is φL*(1), since π≤1. Precision costing more than this cannot be optimal:
-costless uninformative screening with low admission yields a positive profit instead.
-Thus ρ*<C⁻¹(φL*(1)) uniformly. Bounded precision implies π*≤constant×ψ.
-As ψ→0, admission, liquidity, fee revenue and optimized profit vanish.
-Positive opportunity cost U̲ gives a positive viability threshold.
-We assume tokenization worthwhile without regulation, hence ψ*∈(0,ψ0).
-Do not assert issuance at the exact threshold: the issuer's rule is U*>U̲.
-This is commercial viability, not proof that unrestricted tokenization maximizes social welfare.
--->
-
-
-
----
-class: discussion paper-talk projection-large projection-extended projection-frictions-table
----
-
-# Result · Viability of tokenization is asset-specific / platform-specific
-
-<table class="overshoot-tbl frictions-table">
-<thead><tr><th>Asset or platform characteristic</th><th>Economic effect</th></tr></thead>
-<tbody>
-<tr><td>Higher turnover (overall demand)</td><td>More yield</td></tr>
-<tr><td>Greater onchain risk</td><td>Less yield</td></tr>
-<tr><td>Greater asset risk (volatility)</td><td>Less yield</td></tr>
-<tr><td>Larger illicit share / costlier screening technology</td><td>Compliance more expensive</td></tr>
-<tr><td>Greater investor / issuer risks</td><td>Higher ξ and <u>U</u>; less viable tokenization</td></tr>
-</tbody>
-</table>
-
-<br>
-
-
-
-<!--
-Time: 1:05.
-The third result concerns asset-specific viability under a common regulatory policy.
-Turnover is an empirical indicator of trading demand. Trading generates fees and price-impact revenue for liquidity providers.
-Higher ξ,δ,γ or pointwise higher C weakly raises ψ*. Higher legitimate share μ weakly lowers ψ*.
-The first family lowers revenue. The second lowers optimized profit through costs or feasibility.
-Lower profit requires a looser cap for viability.
-Platform features can enter these primitives, but platform choice is not endogenous.
-Do not sign the threshold with λ: the formal propositions do not establish that comparative static.
-A common cap can keep one asset viable and make another non-viable.
--->
-
----
-class: discussion paper-talk evidence-slide projection-large projection-extended projection-market-evidence
----
-
-# Different outcomes
-
-<div class="distribution-pair">
-<figure>
-<figcaption>Ethereum</figcaption>
-<img src="./images/ethereum_distribution.png" alt="Ethereum: stablecoins $160B, Treasuries $6.2B, commodities $4.7B, active strategies $1.8B" />
-</figure>
-<figure>
-<figcaption>Robinhood</figcaption>
-<img src="./images/robinhood_distribution.png" alt="Robinhood: stablecoins $997M, stocks $152.9M, asset-backed credit $34.5M, Treasuries $4.5M" />
-</figure>
-</div>
-
-- Stocks not the best fit for tokenization (issuer risk + asset risk)
-
-<!--
-Time: 1:00. Ethereum/Robinhood comparison.
-Compare the two platform distributions.
-Stablecoins dominate. Compare the nonstablecoin mix.
-Ethereum: Treasuries $6.2B, commodities $4.7B, strategies $1.8B, stablecoins $160B.
-Robinhood: stocks $152.9M, asset-backed credit $34.5M, Treasuries $4.5M,
-stablecoins $997M. Unlabeled small slices prevent exact totals.
-These are allocations, not identified platform liquidity effects.
-The model allows platform risk/execution frictions but does not solve cross-chain sorting.
-Composition does not prove the chain caused sorting or rank platform liquidity after controlling for assets.
-Connect to ξ,δ (reward needed for capital), γ (trade size), and μ,C (compliance).
-These can differ by asset and infrastructure, motivating care with a common policy or exemption.
--->
-
----
-section: Optimal regulation
-class: discussion paper-talk markdown-slide projection-large projection-roomy projection-regulation-motivation
----
-
-
-# Optimal regulation: why ?
-
-## Interest in blockchain technology: socially beneficial innovation
-<br>
-
-- central bank digital currencies, stablecoins <br><span class="policy-reference">(Fung and Halaburda, 2016; Auer et al., 2022)</span>
-- instantaneous and cross-border settlement (BIS Project Mariana)<br><span class="policy-reference">(Harvey, 2021; BIS Innovation Hub, 2023; Cardozo et al., 2024)</span>
-- (DAOs) raise capital and organize governance <br><span class="policy-reference">(Cong et al., 2025; Han, Lee and Li, 2026)</span>
-- competition for traditional venues
-- programmable finance, disintermediation
-
-
-
----
-class: discussion paper-talk markdown-slide optimal-regulation-slide innovation-timing-slide projection-large projection-extended projection-innovation
----
-
-# Model
-
-## Blockchain activity accelerates innovation
-
-##### inspired by Campello, Cong and Dietrich (2024)
-
-<div class="presentation-columns">
-<div>
-
-- $Q_0$: existing blockchain activity
-- $Q^\star(\psi)$: added activity (tokenized market)
-- Total activity: $Q_0+Q^\star(\psi)$
-
-
-</div>
-<div>
-<div v-click="1">
-
-- More activity (legitimate and illicit) accelerates socially useful innovation:
-
-<div class="prop-box">
-
-$$\Pr(\tau\leq t)=1-e^{-a[Q_0+Q^\star(\psi)]t}.$$
-
-</div>
-</div>
-
-<div v-click="1" class="regulation-takeaway">
-
-
-
-</div>
-
-</div>
-</div>
-
-<!--
-Time: 0:45. Section cumulative: 0:45. Optimal-regulation section budget: 5:00.
-Attribution: Regulatory uncertainty and fintech innovation, cited in the paper as cong2024regulatory.
-Bridge from passive yield and programmable finance to the social benefits of innovation.
-Q*(psi) is the dollar trading flow lambda*pi*(psi)*V*(L*(pi*(psi))) in the market above.
-Initially introduce existing activity, added tokenized trading, and their units.
-Click 1 introduces an exponential innovation time with rate a[Q0+Q*(psi)].
-Click 2 emphasizes that more activity shortens the expected waiting time to innovation.
-Both legitimate and illicit trading contribute to activity. The innovation channel is
-an assumption, not an empirical causal estimate. The next slide values the earlier innovation.
--->
-
----
-class: discussion paper-talk markdown-slide optimal-regulation-slide social-value-slide projection-large projection-extended projection-social-value
----
-
-# Model
-
-##  Social value of tokenization
-
-<div class="presentation-columns">
-<div>
-
-- $\Theta\geq0$: future social benefit
-- $m=\mathbb E[\Theta\mid S]$ : regulator's estimate
-
-<div v-click="1">
-
-- Expected discounted benefit without tokenization:
-
-$$m \ p\left(Q_0\right)=m\, \frac{a\,Q_0}{d+a\,Q_0}.$$
-
-- $d>0$: discount rate.
-
-</div>
-
-</div>
-
-<div v-click="2" class="prop-box">
-
-Tokenization adds incremental social value
+<div class="seminar-block sem-eq" style="top:271.5px;left:541.88px;right:auto;width:294px;">
 
 $$
-mA(\psi)
-$$
-$$
-=m\big[p(Q_0+Q^\star(\psi))-p(Q_0)\big]
+q_L(\rho,\pi)=\frac{\rho}{\mu\rho+(1-\mu)}\cdot\pi
 $$
 
 </div>
 
-<div v-click="2">
+<div class="seminar-block sem-muted" style="top:356.23px;left:123.28px;right:auto;width:392.23px;text-align:right;font-style:italic;white-space:nowrap;">
 
-- Regulation $\psi$ limits **innovation**
+Illicit Trader Accept Probability:
 
 </div>
+
+<div class="seminar-block sem-eq" style="top:337.1px;left:541.88px;right:auto;width:294px;">
+
+$$
+q_I(\rho,\pi)=\frac{1}{\mu\rho+(1-\mu)}\cdot\pi
+$$
+
 </div>
 
+<div class="seminar-block " style="top:436.02px;" v-click="1">
 
-<!--
-Time: 0:45. Section cumulative: 1:30.
-Continue from the exponential innovation time and activity levels on the preceding slide.
-Theta is the future social benefit, potentially including continuing public benefits.
-S is information available before the issuer decides to tokenize; m is the conditional mean.
-Click 1 introduces discounting. Theta and innovation timing are independent conditional on S.
-The expected discounted innovation benefit is m*p(Q0+Q*); without tokenization it is m*p(Q0).
-Click 2 displays their difference. A is the incremental discounted value per dollar of m.
-Activity changes timing, not the conditional estimate m or the eventual payoff Theta.
-This is the added social benefit of tokenization beyond the innovation already supported
-by existing crypto and stablecoin trading. The next slide adds the harm from illicit trading.
--->
+Screening precision $\rho\geq1$ costs $\mathcal C(\rho)$: &nbsp; $\mathcal C(1)=0,\ \mathcal C^\prime>0,\ \mathcal C^{\prime\prime}>0$.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 11/25. Text and mathematics remain editable. -->
 
 ---
-class: discussion paper-talk markdown-slide optimal-regulation-slide social-harm-slide projection-large projection-extended projection-social-harm
+layout: seminar
+title: "Issuer: Regulatory Constraint"
 ---
 
-# Model
+# Issuer: Regulatory Constraint
 
-##  Illicit trading creates social harm
+<div class="seminar-block " style="top:199.68px;">
 
-
-<div class="presentation-columns">
-<div>
-<div v-click="1">
-
-- Equilibrium illicit trading volume:
-
-$$J^\star(\psi)=\underbrace{\psi}_{\substack{\text{illicit trades}\\\text{per unit of time}}}\times\underbrace{V^\star}_{\substack{\text{equilibrium}\\\text{trade size}}}$$
-
+The regulator imposes an upper bound on the rate of illicit trading:
 
 </div>
 
+<div class="seminar-block sem-eq" style="top:294px;">
 
-</div>
-<div>
-
-<div v-click="2">
-
-- $h>0$ is the **social harm per dollar of illicit trading**.
-
-</div>
-
-<div v-click="2" class="prop-box">
-
-$$\text{Total expected harm}=\frac{hJ^\star(\psi)}{d}$$
+$$
+\frac{(1-\mu)\lambda}{\mu\rho+(1-\mu)}\cdot\pi\leq\psi
+$$
 
 </div>
 
-<div v-click="2" class="regulation-takeaway">
+<div class="seminar-block " style="top:417.31px;">
 
-
-- Regulation $\psi$ limits **illicit trading**
-
-- Regulation $\psi$ also limits innovation
+where $\psi>0$ is the regulatory stringency parameter.
 
 </div>
-</div>
-</div>
 
-<!--
-Time: 0:45. Section cumulative: 2:15.
-Distinguish the cap on illicit trade arrivals from illicit dollar volume.
-V* is the trade size from stage three, evaluated at the chosen cap's equilibrium liquidity.
-Click 1 converts arrivals into volume and defines harm per dollar. Click 2 discounts
-constant harm hJ* at rate d over the infinite horizon, including after innovation occurs.
-Click 3 connects the two externalities, neither of which private agents internalize.
-When the issuer does not tokenize, Q*=J*=0. Both kinds of trading support innovation,
-while illicit activity also creates the additional social harm.
--->
+<!-- Source: files/seminar.pdf; numbered slide 12/25. Text and mathematics remain editable. -->
 
 ---
-class: discussion paper-talk markdown-slide optimal-regulation-slide regulator-objective-slide projection-large projection-extended projection-regulator-objective
+layout: seminar
+title: "Issuer Problem"
 ---
 
-# Optimal regulation
+# Issuer Problem
 
-- Regulator anticipates effect of regulatory burden
+<div class="seminar-block " style="top:160.14px;">
 
-- Regulator maximizes 
-
-<div class="prop-box">
-
-$$W(\psi)=\underbrace{mA(\psi)}_{\text{innovation benefit}}-\underbrace{\frac{hJ^\star(\psi)}d}_{\text{illicit harm}}-\underbrace{v}_{\text{required benefit}}$$
+The issuer solves:
 
 </div>
 
-- If $W(\psi) \le 0$  for all $\psi$, then ban
+<div class="seminar-block sem-eq" style="top:181.5px;">
 
-
-<!--
-The original time allowance covers this objective slide and the following regime slide.
-Time: 1:10. Section cumulative: 3:25.
-Reuse U* and opportunity cost underline U from stage one. Choose among privately viable
-markets; no tokenization has incremental value zero, and ties lead to a ban.
-v is a minimum required net social gain, not the issuer's opportunity cost.
-Click 1 reveals the three regimes. The two finite bounds guarantee the extreme policies;
-they need not be the exact switches, so not every estimate between them implies an interior cap.
-A sufficient lower bound is v/A(psi0). The sufficient upper bound in the paper is the max of
-[hJ*(psi0)/d+v]/A(psi0) and h[d+aQ0+aQ*(psi0)]^2/(a*d^2).
-When tokenization is optimal at both compared parameter values, higher m favors looser
-regulation and higher h favors tighter regulation. The next slide illustrates all three regimes.
-Full admission means no additional burden in this model, not the absence of securities law.
--->
-
----
-class: discussion paper-talk markdown-slide optimal-regulation-slide regulator-objective-slide projection-large projection-extended projection-regimes
----
-
-# Three regulatory regimes
-
-<img class="regulation-main-chart" src="./images/optimal-regulation.png" alt="Figure 1. Left: higher estimates m move policy from a ban to intermediate regulation and then full admission. Right: greater existing activity Q0 tightens regulation and eventually leads to a ban." />
-
-<div class="regulation-figure-points">
-<div>
-
-**Higher $m$:** more value from innovation favors looser regulation.
-
-</div>
-<div>
-
-**Higher $Q_0$:** tokenization adds less innovation value; eventually a ban.
-
-</div>
-</div>
-
-<v-click>
-
-- SEC  2026 exemption: regulator believes in innovation potential
-
-</v-click>
-
-<!--
-Time: 0:35. Section cumulative: 4:00.
-Paper Figure 1, original curves and parameters. Left: Q0=32/9; right: m=10.
-Left: higher estimates move policy from ban to intermediate regulation to full admission.
-Right: existing activity speeds innovation without tokenization, reducing the incremental
-benefit of adding this tokenized market. Regulation tightens and eventually tokenization is banned.
-The black dot is the ban at the tie; the open dot is the limiting operating policy.
-Functional forms: Pi(V)=sqrt(V), kappa(z)=z^2, C(rho)=(rho-1)^2, z=V/L.
-Parameters: lambda=8, mu=xi=phi=1/2, delta=gamma=0, a=9/32, d=1,
-h=9/16, underline U=v=1/8. Upwards means looser regulation, not more burden.
-Ban at zero is a display convention, not an operating tokenized market at psi=0.
--->
-
----
-class: discussion paper-talk optimal-regulation-slide regulation-figure-slide regulation-frictions-slide projection-large projection-extended projection-regulation-grid
----
-
-# Frictions
-
-
-
-<div class="regulation-friction-charts">
-<figure>
-<figcaption>
-
-Issuer's opportunity cost $\underline U$
-
-</figcaption>
-<img src="./images/optimal-regulation-opportunity-cost.png" alt="Issuer opportunity cost, underline U: optimal regulation stays flat, then loosens, and eventually switches to a ban." />
-</figure>
-<figure>
-<figcaption>
-
-Onchain risk premium $\xi$
-
-</figcaption>
-<img src="./images/optimal-regulation-risk-premium.png" alt="Investor onchain risk premium, xi: regulation initially loosens and eventually switches to a ban." />
-</figure>
-<figure>
-<figcaption>
-
-Adverse selection cost $\delta$
-
-</figcaption>
-<img src="./images/optimal-regulation-adverse-selection.png" alt="Adverse selection cost, delta: regulation initially loosens and eventually switches to a ban." />
-</figure>
-<figure>
-<figcaption>
-
-Value extracted from traders $\gamma$
-
-</figcaption>
-<img src="./images/optimal-regulation-value-extraction.png" alt="Value extracted from traders, gamma: regulation initially loosens and eventually switches to a ban." />
-</figure>
-</div>
-
-
-- regulator first **loosens regulation** to sustain activity, then **bans tokenization** when social benefits are too small.
-
-
-
-<!--
-Time: 0:30. Section cumulative: 4:30.
-Return to issuer opportunity costs and investor risks/costs from the preceding model.
-The fourth panel defines gamma: value extracted from traders by profit-seekers, such as
-sandwich attacks. It increases trading costs and lowers trade size; it is not LP revenue.
-Read the common pattern: higher frictions reduce activity, so the regulator initially
-loosens regulation to sustain innovation, then bans tokenization when net benefits are too low.
-These are the four original panels of Figure 2, not a general comparative-statics theorem.
-Parameters: lambda=8, mu=phi=xi=1/2, delta=gamma=0, a=9/32, d=h=1,
-m=10, Q0=32/9, v=1/8, underline U=1/4, unless varied on an axis.
-Functional forms as in Figure 1. For this illustration only, the issuer tokenizes at
-profit equal to its opportunity cost, as stated in the paper's caption.
--->
-
----
-class: discussion paper-talk optimal-regulation-slide regulation-figure-slide projection-large projection-extended projection-demand
----
-
-# Stronger demand: stricter regulation
-
-
-
-<div class="demand-layout">
-
-<img class="regulation-main-chart" src="./images/optimal-regulation-trader-demand.png" alt="Optimal regulation and trader demand. As the utility multiplier b rises from 1 to 3, the optimal regulatory cap falls from approximately 2.76 to 1.11. A lower cap means stricter regulation." />
-
-- Stronger demand sustains **innovation benefits** with fewer admitted traders
+$$
+(\pi^\star,\rho^\star)=\arg\max_{(\pi,\rho)\in\mathcal S}\ \phi\,L^\star(\pi)-\mathcal C(\rho)
+$$
 
 </div>
 
-<!--
-Time: 0:30. Section cumulative: 5:00.
-Paper Figure 3 varies b in Pi_b(V)=b*sqrt(V), keeping every Figure 2 parameter fixed.
-At b=1 the optimal cap is about 2.76; at b=2 it is 1.56; at b=3 it is 1.11.
-A lower cap means stricter regulation. Larger trades support liquidity and issuer revenue
-even as admission falls; equilibrium screening precision rises along the plotted curve.
-All plotted optima strictly satisfy issuer participation, so no equality convention is needed.
-The demand multiplier changes the trade sizes of both legitimate and illicit traders.
-It does not change arrival intensity lambda or the legitimate share mu.
-Call b trader demand, not turnover: at fixed admission, both V and L scale by b^2,
-leaving Q/L unchanged. Along the chosen policies admission and turnover actually fall.
-Incremental innovation benefits rise along this numerical curve; investor net yield stays at xi.
-This supports the stated intuition for the illustration, not a general comparative-statics theorem.
--->
+<div class="seminar-block sem-bullet" style="top:282.52px;left:108.39px;right:auto;width:831.61px;">
+
+$\phi>0$: fee rate on assets under management
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:314.66px;left:108.39px;right:auto;width:831.61px;">
+
+$L^\star(\pi)$: endogenous equilibrium AUM (determined by investors)
+
+</div>
+
+<div class="seminar-block " style="top:384.61px;">
+
+Issuer has access to an outside option $\underline U>0$.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 13/25. Text and mathematics remain editable. -->
 
 ---
-layout: end
-section: Conclusion
+layout: seminar
+title: "Traders"
 ---
 
-Is tokenization viable?
+# Traders
 
-complex equation
+<div class="seminar-block " style="top:144.66px;">
 
-<!--
-Time: 0:20.
-Return to the opening question. Click 1 reveals the market-size benchmarks.
-The answer depends on the regulatory environment and the asset's economic characteristics.
-Allium reports $2.3B of equities/stocks within $29.5B of tokenized RWAs on 15 July 2026.
-SIFMA reports $76.9T in US-listed equities at the end of Q2 2026.
-These are scale benchmarks, not a like-for-like share: the token numerator includes global
-products and private/pre-IPO exposures. The denominator covers US-listed companies.
-Do not describe their ratio as the fraction of US equities tokenized.
-Pause for questions.
--->
+A trader who passes screening selects optimal trade size $V\geq0$:
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:190.5px;">
+
+$$
+V^\star(L)=\arg\max_{V\geq0}\ \Pi(V)-\kappa\!\left(\frac VL\right)V-\gamma V
+$$
+
+</div>
+
+<div class="seminar-block " style="top:292.53px;">
+
+where:
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:319.71px;left:108.39px;right:auto;width:831.61px;">
+
+$\Pi(V)$: trading payoff with $\Pi^\prime>0$, $\Pi^{\prime\prime}<0$, $\lim\limits_{V\to0^+}\Pi^\prime(V)=+\infty$
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:364px;left:108.39px;right:auto;width:831.61px;">
+
+$\kappa(V/L)$: cost per unit traded, paid to liquidity providers
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:399.43px;left:108.39px;right:auto;width:831.61px;">
+
+$\gamma\geq0$: value extraction per unit traded (e.g., sandwich attacks)
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 14/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Investors"
+---
+
+# Investors
+
+<div class="seminar-block " style="top:159.91px;">
+
+Net return from liquidity provision given liquidity $L>0$:
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:201.5px;">
+
+$$
+r(L)=\frac{\lambda\pi\cdot\kappa(V^\star(L)/L)\cdot V^\star(L)}{L}-\delta-\phi
+$$
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:307.16px;left:108.39px;right:auto;width:831.61px;">
+
+First term: revenue from accepted traders
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:342.59px;left:108.39px;right:auto;width:831.61px;">
+
+$\delta\geq0$: adverse-selection cost per unit liquidity
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:378.63px;left:108.39px;right:auto;width:831.61px;">
+
+$\phi$: fees paid to issuer per unit AUM
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 15/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Investor Equilibrium"
+clicks: 1
+---
+
+# Investor Equilibrium
+
+<div class="seminar-block " style="top:113.62px;">
+
+Investors require risk premium $\xi>0$ to hold the tokenized asset.
+
+</div>
+
+<div class="seminar-block " style="top:161.28px;">
+
+Investors optimally supply all holdings as liquidity.
+
+</div>
+
+<div class="seminar-block " style="top:217.59px;">
+
+Equilibrium holdings $L^\star(\pi)$ therefore satisfy:
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:265.5px;">
+
+$$
+r(L^\star(\pi))=\xi
+$$
+
+</div>
+
+<div class="seminar-block " style="top:345.47px;" v-click="1">
+
+More explicitly:
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:389px;" v-click="1">
+
+$$
+\frac{\lambda\pi\cdot\kappa\!\left(V^\star(L^\star(\pi))/L^\star(\pi)\right)\cdot V^\star(L^\star(\pi))}{L^\star(\pi)}-\delta-\phi=\xi
+$$
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 16/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Equilibrium"
+---
+
+# Equilibrium
+
+<div class="seminar-block " style="top:111.42px;left:61.25px;right:auto;width:857.5px;">
+
+**Definition.** An equilibrium consists of $V^\star:\mathbb R_{++}\to\mathbb R_+$, $L^\star:(0,1]\to\mathbb R_{++}$, and (if<br>the issuer issues the token) policy $(\pi^\star,\rho^\star)\in\mathcal S$ such that:
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:212.2px;left:61.25px;right:auto;width:35px;text-align:right;">
+
+(i)
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:212.2px;left:108.39px;right:auto;width:780px;">
+
+Optimal Trading:
+
+</div>
+
+<div class="seminar-block " style="top:241.48px;left:108.39px;right:auto;width:800px;">
+
+For all $L\in\mathbb R_{++}$, $V^\star(L)$ solves the trader’s problem.
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:289.46px;left:61.25px;right:auto;width:35px;text-align:right;">
+
+(ii)
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:289.46px;left:108.39px;right:auto;width:780px;">
+
+Optimal Liquidity Provision:
+
+</div>
+
+<div class="seminar-block " style="top:318.74px;left:108.39px;right:auto;width:800px;">
+
+For all $\pi\in(0,1]$, $L^\star(\pi)$ satisfies $r(L^\star(\pi))=\xi$.
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:366.72px;left:61.25px;right:auto;width:35px;text-align:right;">
+
+(iii)
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:366.72px;left:108.39px;right:auto;width:780px;">
+
+Optimal Issuer Policy:
+
+</div>
+
+<div class="seminar-block " style="top:396px;left:108.39px;right:auto;width:810px;">
+
+If $\sup_{(\pi,\rho)\in\mathcal S}\big[\phi L^\star(\pi)-\mathcal C(\rho)\big]>\underline U$, then the issuer issues the token and $(\pi^\star,\rho^\star)$<br>solves the issuer’s problem.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 17/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Trader and Investor Equilibrium"
+---
+
+# Trader and Investor Equilibrium
+
+<div class="seminar-block " style="top:125.23px;">
+
+**Proposition.** <span class="sem-accent">Unique Subgame Equilibrium</span>
+
+</div>
+
+<div class="seminar-block " style="top:166.76px;">
+
+For any $\pi\in(0,1]$, there exists a unique $(V^\star(\pi),L^\star(\pi))\in\mathbb R_{++}^2$ satisfying conditions<br>(i) and (ii):
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:240.5px;">
+
+$$
+\begin{aligned}V^\star(\pi)&=(\Pi^\prime)^{-1}\!\big(\kappa(z(\pi))+z(\pi)\,\kappa^\prime(z(\pi))+\gamma\big)\\[0.8em]L^\star(\pi)&=V^\star(\pi)\,/\,z(\pi)\end{aligned}
+$$
+
+</div>
+
+<div class="seminar-block " style="top:350.6px;">
+
+where
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:367.5px;">
+
+$$
+\eta(z):=\kappa(z)\cdot z,\qquad z(\pi):=\eta^{-1}\!\left(\frac{\xi+\delta+\phi}{\lambda\pi}\right)
+$$
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 18/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Equilibrium Existence"
+---
+
+# Equilibrium Existence
+
+<div class="seminar-block " style="top:178.27px;">
+
+**Proposition.** An equilibrium exists. Specifically:
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:263px;left:61.25px;right:auto;width:35px;text-align:right;">
+
+(i)
+
+</div>
+
+<div class="seminar-block " style="top:263px;left:108.39px;right:auto;width:810px;">
+
+The issuer’s optimal issuance decision is well-defined.
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:329.36px;left:61.25px;right:auto;width:35px;text-align:right;">
+
+(ii)
+
+</div>
+
+<div class="seminar-block " style="top:329.36px;left:108.39px;right:auto;width:831.61px;white-space:nowrap;">
+
+If the issuer issues the token, there exists $(\pi^\star,\rho^\star)\in\mathcal S$ solving the issuer’s problem.
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:395.72px;left:61.25px;right:auto;width:35px;text-align:right;">
+
+(iii)
+
+</div>
+
+<div class="seminar-block " style="top:395.72px;left:108.39px;right:auto;width:810px;">
+
+Equilibrium trading volume and investment are $V^\star(\pi^\star)$ and $L^\star(\pi^\star)$.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 19/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Main Result: Stringent Regulation Renders Tokenization Non-Viable"
+---
+
+# Main Result: Stringent Regulation Renders Tokenization Non-Viable
+
+<div class="seminar-block " style="top:174.72px;">
+
+**Proposition.** There is a threshold $\psi^\star\in(0,\psi_0)$ such that no equilibrium involves<br>tokenization whenever $\psi<\psi^\star$.
+
+</div>
+
+<div class="sem-box sem-blue" style="left:128.62px;top:295.81px;width:722.76px;height:73.5px;font-size:23.57px;">
+
+Sufficiently stringent regulation renders tokenization non-viable.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 20/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Main Result: Economic Channel"
+clicks: 4
+---
+
+# Main Result: Economic Channel
+
+<div class="seminar-block " style="top:94.66px;">
+
+The issuer tokenizes only if
+
+</div>
+
+<div class="seminar-block sem-eq" style="top:139px;">
+
+$$
+\max_{(\pi,\rho)\in\mathcal S}\Big[\underbrace{\phi\,L^\star(\pi)}_{\textsf{revenue}}-\underbrace{\mathcal C(\rho)}_{\textsf{screening cost}}\Big]>\underline U
+$$
+
+</div>
+
+<div class="seminar-block " style="top:234.2px;" v-click="1">
+
+**Proposition.** Tighter regulation forces a lower acceptance rate: $\psi\downarrow\implies\pi^\star(\psi)\downarrow$.
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:265.08px;" v-click="1">
+
+(Convex screening costs bound screening precision.)
+
+</div>
+
+<div class="seminar-block " style="top:317.26px;" v-click="2">
+
+**Proposition.** A lower acceptance rate reduces trading revenue: $\pi\downarrow\implies T^\star(\pi)\downarrow$.
+
+</div>
+
+<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="2">
+
+($T^\star$: trading revenue paid to liquidity providers by admitted traders.)
+
+</div>
+
+<div class="seminar-block " style="top:400.31px;" v-click="3">
+
+**Proposition.** Onchain investment increases with trading revenue: $T^\star\downarrow\implies L^\star\downarrow$.
+
+</div>
+
+<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="4">
+
+$\implies$ For sufficiently tight regulation, revenue $\phi\,L^\star(\pi^\star(\psi))$ falls below $\underline U$.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 21/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Main Result: Economic Channel (Continued)"
+clicks: 4
+---
+
+# Main Result: Economic Channel (Continued)
+
+<svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
+<defs><marker id="mechanism-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker></defs>
+<path v-click="1" d="M490 152.91 V179.5" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
+<path v-click="2" d="M490 234.62 V261.21" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
+<path v-click="3" d="M490 316.34 V342.92" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
+<path v-click="4" d="M490 398.05 V424.63" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
+</svg>
+
+<div class="sem-box sem-node" style="left:251.12px;top:97.79px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;">
+
+$\psi\downarrow$ (tighter regulation)
+
+</div>
+
+<div class="sem-box sem-node" style="left:251.12px;top:179.5px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;" v-click="1">
+
+$\pi^\star\downarrow$ (fewer admitted traders)
+
+</div>
+
+<div class="sem-box sem-node" style="left:251.12px;top:261.21px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;" v-click="2">
+
+$T^\star\downarrow$ (trading revenue to liquidity providers)
+
+</div>
+
+<div class="sem-box sem-node" style="left:251.12px;top:342.92px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;border-color:#3498db;" v-click="3">
+
+$L^\star\downarrow$ (onchain investment)
+
+</div>
+
+<div class="sem-box sem-node" style="left:251.12px;top:424.63px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;border-color:#b91c1c;" v-click="4">
+
+$\phi\,L^\star<\underline U$ (no issuance)
+
+</div>
+
+<div class="seminar-block sem-label sem-muted" style="top:157.05px;left:498.72px;right:auto;width:300px;" v-click="1">
+
+compliance with the cap
+
+</div>
+
+<div class="seminar-block sem-label sem-muted" style="top:238.76px;left:498.72px;right:auto;width:300px;" v-click="2">
+
+less trading
+
+</div>
+
+<div class="seminar-block sem-label sem-muted" style="top:319.5px;left:498.72px;right:auto;width:300px;" v-click="3">
+
+$L^\star\propto T^\star$
+
+</div>
+
+<div class="seminar-block sem-label sem-muted" style="top:403.86px;left:498.72px;right:auto;width:300px;" v-click="4">
+
+lower issuer revenue
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 22/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Viability Is Heterogeneous Under a Given Regulatory Standard"
+---
+
+# Viability Is Heterogeneous Under a Given Regulatory Standard
+
+<div class="sem-box sem-plain-blue" style="left:91.87px;top:73.48px;width:796.26px;height:110.33px;border-radius:8.6px;">
+
+
+
+</div>
+
+<div class="seminar-block " style="top:87px;left:107.19px;right:auto;width:760px;">
+
+**Proposition.** The threshold $\psi^\star$ below which tokenization is non-viable<br>is weakly increasing in the risk premium $\xi$, adverse selection $\delta$, and value<br>extraction $\gamma$.
+
+</div>
+
+<div class="seminar-block sem-small sem-accent" style="top:241.91px;left:152.46px;right:auto;width:198px;">
+
+**Friction**
+
+</div>
+
+<div class="seminar-block sem-small sem-accent" style="top:241.91px;left:350.07px;right:auto;width:500px;">
+
+**Driven by**
+
+</div>
+
+<div class="seminar-block sem-small" style="top:276.79px;left:152.46px;right:auto;width:198px;">
+
+Adverse selection $\delta$
+
+</div>
+
+<div class="seminar-block sem-small" style="top:276.79px;left:350.06px;right:auto;width:500px;">
+
+The asset’s volatility and the blockchain’s block time
+
+</div>
+
+<div class="seminar-block sem-small" style="top:311.66px;left:152.46px;right:auto;width:198px;">
+
+Value extraction $\gamma$
+
+</div>
+
+<div class="seminar-block sem-small" style="top:311.66px;left:350.06px;right:auto;width:500px;">
+
+The blockchain’s exposure to sandwich attacks
+
+</div>
+
+<div class="seminar-block sem-small" style="top:346.54px;left:152.46px;right:auto;width:198px;">
+
+Risk premium $\xi$
+
+</div>
+
+<div class="seminar-block sem-small" style="top:346.54px;left:350.06px;right:auto;width:500px;">
+
+The blockchain’s smart-contract and settlement risk
+
+</div>
+
+<div class="sem-box sem-orange" style="left:129.95px;top:424.34px;width:720.1px;height:73.5px;font-size:21.53px;">
+
+The same cap can keep tokenization viable for one asset or blockchain<br>and render it non-viable for another.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 23/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Heterogeneous Viability: Economic Channel"
+---
+
+# Heterogeneous Viability: Economic Channel
+
+<div class="seminar-block " style="top:123.02px;">
+
+Each friction lowers onchain investment $L^\star$ at every acceptance rate $\pi$:
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:177.13px;left:108.39px;right:auto;width:831.61px;">
+
+Higher risk premium $\xi$ or adverse selection $\delta$: investors require a higher yield
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:237.36px;left:108.39px;right:auto;width:831.61px;">
+
+Higher value extraction $\gamma$: traders trade less, reducing trading revenue
+
+</div>
+
+<div class="seminar-block " style="top:297.6px;">
+
+Lower onchain investment lowers the issuer’s fee revenue at every level of regulation.
+
+</div>
+
+<div class="sem-box sem-blue" style="left:82.68px;top:379.31px;width:814.64px;height:73.5px;font-size:23.57px;">
+
+Higher frictions require looser regulation to keep tokenization viable.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 24/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "Conclusion"
+---
+
+<div class="seminar-block sem-bullet" style="top:128.15px;left:108.39px;right:auto;width:831.61px;">
+
+Onchain holdings require an incentive that covers onchain costs and priced risks
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:188.39px;left:108.39px;right:auto;width:831.61px;">
+
+Yield farming provides this incentive via an endogenous two-way positive externality
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:248.62px;left:108.39px;right:auto;width:831.61px;">
+
+Tighter regulation undermines this externality, limiting onchain investment
+
+</div>
+
+<div class="sem-box sem-blue" style="left:128.62px;top:342.92px;width:722.76px;height:85.75px;font-size:25.83px;">
+
+Sufficiently stringent regulation renders tokenization non-viable.
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 25/25. Text and mathematics remain editable. -->
+
+---
+layout: primer-backup
+title: "Backup: Equity Tokenization"
+hideInToc: true
+routeAlias: primer
+---
+<img src="./images/equity-tokenization-primer/page-01.svg" alt="Equity Tokenization" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 1. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Five Questions — Overview"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-02.svg" alt="Five Questions — Overview" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 2. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Five Questions — What Is Tokenization?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-03.svg" alt="Five Questions — What Is Tokenization?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 3. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: What Is Tokenization?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-04.svg" alt="What Is Tokenization?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 4. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Three Tokenization Models"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-05.svg" alt="Three Tokenization Models" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 5. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Synthetic Tokens: Price Exposure, Not Ownership"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-06.svg" alt="Synthetic Tokens: Price Exposure, Not Ownership" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 6. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Five Questions — Why Tokenize?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-07.svg" alt="Five Questions — Why Tokenize?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 7. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Who Owns Your Shares Today?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-08.svg" alt="Who Owns Your Shares Today?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 8. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Purported Benefits of Tokenization"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-09.svg" alt="Purported Benefits of Tokenization" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 9. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Five Questions — Policy Actions"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-10.svg" alt="Five Questions — Policy Actions" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 10. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Proposed Transfer Agent Rules (September 2026)"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-11.svg" alt="Proposed Transfer Agent Rules (September 2026)" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 11. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: SEC Innovation Exemption (September 2026)"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-12.svg" alt="SEC Innovation Exemption (September 2026)" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 12. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Issuers Can Say No"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-13.svg" alt="Issuers Can Say No" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 13. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Issuers Object to Third-party Tokenization"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-14.svg" alt="Issuers Object to Third-party Tokenization" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 14. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Five Questions — How Is It Going?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-15.svg" alt="Five Questions — How Is It Going?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 15. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Equity Tokenization Remains Trivial in Scale"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-16.svg" alt="Equity Tokenization Remains Trivial in Scale" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 16. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Nearly All Tokenized Stocks Are Synthetic"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-17.svg" alt="Nearly All Tokenized Stocks Are Synthetic" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 17. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Tokenized Stocks Barely Trade"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-18.svg" alt="Tokenized Stocks Barely Trade" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 18. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Weekend AMC Token Price Spike"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-19.svg" alt="Weekend AMC Token Price Spike" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 19. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Five Questions — Why Is It Going That Way?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-20.svg" alt="Five Questions — Why Is It Going That Way?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 20. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Why Hold Securities Onchain?"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-21.svg" alt="Why Hold Securities Onchain?" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 21. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Incremental Onchain Incentive"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-22.svg" alt="Incremental Onchain Incentive" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 22. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: The Role of Regulation"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-23.svg" alt="The Role of Regulation" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 23. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Regulation in Practice: Volume Caps"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-24.svg" alt="Regulation in Practice: Volume Caps" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 24. Original footer number removed. -->
+
+---
+layout: primer-backup
+title: "Backup: Stringent Regulation Undermines Tokenization"
+hideInToc: true
+---
+<img src="./images/equity-tokenization-primer/page-25.svg" alt="Stringent Regulation Undermines Tokenization" />
+
+<!-- Backup source: files/equity-tokenization-primer.pdf, page 25. Original footer number removed. -->

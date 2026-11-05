@@ -1,0 +1,258 @@
+/* Geometry follows files/seminar.pdf, scaled to a 980 × 551.25 canvas.
+   Presentation palette: white backgrounds and black text.
+   Keep these rules scoped so slides_old.md retains its original typography. */
+@font-face {
+  font-family: 'Seminar Sans';
+  src: url('./fonts/KaTeX_SansSerif-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Seminar Sans';
+  src: url('./fonts/KaTeX_SansSerif-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Seminar Sans';
+  src: url('./fonts/KaTeX_SansSerif-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: block;
+}
+
+#app .slidev-layout.seminar-slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #fff !important;
+  color: #000;
+  font-family: 'Seminar Sans', sans-serif;
+  font-size: 23.57px;
+  font-weight: 400;
+  line-height: 1.24;
+  letter-spacing: 0;
+  word-spacing: 0.083333em;
+  text-align: left;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app .slidev-layout.seminar-slide h1 {
+  position: absolute;
+  top: 18.6px;
+  left: 0;
+  width: 980px;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #000;
+  font-family: 'Seminar Sans', sans-serif;
+  font-size: 25.83px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+  word-spacing: 0.117em;
+  --un-shadow-color: transparent !important;
+}
+
+#app .seminar-slide p,
+#app .seminar-slide h1 + p {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  opacity: 1;
+}
+
+#app .seminar-slide h2,
+#app .seminar-slide h3,
+#app .seminar-slide h4 {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+#app .seminar-slide b,
+#app .seminar-slide strong,
+#app .seminar-slide .sem-bold {
+  font-weight: 700;
+  word-spacing: 0.117em;
+}
+
+#app .seminar-slide ul,
+#app .seminar-slide ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#app .seminar-slide li {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+}
+
+#app .seminar-slide table,
+#app .seminar-slide tbody,
+#app .seminar-slide thead,
+#app .seminar-slide tr,
+#app .seminar-slide th,
+#app .seminar-slide td {
+  border: 0;
+  background: transparent;
+}
+
+#app .seminar-slide th,
+#app .seminar-slide td {
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+#app .seminar-slide code {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+#app .seminar-slide code::before,
+#app .seminar-slide code::after {
+  content: none;
+}
+
+#app .seminar-slide .seminar-block,
+#app .seminar-slide .sem-eq {
+  position: absolute;
+  left: 61.25px;
+  right: 61.25px;
+  margin: 0;
+}
+
+#app .seminar-slide .sem-box,
+#app .seminar-slide .sem-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0.86px solid #64748b;
+  border-radius: 17px;
+  background: #fff;
+  color: #000;
+  font-size: 21.53px;
+  line-height: 1.24;
+  text-align: center;
+}
+
+#app .seminar-slide .sem-node {
+  border-radius: 10.8px;
+}
+
+#app .seminar-slide .sem-blue {
+  border-color: #3498db;
+  background: #fff;
+}
+
+#app .seminar-slide .sem-orange {
+  border-color: #f39c12;
+  background: #fff;
+}
+
+#app .seminar-slide .sem-plain-blue {
+  border-color: #3498db;
+  background: transparent;
+}
+
+#app .seminar-slide .sem-muted { color: #000; }
+#app .seminar-slide .sem-accent { color: #000; }
+#app .seminar-slide .sem-small { font-size: 21.53px; }
+#app .seminar-slide .sem-label { font-size: 17.22px; }
+
+#app .seminar-slide .sem-bullet {
+  position: absolute;
+  left: 108.39px;
+  right: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+#app .seminar-slide .sem-bullet::before {
+  position: absolute;
+  left: -23.57px;
+  top: 6px;
+  width: 10.5px;
+  height: 12px;
+  content: '';
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 14'%3E%3Cpath d='M1 1L11 7L1 13Z' fill='none' stroke='%233498db' stroke-width='.9'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+#app .seminar-slide .katex {
+  word-spacing: normal;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+#app .seminar-slide .katex-display {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#app .seminar-slide .sem-svg {
+  position: absolute;
+  inset: 0;
+  width: 980px;
+  height: 551.25px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+#app .seminar-slide .sem-svg :is(path, line, polyline)[stroke] {
+  stroke-width: 0.86px;
+}
+
+#app .seminar-slide .sem-code {
+  font-family: KaTeX_Typewriter, 'Courier New', monospace;
+  word-spacing: normal;
+  font-weight: 400;
+}
+
+#app .seminar-slide .seminar-page-number {
+  position: absolute;
+  right: 13.7px;
+  bottom: 7.2px;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 12.92px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: right;
+}
