@@ -179,7 +179,6 @@ Regulatory environment endogenously affects yields.
 ---
 layout: seminar
 title: "The Role of Regulation"
-clicks: 3
 ---
 
 # The Role of Regulation
@@ -190,19 +189,19 @@ Tighter regulation reduces trading activity, lowering trading revenues.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;" v-click="1">
+<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
 
 Lower revenues reduce incentives for liquidity provision, raising trading costs.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;" v-click="2">
+<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;">
 
 Low trading and low liquidity sustain each other in a low-adoption equilibrium.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;" v-click="3">
+<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;">
 
 A low-adoption equilibrium implies low incentives to tokenize.
 
@@ -242,6 +241,49 @@ SEC, Release No. 34-106402 (September 17, 2026):
 </div>
 
 <!-- Source: files/seminar.pdf; numbered slide 6/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "BlackRock USD Institutional Digital Liquidity Fund (BUIDL)"
+---
+
+<div class="sem-box " style="left:138.32px;top:73.85px;width:703.36px;height:165.82px;border-color:#888;border-radius:10.8px;">
+
+
+
+</div>
+
+<div class="seminar-block sem-accent sem-small" style="top:97.67px;left:162.82px;right:auto;width:660px;">
+
+**BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
+
+</div>
+
+<div class="seminar-block sem-small" style="top:132.7px;left:162.82px;right:auto;width:670px;">
+
+• Tokenized money market fund with underlying assets at BNY Mellon
+
+</div>
+
+<div class="seminar-block sem-small" style="top:163.43px;left:162.82px;right:auto;width:670px;">
+
+• Ownership registered onchain by a SEC-registered transfer agent
+
+</div>
+
+<div class="seminar-block sem-small" style="top:194.16px;left:162.82px;right:auto;width:670px;">
+
+• Every transfer gated by a compliance check at the token contract level
+
+</div>
+
+<div class="seminar-block " style="top:280px;left:18.37px;right:auto;width:943.3px;height:193px;overflow:hidden;">
+
+<img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;" />
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 8/25. Text and mathematics remain editable. -->
 
 ---
 layout: seminar
@@ -307,117 +349,6 @@ Unprofitable issuance
 </div>
 
 <!-- Source: files/seminar.pdf; numbered slide 7/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "BlackRock USD Institutional Digital Liquidity Fund (BUIDL)"
-clicks: 1
----
-
-<div class="sem-box " style="left:138.32px;top:73.85px;width:703.36px;height:165.82px;border-color:#888;border-radius:10.8px;">
-
-
-
-</div>
-
-<div class="seminar-block sem-accent sem-small" style="top:97.67px;left:162.82px;right:auto;width:660px;">
-
-**BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
-
-</div>
-
-<div class="seminar-block sem-small" style="top:132.7px;left:162.82px;right:auto;width:670px;">
-
-• Tokenized money market fund with underlying assets at BNY Mellon
-
-</div>
-
-<div class="seminar-block sem-small" style="top:163.43px;left:162.82px;right:auto;width:670px;">
-
-• Ownership registered onchain by a SEC-registered transfer agent
-
-</div>
-
-<div class="seminar-block sem-small" style="top:194.16px;left:162.82px;right:auto;width:670px;">
-
-• Every transfer gated by a compliance check at the token contract level
-
-</div>
-
-<div class="seminar-block " style="top:280px;left:18.37px;right:auto;width:943.3px;height:193px;overflow:hidden;" v-click="1">
-
-<img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;" />
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 8/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Transfer compliance"
-clicks: 3
----
-
-<div class="seminar-block " style="top:40.91px;">
-
-The <span class="sem-code" style="font-size:21.53px;">canTransfer</span> modifier enforces:
-
-</div>
-
-<svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
-<defs>
-<marker id="transfer-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker>
-<marker id="transfer-pass" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#15803d" /></marker>
-<marker id="transfer-fail" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#b91c1c" /></marker>
-</defs>
-<path v-click="1" d="M490 154.79 V209.91" stroke="#64748b" stroke-width=".86" marker-end="url(#transfer-arrow)" />
-<path v-click="2" d="M490 265.04 V320.17" stroke="#64748b" stroke-width=".86" marker-end="url(#transfer-arrow)" />
-<g v-click="3"><path d="M427.79 375.72 L315.27 426.34" stroke="#15803d" stroke-width=".86" marker-end="url(#transfer-pass)" /><path d="M552.21 375.72 L664.73 426.34" stroke="#b91c1c" stroke-width=".86" marker-end="url(#transfer-fail)" /></g>
-</svg>
-
-<div class="sem-box sem-node" style="left:336.87px;top:99.66px;width:306.26px;height:55.13px;border-color:#64748b;">
-
-Transfer requested
-
-</div>
-
-<div class="sem-box sem-node" style="left:336.87px;top:209.91px;width:306.26px;height:55.13px;border-color:#f39c12;" v-click="1">
-
-<span class="sem-code">getComplianceService()</span>
-
-</div>
-
-<div class="sem-box sem-node" style="left:250.46px;top:320.17px;width:479.08px;height:55.12px;border-color:#f39c12;" v-click="2">
-
-<span class="sem-code">validateTransfer(sender, receiver, value)</span>
-
-</div>
-
-<div class="sem-box sem-node" style="left:91.87px;top:430.42px;width:306.25px;height:55.12px;border-color:#15803d;" v-click="3">
-
-Transfer executes
-
-</div>
-
-<div class="sem-box sem-node" style="left:581.88px;top:430.42px;width:306.25px;height:55.12px;border-color:#b91c1c;" v-click="3">
-
-Transfer reverts
-
-</div>
-
-<div class="seminar-block sem-label" style="top:391.54px;left:326.5px;right:auto;width:80px;color:#000;" v-click="3">
-
-pass
-
-</div>
-
-<div class="seminar-block sem-label" style="top:395.37px;left:621.24px;right:auto;width:80px;color:#000;" v-click="3">
-
-fail
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 9/25. Text and mathematics remain editable. -->
 
 ---
 layout: seminar
@@ -942,7 +873,7 @@ Sufficiently stringent regulation renders tokenization non-viable.
 ---
 layout: seminar
 title: "Main Result: Economic Channel"
-clicks: 4
+clicks: 5
 ---
 
 # Main Result: Economic Channel
@@ -973,7 +904,7 @@ $$
 
 </div>
 
-<div class="seminar-block sem-eq sem-mcs" style="top:306px;font-size:20.5px;" v-click="[1, 2]">
+<div class="seminar-block sem-eq sem-mcs" style="top:306px;font-size:20.5px;" v-click="[2, 3]">
 
 $$
 \underbrace{\Pi^\star(\psi)}_{\textsf{set of optimal acceptance rates}}
@@ -987,7 +918,7 @@ $$
 
 </div>
 
-<div class="seminar-block sem-eq sem-mcs" style="top:398px;font-size:21.53px;" v-click="[1, 2]">
+<div class="seminar-block sem-eq sem-mcs" style="top:398px;font-size:21.53px;" v-click="[2, 3]">
 
 $$
 \left.
@@ -1003,31 +934,31 @@ $$
 
 </div>
 
-<div class="seminar-block sem-mcs" style="top:469px;font-size:18.5px;" v-click="[1, 2]">
+<div class="seminar-block sem-mcs" style="top:469px;font-size:18.5px;" v-click="[2, 3]">
 
 *Milgrom and Shannon (1994).* $\le_{\mathrm{SSO}}$ denotes the strong set order.
 
 </div>
 
-<div class="seminar-block " style="top:317.26px;" v-click="2">
+<div class="seminar-block " style="top:317.26px;" v-click="3">
 
 **Proposition.** A lower acceptance rate reduces trading revenue: $\pi\downarrow\implies T^\star(\pi)\downarrow$.
 
 </div>
 
-<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="2">
+<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="3">
 
 ($T^\star$: trading revenue paid to liquidity providers by admitted traders.)
 
 </div>
 
-<div class="seminar-block " style="top:400.31px;" v-click="3">
+<div class="seminar-block " style="top:400.31px;" v-click="4">
 
 **Proposition.** Onchain investment increases with trading revenue: $T^\star\downarrow\implies L^\star\downarrow$.
 
 </div>
 
-<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="4">
+<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="5">
 
 $\implies$ For sufficiently tight regulation, revenue $\phi\,L^\star(\pi^\star(\psi))$ falls below $\underline U$.
 
