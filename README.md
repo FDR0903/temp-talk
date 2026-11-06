@@ -1,8 +1,10 @@
 # The Economics of Regulating Tokenized Securities
 
-Slidev presentation with 25 main slides and 25 unnumbered backup slides for Q&A.
+Slidev presentation with 26 main slides and 27 unnumbered backup slides for Q&A.
 The main slides use a white background, Computer Modern sans-serif typography,
 and colored outlines. Slide 2 includes the RWA.xyz tokenization-growth chart.
+Slides 2–5 include incremental reveals; slide 21 includes a mathematical
+definition of optimal admission and the Milgrom–Shannon set-order argument.
 
 View the slides at <https://fdr0903.github.io/temp-talk/>.
 
@@ -28,12 +30,19 @@ and typography are in `layouts/seminar.vue` and `seminar.css`, with additional
 shared styles in `style.css`. The bundled fonts and their license are in `fonts/`.
 The dependency lockfile pins the versions used by the presentation.
 
-The main talk ends at 25/25. The backup slides follow the conclusion and reproduce
-the Equity Tokenization primer as vector SVGs, including its original dark
-appearance. Their printed page numbers have been removed, and
-`layouts/primer-backup.vue` adds no counter. The backup assets are in
+The main talk ends at 26/26, after the Ethereum/Arbitrum comparison and conclusion.
+Two unnumbered **Optimal Regulation** slides follow, reproducing the old deck's
+regulatory-regime charts and four friction panels. The first credits Campello,
+Cong and Dietrich (2024), *Regulatory uncertainty and fintech innovation*.
+`layouts/seminar-backup.vue` displays these slides without a counter.
+
+The remaining 25 backups reproduce the Equity Tokenization primer as vector
+SVGs, including its original dark appearance. Their printed page numbers have
+been removed; the primer cover omits the author, affiliation, and guest-lecture
+details. `layouts/primer-backup.vue` adds no counter. The backup assets are in
 `images/equity-tokenization-primer/`.
 
-During a local preview, open `http://localhost:3030/primer` to jump directly to
-the backups. They begin at deck position 26 and have descriptive titles in the
-slide overview.
+During a local preview, use `/optimal-regulation` and
+`/optimal-regulation-frictions` to jump to the two optimal-regulation backups
+(deck positions 27–28). Open `http://localhost:3030/primer` to jump to the primer,
+which begins at position 29. The backup slides have descriptive overview titles.

@@ -47,6 +47,7 @@ defaults:
 ---
 layout: seminar
 title: "Equity Tokenization Remains Trivial in Scale"
+clicks: 1
 ---
 
 # Equity Tokenization Remains Trivial in Scale
@@ -56,37 +57,37 @@ title: "Equity Tokenization Remains Trivial in Scale"
 <figcaption style="margin-top:6px;font-size:14px;line-height:1.2;text-align:center;">Tokenized assets across asset classes · RWA.xyz</figcaption>
 </figure>
 
-<div class="sem-box sem-orange" style="left:101.06px;top:432px;width:349.13px;height:100px;">
+<div class="sem-box sem-orange" style="left:101.06px;top:432px;width:349.13px;height:100px;" v-click="1">
 
 
 
 </div>
 
-<div class="sem-box sem-blue" style="left:529.81px;top:432px;width:349.13px;height:100px;">
+<div class="sem-box sem-blue" style="left:529.81px;top:432px;width:349.13px;height:100px;" v-click="1">
 
 
 
 </div>
 
-<div class="seminar-block " style="top:450px;left:101.06px;right:auto;width:349.13px;text-align:center;">
+<div class="seminar-block " style="top:450px;left:101.06px;right:auto;width:349.13px;text-align:center;" v-click="1">
 
 **Tokenized Stocks**
 
 </div>
 
-<div class="seminar-block " style="top:487px;left:101.06px;right:auto;width:349.13px;font-size:31px;text-align:center;">
+<div class="seminar-block " style="top:487px;left:101.06px;right:auto;width:349.13px;font-size:31px;text-align:center;" v-click="1">
 
 &#36;3.7 billion
 
 </div>
 
-<div class="seminar-block " style="top:450px;left:529.81px;right:auto;width:349.13px;text-align:center;">
+<div class="seminar-block " style="top:450px;left:529.81px;right:auto;width:349.13px;text-align:center;" v-click="1">
 
 **U.S. Equity Market**
 
 </div>
 
-<div class="seminar-block " style="top:487px;left:529.81px;right:auto;width:349.13px;font-size:31px;text-align:center;">
+<div class="seminar-block " style="top:487px;left:529.81px;right:auto;width:349.13px;font-size:31px;text-align:center;" v-click="1">
 
 &#36;78.7 trillion
 
@@ -98,6 +99,7 @@ title: "Equity Tokenization Remains Trivial in Scale"
 ---
 layout: seminar
 title: "Why Hold Securities Onchain?"
+clicks: 1
 ---
 
 # Why Hold Securities Onchain?
@@ -114,25 +116,25 @@ Holding onchain introduces novel risks and costs.
 
 </div>
 
-<div class="seminar-block " style="top:221.58px;">
+<div class="seminar-block " style="top:221.58px;" v-click="1">
 
 An incremental onchain incentive is necessary for tokenization to be viable.
 
 </div>
 
-<div class="sem-box sem-orange" style="left:39.81px;top:304.15px;width:900.38px;height:147px;">
+<div class="sem-box sem-orange" style="left:39.81px;top:304.15px;width:900.38px;height:147px;" v-click="1">
 
 
 
 </div>
 
-<div class="seminar-block " style="top:337.46px;left:39.81px;right:auto;width:900.38px;text-align:center;">
+<div class="seminar-block " style="top:337.46px;left:39.81px;right:auto;width:900.38px;text-align:center;" v-click="1">
 
 Equilibrium Condition:
 
 </div>
 
-<div class="seminar-block " style="top:397.37px;left:39.81px;right:auto;width:900.38px;text-align:center;white-space:nowrap;">
+<div class="seminar-block " style="top:397.37px;left:39.81px;right:auto;width:900.38px;text-align:center;white-space:nowrap;" v-click="1">
 
 **Incremental Onchain Incentive = Incremental Onchain Costs and Priced Risks**
 
@@ -143,6 +145,7 @@ Equilibrium Condition:
 ---
 layout: seminar
 title: "Incremental Onchain Incentive"
+clicks: 2
 ---
 
 # Incremental Onchain Incentive
@@ -159,13 +162,13 @@ Yield farming: supplying tokens as liquidity to earn fees from traders.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:247.08px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:247.08px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
-Yield farming returns arise via an endogenous externality between trading and liquidity provision.
+Yield farming returns are endogenous: via an externality between trading and liquidity provision.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:355.31px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:355.31px;left:108.39px;right:auto;width:831.61px;" v-click="2">
 
 Regulatory environment endogenously affects yields.
 
@@ -176,6 +179,7 @@ Regulatory environment endogenously affects yields.
 ---
 layout: seminar
 title: "The Role of Regulation"
+clicks: 3
 ---
 
 # The Role of Regulation
@@ -186,19 +190,19 @@ Tighter regulation reduces trading activity, lowering trading revenues.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
 Lower revenues reduce incentives for liquidity provision, raising trading costs.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;" v-click="2">
 
 Low trading and low liquidity sustain each other in a low-adoption equilibrium.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;" v-click="3">
 
 A low-adoption equilibrium implies low incentives to tokenize.
 
@@ -502,7 +506,8 @@ A fraction $\mu\in(0,1)$ are **legitimate**; the rest are **illicit**.
 
 <div class="seminar-block " style="top:207.63px;">
 
-The issuer chooses acceptance rate $\pi\in(0,1]$ and precision $\rho\geq1$, thereby implying:
+The issuer chooses acceptance rate $\pi\in(0,1]$ and precision $\rho\geq1$, thereby implying<br>
+<span style="font-size:20.5px;">(signal detection theory; Peterson et al., 1954):</span>
 
 </div>
 
@@ -968,6 +973,42 @@ $$
 
 </div>
 
+<div class="seminar-block sem-eq sem-mcs" style="top:306px;font-size:20.5px;" v-click="[1, 2]">
+
+$$
+\underbrace{\Pi^\star(\psi)}_{\textsf{set of optimal acceptance rates}}
+=
+\underset{\pi\in[\psi/((1-\mu)\lambda),\,\mu+\psi/\lambda]}{\arg\max}
+\left\{
+\phi L^\star(\pi)
+-\mathcal C\!\left(\frac{1-\mu}{\mu}\left[\frac{\lambda\pi}{\psi}-1\right]\right)
+\right\}.
+$$
+
+</div>
+
+<div class="seminar-block sem-eq sem-mcs" style="top:398px;font-size:21.53px;" v-click="[1, 2]">
+
+$$
+\left.
+\begin{gathered}
+\textsf{Increasing differences}\\
+\textsf{and ordered feasible sets}
+\end{gathered}
+\right\}
+\Longrightarrow
+\Pi^\star(\psi_1)\le_{\mathrm{SSO}}\Pi^\star(\psi_2),
+\qquad \psi_1<\psi_2.
+$$
+
+</div>
+
+<div class="seminar-block sem-mcs" style="top:469px;font-size:18.5px;" v-click="[1, 2]">
+
+*Milgrom and Shannon (1994).* $\le_{\mathrm{SSO}}$ denotes the strong set order.
+
+</div>
+
 <div class="seminar-block " style="top:317.26px;" v-click="2">
 
 **Proposition.** A lower acceptance rate reduces trading revenue: $\pi\downarrow\implies T^\star(\pi)\downarrow$.
@@ -1182,8 +1223,35 @@ Higher frictions require looser regulation to keep tokenization viable.
 
 ---
 layout: seminar
+title: "Different Outcomes"
+---
+
+# Different Outcomes
+
+<figure style="position:absolute;top:100px;left:30px;width:450px;margin:0;">
+<figcaption style="margin-bottom:12px;font-size:25.83px;font-weight:700;text-align:center;">Ethereum</figcaption>
+<img src="./images/ethereum_distribution.png" alt="Ethereum tokenized-asset distribution: stablecoins $160 billion, US Treasury debt $6.2 billion, commodities $4.7 billion, and active strategies $1.8 billion" style="display:block;width:100%;height:310px;object-fit:contain;" />
+</figure>
+
+<figure style="position:absolute;top:100px;left:500px;width:450px;margin:0;">
+<figcaption style="margin-bottom:12px;font-size:25.83px;font-weight:700;text-align:center;">Arbitrum</figcaption>
+<img src="./images/arbitrum_distribution.png" alt="Arbitrum tokenized-asset distribution: stablecoins $4.2 billion, non-US government debt $293.5 million, stocks $189.5 million, active strategies $176.4 million, and private equity $130.5 million" style="display:block;width:100%;height:310px;object-fit:contain;" />
+</figure>
+
+<div class="seminar-block sem-bullet" style="top:474px;left:108.39px;right:auto;width:831.61px;">
+
+Stocks not the best fit for tokenization (issuer risk + asset risk)
+
+</div>
+
+<!-- Adapted from slides_old.md, "Different outcomes", using the Ethereum and Arbitrum distribution figures. -->
+
+---
+layout: seminar
 title: "Conclusion"
 ---
+
+# Conclusion
 
 <div class="seminar-block sem-bullet" style="top:128.15px;left:108.39px;right:auto;width:831.61px;">
 
@@ -1210,6 +1278,98 @@ Sufficiently stringent regulation renders tokenization non-viable.
 </div>
 
 <!-- Source: files/seminar.pdf; numbered slide 25/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar-backup
+title: "Optimal Regulation"
+routeAlias: optimal-regulation
+hideInToc: true
+clicks: 1
+---
+
+# Optimal Regulation
+
+<div class="seminar-block" style="top:60px;left:40px;right:auto;width:900px;font-size:17.22px;line-height:1.2;text-align:center;">
+
+Inspired by **Campello, Cong and Dietrich (2024)**:<br>*Regulatory uncertainty and fintech innovation*.
+
+</div>
+
+<img src="./images/optimal-regulation.png" alt="Optimal regulatory cap: higher estimates of innovation value move policy from a ban to intermediate regulation and full admission; greater baseline activity eventually leads to a ban." style="position:absolute;top:112px;left:40px;display:block;width:900px;height:300px;object-fit:contain;" />
+
+<div class="seminar-block" style="top:421px;left:170px;right:auto;width:350px;font-size:19.5px;line-height:1.2;text-align:center;">
+
+**Higher $m$:** more value from innovation favors looser regulation.
+
+</div>
+
+<div class="seminar-block" style="top:421px;left:530px;right:auto;width:350px;font-size:19.5px;line-height:1.2;text-align:center;">
+
+**Higher $Q_0$:** tokenization adds less innovation value; eventually a ban.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:491px;left:108.39px;right:auto;width:831.61px;font-size:20.5px;" v-click="1">
+
+SEC 2026 exemption: regulator believes in innovation potential.
+
+</div>
+
+<!-- Unnumbered backup adapted from slides_old.md, slide 26, "Three regulatory regimes". -->
+<!-- Campello, Murillo; Cong, Lin William; Dietrich, Diemo (2024). Regulatory uncertainty and fintech innovation. FEB-RN Research Paper No. 15. -->
+
+---
+layout: seminar-backup
+title: "Optimal Regulation"
+routeAlias: optimal-regulation-frictions
+hideInToc: true
+---
+
+# Optimal Regulation
+
+<figure style="position:absolute;top:65px;left:30px;width:450px;margin:0;">
+<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
+
+Issuer's opportunity cost $\underline U$
+
+</figcaption>
+<img src="./images/optimal-regulation-opportunity-cost.png" alt="Issuer opportunity cost: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
+</figure>
+
+<figure style="position:absolute;top:65px;left:500px;width:450px;margin:0;">
+<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
+
+Onchain risk premium $\xi$
+
+</figcaption>
+<img src="./images/optimal-regulation-risk-premium.png" alt="Onchain risk premium: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
+</figure>
+
+<figure style="position:absolute;top:279px;left:30px;width:450px;margin:0;">
+<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
+
+Adverse selection cost $\delta$
+
+</figcaption>
+<img src="./images/optimal-regulation-adverse-selection.png" alt="Adverse selection cost: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
+</figure>
+
+<figure style="position:absolute;top:279px;left:500px;width:450px;margin:0;">
+<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
+
+Value extracted from traders $\gamma$
+
+</figcaption>
+<img src="./images/optimal-regulation-value-extraction.png" alt="Value extracted from traders: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
+</figure>
+
+<div class="seminar-block" style="top:500px;left:40px;right:auto;width:900px;font-size:18.5px;line-height:1.2;text-align:center;">
+
+The regulator first **loosens regulation** to sustain activity,<br>then **bans tokenization** when social benefits are too small.
+
+</div>
+
+<!-- Unnumbered backup adapted from slides_old.md, slide 27, "Frictions". -->
 
 ---
 layout: primer-backup
