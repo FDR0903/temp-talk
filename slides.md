@@ -1,1529 +1,1079 @@
 ---
-theme: default
-colorSchema: light
-layout: seminar
-aspectRatio: 16/9
-canvasWidth: 980
-title: The Economics of Regulating Tokenized Securities
+layout: cover
+class: text-center pos-cover
+title: Economics of proof of stake
 titleTemplate: '%s'
-author: Álvaro Cartea, Fayçal Drissi, Fahad Saleh
+favicon: ./images/defiicon.png
+author: Fayçal Drissi
+theme: frankfurt
+themeConfig:
+  paginationX: disabled
+  paginationY: disabled
+  paginationPagesDisabled: [1]
 fonts:
-  sans: Seminar Sans
-  local: Seminar Sans
-transition: none
-drawings:
-  enabled: false
+  local: Montserrat, Roboto Mono, Roboto Slab
+infoLine: true
+date: '13/11/2026'
 mdc: true
-defaults:
-  layout: seminar
 ---
 
-<div class="sem-box sem-blue" style="left:189.87px;top:136.25px;width:600.26px;height:151px;background:#fff;">
+# Economics of proof of stake
 
+## Fayçal Drissi
 
+<br>
 
-</div>
+Based on work with
 
-<div class="seminar-block " style="top:169.76px;left:0px;right:auto;width:980px;font-size:37.2px;text-align:center;line-height:1.389;">
-
-**The Economics of Regulating**<br>**Tokenized Securities**
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:354.22px;left:0px;right:auto;width:980px;text-align:center;">
-
-**Álvaro Cartea<sup>1</sup>, Fayçal Drissi<sup>1</sup>, Fahad Saleh<sup>2</sup>**
-
-</div>
-
-<div class="seminar-block sem-muted sem-small" style="top:418.52px;left:0px;right:auto;width:980px;text-align:center;">
-
-<sup>1</sup>University of Oxford &nbsp;&nbsp; <sup>2</sup>University of Florida
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 1/25. Text and mathematics remain editable. -->
+Alvaro Cartea, Nan Chen, Zach Feinstein, Basil Williams, Mingyue Zhong
 
 ---
-layout: seminar
-title: "Equity Tokenization Remains Trivial in Scale"
-clicks: 1
+layout: section
+section: Issuance tax
+class: pos-deck pos-staking
 ---
 
-# Equity Tokenization Remains Trivial in Scale
+# Proof of stake (POS) blockchains
 
-<figure style="position:absolute;top:65px;left:50px;width:880px;margin:0;">
-<img src="./images/tokenizationsize.png" alt="RWA.xyz stacked area chart showing growth in tokenized asset value across asset classes, with labeled dates from January 2024 to September 2026" style="display:block;width:100%;height:auto;" />
-<figcaption style="margin-top:6px;font-size:14px;line-height:1.2;text-align:center;">Tokenized assets across asset classes · RWA.xyz</figcaption>
-</figure>
-
-<div class="sem-box sem-orange" style="left:101.06px;top:432px;width:349.13px;height:100px;" v-click="1">
+## Staking
 
 
+- Lock assets on the blockchain to participate in the consensus protocol
+- The blockchain pays for security through **issuance**
+  - newly created native tokens are distributed to stakers
 
-</div>
+![POS](./images/POS.jpg){style="display: block; margin: 0 auto; width: 850px; max-width: 100%"}
 
-<div class="sem-box sem-blue" style="left:529.81px;top:432px;width:349.13px;height:100px;" v-click="1">
-
-
-
-</div>
-
-<div class="seminar-block " style="top:450px;left:101.06px;right:auto;width:349.13px;text-align:center;" v-click="1">
-
-**Tokenized Stocks**
-
-</div>
-
-<div class="seminar-block " style="top:487px;left:101.06px;right:auto;width:349.13px;font-size:31px;text-align:center;" v-click="1">
-
-&#36;3.7 billion
-
-</div>
-
-<div class="seminar-block " style="top:450px;left:529.81px;right:auto;width:349.13px;text-align:center;" v-click="1">
-
-**U.S. Equity Market**
-
-</div>
-
-<div class="seminar-block " style="top:487px;left:529.81px;right:auto;width:349.13px;font-size:31px;text-align:center;" v-click="1">
-
-&#36;78.7 trillion
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 2/25. Text and mathematics remain editable. -->
-<!-- Growth chart added from slides_old.md, "Tokenization is growing". -->
+<!-- Source: LST talk 1, slide 3; added Staking heading. -->
 
 ---
-layout: seminar
-title: "Why Hold Securities Onchain?"
-clicks: 1
+class: pos-deck pos-security
 ---
 
-# Why Hold Securities Onchain?
+# Proof of stake (POS) blockchains
 
-<div class="seminar-block " style="top:114.02px;">
+### Slashing
+- The blockchain incentivises correct consensus behaviour through **slashing**
 
-Investors can hold the same securities offchain.
+<center>
 
-</div>
+```mermaid {scale: 0.7}
+flowchart LR
+  V["Consensus<br/>work"]
 
-<div class="seminar-block " style="top:167.8px;">
+  R["Issuance<br/>Reward"]
+  S["Slashing"]
 
-Holding onchain introduces novel risks and costs.
+  V -->|good behaviour| R
+  V -->|bad behaviour| S
+```
 
-</div>
+</center> <v-click>
 
-<div class="seminar-block " style="top:221.58px;" v-click="1">
+### Economic security
+- A high dollar value of total stake, incentivised by issuance, makes a $51\%$ attack expensive
+- Diversity in the staking pool: decentralised staking reduces the risk of coordination attacks
 
-An incremental onchain incentive is necessary for tokenization to be viable.
+</v-click>
 
-</div>
-
-<div class="sem-box sem-orange" style="left:39.81px;top:304.15px;width:900.38px;height:147px;" v-click="1">
-
-
-
-</div>
-
-<div class="seminar-block " style="top:337.46px;left:39.81px;right:auto;width:900.38px;text-align:center;" v-click="1">
-
-Equilibrium Condition:
-
-</div>
-
-<div class="seminar-block " style="top:397.37px;left:39.81px;right:auto;width:900.38px;text-align:center;white-space:nowrap;" v-click="1">
-
-**Incremental Onchain Incentive = Incremental Onchain Costs and Priced Risks**
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 3/25. Text and mathematics remain editable. -->
+<!-- Source: LST talk 1, slide 4. -->
 
 ---
-layout: seminar
-title: "Incremental Onchain Incentive"
-clicks: 2
+class: pos-deck pos-uses
 ---
 
-# Incremental Onchain Incentive
+# Two uses of blockchain capital
 
-<div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
+<div class="uses-columns">
+<div>
 
-Yield farming can provide the incremental onchain incentive.
+### DeFi: productive capital
 
-</div>
-
-<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
-
-Yield farming: supplying tokens as liquidity to earn fees from traders.
+Users lock capital in financial applications. Outside users pay for these services, generating fees and economic value
 
 </div>
+<div>
 
-<div class="seminar-block sem-bullet" style="top:247.08px;left:108.39px;right:auto;width:831.61px;" v-click="1">
+### Staking: security capital
 
-Yield farming returns are endogenous: via an externality between trading and liquidity provision.
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:355.31px;left:108.39px;right:auto;width:831.61px;" v-click="2">
-
-Regulatory environment endogenously affects yields.
+Stakers lock capital in the protocol. They secure transactions and the financial services built on the blockchain.
 
 </div>
+</div>
 
-<!-- Source: files/seminar.pdf; numbered slide 4/25. Text and mathematics remain editable. -->
+![DeFi users generate productive activity and stakers provide security; outside users pay service fees that enter the blockchain economy.](./images/blockchain-uses.svg){class="uses-diagram"}
+
+<style>
+.uses-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.uses-columns h3 { font-size: 1.35rem; margin: 0 0 0.4rem; }
+.uses-columns p { margin: 0; line-height: 1.4; }
+.uses-diagram { display: block; width: 100%; margin: 0.3rem auto 0; }
+</style>
+
+<!-- DeFi and staking are two uses of capital: an investor may allocate to both. External demand generates service fees, while staking secures the protocol that supports the financial services. -->
 
 ---
-layout: seminar
-title: "The Role of Regulation"
+class: pos-deck pos-issuance
 ---
 
-# The Role of Regulation
+# Issuance / slashing in USD
 
-<div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
+* Price of ETH $P=\$1$.
+* Supply of ETH $Q=2\, \footnotesize\text{ETH}$
+* Stakers hold $1$ ETH, DeFi users hold $1$ ETH
 
-Tighter regulation reduces trading activity, lowering trading revenues.
+$\implies$ market cap of ETH = $Q\times P = \$\,2.$
+<v-click>
 
-</div>
+* Protocol issues $1$ ETH to stakers $\implies$ new supply $Q = 3 \, \footnotesize\text{ETH}$
+<v-click>
 
-<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
+* Market Cap in USD does not change $\implies$ price adjusts to $P = \$\,2/3$
+<v-click>
 
-Lower revenues reduce incentives for liquidity provision, raising trading costs.
+$\implies$  stakers hold 2 ETH worth $\$\,4/3$,  DeFi users 1 ETH worth $\$\,2/3$
 
-</div>
+<v-click>
 
-<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;">
-
-Low trading and low liquidity sustain each other in a low-adoption equilibrium.
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;">
-
-A low-adoption equilibrium implies low incentives to tokenize.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 5/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "SEC Innovation Exemption"
----
-
-# SEC Innovation Exemption
-
-<div class="seminar-block " style="top:114.02px;">
-
-SEC, Release No. 34-106402 (September 17, 2026):
-
-</div>
-
-<div class="sem-box sem-blue" style="left:61.68px;top:208.18px;width:857.51px;height:117.61px;border-radius:10.8px;">
-
-
-
-</div>
-
-<div class="seminar-block " style="top:236.75px;left:92.31px;right:auto;width:800px;">
-
-*“Tier 1 Tokenized NMS Stock traded on a TSV . . . cannot exceed . . .*
-
-</div>
-
-<div class="seminar-block " style="top:272.16px;left:104.09px;right:auto;width:800px;">
-
-*0.25 percent of the average daily share volume during the prior month . . . ”*
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 6/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "BlackRock USD Institutional Digital Liquidity Fund (BUIDL)"
----
-
-<div class="sem-box " style="left:138.32px;top:73.85px;width:703.36px;height:165.82px;border-color:#888;border-radius:10.8px;">
-
-
-
-</div>
-
-<div class="seminar-block sem-accent sem-small" style="top:97.67px;left:162.82px;right:auto;width:660px;">
-
-**BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
-
-</div>
-
-<div class="seminar-block sem-small" style="top:132.7px;left:162.82px;right:auto;width:670px;">
-
-• Tokenized money market fund with underlying assets at BNY Mellon
-
-</div>
-
-<div class="seminar-block sem-small" style="top:163.43px;left:162.82px;right:auto;width:670px;">
-
-• Ownership registered onchain by a SEC-registered transfer agent
-
-</div>
-
-<div class="seminar-block sem-small" style="top:194.16px;left:162.82px;right:auto;width:670px;">
-
-• Every transfer gated by a compliance check at the token contract level
-
-</div>
-
-<div class="seminar-block " style="top:280px;left:18.37px;right:auto;width:943.3px;height:193px;overflow:hidden;">
-
-<img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;" />
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 8/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Main Result"
----
-
-# Main Result
-
-<div class="sem-box sem-blue" style="left:98px;top:125.13px;width:784.01px;height:91.87px;font-size:25.83px;">
-
-Sufficiently stringent regulation renders tokenization non-viable.
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:275.27px;left:409.36px;right:auto;width:400px;">
-
-Tighter regulation
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:308.57000000000005px;left:342.87px;right:auto;width:50px;">
-
-$\implies$
-
-</div>
-<div class="seminar-block sem-small sem-muted" style="top:308.85px;left:409.36px;right:auto;width:450px;">
-
-Less trading
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:342.15000000000003px;left:342.87px;right:auto;width:50px;">
-
-$\implies$
-
-</div>
-<div class="seminar-block sem-small sem-muted" style="top:342.43px;left:409.36px;right:auto;width:450px;">
-
-Lower fee income
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:375.74px;left:342.87px;right:auto;width:50px;">
-
-$\implies$
-
-</div>
-<div class="seminar-block sem-small sem-muted" style="top:376.02px;left:409.36px;right:auto;width:450px;">
-
-Lower onchain investment
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:409.32000000000005px;left:342.87px;right:auto;width:50px;">
-
-$\implies$
-
-</div>
-<div class="seminar-block sem-small sem-muted" style="top:409.6px;left:409.36px;right:auto;width:450px;">
-
-Unprofitable issuance
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 7/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Model Overview"
-clicks: 3
----
-
-# Model Overview
-
-<svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
-<defs><marker id="model-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker><marker id="model-blue" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#3498db" /></marker><marker id="model-orange" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f39c12" /></marker></defs>
-<g v-click="1"><path d="M434.46 312.34 L248.09 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" /><path d="M546.4 312.34 L732.78 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" /></g>
-<path v-click="2" d="M306.68 437.48 H674.18" stroke="#3498db" stroke-width=".86" marker-end="url(#model-blue)" />
-<path v-click="3" d="M490.43 189.41 V256.79" stroke="#f39c12" stroke-width=".86" marker-end="url(#model-orange)" />
-</svg>
-
-<div class="sem-box sem-node" style="left:367.93px;top:256.79px;width:245px;height:55.12px;border-color:#3498db;">
-
-**Issuer**
-
-</div>
-
-<div class="sem-box sem-node" style="left:61.68px;top:409.91px;width:245px;height:55.13px;border-color:#64748b;">
-
-**Traders**
-
-</div>
-
-<div class="sem-box sem-node" style="left:674.18px;top:409.91px;width:245px;height:55.13px;border-color:#64748b;">
-
-**Investors**
-
-</div>
-
-<div class="seminar-block sem-label sem-muted" style="top:353.43px;left:215.87px;right:auto;width:160px;" v-click="1">
-
-screens traders
-
-</div>
-
-<div class="seminar-block sem-label sem-muted" style="top:341.53px;left:652.27px;right:auto;width:220px;line-height:1.187;" v-click="1">
-
-receives fees<br>proportional to AUM
-
-</div>
-
-<div class="seminar-block sem-label sem-accent" style="top:444.69px;left:385.8px;right:auto;width:300px;" v-click="2">
-
-trading fees + price impact
-
-</div>
-
-<div class="sem-box sem-orange sem-node" style="left:367.93px;top:134.28px;width:245px;height:55.13px;" v-click="3">
-
-**Regulator**
-
-</div>
-
-<div class="seminar-block sem-label" style="top:213.94px;left:499.15px;right:auto;width:260px;color:#000;" v-click="3">
-
-imposes cap on illicit trading
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 10/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Issuer: Screening"
-clicks: 1
----
-
-# Issuer: Screening
-
-<div class="seminar-block " style="top:112.63px;">
-
-Traders arrive at Poisson rate $\lambda>0$.
-
-</div>
-
-<div class="seminar-block " style="top:159.98px;">
-
-A fraction $\mu\in(0,1)$ are **legitimate**; the rest are **illicit**.
-
-</div>
-
-<div class="seminar-block " style="top:207.63px;">
-
-The issuer chooses acceptance rate $\pi\in(0,1]$ and precision $\rho\geq1$, thereby implying<br>
-<span style="font-size:20.5px;">(signal detection theory; Peterson et al., 1954):</span>
-
-</div>
-
-<div class="seminar-block sem-muted" style="top:290.62px;left:123.28px;right:auto;width:392.23px;text-align:right;font-style:italic;white-space:nowrap;">
-
-Legitimate Trader Accept Probability:
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:271.5px;left:541.88px;right:auto;width:294px;">
-
+**$\implies$ Issuance redistributes USD wealth from ETH holders to stakers, it does not create or destroy USD**
 $$
-q_L(\rho,\pi)=\frac{\rho}{\mu\rho+(1-\mu)}\cdot\pi
+\boxed{\text{ETH Issuance policy } dI^e_t/I^e_t \equiv \text{USD tax policy } dI^\$_t/I^\$_t \text{ on DeFi users}}
 $$
 
-</div>
+<v-click>
 
-<div class="seminar-block sem-muted" style="top:356.23px;left:123.28px;right:auto;width:392.23px;text-align:right;font-style:italic;white-space:nowrap;">
+### Slashing
+* Slashing burns ETH of stakers and transfers value to non‑stakers via price adjustment
 
-Illicit Trader Accept Probability:
+</v-click>
+</v-click>
+</v-click>
+</v-click>
+</v-click>
 
-</div>
-
-<div class="seminar-block sem-eq" style="top:337.1px;left:541.88px;right:auto;width:294px;">
-
-$$
-q_I(\rho,\pi)=\frac{1}{\mu\rho+(1-\mu)}\cdot\pi
-$$
-
-</div>
-
-<div class="seminar-block " style="top:436.02px;" v-click="1">
-
-Screening precision $\rho\geq1$ costs $\mathcal C(\rho)$: &nbsp; $\mathcal C(1)=0,\ \mathcal C^\prime>0,\ \mathcal C^{\prime\prime}>0$.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 11/25. Text and mathematics remain editable. -->
+<!-- Source: LST talk 2, slide 9. -->
 
 ---
-layout: seminar
-title: "Issuer: Regulatory Constraint"
+class: pos-deck pos-economy
 ---
 
-# Issuer: Regulatory Constraint
+# Blockchain economy and users
 
-<div class="seminar-block " style="top:199.68px;">
+* Small open economy with continuum of homogeneous users (mass one).
+* Consumption good normalized to $1$ USD.
 
-The regulator imposes an upper bound on the rate of illicit trading:
+<v-click>
 
-</div>
+* Blockchain users choose a consumption stream $\{c_t\}_{t=0}^\infty$ that maximises expected log utility
+$$E_0\int_0^{\infty} e^{-\beta\,t}\,\log(c_t)\,dt$$
 
-<div class="seminar-block sem-eq" style="top:294px;">
+<v-click>
 
-$$
-\frac{(1-\mu)\lambda}{\mu\rho+(1-\mu)}\cdot\pi\leq\psi
-$$
+- Users allocate wealth across:
+  1. Consumption (USD)
+  2. DeFi  (with native ETH)
+  3. Staking
 
-</div>
+<v-click>
 
-<div class="seminar-block " style="top:417.31px;">
+* Each infinitesimal user take as given
+  - $P_t$: price of ETH
+  - $S_t$: dollar value of staked ETH
+  - $D_t$: dollar value of ETH locked in DeFi protocols
+  - $Q_t$: supply of ETH in the blockchain
 
-where $\psi>0$ is the regulatory stringency parameter.
+</v-click>
+</v-click>
+</v-click>
 
-</div>
+<style>
+li { line-height: 1.6; }
+</style>
 
-<!-- Source: files/seminar.pdf; numbered slide 12/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Issuer Problem"
----
-
-# Issuer Problem
-
-<div class="seminar-block " style="top:160.14px;">
-
-The issuer solves:
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:181.5px;">
-
-$$
-(\pi^\star,\rho^\star)=\arg\max_{(\pi,\rho)\in\mathcal S}\ \phi\,L^\star(\pi)-\mathcal C(\rho)
-$$
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:282.52px;left:108.39px;right:auto;width:831.61px;">
-
-$\phi>0$: fee rate on assets under management
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:314.66px;left:108.39px;right:auto;width:831.61px;">
-
-$L^\star(\pi)$: endogenous equilibrium AUM (determined by investors)
-
-</div>
-
-<div class="seminar-block " style="top:384.61px;">
-
-Issuer has access to an outside option $\underline U>0$.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 13/25. Text and mathematics remain editable. -->
+<!-- Source: LST talk 1, slide 9. -->
 
 ---
-layout: seminar
-title: "Traders"
+class: pos-deck pos-staking-return
 ---
 
-# Traders
+# Returns to staking (no slashing)
 
-<div class="seminar-block " style="top:144.66px;">
-
-A trader who passes screening selects optimal trade size $V\geq0$:
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:190.5px;">
-
+* Issuance is a proportional rate $dI_t/I_t$, applied to staked ETH, as currently implemented in Ethereum. <br> The number of ETH issued at time $t$ is
 $$
-V^\star(L)=\arg\max_{V\geq0}\ \Pi(V)-\kappa\!\left(\frac VL\right)V-\gamma V
+\underbrace{\frac{S_t}{P_t}}_{\text{staked ETH}}
+\times
+\underbrace{\frac{dI_t}{I_t}}_{\text{issuance policy}}\,
+$$
+<v-click>
+
+- The dollar value of wealth distributed to stakers at time $t$ is
+$$
+\underbrace{\frac{S_t}{P_t}\,\frac{dI_t}{I_t}}_{\text{ETH issued}}\times\underbrace{P_t}_{\text{ETH price}}\,
+$$
+<v-click>
+
+- The return to staking, per dollar locked in staking, is therefore
+$$
+\frac{d\nu_{S,t}}{\nu_{S,t}} = \underbrace{\frac{S_t}{P_t}\,\frac{dI_t}{I_t}}_{\text{ETH issued}}
+\times
+\underbrace{P_t}_{\text{ETH price}}
+\times
+\underbrace{\frac{1}{S_t}}_{\text{normalized by total stake}}
+=
+\frac{dI_t}{I_t}\,
 $$
 
-</div>
+</v-click>
+</v-click>
 
-<div class="seminar-block " style="top:292.53px;">
+<style>
+:deep(.katex-display) { margin: 0.6rem 0; }
+</style>
 
-where:
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:319.71px;left:108.39px;right:auto;width:831.61px;">
-
-$\Pi(V)$: trading payoff with $\Pi^\prime>0$, $\Pi^{\prime\prime}<0$, $\lim\limits_{V\to0^+}\Pi^\prime(V)=+\infty$
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:364px;left:108.39px;right:auto;width:831.61px;">
-
-$\kappa(V/L)$: cost per unit traded, paid to liquidity providers
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:399.43px;left:108.39px;right:auto;width:831.61px;">
-
-$\gamma\geq0$: value extraction per unit traded (e.g., sandwich attacks)
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 14/25. Text and mathematics remain editable. -->
+<!-- Source: LST talk 1, slide 11. -->
 
 ---
-layout: seminar
-title: "Investors"
+class: pos-deck
 ---
 
-# Investors
+# Returns to DeFi
 
-<div class="seminar-block " style="top:159.91px;">
+### Returns to DeFi have two components
+1. productivity
+2. issuance tax
 
-Net return from liquidity provision given liquidity $L>0$:
+<br>
 
-</div>
+<v-click>
 
-<div class="seminar-block sem-eq" style="top:201.5px;">
+### Productivity
+* The return from DeFi due to **productivity** is stochastic:
+  $$
+  \mu_{D}\,dt+\sigma_{D}\,dW_{D,t}\,
+  $$
+  - $\mu_{D}$: growth of the blockchain economy driven by wealth locked in DeFi protocols and adoption
+  - $W_{D,t}$: productivity shocks (exogenous demand shocks, hacks, theft, and political risk)
+  - $\sigma_{D}$: scales the magnitude of these shocks
 
-$$
-r(L)=\frac{\lambda\pi\cdot\kappa(V^\star(L)/L)\cdot V^\star(L)}{L}-\delta-\phi
-$$
+</v-click>
 
-</div>
-
-<div class="seminar-block sem-bullet" style="top:307.16px;left:108.39px;right:auto;width:831.61px;">
-
-First term: revenue from accepted traders
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:342.59px;left:108.39px;right:auto;width:831.61px;">
-
-$\delta\geq0$: adverse-selection cost per unit liquidity
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:378.63px;left:108.39px;right:auto;width:831.61px;">
-
-$\phi$: fees paid to issuer per unit AUM
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 15/25. Text and mathematics remain editable. -->
+<!-- Source: LST talk 1, slide 12. -->
 
 ---
-layout: seminar
-title: "Investor Equilibrium"
-clicks: 1
+class: pos-deck
 ---
 
-# Investor Equilibrium
+# Returns to DeFi
 
-<div class="seminar-block " style="top:113.62px;">
 
-Investors require risk premium $\xi>0$ to hold the tokenized asset.
-
-</div>
-
-<div class="seminar-block " style="top:161.28px;">
-
-Investors optimally supply all holdings as liquidity.
-
-</div>
-
-<div class="seminar-block " style="top:217.59px;">
-
-Equilibrium holdings $L^\star(\pi)$ therefore satisfy:
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:265.5px;">
-
+### Issuance tax
+- Issuance does not create or destroy dollar wealth in the blockchain economy $\implies$ issuance enters as a negative component of returns to productive ETH
 $$
-r(L^\star(\pi))=\xi
+- \underbrace{S_t\,\frac{dI_t}{I_t}}_{\text{dollars distributed to stakers}}
+\times
+\underbrace{\frac{1}{D_t}}_{\scriptsize \begin{array}{c}\text{normalized by dollar}\\\text{value of productive ETH}\end{array}}
 $$
 
-</div>
+<v-click>
 
-<div class="seminar-block " style="top:345.47px;" v-click="1">
-
-More explicitly:
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:389px;" v-click="1">
-
+### Returns to DeFi
+- Combining this issuance tax with stochastic productivity yields the return to DeFi:
 $$
-\frac{\lambda\pi\cdot\kappa\!\left(V^\star(L^\star(\pi))/L^\star(\pi)\right)\cdot V^\star(L^\star(\pi))}{L^\star(\pi)}-\delta-\phi=\xi
+\frac{d\nu_{D,t}}{\nu_{D,t}}
+= \underbrace{\mu_{D}\,dt+\sigma_{D}\,dW_{D,t}}_{\text{productivity}}
+-
+\underbrace{\frac{S_t}{D_t}\,\frac{dI_t}{I_t}}_{\text{tax on productive capital}}
 $$
+</v-click>
 
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 16/25. Text and mathematics remain editable. -->
+<!-- Source: LST talk 1, slide 13. -->
 
 ---
-layout: seminar
-title: "Equilibrium"
+class: pos-deck pos-user
+---
+
+# Blockchain user problem
+
+- Let $x_t^i$ denote the dollar net worth of user $i\in[0,1]$
+- Each user allocates a fraction $\theta_t^i$ of wealth to DeFi, with the remaining share $1-\theta_t^i$ in staking
+$$
+\frac{dx_t^i}{x_t^i}
+=\theta_t^i\,\frac{d\nu_{D,t}}{\nu_{D,t}}
++\left(1-\theta_t^i\right)\frac{d\nu_{S,t}}{\nu_{S,t}}
+-\frac{c_t^i}{x_t^i}\,dt,
+$$
+
+
+<br>
+
+<v-click>
+
+### In the more general model:
+
+#### Dollar return to DeFi: $\small \ \qquad \qquad \qquad \qquad \underbrace{\mu_D\,dt+\sigma_D\,dW_{L,t}}_{\text{productivity rate}}-\underbrace{\frac{S_{t}}{D_t}\frac{dI_{t}}{I_{t}}}_{\text{issuance tax}}+\underbrace{\gamma\frac{S_{t}}{D_t+S_t}dN_{t}}_{\text{deflation}}$
+
+#### $\footnotesize \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\swarrow\qquad\qquad\qquad \nearrow$
+
+#### Dollar return to staking: $\small  \qquad \qquad \qquad \qquad \qquad \qquad  \underbrace{\frac{dI_{t}}{I_{t}}}_{\text{issuance}}-\underbrace{\gamma\frac{D_{t}}{D_t+S_t}dN_{t}}_{\text{slashing}}$
+
+
+</v-click>
+
+<!-- Source: LST talk 1, slide 14. -->
+
+---
+class: pos-deck pos-allocation
+---
+
+# Blockchain user problem
+
+- We consider a class of issuance policies that respond to shocks (yielding a unique equilibrium)
+$$
+\frac{dI_t}{I_t}
+=
+\frac{D_t}{P_t Q_t}\,\left(\mu_{I,t}\,dt+\sigma_{I,t}\,dW_{D,t}\right)
+$$
+
+<v-click>
+
+- Optimal allocation
+$$
+\theta_{t}^{i\,\star}
+=
+\frac{\mu_{D}-\mu_{I,t}}{\left(\sigma_{D}-\sigma_{I,t}\right)^{2}}
+-
+\frac{D_t}{S_t+D_t}\,\frac{\sigma_{I,t}}{\sigma_{D}-\sigma_{I,t}}
+$$
+
+$\implies$ Higher issuance reduces the allocation to productive DeFi
+
+<v-click>
+
+- Zero allocation to DeFi if $\qquad \quad\mu_{I,t}\ge \mu_{D}-\frac{D_t}{S_t+D_t}\,\sigma_{I,t}\left(\sigma_{D}-\sigma_{I,t}\right)$
+
+- No staking if  $\qquad \quad\mu_{I,t}\le \mu_{D}-\left(\sigma_{D}-\frac{S_t}{S_t+D_t}\,\sigma_{I,t}\right)\left(\sigma_{D}-\sigma_{I,t}\right)$
+
+</v-click>
+</v-click>
+
+<!-- Source: LST talk 1, slide 15. -->
+
+---
+class: pos-deck pos-clearing
+---
+
+# Clearing
+
+- Aggregate user wealth equals the market capitalization of ETH:
+$$
+x_t \equiv \int_0^1 x_t^i\,di = P_t Q_t,
+$$
+
+- Portfolio choices clear the DeFi and staking markets:
+$$
+D_t = \theta_t\,x_t
+\qquad\text{and}\qquad
+S_t = (1-\theta_t)\,x_t
+\qquad \implies \qquad
+P_t\,Q_t = S_t+D_t
+$$
+
+<v-click>
+
+- Only DeFi and consumption creates or destroys wealth
+
+$$
+\frac{d(P_t Q_t)}{P_t Q_t}
+=
+\theta_t^\star\big(\mu_D\,dt+\sigma_D\,dW_{D,t}\big)
+-\beta\,dt.
+$$
+
+</v-click>
+
+<v-click>
+
+- Staker holdings change due to issuance
+
+$$
+dQ_{t}=\frac{S_{t}}{P_{t}}\,\frac{dI_{t}}{I_{t}}
+$$
+
+</v-click>
+
+<!-- Sources: LST talk 1, slide 16 (clearing only), slide 17 (market cap), slide 19 (aggregate supply); LST talk 2, slide 11 (wealth and holdings). -->
+
+---
+class: pos-deck pos-equilibrium
 ---
 
 # Equilibrium
 
-<div class="seminar-block " style="top:111.42px;left:61.25px;right:auto;width:857.5px;">
+### Equilibrium allocation
 
-**Definition.** An equilibrium consists of $V^\star:\mathbb R_{++}\to\mathbb R_+$, $L^\star:(0,1]\to\mathbb R_{++}$, and (if<br>the issuer issues the token) policy $(\pi^\star,\rho^\star)\in\mathcal S$ such that:
+- All users choose the same portfolio share:
+  - $\theta_t^{\star}=0$ if $\mu_{I,t}\ge \mu_D$
+  - $\theta_t^{\star}=1$ if $\mu_{I,t}\le \mu_D-\sigma_D\left(\sigma_D-\sigma_{I,t}\right)$
+  - Otherwise,
+  $$
+  \theta_t^{\star}
+  =
+  \frac{\mu_D-\mu_{I,t}}{\sigma_D\left(\sigma_D-\sigma_{I,t}\right)}
+  $$
 
-</div>
+<v-click>
 
-<div class="seminar-block sem-accent" style="top:212.2px;left:61.25px;right:auto;width:35px;text-align:right;">
-
-(i)
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:212.2px;left:108.39px;right:auto;width:780px;">
-
-Optimal Trading:
-
-</div>
-
-<div class="seminar-block " style="top:241.48px;left:108.39px;right:auto;width:800px;">
-
-For all $L\in\mathbb R_{++}$, $V^\star(L)$ solves the trader’s problem.
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:289.46px;left:61.25px;right:auto;width:35px;text-align:right;">
-
-(ii)
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:289.46px;left:108.39px;right:auto;width:780px;">
-
-Optimal Liquidity Provision:
-
-</div>
-
-<div class="seminar-block " style="top:318.74px;left:108.39px;right:auto;width:800px;">
-
-For all $\pi\in(0,1]$, $L^\star(\pi)$ satisfies $r(L^\star(\pi))=\xi$.
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:366.72px;left:61.25px;right:auto;width:35px;text-align:right;">
-
-(iii)
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:366.72px;left:108.39px;right:auto;width:780px;">
-
-Optimal Issuer Policy:
-
-</div>
-
-<div class="seminar-block " style="top:396px;left:108.39px;right:auto;width:810px;">
-
-If $\sup_{(\pi,\rho)\in\mathcal S}\big[\phi L^\star(\pi)-\mathcal C(\rho)\big]>\underline U$, then the issuer issues the token and $(\pi^\star,\rho^\star)$<br>solves the issuer’s problem.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 17/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Trader and Investor Equilibrium"
----
-
-# Trader and Investor Equilibrium
-
-<div class="seminar-block " style="top:125.23px;">
-
-**Proposition.** <span class="sem-accent">Unique Subgame Equilibrium</span>
-
-</div>
-
-<div class="seminar-block " style="top:166.76px;">
-
-For any $\pi\in(0,1]$, there exists a unique $(V^\star(\pi),L^\star(\pi))\in\mathbb R_{++}^2$ satisfying conditions<br>(i) and (ii):
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:240.5px;">
+### Equilibrium staking return
 
 $$
-\begin{aligned}V^\star(\pi)&=(\Pi^\prime)^{-1}\!\big(\kappa(z(\pi))+z(\pi)\,\kappa^\prime(z(\pi))+\gamma\big)\\[0.8em]L^\star(\pi)&=V^\star(\pi)\,/\,z(\pi)\end{aligned}
+\frac{\mu_D-\mu_{I,t}}{\sigma_D\left(\sigma_D-\sigma_{I,t}\right)}\,\mu_I
+$$
+
+</v-click>
+
+<v-click>
+
+### Equilibrium productivity of the blockchain
+
+$$
+\mu_D\,\left(1-\frac{\mu_D-\mu_{I,t}}{\sigma_D\left(\sigma_D-\sigma_{I,t}\right)}\right)\,\mu_I
+$$
+
+</v-click>
+
+<style>
+li { line-height: 1.5; }
+:deep(.katex-display) { margin: 0.4rem 0; }
+</style>
+
+<!-- Sources: LST talk 1, slide 16 (symmetric allocation) and slide 18 (staking return and productivity). Equations reproduced as written in the source. -->
+
+---
+class: pos-deck pos-laffer
+---
+
+# Laffer curve: dangers of too much issuance
+
+$$
+\boxed{\ \text{staking return}\ =\ \text{productive base}\ \times\ \text{issuance tax rate}\ }
+$$
+
+![laffer](./images/laffer.png){style="display: block; margin: 0 auto; width: 620px; max-height: 220px; object-fit: contain"}
+
+
+- Higher issuance raises the tax applied to productive output
+<v-click>
+
+- It simultaneously reduces the equilibrium amount of productive ETH
+<v-click>
+
+- Beyond a certain point, the contraction of the tax base dominates the increase in the tax rate
+<v-click>
+
+- **In practice**: with an outside investment option, when staking returns fall below the risk-free rate, users leave the blockchain
+
+</v-click>
+</v-click>
+</v-click>
+
+<!-- Sources: LST talk 1, slide 18 (plot and explanation); LST talk 2, slide 13 (staking return = productive base × issuance tax rate). -->
+
+---
+class: pos-deck pos-policy
+---
+
+# Issuance (and slashing) are useful
+
+### Issuance policy is effective because it influences dollar incentives
+
+$$\footnotesize
+\text{allocation } = \theta({\color{red} \mu_{\iota}}, {\color{red} \sigma_{\iota}}) \qquad \qquad \qquad \text{ETH prices: } \begin{cases}
+\text{drift}  & = \mu_P({\color{red} \mu_{\iota}},{\color{red} \sigma_{\iota}})\\
+\\\text{productivity shocks}  & = \sigma_P({\color{red} \mu_{\iota}},{\color{red} \sigma_{\iota}}) \\
+\\\text{slashing shocks} & =\gamma_P({\color{red} \mu_{\iota}}, {\color{red} \sigma_{\iota}})
+\end{cases}
+$$
+
+<br>
+
+<v-click>
+
+### Slashing is effective because it influences dollar incentives
+
+<br>
+
+
+
+<v-click>
+
+### Policy objectives can be attained
+
+- Reduce eth volatility
+- Target staking share
+- Long-term economic security (incentivise productivity and then increase security)
+
+</v-click>
+</v-click>
+
+<!-- Source: LST talk 1, slide 20. -->
+
+---
+class: pos-deck pos-prices
+---
+
+# ETH prices
+
+### Equilibrium and clearing conditions
+
+- Assume  $dP_t / P_t = \mu_{P,t} \, dt + \sigma dW_{D,t}$
+$$
+\begin{aligned}
+\mu_{P,t}&=
+\underbrace{\theta_t^{\star}\,\mu_D
+-\beta}_\text{discounted productivity}
+-\underbrace{\left(1-\theta_t^{\star}\right)\,\mu_{I,t}^e}_\text{inflation from issuance}
+\\[5pt]
+&-\underbrace{\theta_t^{\star}\left(1-\theta_t^{\star}\right)\sigma_{I,t}^e\,\sigma_D}_\text{inflation/deflation: productivity shocks}
++\underbrace{\left(1-\theta_t^{\star}\right)^2\sigma_{I,t}^{e\,2}}_\text{issuance risk}\\
+\\
+\sigma_{P,t}&=
+\underbrace{\theta_t^{\star}\,\sigma_D}_{\text{productivity risk}}
+-\underbrace{\left(1-\theta_t^{\star}\right)\,\sigma_{I,t}^e}_{\text{issuance risk}}\,.
+\end{aligned}
+$$
+
+
+ $-\theta_t^{\star}\,(1-\theta_t^{\star})\,\sigma_{I,t}^e\,\sigma_D$: issuance that expands ETH supply in response to positive shocks generates an inflationary effect
+
+
+ $(1-\theta_t^{\star})^2\,\sigma_{I,t}^{e,2}$: higher issuance volatility increases the riskiness of staking $\implies$  users reallocate toward productive ETH
+
+<!-- Source: LST talk 1, slide 19, with the supply dynamics removed and the price equation wrapped across lines. -->
+
+---
+section: Layer 2
+class: pos-deck l2-slide l2-intro
+---
+
+# Layer 2 blockchains
+
+<div class="l2-intro-grid">
+<div>
+
+- Layer 1 blockchains (L1s) are slow because of consensus $\implies$ throughput is limited.
+
+- **A layer 2 (L2) is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum.**
+
+- The main goal of L2s and scalability is to increase transaction speed (faster finality) and transaction throughput (high transactions per second), without sacrificing decentralization or security.
+
+- Capital can flow between L1 and L2s.
+
+</div>
+
+![Capital flows between Ethereum, L2s, and other blockchains.](./images/L2_1.png){class="l2-network-image"}
+
+</div>
+
+<!-- Layer 2 introduction; wording and illustration supplied by the presenter. -->
+
+---
+class: pos-deck l2-slide l2-image-slide
+---
+
+# L2s are cheap
+
+![Average cost per L2 user operation, with calldata, blob, compute, and overhead components.](./images/L2_3.png){class="l2-cost-image"}
+
+<!-- Supplied L2_3.png; retain the complete screenshot and its original values. -->
+
+---
+class: pos-deck l2-slide l2-image-slide l2-productivity
+---
+
+# L2s are more productive
+
+![Transaction throughput across L2s and Ethereum.](./images/L2_2.png){class="l2-throughput-image"}
+
+<div v-click class="l2-blob-payment">
+
+**L2s pay blob fees to L1 stakers.**
+
+</div>
+
+<!-- Supplied L2_2.png. As in the model in the source deck, blob fees represent payments supporting L1 staking. The source distinguishes this modeling treatment from Ethereum's burning of blob base fees. -->
+
+---
+class: pos-deck l2-slide l2-capital
+---
+
+# Capital taxation and security
+
+<div class="l2-capital-grid">
+<div>
+<h3>Ethereum (L1)</h3>
+<table>
+<thead><tr><th>Asset</th><th>Value</th><th>Share</th></tr></thead>
+<tbody>
+<tr class="l2-native-row"><td>Ether — ETH</td><td>&#36;246.5B</td><td>60.0%</td></tr>
+<tr><td>Tether — USDT</td><td>&#36;66.7B</td><td>16.2%</td></tr>
+<tr><td>USD Coin — USDC</td><td>&#36;42.1B</td><td>10.2%</td></tr>
+<tr><td>Chainlink — LINK</td><td>&#36;7.8B</td><td>1.9%</td></tr>
+<tr><td>Sky Dollar — USDS</td><td>&#36;5.3B</td><td>1.3%</td></tr>
+</tbody>
+</table>
+</div>
+<div>
+<h3>Arbitrum (L2)</h3>
+<table>
+<thead><tr><th>Asset</th><th>Value</th><th>Share</th></tr></thead>
+<tbody>
+<tr class="l2-native-row"><td>ETH &amp; derivatives</td><td>&#36;3.64B</td><td>21.3%</td></tr>
+<tr><td>Stablecoins</td><td>&#36;9.03B</td><td>52.9%</td></tr>
+<tr><td>BTC &amp; derivatives</td><td>&#36;917.34M</td><td>5.37%</td></tr>
+<tr><td>Other</td><td>&#36;3.38B</td><td>19.8%</td></tr>
+<tr><td>Public RWAs</td><td>&#36;95.49M</td><td>0.55%</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div v-click class="l2-capital-takeaway">
+
+**Productive, non-staked ETH pays for security!**
+
+One dollar on L1 does not pay the same issuance tax as one dollar on L2.
+
+</div>
+
+<!-- Tables transcribed from the presenter's two attached images. Ethereum covers selected token values; Arbitrum reports TVS categories, with its original 16 January 2026 date. -->
+
+---
+class: pos-deck l2-slide l2-payment
+---
+
+# Security payment
+
+L2 operators pay stakers a fee $b$ per dollar of L2 capital and pass it on to investors.
+
+<div class="l2-payment-table">
+
+$$
+\def\arraystretch{1.65}
+\begin{array}{lcc}
+\hline
+&\textbf{One dollar on L1}&\textbf{One dollar on L2}\\[4pt]
+\hline
+\text{Payment per dollar}&\iota&
+\underbrace{\chi\iota}_{\text{issuance tax}}+
+\underbrace{b}_{\text{blob fee}}\\[18pt]
+\hline
+\end{array}
 $$
 
 </div>
 
-<div class="seminar-block " style="top:350.6px;">
+- $\iota$: issuance tax per dollar of non-staked L1 capital.
+- $\chi\in[0,1]$: native-token demand per dollar on L2.
 
-where
+<br>
+
+$\implies$ Investment on both layers finances L1 staking rewards.
+
+<!-- Source: L2 talk, frame 6. -->
+
+---
+class: pos-deck l2-slide l2-impact
+---
+
+# L2 trade-off
+
+<div class="l2-two-columns">
+<div>
+
+### More capital
+
+Higher productivity attracts investors
+
+</div>
+<div>
+
+### Less tax
+
+Each dollar pays less issuance tax
+
+</div>
+</div>
+
+<div class="l2-claim l2-question">
+
+How much must L2s pay to preserve L1-only security?
 
 </div>
 
-<div class="seminar-block sem-eq" style="top:367.5px;">
+<!-- Source: L2 talk, frame 7. -->
+
+---
+class: pos-deck l2-slide l2-security
+---
+
+# Security and productivity
+
+- Security is measured by $S$, the **dollar value staked on L1**.
+
+- Productivity returns per dollar
 
 $$
-\eta(z):=\kappa(z)\cdot z,\qquad z(\pi):=\eta^{-1}\!\left(\frac{\xi+\delta+\phi}{\lambda\pi}\right)
+\begin{aligned}
+R_1(S)&=\mu_1-\kappa_1J_1(S),\\[10pt]
+R_2(S)&=\mu_2-\kappa_1J_1(S)-\kappa_2J_2.
+\end{aligned}
 $$
 
-</div>
+- $J_1(S)\sim\operatorname{Poisson}(p_1(S))$ and $J_2\sim\operatorname{Poisson}(p_2)$ are independent.
 
-<!-- Source: files/seminar.pdf; numbered slide 18/25. Text and mathematics remain editable. -->
+- $p_1(S)$ strictly decreases in $S$.
 
----
-layout: seminar
-title: "Equilibrium Existence"
----
-
-# Equilibrium Existence
-
-<div class="seminar-block " style="top:178.27px;">
-
-**Proposition.** An equilibrium exists. Specifically:
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:263px;left:61.25px;right:auto;width:35px;text-align:right;">
-
-(i)
-
-</div>
-
-<div class="seminar-block " style="top:263px;left:108.39px;right:auto;width:810px;">
-
-The issuer’s optimal issuance decision is well-defined.
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:329.36px;left:61.25px;right:auto;width:35px;text-align:right;">
-
-(ii)
-
-</div>
-
-<div class="seminar-block " style="top:329.36px;left:108.39px;right:auto;width:831.61px;white-space:nowrap;">
-
-If the issuer issues the token, there exists $(\pi^\star,\rho^\star)\in\mathcal S$ solving the issuer’s problem.
-
-</div>
-
-<div class="seminar-block sem-accent" style="top:395.72px;left:61.25px;right:auto;width:35px;text-align:right;">
-
-(iii)
-
-</div>
-
-<div class="seminar-block " style="top:395.72px;left:108.39px;right:auto;width:810px;">
-
-Equilibrium trading volume and investment are $V^\star(\pi^\star)$ and $L^\star(\pi^\star)$.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 19/25. Text and mathematics remain editable. -->
+<!-- Source: L2 talk, frame 10; independent Poisson counts and decreasing L1 attack intensity retained. -->
 
 ---
-layout: seminar
-title: "Main Result: Stringent Regulation Renders Tokenization Non-Viable"
+class: pos-deck l2-slide l2-timeline
 ---
 
-# Main Result: Stringent Regulation Renders Tokenization Non-Viable
+# Model
 
-<div class="seminar-block " style="top:174.72px;">
+Investors and stakers form two continua of infinitesimal agents.
 
-**Proposition.** There is a threshold $\psi^\star\in(0,\psi_0)$ such that no equilibrium involves<br>tokenization whenever $\psi<\psi^\star$.
+<div class="l2-stages">
+<div class="l2-stage">
+<div class="l2-stage-time">
+
+$t=0$
+
+<span>Policy</span>
+</div>
+<div class="l2-stage-content">
+
+Issuance $\iota$ and blob fee $b$ are fixed.
 
 </div>
+</div>
+<div class="l2-stage">
+<div class="l2-stage-time">
 
-<div class="sem-box sem-blue" style="left:128.62px;top:295.81px;width:722.76px;height:73.5px;font-size:23.57px;">
+$t=1$
 
-Sufficiently stringent regulation renders tokenization non-viable.
+<span>Stake commitment</span>
+</div>
+<div class="l2-stage-content">
+
+Stakers commit their stake, which determines security of the blockchain economy.
 
 </div>
+</div>
+<div class="l2-stage">
+<div class="l2-stage-time">
 
-<!-- Source: files/seminar.pdf; numbered slide 20/25. Text and mathematics remain editable. -->
+$t=1$
+
+<span>Entry and allocation</span>
+</div>
+<div class="l2-stage-content">
+
+Investors decide whether to enter.<br>Entrants allocate $W_E$ between L1 ($W_{E,1}$) and L2 ($W_{E,2}$).
+
+</div>
+</div>
+<div class="l2-stage">
+<div class="l2-stage-time">
+
+$t=2$
+
+<span>Realization</span>
+</div>
+<div class="l2-stage-content">
+
+Productivity output and attacks are realized
+</div>
+</div>
+</div>
+
+<!-- Source: L2 talk, frame 9; timing diagram redrawn in editable HTML/CSS. -->
 
 ---
-layout: seminar
-title: "Main Result: Economic Channel"
-clicks: 5
+class: pos-deck l2-slide l2-dense l2-investors
 ---
 
-# Main Result: Economic Channel
+# Investors' problem ($t=1$)
 
-<div class="seminar-block " style="top:94.66px;">
+- Continuum of investors have mean–variance preferences, initial wealth $W_I$, and risk aversion $\rho_I$. They observe aggregate $S$.
 
-The issuer tokenizes only if
-
-</div>
-
-<div class="seminar-block sem-eq" style="top:139px;">
+- For portfolio shares on L1 and L2, define the net return
 
 $$
-\max_{(\pi,\rho)\in\mathcal S}\Big[\underbrace{\phi\,L^\star(\pi)}_{\textsf{revenue}}-\underbrace{\mathcal C(\rho)}_{\textsf{screening cost}}\Big]>\underline U
+R_P(S)=\omega_{I,1}(R_1-\iota)+\omega_{I,2}(R_2-\chi\iota-b).
 $$
 
-</div>
-
-<div class="seminar-block " style="top:234.2px;" v-click="1">
-
-**Proposition.** Tighter regulation forces a lower acceptance rate: $\psi\downarrow\implies\pi^\star(\psi)\downarrow$.
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:265.08px;" v-click="1">
-
-(Convex screening costs bound screening precision.)
-
-</div>
-
-<div class="seminar-block sem-eq sem-mcs" style="top:306px;font-size:20.5px;" v-click="[2, 3]">
+- Their optimal risk-adjusted excess return over the risk-free rate $r$ is
 
 $$
-\underbrace{\Pi^\star(\psi)}_{\textsf{set of optimal acceptance rates}}
+\Lambda(S)=
+\max_{\substack{\omega_{I,1},\omega_{I,2}\ge0\\\omega_{I,1}+\omega_{I,2}=1}}
+\left\{\mathbb E[R_P(S)]-\frac{\rho_I}{2}\operatorname{Var}[R_P(S)]-r\right\}.
+$$
+
+<v-click>
+
+- Investor $i\in[0,1]$ has private reservation value $\nu^i$. Enters only if
+
+$$
+\Lambda(S)\ge\nu^i,
+\qquad \nu^i\sim U[0,\bar\nu],
+\qquad \Lambda(S)\le\bar\nu.
+$$
+
+Productive capital: $\displaystyle W_E=\frac{\Lambda(S)}{\bar\nu}W_I$.
+
+$\implies$ L2s more productive $=$ more capital
+
+</v-click>
+
+<!-- Source: L2 talk, frame 11. Optimization presented before entry. Lambda is the source maximized mean–variance objective minus r, written directly as a maximized excess return; subtracting r does not change optimal portfolio weights. -->
+
+---
+class: pos-deck l2-slide l2-allocation
+---
+
+# Investors' problem ($t=1$)
+
+- L2-L1 gap
+
+$$
+\Delta=
+\underbrace{\mu_2-\mu_1-\kappa_2p_2}_{\Delta^{\mu}:\;\text{expected productivity gap}}
++\underbrace{\iota(1-\chi)-b}_{\Delta^{\iota}:\;\text{payment gap}}.
+$$
+
+- Optimal investment of infinitesimal staker in L2
+
+$$
+\omega_{I,2}^{\star}=
+\begin{cases}
+0, & \Delta\le0,\\[7pt]
+\dfrac{\Delta}{\rho_I\kappa_2^2p_2}, & 0<\Delta<\rho_I\kappa_2^2p_2,\\[7pt]
+1, & \Delta\ge\rho_I\kappa_2^2p_2,
+\end{cases}
+\qquad
+\omega_{I,1}^{\star}=1-\omega_{I,2}^{\star}.
+$$
+
+
+
+
+<!-- Source: L2 talk, frame 12. -->
+
+---
+class: pos-deck l2-slide l2-dense l2-stakers
+---
+
+# Stakers' problem ($t=1$)
+
+- Continuum of stakers with mean–variance preferences
+- Initial aggregate wealth $W_S$ and risk aversion $\rho_S$.
+- Each infinitesimal staker takes the aggregate stake $S$ as given and the reward rate $\tau$ per dollar staked (funded by issuance and blob fees).
+
+<v-click>
+
+- Staker $j\in[0,1]$ chooses the wealth share $\omega_S^j\ge0$ to stake and solves
+
+$$
+\max_{\omega_S^j\ge0}\;
+\begin{aligned}
+&\mathbb E\!\left[(1-\omega_S^j)(1+r)
++\omega_S^j\big(1+\tau-\kappa_1J_1(S)\big)\right]\\[8pt]
+&\quad-\frac{\rho_S}{2}\operatorname{Var}\!\left[(1-\omega_S^j)(1+r)
++\omega_S^j\big(1+\tau-\kappa_1J_1(S)\big)\right].
+\end{aligned}
+$$
+
+</v-click>
+
+<!-- Source: L2 talk, frame 13; original nonnegativity constraint retained. -->
+
+---
+class: pos-deck l2-slide l2-stake
+---
+
+# Equilibrium conditions (t=1)
+
+### Staking market clearing
+
+$$\text{Aggregate stake: }S^\star=\int_i \omega_S^i W_S^i di$$
+
+### Security payment clearing
+
+$$
+\underbrace{\tau^{\star}S^{\star}}_{\substack{\text{Required staking}\\\text{compensation}}}
 =
-\underset{\pi\in[\psi/((1-\mu)\lambda),\,\mu+\psi/\lambda]}{\arg\max}
-\left\{
-\phi L^\star(\pi)
--\mathcal C\!\left(\frac{1-\mu}{\mu}\left[\frac{\lambda\pi}{\psi}-1\right]\right)
-\right\}.
+\underbrace{\iota W_{E,1}^{\star}+(\chi\iota+b)W_{E,2}^{\star}}_{\text{Issuance and blob-fee payments}}.
 $$
 
-</div>
+<v-click>
 
-<div class="seminar-block sem-eq sem-mcs" style="top:398px;font-size:21.53px;" v-click="[2, 3]">
+- Result: there is a unique positive equilibrium stake $S^{\star}$.
+
+</v-click>
+
+
+<!-- Source: L2 talk, frame 14. -->
+
+---
+class: pos-deck l2-slide l2-benchmark
+---
+
+# The benchmark: L1-only
+
+- The **L1-only economy** at the same issuance rate $\iota$.
+- If blob fees are too high $\implies$ no L2 holdings
 
 $$
-\left.
-\begin{gathered}
-\textsf{Increasing differences}\\
-\textsf{and ordered feasible sets}
-\end{gathered}
-\right\}
-\Longrightarrow
-\Pi^\star(\psi_1)\le_{\mathrm{SSO}}\Pi^\star(\psi_2),
-\qquad \psi_1<\psi_2.
+b\ge b_{\mathrm{deter}}
+:=\Delta^{\mu}+\iota(1-\chi)
+\quad\Longrightarrow\quad
+\omega_{I,2}^{\star}=0.
 $$
 
-</div>
+<v-click>
 
-<div class="seminar-block sem-mcs" style="top:469px;font-size:18.5px;" v-click="[2, 3]">
+<div class="l2-two-columns l2-benchmark-values">
+<div>
 
-*Milgrom and Shannon (1994).* $\le_{\mathrm{SSO}}$ denotes the strong set order.
+### Equilibrium stake
 
-</div>
-
-<div class="seminar-block " style="top:317.26px;" v-click="3">
-
-**Proposition.** A lower acceptance rate reduces trading revenue: $\pi\downarrow\implies T^\star(\pi)\downarrow$.
+$$S_{\mathrm{L1}}^{\star}(\iota)$$
 
 </div>
+<div>
 
-<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="3">
+### Productive capital
 
-($T^\star$: trading revenue paid to liquidity providers by admitted traders.)
-
-</div>
-
-<div class="seminar-block " style="top:400.31px;" v-click="4">
-
-**Proposition.** Onchain investment increases with trading revenue: $T^\star\downarrow\implies L^\star\downarrow$.
+$$W_{\mathrm{L1}}^{\star}(\iota)$$
 
 </div>
-
-<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="5">
-
-$\implies$ For sufficiently tight regulation, revenue $\phi\,L^\star(\pi^\star(\psi))$ falls below $\underline U$.
-
 </div>
+</v-click>
 
-<!-- Source: files/seminar.pdf; numbered slide 21/25. Text and mathematics remain editable. -->
+
+<!-- Source: L2 talk, frame 15; final sentence restates the zero-allocation condition. -->
 
 ---
-layout: seminar
-title: "Main Result: Economic Channel (Continued)"
-clicks: 4
+class: pos-deck l2-slide l2-blob-fee
 ---
 
-# Main Result: Economic Channel (Continued)
+# Price of security
 
-<svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
-<defs><marker id="mechanism-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker></defs>
-<path v-click="1" d="M490 152.91 V179.5" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
-<path v-click="2" d="M490 234.62 V261.21" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
-<path v-click="3" d="M490 316.34 V342.92" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
-<path v-click="4" d="M490 398.05 V424.63" stroke="#64748b" stroke-width=".86" marker-end="url(#mechanism-arrow)" />
-</svg>
+The minimum fee that preserves L1-only security satisfies
 
-<div class="sem-box sem-node" style="left:251.12px;top:97.79px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;">
+$$
+b^{\star}(\chi)=\max\!\left\{
+\underbrace{\iota(1-\chi)}_{\text{avoided issuance tax}}
+-\underbrace{\Delta^{\iota,\star}}_{\substack{\text{benefit from}\\\text{a larger tax base}}},\;0\right\}.
+$$
 
-$\psi\downarrow$ (tighter regulation)
+<div class="l2-regime-table">
+
+| Blob fee | Equilibrium stake | Effect of L2 |
+| :-- | :-- | :-- |
+| $0\le b<b^{\star}$ | $S^{\star}(b)<S_{\mathrm{L1}}^{\star}$ | L2 drains security |
+| $b^{\star}\le b<b_{\mathrm{deter}}$ | $S^{\star}(b)\ge S_{\mathrm{L1}}^{\star}$ | L2 funds security |
 
 </div>
 
-<div class="sem-box sem-node" style="left:251.12px;top:179.5px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;" v-click="1">
-
-$\pi^\star\downarrow$ (fewer admitted traders)
-
-</div>
-
-<div class="sem-box sem-node" style="left:251.12px;top:261.21px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;" v-click="2">
-
-$T^\star\downarrow$ (trading revenue to liquidity providers)
-
-</div>
-
-<div class="sem-box sem-node" style="left:251.12px;top:342.92px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;border-color:#3498db;" v-click="3">
-
-$L^\star\downarrow$ (onchain investment)
-
-</div>
-
-<div class="sem-box sem-node" style="left:251.12px;top:424.63px;width:477.76px;height:55.13px;border-color:#64748b;border-radius:13px;border-color:#b91c1c;" v-click="4">
-
-$\phi\,L^\star<\underline U$ (no issuance)
-
-</div>
-
-<div class="seminar-block sem-label sem-muted" style="top:157.05px;left:498.72px;right:auto;width:300px;" v-click="1">
-
-compliance with the cap
-
-</div>
-
-<div class="seminar-block sem-label sem-muted" style="top:238.76px;left:498.72px;right:auto;width:300px;" v-click="2">
-
-less trading
-
-</div>
-
-<div class="seminar-block sem-label sem-muted" style="top:319.5px;left:498.72px;right:auto;width:300px;" v-click="3">
-
-$L^\star\propto T^\star$
-
-</div>
-
-<div class="seminar-block sem-label sem-muted" style="top:403.86px;left:498.72px;right:auto;width:300px;" v-click="4">
-
-lower issuer revenue
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 22/25. Text and mathematics remain editable. -->
+<!-- Source: L2 talk, frame 16. -->
 
 ---
-layout: seminar
-title: "Viability Is Heterogeneous Under a Given Regulatory Standard"
+class: pos-deck l2-slide l2-plot
 ---
 
-# Viability Is Heterogeneous Under a Given Regulatory Standard
+# Maximizing security
 
-<div class="sem-box sem-plain-blue" style="left:91.87px;top:73.48px;width:796.26px;height:110.33px;border-radius:8.6px;">
+- Equilibrium stake has a unique maximum at $\widehat b\in[b^{\star},b_{\mathrm{deter}})$.
 
+![Equilibrium aggregate stake as a function of the blob fee, compared with L1-only stake.](./images/fig_security_blob.svg){class="l2-security-plot"}
 
-
-</div>
-
-<div class="seminar-block " style="top:87px;left:107.19px;right:auto;width:760px;">
-
-**Proposition.** The threshold $\psi^\star$ below which tokenization is non-viable<br>is weakly increasing in the risk premium $\xi$, adverse selection $\delta$, and value<br>extraction $\gamma$.
-
-</div>
-
-<div class="seminar-block sem-small sem-accent" style="top:241.91px;left:152.46px;right:auto;width:198px;">
-
-**Friction**
-
-</div>
-
-<div class="seminar-block sem-small sem-accent" style="top:241.91px;left:350.07px;right:auto;width:500px;">
-
-**Driven by**
-
-</div>
-
-<div class="seminar-block sem-small" style="top:276.79px;left:152.46px;right:auto;width:198px;">
-
-Adverse selection $\delta$
-
-</div>
-
-<div class="seminar-block sem-small" style="top:276.79px;left:350.06px;right:auto;width:500px;">
-
-The asset’s volatility and the blockchain’s block time
-
-</div>
-
-<div class="seminar-block sem-small" style="top:311.66px;left:152.46px;right:auto;width:198px;">
-
-Value extraction $\gamma$
-
-</div>
-
-<div class="seminar-block sem-small" style="top:311.66px;left:350.06px;right:auto;width:500px;">
-
-The blockchain’s exposure to sandwich attacks
-
-</div>
-
-<div class="seminar-block sem-small" style="top:346.54px;left:152.46px;right:auto;width:198px;">
-
-Risk premium $\xi$
-
-</div>
-
-<div class="seminar-block sem-small" style="top:346.54px;left:350.06px;right:auto;width:500px;">
-
-The blockchain’s smart-contract and settlement risk
-
-</div>
-
-<div class="sem-box sem-orange" style="left:129.95px;top:424.34px;width:720.1px;height:73.5px;font-size:21.53px;">
-
-The same cap can keep tokenization viable for one asset or blockchain<br>and render it non-viable for another.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 23/25. Text and mathematics remain editable. -->
+<!-- Source: L2 talk, frame 17. Original fig_security_blob.pdf converted to SVG without changing the plot. -->
 
 ---
-layout: seminar
-title: "Heterogeneous Viability: Economic Channel"
+class: pos-deck l2-slide l2-dense l2-output
 ---
 
-# Heterogeneous Viability: Economic Channel
+# Productive capital and expected output
 
-<div class="seminar-block " style="top:123.02px;">
+- Productive capital
 
-Each friction lowers onchain investment $L^\star$ at every acceptance rate $\pi$:
+$$
+W_E^\star(S^\star)
+$$
 
-</div>
+- Expected productive output
 
-<div class="seminar-block sem-bullet" style="top:177.13px;left:108.39px;right:auto;width:831.61px;">
+$$
+\begin{aligned}
+Y^{\star}(S^\star)={}&\underbrace{\omega_{I,1}^{\star}W_E^{\star}
+\left[\mu_1-\kappa_1p_1(S^{\star})\right]}_{\text{expected L1 output}}+\underbrace{\omega_{I,2}^{\star}W_E^{\star}
+\left[\mu_2-\kappa_1p_1(S^{\star})-\kappa_2p_2\right]}_{\text{expected L2 output}}.
+\end{aligned}
+$$
 
-Higher risk premium $\xi$ or adverse selection $\delta$: investors require a higher yield
+<v-click>
 
-</div>
+- The blob fees that maximize productive capital and productive output exists and is unique.
 
-<div class="seminar-block sem-bullet" style="top:237.36px;left:108.39px;right:auto;width:831.61px;">
+$$
+\begin{aligned}
+b_W^{\star}&=\operatorname*{arg\,max}_{b\ge0}W_E^{\star}(b),
+& b_Y^{\star}&=\operatorname*{arg\,max}_{b\ge0}Y^{\star}(b).
+\end{aligned}
+$$
 
-Higher value extraction $\gamma$: traders trade less, reducing trading revenue
+<v-click>
 
-</div>
+- Both fees are smaller than the blob fee that maximises security.
 
-<div class="seminar-block " style="top:297.6px;">
+$$
+b_W^{\star}\le\widehat b,
+\qquad b_Y^{\star}\le\widehat b,
+$$
 
-Lower onchain investment lowers the issuer’s fee revenue at every level of regulation.
 
-</div>
 
-<div class="sem-box sem-blue" style="left:82.68px;top:379.31px;width:814.64px;height:73.5px;font-size:23.57px;">
+</v-click>
+</v-click>
 
-Higher frictions require looser regulation to keep tokenization viable.
 
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 24/25. Text and mathematics remain editable. -->
-
----
-layout: seminar
-title: "Different Outcomes"
----
-
-# Different Outcomes
-
-<figure style="position:absolute;top:100px;left:30px;width:450px;margin:0;">
-<figcaption style="margin-bottom:12px;font-size:25.83px;font-weight:700;text-align:center;">Ethereum</figcaption>
-<img src="./images/ethereum_distribution.png" alt="Ethereum tokenized-asset distribution: stablecoins $160 billion, US Treasury debt $6.2 billion, commodities $4.7 billion, and active strategies $1.8 billion" style="display:block;width:100%;height:310px;object-fit:contain;" />
-</figure>
-
-<figure style="position:absolute;top:100px;left:500px;width:450px;margin:0;">
-<figcaption style="margin-bottom:12px;font-size:25.83px;font-weight:700;text-align:center;">Arbitrum</figcaption>
-<img src="./images/arbitrum_distribution.png" alt="Arbitrum tokenized-asset distribution: stablecoins $4.2 billion, non-US government debt $293.5 million, stocks $189.5 million, active strategies $176.4 million, and private equity $130.5 million" style="display:block;width:100%;height:310px;object-fit:contain;" />
-</figure>
-
-<div class="seminar-block sem-bullet" style="top:474px;left:108.39px;right:auto;width:831.61px;">
-
-Stocks not the best fit for tokenization (issuer risk + asset risk)
-
-</div>
-
-<!-- Adapted from slides_old.md, "Different outcomes", using the Ethereum and Arbitrum distribution figures. -->
+<!-- Source: L2 talk, frame 18; expected-output equation wrapped without changing its terms. -->
 
 ---
-layout: seminar
-title: "Conclusion"
+class: pos-deck l2-slide l2-dense l2-policy-ranking
 ---
 
-# Conclusion
+# Blob fees versus issuance
 
-<div class="seminar-block sem-bullet" style="top:128.15px;left:108.39px;right:auto;width:831.61px;">
+- The payment for security per dollar is
 
-Onchain holdings require an incentive that covers onchain costs and priced risks
+$$
+\iota\,\omega_{I,1}^{\star}+(\chi\,\iota+b)\omega_{I,2}^{\star}.
+$$
 
-</div>
+- **Blob fees yield higher security than issuance**.
 
-<div class="seminar-block sem-bullet" style="top:188.39px;left:108.39px;right:auto;width:831.61px;">
+$$
+\frac{\partial_b S^{\star}}
+{\partial_b\!\left[\iota\omega_{I,1}^{\star}+(\chi\iota+b)\omega_{I,2}^{\star}\right]}
+>
+\frac{\partial_{\iota}S^{\star}}
+{\partial_{\iota}\!\left[\iota\omega_{I,1}^{\star}+(\chi\iota+b)\omega_{I,2}^{\star}\right]}.
+$$
 
-Yield farming provides this incentive via an endogenous two-way positive externality
+- The same holds for equilibrium productive capital onchain
 
-</div>
-
-<div class="seminar-block sem-bullet" style="top:248.62px;left:108.39px;right:auto;width:831.61px;">
-
-Tighter regulation undermines this externality, limiting onchain investment
-
-</div>
-
-<div class="sem-box sem-blue" style="left:128.62px;top:342.92px;width:722.76px;height:85.75px;font-size:25.83px;">
-
-Sufficiently stringent regulation renders tokenization non-viable.
-
-</div>
-
-<!-- Source: files/seminar.pdf; numbered slide 25/25. Text and mathematics remain editable. -->
-
----
-layout: seminar-backup
-title: "Optimal Regulation"
-routeAlias: optimal-regulation
-hideInToc: true
-clicks: 1
----
-
-# Optimal Regulation
-
-<div class="seminar-block" style="top:60px;left:40px;right:auto;width:900px;font-size:17.22px;line-height:1.2;text-align:center;">
-
-Inspired by **Campello, Cong and Dietrich (2024)**:<br>*Regulatory uncertainty and fintech innovation*.
-
-</div>
-
-<img src="./images/optimal-regulation.png" alt="Optimal regulatory cap: higher estimates of innovation value move policy from a ban to intermediate regulation and full admission; greater baseline activity eventually leads to a ban." style="position:absolute;top:112px;left:40px;display:block;width:900px;height:300px;object-fit:contain;" />
-
-<div class="seminar-block" style="top:421px;left:170px;right:auto;width:350px;font-size:19.5px;line-height:1.2;text-align:center;">
-
-**Higher $m$:** more value from innovation favors looser regulation.
-
-</div>
-
-<div class="seminar-block" style="top:421px;left:530px;right:auto;width:350px;font-size:19.5px;line-height:1.2;text-align:center;">
-
-**Higher $Q_0$:** tokenization adds less innovation value; eventually a ban.
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:491px;left:108.39px;right:auto;width:831.61px;font-size:20.5px;" v-click="1">
-
-SEC 2026 exemption: regulator believes in innovation potential.
-
-</div>
-
-<!-- Unnumbered backup adapted from slides_old.md, slide 26, "Three regulatory regimes". -->
-<!-- Campello, Murillo; Cong, Lin William; Dietrich, Diemo (2024). Regulatory uncertainty and fintech innovation. FEB-RN Research Paper No. 15. -->
-
----
-layout: seminar-backup
-title: "Optimal Regulation"
-routeAlias: optimal-regulation-frictions
-hideInToc: true
----
-
-# Optimal Regulation
-
-<figure style="position:absolute;top:65px;left:30px;width:450px;margin:0;">
-<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
-
-Issuer's opportunity cost $\underline U$
-
-</figcaption>
-<img src="./images/optimal-regulation-opportunity-cost.png" alt="Issuer opportunity cost: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
-</figure>
-
-<figure style="position:absolute;top:65px;left:500px;width:450px;margin:0;">
-<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
-
-Onchain risk premium $\xi$
-
-</figcaption>
-<img src="./images/optimal-regulation-risk-premium.png" alt="Onchain risk premium: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
-</figure>
-
-<figure style="position:absolute;top:279px;left:30px;width:450px;margin:0;">
-<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
-
-Adverse selection cost $\delta$
-
-</figcaption>
-<img src="./images/optimal-regulation-adverse-selection.png" alt="Adverse selection cost: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
-</figure>
-
-<figure style="position:absolute;top:279px;left:500px;width:450px;margin:0;">
-<figcaption style="margin-bottom:3px;font-size:19.5px;line-height:1.2;text-align:center;">
-
-Value extracted from traders $\gamma$
-
-</figcaption>
-<img src="./images/optimal-regulation-value-extraction.png" alt="Value extracted from traders: regulation initially loosens to sustain activity, then tokenization is banned." style="display:block;width:100%;height:180px;object-fit:contain;" />
-</figure>
-
-<div class="seminar-block" style="top:500px;left:40px;right:auto;width:900px;font-size:18.5px;line-height:1.2;text-align:center;">
-
-The regulator first **loosens regulation** to sustain activity,<br>then **bans tokenization** when social benefits are too small.
-
-</div>
-
-<!-- Unnumbered backup adapted from slides_old.md, slide 27, "Frictions". -->
-
----
-layout: primer-backup
-title: "Backup: Equity Tokenization"
-hideInToc: true
-routeAlias: primer
----
-<img src="./images/equity-tokenization-primer/page-01.svg" alt="Equity Tokenization" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 1. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Five Questions — Overview"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-02.svg" alt="Five Questions — Overview" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 2. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Five Questions — What Is Tokenization?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-03.svg" alt="Five Questions — What Is Tokenization?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 3. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: What Is Tokenization?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-04.svg" alt="What Is Tokenization?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 4. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Three Tokenization Models"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-05.svg" alt="Three Tokenization Models" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 5. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Synthetic Tokens: Price Exposure, Not Ownership"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-06.svg" alt="Synthetic Tokens: Price Exposure, Not Ownership" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 6. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Five Questions — Why Tokenize?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-07.svg" alt="Five Questions — Why Tokenize?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 7. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Who Owns Your Shares Today?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-08.svg" alt="Who Owns Your Shares Today?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 8. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Purported Benefits of Tokenization"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-09.svg" alt="Purported Benefits of Tokenization" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 9. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Five Questions — Policy Actions"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-10.svg" alt="Five Questions — Policy Actions" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 10. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Proposed Transfer Agent Rules (September 2026)"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-11.svg" alt="Proposed Transfer Agent Rules (September 2026)" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 11. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: SEC Innovation Exemption (September 2026)"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-12.svg" alt="SEC Innovation Exemption (September 2026)" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 12. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Issuers Can Say No"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-13.svg" alt="Issuers Can Say No" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 13. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Issuers Object to Third-party Tokenization"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-14.svg" alt="Issuers Object to Third-party Tokenization" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 14. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Five Questions — How Is It Going?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-15.svg" alt="Five Questions — How Is It Going?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 15. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Equity Tokenization Remains Trivial in Scale"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-16.svg" alt="Equity Tokenization Remains Trivial in Scale" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 16. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Nearly All Tokenized Stocks Are Synthetic"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-17.svg" alt="Nearly All Tokenized Stocks Are Synthetic" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 17. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Tokenized Stocks Barely Trade"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-18.svg" alt="Tokenized Stocks Barely Trade" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 18. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Weekend AMC Token Price Spike"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-19.svg" alt="Weekend AMC Token Price Spike" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 19. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Five Questions — Why Is It Going That Way?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-20.svg" alt="Five Questions — Why Is It Going That Way?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 20. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Why Hold Securities Onchain?"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-21.svg" alt="Why Hold Securities Onchain?" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 21. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Incremental Onchain Incentive"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-22.svg" alt="Incremental Onchain Incentive" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 22. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: The Role of Regulation"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-23.svg" alt="The Role of Regulation" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 23. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Regulation in Practice: Volume Caps"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-24.svg" alt="Regulation in Practice: Volume Caps" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 24. Original footer number removed. -->
-
----
-layout: primer-backup
-title: "Backup: Stringent Regulation Undermines Tokenization"
-hideInToc: true
----
-<img src="./images/equity-tokenization-primer/page-25.svg" alt="Stringent Regulation Undermines Tokenization" />
-
-<!-- Backup source: files/equity-tokenization-primer.pdf, page 25. Original footer number removed. -->
+<!-- Source: L2 talk, frame 20; derivative denominators retain equilibrium portfolio reallocation. -->

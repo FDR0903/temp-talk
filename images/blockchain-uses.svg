@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 280" role="img" aria-labelledby="title desc">
+  <title id="title">Productive capital and security capital in a blockchain economy</title>
+  <desc id="desc">Outside users pay service fees to financial services funded by DeFi users. These fees enter the blockchain economy. Financial services flow back to outside users. Stakers lock capital in consensus and provide security to the blockchain protocol, which securely executes the financial services.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 0.5 8 3.5 1 6.5" fill="none" stroke="#111" stroke-width="1.5"/>
+    </marker>
+    <g id="person" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cy="-7" r="6"/>
+      <path d="M-11 15V8C-11-1 11-1 11 8V15"/>
+    </g>
+  </defs>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
+    <rect x="284" y="24" width="680" height="246" rx="5" fill="#fff" stroke="#111" stroke-width="1.3" stroke-dasharray="6 5"/>
+    <rect x="518" y="10" width="212" height="27" fill="#fff"/>
+    <text x="624" y="29" text-anchor="middle" font-size="17">Blockchain economy</text>
+
+    <g fill="#fff" stroke="#111" stroke-width="1.5">
+      <rect x="12" y="75" width="174" height="108" rx="4"/>
+      <rect x="316" y="62" width="220" height="116" rx="4"/>
+      <rect x="724" y="62" width="220" height="116" rx="4"/>
+    </g>
+
+    <use href="#person" transform="translate(89 108)"/>
+    <use href="#person" transform="translate(110 108)"/>
+    <text x="99" y="151" text-anchor="middle" font-size="18">Outside users</text>
+
+    <use href="#person" transform="translate(426 86)"/>
+    <text x="426" y="126" text-anchor="middle" font-size="18" font-weight="600">DeFi users</text>
+    <text x="426" y="153" text-anchor="middle" font-size="14">Capital in financial services</text>
+
+    <use href="#person" transform="translate(824 86)"/>
+    <path d="M844 75 854 79V88C854 95 850 100 844 103 838 100 834 95 834 88V79Z" fill="#fff" stroke="#111" stroke-width="1.5"/>
+    <path d="m839 88 4 4 7-9" fill="none" stroke="#111" stroke-width="1.5"/>
+    <text x="834" y="126" text-anchor="middle" font-size="18" font-weight="600">Stakers</text>
+    <text x="834" y="153" text-anchor="middle" font-size="14">Capital in consensus</text>
+
+    <g fill="none" stroke="#111" stroke-width="1.6" marker-end="url(#arrow)">
+      <path d="M188 108H309"/>
+      <path d="M314 145H193"/>
+      <path d="M834 180V224H698"/>
+      <path d="M552 224H426V185"/>
+    </g>
+    <text x="236" y="95" text-anchor="middle" font-size="14">Service fees</text>
+    <text x="236" y="165" text-anchor="middle" font-size="14">Financial</text>
+    <text x="236" y="181" text-anchor="middle" font-size="14">services</text>
+    <text x="782" y="211" text-anchor="middle" font-size="15">Security</text>
+    <text x="478" y="246" text-anchor="middle" font-size="14">Secure execution</text>
+
+    <g fill="#fff" stroke="#111" stroke-width="1.5" stroke-linejoin="round">
+      <path d="M565 210H595V238H565Z M610 210H640V238H610Z M655 210H685V238H655Z"/>
+      <path d="M595 224H610 M640 224H655"/>
+      <path d="M571 216H589 M616 216H634 M661 216H679"/>
+      <path d="M571 222H583 M616 222H628 M661 222H673"/>
+    </g>
+    <text x="625" y="259" text-anchor="middle" font-size="15">Blockchain protocol</text>
+  </g>
+</svg>
