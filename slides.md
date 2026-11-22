@@ -158,7 +158,7 @@ Yield farming can provide the incremental onchain incentive.
 
 <div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
 
-Yield farming: supplying tokens as liquidity to earn fees from traders.
+Yield farming: supplying tokens as liquidity to earn fees from traders (Malinova and Park 2024).
 
 </div>
 
