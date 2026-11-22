@@ -46,50 +46,62 @@ defaults:
 
 ---
 layout: seminar
-title: "Equity Tokenization Remains Trivial in Scale"
-clicks: 1
+title: "Project Crypto and Tokenization Adoption"
+clicks: 2
 ---
 
-# Equity Tokenization Remains Trivial in Scale
+<div class="seminar-block sem-bullet" style="top:22px;left:108.39px;right:auto;width:831.61px;font-size:21.53px;font-weight:700;text-align:left;">
 
-<figure style="position:absolute;top:65px;left:50px;width:880px;margin:0;">
+## Project Crypto: U.S. SEC's initiative to move U.S. financial markets onchain
+
+</div>
+
+<figure style="position:absolute;top:65px;left:90px;width:800px;margin:0;">
 <img src="./images/tokenizationsize.png" alt="RWA.xyz stacked area chart showing growth in tokenized asset value across asset classes, with labeled dates from January 2024 to September 2026" style="display:block;width:100%;height:auto;" />
-<figcaption style="margin-top:6px;font-size:14px;line-height:1.2;text-align:center;">Tokenized assets across asset classes · RWA.xyz</figcaption>
+<figcaption style="margin-top:6px;font-size:12px;line-height:1.2;text-align:center;">Tokenized assets across asset classes · RWA.xyz</figcaption>
 </figure>
 
-<div class="sem-box sem-orange" style="left:101.06px;top:432px;width:349.13px;height:100px;" v-click="1">
+<div class="seminar-block sem-bullet" style="top:391px;left:108.39px;right:auto;width:831.61px;font-size:24px;text-align:left;" v-click="1">
 
-
-
-</div>
-
-<div class="sem-box sem-blue" style="left:529.81px;top:432px;width:349.13px;height:100px;" v-click="1">
-
-
+**Tokenization remains trivial in scale**
 
 </div>
 
-<div class="seminar-block " style="top:450px;left:101.06px;right:auto;width:349.13px;text-align:center;" v-click="1">
+<div class="sem-box sem-orange" style="left:101.06px;top:428px;width:349.13px;height:70px;" v-click="1">
+
+</div>
+
+<div class="sem-box sem-blue" style="left:529.81px;top:428px;width:349.13px;height:70px;" v-click="1">
+
+</div>
+
+<div class="seminar-block " style="top:435px;left:101.06px;right:auto;width:349.13px;font-size:20.5px;text-align:center;" v-click="1">
 
 **Tokenized Stocks**
 
 </div>
 
-<div class="seminar-block " style="top:487px;left:101.06px;right:auto;width:349.13px;font-size:31px;text-align:center;" v-click="1">
+<div class="seminar-block " style="top:462px;left:101.06px;right:auto;width:349.13px;font-size:27px;text-align:center;" v-click="1">
 
 &#36;3.7 billion
 
 </div>
 
-<div class="seminar-block " style="top:450px;left:529.81px;right:auto;width:349.13px;text-align:center;" v-click="1">
+<div class="seminar-block " style="top:435px;left:529.81px;right:auto;width:349.13px;font-size:20.5px;text-align:center;" v-click="1">
 
 **U.S. Equity Market**
 
 </div>
 
-<div class="seminar-block " style="top:487px;left:529.81px;right:auto;width:349.13px;font-size:31px;text-align:center;" v-click="1">
+<div class="seminar-block " style="top:462px;left:529.81px;right:auto;width:349.13px;font-size:27px;text-align:center;" v-click="1">
 
 &#36;78.7 trillion
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:510px;left:108.39px;right:auto;width:831.61px;font-size:23.57px;text-align:left;" v-click="2">
+
+Stringent regulation can explain this lack of adoption
 
 </div>
 
@@ -118,25 +130,7 @@ Holding onchain introduces novel risks and costs.
 
 <div class="seminar-block " style="top:221.58px;" v-click="1">
 
-An incremental onchain incentive is necessary for tokenization to be viable.
-
-</div>
-
-<div class="sem-box sem-orange" style="left:39.81px;top:304.15px;width:900.38px;height:147px;" v-click="1">
-
-
-
-</div>
-
-<div class="seminar-block " style="top:337.46px;left:39.81px;right:auto;width:900.38px;text-align:center;" v-click="1">
-
-Equilibrium Condition:
-
-</div>
-
-<div class="seminar-block " style="top:397.37px;left:39.81px;right:auto;width:900.38px;text-align:center;white-space:nowrap;" v-click="1">
-
-**Incremental Onchain Incentive = Incremental Onchain Costs and Priced Risks**
+Investors hold a tokenized security only if holding it offers an incremental incentive over holding the security offchain.
 
 </div>
 
@@ -144,33 +138,87 @@ Equilibrium Condition:
 
 ---
 layout: seminar
+title: "Onchain holdings are endogenous"
+clicks: 1
+---
+
+# Onchain holdings are endogenous
+
+<div class="seminar-block sem-bullet" style="top:88px;left:108.39px;right:auto;width:831.61px;">
+
+Investors decide how much to hold onchain by comparing:
+
+</div>
+
+<div class="seminar-block sem-bullet sem-small" style="top:126px;left:155.53px;right:auto;width:784.47px;">
+
+Incentives to hold a security onchain
+
+</div>
+
+<div class="seminar-block sem-bullet sem-small" style="top:160px;left:155.53px;right:auto;width:784.47px;">
+
+Incentives to hold a security offchain
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:254px;left:108.39px;right:auto;width:831.61px;">
+
+Investors hold securities onchain only if compensated for incremental risks and costs
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:331px;left:108.39px;right:auto;width:831.61px;">
+
+In equilibrium, investors expand their onchain holdings until they are indifferent between onchain & offchain
+
+</div>
+
+<div class="sem-box sem-orange" style="left:39.81px;top:410px;width:900.38px;height:110px;" v-click="1">
+
+</div>
+
+<div class="seminar-block" style="top:426px;left:39.81px;right:auto;width:900.38px;font-size:20.5px;text-align:center;" v-click="1">
+
+**Equilibrium condition:** size of the tokenized market is such that
+
+</div>
+
+<div class="seminar-block" style="top:469px;left:39.81px;right:auto;width:900.38px;font-size:21.53px;text-align:center;white-space:nowrap;" v-click="1">
+
+**Incremental Onchain Incentive = Incremental Onchain Costs and Priced Risks**
+
+</div>
+
+---
+layout: seminar
 title: "Incremental Onchain Incentive"
-clicks: 2
+clicks: 1
 ---
 
 # Incremental Onchain Incentive
 
 <div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
 
-Yield farming can provide the incremental onchain incentive.
+The primary incentive to hold a security onchain is yield.
 
 </div>
 
 <div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
 
-Yield farming: supplying tokens as liquidity to earn fees from traders (Malinova and Park 2024).
+Investors may accrue yield because they possess custody of their token.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:247.08px;left:108.39px;right:auto;width:831.61px;" v-click="1">
+<div class="seminar-block sem-bullet" style="top:240.96px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
-Yield farming returns are endogenous: via an externality between trading and liquidity provision.
+Investors most commonly earn this yield by supplying their tokens as liquidity to traders
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:355.31px;left:108.39px;right:auto;width:831.61px;" v-click="2">
+<div class="seminar-block sem-bullet" style="top:350px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
-Regulatory environment endogenously affects yields.
+**Yield farming**: earn fees from traders (Malinova and Park 2024).
 
 </div>
 
@@ -178,32 +226,79 @@ Regulatory environment endogenously affects yields.
 
 ---
 layout: seminar
+title: "Yield farming"
+clicks: 1
+---
+
+# Yield farming
+
+<div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
+
+Yield farming generates a two-way positive externality between trading and liquidity provision
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:228.72px;left:108.39px;right:auto;width:831.61px;" v-click="1">
+
+More trading → more yield → attracts more liquidity (indifference condition)
+
+→ more liquidity lowers trading costs → attracts more trading
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:336.96px;left:108.39px;right:auto;width:831.61px;" v-click="1">
+
+High trading and high liquidity thus sustain each other in equilibrium
+
+</div>
+
+---
+layout: seminar
 title: "The Role of Regulation"
+clicks: 1
 ---
 
 # The Role of Regulation
 
-<div class="seminar-block sem-bullet" style="top:120.48px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:88px;left:108.39px;right:auto;width:831.61px;">
 
-Tighter regulation reduces trading activity, lowering trading revenues.
-
-</div>
-
-<div class="seminar-block sem-bullet" style="top:180.72px;left:108.39px;right:auto;width:831.61px;">
-
-Lower revenues reduce incentives for liquidity provision, raising trading costs.
+Regulation affects the tokenized market through the two-way externality.
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:240.95px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet sem-small" style="top:151px;left:155.53px;right:auto;width:784.47px;">
 
-Low trading and low liquidity sustain each other in a low-adoption equilibrium.
+Tighter regulation requires issuers to admit fewer traders
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:301.19px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet sem-small" style="top:196px;left:155.53px;right:auto;width:784.47px;">
 
-A low-adoption equilibrium implies low incentives to tokenize.
+Fewer traders lower yield
+
+</div>
+
+<div class="seminar-block sem-bullet sem-small" style="top:241px;left:155.53px;right:auto;width:784.47px;">
+
+Investors then supply less liquidity (indifference condition)
+
+</div>
+
+<div class="seminar-block sem-bullet sem-small" style="top:286px;left:155.53px;right:auto;width:784.47px;">
+
+Less liquidity raises trading costs and reduces trading further
+
+</div>
+
+<div class="seminar-block sem-bullet sem-small" style="top:331px;left:155.53px;right:auto;width:784.47px;">
+
+Low trading and low liquidity thus sustain each other
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:416px;left:108.39px;right:auto;width:831.61px;" v-click="1">
+
+When regulation is sufficiently stringent, the tokenized market becomes too small for the issuer to recover the cost of tokenizing.
 
 </div>
 
@@ -212,29 +307,36 @@ A low-adoption equilibrium implies low incentives to tokenize.
 ---
 layout: seminar
 title: "SEC Innovation Exemption"
+clicks: 2
 ---
 
 # SEC Innovation Exemption
 
-<div class="seminar-block " style="top:114.02px;">
+<div class="seminar-block sem-bullet" style="top:88px;left:108.39px;right:auto;width:831.61px;">
+
+Regulation that restricts trading in this way is already in place
+
+</div>
+
+<div class="seminar-block " style="top:165px;">
 
 SEC, Release No. 34-106402 (September 17, 2026):
 
 </div>
 
-<div class="sem-box sem-blue" style="left:61.68px;top:208.18px;width:857.51px;height:117.61px;border-radius:10.8px;">
+<div class="sem-box sem-blue" style="left:61.68px;top:245px;width:857.51px;height:117.61px;border-radius:10.8px;">
 
 
 
 </div>
 
-<div class="seminar-block " style="top:236.75px;left:92.31px;right:auto;width:800px;">
+<div class="seminar-block " style="top:273.57px;left:92.31px;right:auto;width:800px;">
 
 *“Tier 1 Tokenized NMS Stock traded on a TSV . . . cannot exceed . . .*
 
 </div>
 
-<div class="seminar-block " style="top:272.16px;left:104.09px;right:auto;width:800px;">
+<div class="seminar-block " style="top:308.98px;left:104.09px;right:auto;width:800px;">
 
 *0.25 percent of the average daily share volume during the prior month . . . ”*
 
@@ -242,48 +344,32 @@ SEC, Release No. 34-106402 (September 17, 2026):
 
 <!-- Source: files/seminar.pdf; numbered slide 6/25. Text and mathematics remain editable. -->
 
----
+<!--
+  ---
 layout: seminar
-title: "BlackRock USD Institutional Digital Liquidity Fund (BUIDL)"
----
+title: "Regulation policy"
+  ---
 
-<div class="sem-box " style="left:138.32px;top:73.85px;width:703.36px;height:165.82px;border-color:#888;border-radius:10.8px;">
+# Regulation policy
+-->
 
+<div class="seminar-block sem-bullet" style="top:385px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
-
-</div>
-
-<div class="seminar-block sem-accent sem-small" style="top:97.67px;left:162.82px;right:auto;width:660px;">
-
-**BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
+A volume cap limits the trading that generates yield
 
 </div>
 
-<div class="seminar-block sem-small" style="top:132.7px;left:162.82px;right:auto;width:670px;">
+<div class="seminar-block sem-bullet" style="top:431px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
-• Tokenized money market fund with underlying assets at BNY Mellon
-
-</div>
-
-<div class="seminar-block sem-small" style="top:163.43px;left:162.82px;right:auto;width:670px;">
-
-• Ownership registered onchain by a SEC-registered transfer agent
+It acts directly on the two-way externality
 
 </div>
 
-<div class="seminar-block sem-small" style="top:194.16px;left:162.82px;right:auto;width:670px;">
+<div class="seminar-block sem-bullet" style="top:477px;left:108.39px;right:auto;width:831.61px;" v-click="2">
 
-• Every transfer gated by a compliance check at the token contract level
-
-</div>
-
-<div class="seminar-block " style="top:280px;left:18.37px;right:auto;width:943.3px;height:193px;overflow:hidden;">
-
-<img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;" />
+The level of the cap is a policy choice
 
 </div>
-
-<!-- Source: files/seminar.pdf; numbered slide 8/25. Text and mathematics remain editable. -->
 
 ---
 layout: seminar
@@ -311,7 +397,7 @@ $\implies$
 </div>
 <div class="seminar-block sem-small sem-muted" style="top:308.85px;left:409.36px;right:auto;width:450px;">
 
-Less trading
+Less traders
 
 </div>
 
@@ -320,20 +406,9 @@ Less trading
 $\implies$
 
 </div>
-<div class="seminar-block sem-small sem-muted" style="top:342.43px;left:409.36px;right:auto;width:450px;">
+<div class="seminar-block sem-small sem-muted" style="top:342.43px;left:409.36px;right:auto;width:510px;">
 
-Lower fee income
-
-</div>
-
-<div class="seminar-block sem-small sem-muted" style="top:375.74px;left:342.87px;right:auto;width:50px;">
-
-$\implies$
-
-</div>
-<div class="seminar-block sem-small sem-muted" style="top:376.02px;left:409.36px;right:auto;width:450px;">
-
-Lower onchain investment
+Lower onchain investment<br><span style="font-size:18.5px;">(investor indifference and the two-way externality)</span>
 
 </div>
 
@@ -409,11 +484,72 @@ trading fees + price impact
 
 <div class="seminar-block sem-label" style="top:213.94px;left:499.15px;right:auto;width:260px;color:#000;" v-click="3">
 
-imposes cap on illicit trading
+imposes cap on illicit trading / all trading
 
 </div>
 
 <!-- Source: files/seminar.pdf; numbered slide 10/25. Text and mathematics remain editable. -->
+
+---
+layout: seminar
+title: "The model in practice"
+---
+
+# The model in practice
+
+<div class="seminar-block sem-bullet" style="top:74px;left:108.39px;right:auto;width:831.61px;">
+
+Issuer: an asset manager issuing a tokenized fund
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:114px;left:108.39px;right:auto;width:831.61px;">
+
+Fund managers earn a proportional fee on onchain AUM
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:154px;left:108.39px;right:auto;width:831.61px;">
+
+The issuer implements screens (identity checks, transfer restrictions, volume cap) in the token contract
+
+</div>
+
+<div class="sem-box" style="left:61.68px;top:235px;width:857.51px;height:140px;border-color:#888;border-radius:10.8px;">
+
+</div>
+
+<div class="seminar-block sem-accent" style="top:247px;left:85px;right:auto;width:810px;font-size:20.5px;">
+
+**BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
+
+</div>
+
+<div class="seminar-block" style="top:282px;left:85px;right:auto;width:810px;font-size:19.5px;">
+
+• Tokenized money market fund with underlying assets at BNY Mellon
+
+</div>
+
+<div class="seminar-block" style="top:310px;left:85px;right:auto;width:810px;font-size:19.5px;">
+
+• Ownership registered onchain by a SEC-registered transfer agent
+
+</div>
+
+<div class="seminar-block" style="top:338px;left:85px;right:auto;width:810px;font-size:19.5px;">
+
+• Every transfer gated by a compliance check at the token contract level
+
+</div>
+
+<div class="seminar-block" style="top:394px;left:18.37px;right:auto;width:943.3px;height:130px;overflow:hidden;">
+
+<img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;transform:translateY(-65px);" />
+
+</div>
+
+<!-- Source: files/seminar.pdf; numbered slide 8/25. Text and mathematics remain editable. -->
 
 ---
 layout: seminar
@@ -873,7 +1009,7 @@ Sufficiently stringent regulation renders tokenization non-viable.
 ---
 layout: seminar
 title: "Main Result: Economic Channel"
-clicks: 5
+clicks: 4
 ---
 
 # Main Result: Economic Channel
@@ -904,61 +1040,23 @@ $$
 
 </div>
 
-<div class="seminar-block sem-eq sem-mcs" style="top:306px;font-size:20.5px;" v-click="[2, 3]">
-
-$$
-\underbrace{\Pi^\star(\psi)}_{\textsf{set of optimal acceptance rates}}
-=
-\underset{\pi\in[\psi/((1-\mu)\lambda),\,\mu+\psi/\lambda]}{\arg\max}
-\left\{
-\phi L^\star(\pi)
--\mathcal C\!\left(\frac{1-\mu}{\mu}\left[\frac{\lambda\pi}{\psi}-1\right]\right)
-\right\}.
-$$
-
-</div>
-
-<div class="seminar-block sem-eq sem-mcs" style="top:398px;font-size:21.53px;" v-click="[2, 3]">
-
-$$
-\left.
-\begin{gathered}
-\textsf{Increasing differences}\\
-\textsf{and ordered feasible sets}
-\end{gathered}
-\right\}
-\Longrightarrow
-\Pi^\star(\psi_1)\le_{\mathrm{SSO}}\Pi^\star(\psi_2),
-\qquad \psi_1<\psi_2.
-$$
-
-</div>
-
-<div class="seminar-block sem-mcs" style="top:469px;font-size:18.5px;" v-click="[2, 3]">
-
-*Milgrom and Shannon (1994).* $\le_{\mathrm{SSO}}$ denotes the strong set order.
-
-</div>
-
-<div class="seminar-block " style="top:317.26px;" v-click="3">
+<div class="seminar-block " style="top:317.26px;" v-click="2">
 
 **Proposition.** A lower acceptance rate reduces trading revenue: $\pi\downarrow\implies T^\star(\pi)\downarrow$.
 
 </div>
 
-<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="3">
-
-($T^\star$: trading revenue paid to liquidity providers by admitted traders.)
+<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="2">
 
 </div>
 
-<div class="seminar-block " style="top:400.31px;" v-click="4">
+<div class="seminar-block " style="top:350.31px;" v-click="2">
 
-**Proposition.** Onchain investment increases with trading revenue: $T^\star\downarrow\implies L^\star\downarrow$.
+Onchain investment decreases: $T^\star\downarrow\implies L^\star\downarrow$.
 
 </div>
 
-<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="5">
+<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="4">
 
 $\implies$ For sufficiently tight regulation, revenue $\phi\,L^\star(\pi^\star(\psi))$ falls below $\underline U$.
 
@@ -966,11 +1064,12 @@ $\implies$ For sufficiently tight regulation, revenue $\phi\,L^\star(\pi^\star(\
 
 <!-- Source: files/seminar.pdf; numbered slide 21/25. Text and mathematics remain editable. -->
 
----
+<!--
+  ---
 layout: seminar
 title: "Main Result: Economic Channel (Continued)"
 clicks: 4
----
+  ---
 
 # Main Result: Economic Channel (Continued)
 
@@ -1036,11 +1135,12 @@ lower issuer revenue
 
 </div>
 
+-->
 <!-- Source: files/seminar.pdf; numbered slide 22/25. Text and mathematics remain editable. -->
 
 ---
 layout: seminar
-title: "Viability Is Heterogeneous Under a Given Regulatory Standard"
+title: "Viability Is Heterogeneous"
 ---
 
 # Viability Is Heterogeneous Under a Given Regulatory Standard
@@ -1113,10 +1213,11 @@ The same cap can keep tokenization viable for one asset or blockchain<br>and ren
 
 <!-- Source: files/seminar.pdf; numbered slide 23/25. Text and mathematics remain editable. -->
 
----
+<!--
+  ---
 layout: seminar
 title: "Heterogeneous Viability: Economic Channel"
----
+  ---
 
 # Heterogeneous Viability: Economic Channel
 
@@ -1150,6 +1251,7 @@ Higher frictions require looser regulation to keep tokenization viable.
 
 </div>
 
+-->
 <!-- Source: files/seminar.pdf; numbered slide 24/25. Text and mathematics remain editable. -->
 
 ---
@@ -1176,6 +1278,45 @@ Stocks not the best fit for tokenization (issuer risk + asset risk)
 </div>
 
 <!-- Adapted from slides_old.md, "Different outcomes", using the Ethereum and Arbitrum distribution figures. -->
+
+---
+layout: seminar
+title: "Optimal regulation"
+---
+
+# Optimal regulation
+
+<div class="seminar-block sem-bullet" style="top:88px;left:108.39px;right:auto;width:831.61px;">
+
+We adapt the model of **Campello, Cong and Dietrich (2024)**.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:153px;left:108.39px;right:auto;width:831.61px;">
+
+We assume that greater onchain trading activity, supported by liquidity, accelerates innovation.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:237px;left:108.39px;right:auto;width:831.61px;">
+
+**Social benefit:** tokenized markets bring beneficial innovation forward relative to existing blockchain activity.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:321px;left:108.39px;right:auto;width:831.61px;">
+
+**Social harm:** looser regulation increases illicit trading.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:386px;left:108.39px;right:auto;width:831.61px;">
+
+**Regulator's tradeoff:** balance incremental innovation benefits against illicit-trading harm. Permit tokenization only if net social benefits are sufficient, or illicit finance is sufficiently low.
+
+</div>
+
+<!-- Source: regulation-liquidity.tex, Section 5; Campello, Cong and Dietrich (2024), Regulatory uncertainty and fintech innovation. -->
 
 ---
 layout: seminar
