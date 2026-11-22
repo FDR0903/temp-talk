@@ -33,7 +33,8 @@ The dependency lockfile pins the versions used by the presentation.
 
 The main talk ends at 26/26. An **Optimal regulation** overview immediately
 precedes the conclusion.
-The BUIDL example immediately follows the Model Overview and has no pause.
+The BUIDL example immediately follows the Model Overview. Its screening point
+and example appear together after a click.
 Two unnumbered **Optimal Regulation** slides follow, reproducing the old deck's
 regulatory-regime charts and four friction panels. The first credits Campello,
 Cong and Dietrich (2024), *Regulatory uncertainty and fintech innovation*.

@@ -493,6 +493,7 @@ imposes cap on illicit trading / all trading
 ---
 layout: seminar
 title: "The model in practice"
+clicks: 1
 ---
 
 # The model in practice
@@ -509,41 +510,41 @@ Fund managers earn a proportional fee on onchain AUM
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:154px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:154px;left:108.39px;right:auto;width:831.61px;" v-click="1">
 
 The issuer implements screens (identity checks, transfer restrictions, volume cap) in the token contract
 
 </div>
 
-<div class="sem-box" style="left:61.68px;top:235px;width:857.51px;height:140px;border-color:#888;border-radius:10.8px;">
+<div class="sem-box" style="left:61.68px;top:235px;width:857.51px;height:140px;border-color:#888;border-radius:10.8px;" v-click="1">
 
 </div>
 
-<div class="seminar-block sem-accent" style="top:247px;left:85px;right:auto;width:810px;font-size:20.5px;">
+<div class="seminar-block sem-accent" style="top:247px;left:85px;right:auto;width:810px;font-size:20.5px;" v-click="1">
 
 **BlackRock USD Institutional Digital Liquidity Fund (BUIDL)**
 
 </div>
 
-<div class="seminar-block" style="top:282px;left:85px;right:auto;width:810px;font-size:19.5px;">
+<div class="seminar-block" style="top:282px;left:85px;right:auto;width:810px;font-size:19.5px;" v-click="1">
 
 • Tokenized money market fund with underlying assets at BNY Mellon
 
 </div>
 
-<div class="seminar-block" style="top:310px;left:85px;right:auto;width:810px;font-size:19.5px;">
+<div class="seminar-block" style="top:310px;left:85px;right:auto;width:810px;font-size:19.5px;" v-click="1">
 
 • Ownership registered onchain by a SEC-registered transfer agent
 
 </div>
 
-<div class="seminar-block" style="top:338px;left:85px;right:auto;width:810px;font-size:19.5px;">
+<div class="seminar-block" style="top:338px;left:85px;right:auto;width:810px;font-size:19.5px;" v-click="1">
 
 • Every transfer gated by a compliance check at the token contract level
 
 </div>
 
-<div class="seminar-block" style="top:394px;left:18.37px;right:auto;width:943.3px;height:130px;overflow:hidden;">
+<div class="seminar-block" style="top:394px;left:18.37px;right:auto;width:943.3px;height:130px;overflow:hidden;" v-click="1">
 
 <img src="./images/seminar-transfer-code.png" alt="BUIDL transfer-restriction code calling getComplianceService().validateTransfer before executing a transfer." style="display:block;width:943.3px;height:auto;transform:translateY(-65px);" />
 
@@ -1042,21 +1043,13 @@ $$
 
 <div class="seminar-block " style="top:317.26px;" v-click="2">
 
-**Proposition.** A lower acceptance rate reduces trading revenue: $\pi\downarrow\implies T^\star(\pi)\downarrow$.
+**Proposition.** A lower acceptance rate reduces trading revenue and onchain investment: $\pi\downarrow\implies T^\star(\pi)\downarrow\quad L^\star\downarrow(\pi)$.
 
 </div>
 
-<div class="seminar-block sem-small sem-muted" style="top:348.14px;" v-click="2">
 
-</div>
 
-<div class="seminar-block " style="top:350.31px;" v-click="2">
-
-Onchain investment decreases: $T^\star\downarrow\implies L^\star\downarrow$.
-
-</div>
-
-<div class="seminar-block " style="top:454.09px;left:67.8px;right:auto;width:851px;" v-click="4">
+<div class="seminar-block " style="top:424.09px;left:67.8px;right:auto;width:851px;" v-click="3">
 
 $\implies$ For sufficiently tight regulation, revenue $\phi\,L^\star(\pi^\star(\psi))$ falls below $\underline U$.
 
