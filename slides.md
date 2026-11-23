@@ -435,7 +435,8 @@ clicks: 3
 
 <svg class="sem-svg" viewBox="0 0 980 551.25" aria-hidden="true">
 <defs><marker id="model-arrow" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#64748b" /></marker><marker id="model-blue" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#3498db" /></marker><marker id="model-orange" viewBox="0 0 8 6" refX="8" refY="3" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f39c12" /></marker></defs>
-<g v-click="1"><path d="M434.46 312.34 L248.09 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" /><path d="M546.4 312.34 L732.78 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" /></g>
+<path v-click="3" d="M434.46 312.34 L248.09 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" />
+<path v-click="1" d="M546.4 312.34 L732.78 405.51" stroke="#64748b" stroke-width=".86" marker-end="url(#model-arrow)" />
 <path v-click="2" d="M306.68 437.48 H674.18" stroke="#3498db" stroke-width=".86" marker-end="url(#model-blue)" />
 <path v-click="3" d="M490.43 189.41 V256.79" stroke="#f39c12" stroke-width=".86" marker-end="url(#model-orange)" />
 </svg>
@@ -458,7 +459,7 @@ clicks: 3
 
 </div>
 
-<div class="seminar-block sem-label sem-muted" style="top:353.43px;left:215.87px;right:auto;width:160px;" v-click="1">
+<div class="seminar-block sem-label sem-muted" style="top:353.43px;left:215.87px;right:auto;width:160px;" v-click="3">
 
 screens traders
 
@@ -472,7 +473,7 @@ receives fees<br>proportional to AUM
 
 <div class="seminar-block sem-label sem-accent" style="top:444.69px;left:385.8px;right:auto;width:300px;" v-click="2">
 
-trading fees + price impact
+trading revenue
 
 </div>
 
@@ -1136,7 +1137,7 @@ layout: seminar
 title: "Viability Is Heterogeneous"
 ---
 
-# Viability Is Heterogeneous Under a Given Regulatory Standard
+# Viability Is Heterogeneous
 
 <div class="sem-box sem-plain-blue" style="left:91.87px;top:73.48px;width:796.26px;height:110.33px;border-radius:8.6px;">
 
