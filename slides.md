@@ -1303,7 +1303,13 @@ We assume that greater onchain trading activity, supported by liquidity, acceler
 
 </div>
 
-<div class="seminar-block sem-bullet" style="top:386px;left:108.39px;right:auto;width:831.61px;">
+<div class="seminar-block sem-bullet" style="top:376px;left:108.39px;right:auto;width:831.61px;">
+
+The regulator anticipates how each cap affects equilibrium trading.
+
+</div>
+
+<div class="seminar-block sem-bullet" style="top:431px;left:108.39px;right:auto;width:831.61px;">
 
 **Regulator's tradeoff:** balance incremental innovation benefits against illicit-trading harm. Permit tokenization only if net social benefits are sufficient, or illicit finance is sufficiently low.
 
