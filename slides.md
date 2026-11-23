@@ -1320,6 +1320,51 @@ The regulator anticipates how each cap affects equilibrium trading.
 
 ---
 layout: seminar
+title: "Literature"
+---
+
+# Literature
+
+<div class="seminar-block" style="top:64px;left:108.39px;right:auto;width:831.61px;display:flex;flex-direction:column;gap:14px;font-size:21.53px;">
+
+<div class="sem-bullet" style="position:relative;left:0;right:auto;width:100%;">
+
+**Tens of billions of dollars** of real-world assets have been tokenized.
+<span style="display:block;margin-top:5px;font-size:18.5px;line-height:1.24;">Harvey, Lin, Rabetti and Zhang (2025); Li (2025); Cook (2026); Chemla and Tinn (2026); Luo, Xiong, Li, Kang, Liu, Knottenbelt and Tinn (2026).</span>
+
+</div>
+
+<div class="sem-bullet" style="position:relative;left:0;right:auto;width:100%;">
+
+**Malinova and Park (2026)** caution that whitelisting limits token usability and may hamper market efficiency. Consistent with this, tighter regulation reduces equilibrium liquidity in our model.
+
+</div>
+
+<div class="sem-bullet" style="position:relative;left:0;right:auto;width:100%;">
+
+**Cong, Mayer and Rabetti (2026)** recommend regulation tailored to a token's economic function. Our asset-specific viability thresholds support this recommendation.
+
+</div>
+
+<div class="sem-bullet" style="position:relative;left:0;right:auto;width:100%;">
+
+We provide an **economic channel that can explain the low liquidity** of tokenized assets documented empirically.
+<span style="display:block;margin-top:5px;font-size:18.5px;line-height:1.24;">Laschinger et al. (2024); Leonhard et al. (2026); Ma, Steininger and Yang (2025); Cong et al. (2025); Mafrur (2026).</span>
+
+</div>
+
+<div class="sem-bullet" style="position:relative;left:0;right:auto;width:100%;">
+
+**Capital formation (an SEC mandate):** onchain AUM fees give issuers a source of capital. Investors pay for liquidity benefits, as in closed-end funds (Cherkes, Sagi and Stanton, 2009).
+
+</div>
+
+</div>
+
+<!-- Sources: introduction-revised.tex, tokenization-scale, literature and capital-formation paragraphs; references.bib keys harvey2025tokenized, li2025current, cook2026tokenization, chemla2026digital, luo2026sok, malinova2026tokenized, cong2026tokenizing, laschinger2024liquidity, leonhard2026tokenization, ma2025digital, cong2025tokenized, mafrur2026tokenized, cherkes2009liquidity. -->
+
+---
+layout: seminar
 title: "Conclusion"
 ---
 

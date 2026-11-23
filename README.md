@@ -1,6 +1,6 @@
 # The Economics of Regulating Tokenized Securities
 
-Slidev presentation with 26 main slides and 27 unnumbered backup slides for Q&A.
+Slidev presentation with 27 main slides and 27 unnumbered backup slides for Q&A.
 The main slides use a white background, Computer Modern sans-serif typography,
 and colored outlines. Slide 2 includes the RWA.xyz tokenization-growth chart.
 Slides 2–7 include incremental reveals; slide 22 presents the main result's
@@ -31,8 +31,8 @@ and typography are in `layouts/seminar.vue` and `seminar.css`, with additional
 shared styles in `style.css`. The bundled fonts and their license are in `fonts/`.
 The dependency lockfile pins the versions used by the presentation.
 
-The main talk ends at 26/26. An **Optimal regulation** overview immediately
-precedes the conclusion.
+The main talk ends at 27/27, with **Optimal regulation** and **Literature**
+before the conclusion.
 The BUIDL example immediately follows the Model Overview. Its screening point
 and example appear together after a click.
 Two unnumbered **Optimal Regulation** slides follow, reproducing the old deck's
@@ -48,5 +48,5 @@ details. `layouts/primer-backup.vue` adds no counter. The backup assets are in
 
 During a local preview, use `/optimal-regulation` and
 `/optimal-regulation-frictions` to jump to the two optimal-regulation backups
-(deck positions 27–28). Open `http://localhost:3030/primer` to jump to the primer,
-which begins at position 29. The backup slides have descriptive overview titles.
+(deck positions 28–29). Open `http://localhost:3030/primer` to jump to the primer,
+which begins at position 30. The backup slides have descriptive overview titles.
